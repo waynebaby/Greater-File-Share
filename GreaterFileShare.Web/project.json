@@ -1,4 +1,4 @@
-﻿{
+{
   "dependencies": {
    
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
@@ -44,7 +44,8 @@
 
   "buildOptions": {
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "define": [ "DEBUG", "TRACE" ]
   },
 
   "runtimeOptions": {

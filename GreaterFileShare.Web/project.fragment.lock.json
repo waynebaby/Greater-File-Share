@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "exports": {
+    "GreaterFileShare.Hosts.WPF/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6",
+      "compile": {
+        "bin/GreaterFileShare.Hosts.WPF.dll": {}
+      },
+      "runtime": {
+        "../packages/CommonServiceLocator.1.3/lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {},
+        "../packages/MVVM-Sidekick.1.6.25/lib/net45/MVVMSidekick.dll": {},
+        "../packages/Microsoft.Bcl.Async.1.0.168/lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {},
+        "../packages/Microsoft.Bcl.Async.1.0.168/lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {},
+        "../packages/Microsoft.Bcl.Async.1.0.168/lib/net40/Microsoft.Threading.Tasks.dll": {},
+        "../packages/Rx-Core.2.2.5/lib/net45/System.Reactive.Core.dll": {},
+        "../packages/Rx-Interfaces.2.2.5/lib/net45/System.Reactive.Interfaces.dll": {},
+        "../packages/Rx-Linq.2.2.5/lib/net45/System.Reactive.Linq.dll": {},
+        "../packages/Rx-PlatformServices.2.2.5/lib/net45/System.Reactive.PlatformServices.dll": {},
+        "../packages/Rx-XAML.2.2.5/lib/net45/System.Reactive.Windows.Threading.dll": {},
+        "../packages/Unity.4.0.1/lib/net45/Microsoft.Practices.Unity.Configuration.dll": {},
+        "../packages/Unity.4.0.1/lib/net45/Microsoft.Practices.Unity.RegistrationByConvention.dll": {},
+        "../packages/Unity.4.0.1/lib/net45/Microsoft.Practices.Unity.dll": {},
+        "bin/GreaterFileShare.Hosts.WPF.dll": {}
+      },
+      "contentFiles": {
+        "bin/GreaterFileShare.Hosts.WPF.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}

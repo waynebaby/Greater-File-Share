@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace GreaterFileShare.Hosts.Core
 {
-    public class Class1
+    public class Launcher
     {
+
+        public void Launch()
+        {
+
+
+        }
     }
 }

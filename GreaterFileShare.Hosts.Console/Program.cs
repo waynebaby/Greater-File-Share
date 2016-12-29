@@ -10,6 +10,7 @@ namespace GreaterFileShare.Hosts.Console
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using System.Threading;
 
 namespace GreaterFileShare.Web
 {
@@ -19,6 +20,14 @@ namespace GreaterFileShare.Web
                 .Build();
 
             host.Run();
+           
+        }
+
+
+        public static async Task StartAsync(string folderName , CancellationToken cancellationToken)
+        {
+
+       
         }
     }
 }
