@@ -241,3 +241,5 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /GreaterFileShare.Hosts.Core/SiteDlls/
+/DebugFolder
+/ReleaseFolder

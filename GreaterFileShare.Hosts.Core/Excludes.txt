@@ -1,0 +1,5 @@
+﻿
+GreaterFileShare.Web.xproj
+GreaterFileShare.Web.xproj.user
+.bowerrc
+.cs
