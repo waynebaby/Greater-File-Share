@@ -12,6 +12,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.IO;
+using System.Threading;
 
 namespace GreaterFileShare.Hosts.WPF
 {
@@ -25,10 +27,20 @@ namespace GreaterFileShare.Hosts.WPF
             MVVMSidekick.Startups.StartupFunctions.RunAllConfig();
         }
 
-        protected override void OnStartup(StartupEventArgs e)
+        protected override async void OnStartup(StartupEventArgs e)
         {
+
             InitNavigationConfigurationInThisAssembly();
             base.OnStartup(e);
+            var path = new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.GetDirectories("contents").FirstOrDefault()?.FullName;
+            var l = new GreaterFileShare.Hosts.Core.Launcher();
+            //var t = l.RunWebsiteAsync(
+            //        path,
+            //        5000,
+            //        default(CancellationToken));
+            var s = new GreaterFileShare.Hosts.WPF.Models.ShareFileTask() ;
+            s.Start(path, 5000);
+
         }
     }
 }

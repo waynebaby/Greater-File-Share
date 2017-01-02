@@ -20,14 +20,12 @@ namespace GreaterFileShare.Web
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
-
             host.Run();
 
         }
 
-        public static async Task StartAsync(string folderName, CancellationToken cancellationToken)
+        public static async Task StartAsync(string folderName, int port = 8080, CancellationToken cancellationToken = default(CancellationToken))
         {
-
             var host = new WebHostBuilder()
               .UseKestrel()
               .UseContentRoot(folderName ?? Directory.GetCurrentDirectory())
@@ -35,10 +33,9 @@ namespace GreaterFileShare.Web
               .UseStartup<Startup>()
               .Build();
             await RunAsync(host, cancellationToken, "");
-
         }
 
-        private static async Task RunAsync( IWebHost host, CancellationToken token, string shutdownMessage)
+        private static async Task RunAsync(IWebHost host, CancellationToken token, string shutdownMessage)
         {
             using (host)
             {

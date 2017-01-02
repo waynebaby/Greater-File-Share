@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.StaticFiles.Infrastructure;
 
 namespace GreaterFileShare.Web
 {
@@ -47,14 +48,17 @@ namespace GreaterFileShare.Web
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+            app.UseStaticFiles()
+                .UseDirectoryBrowser();
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "API/{controller=Home}/{action=Index}/{id?}");
             });
+
+         
         }
     }
 }

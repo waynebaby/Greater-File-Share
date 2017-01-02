@@ -141,6 +141,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\ShareFileTask.cs" />
     <Compile Include="Startups\StartupFunctions.cs">
       <SubType>Code</SubType>
     </Compile>
