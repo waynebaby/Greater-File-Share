@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
+using GreaterFileShare.Hosts.WPF.Models;
 
 namespace GreaterFileShare.Hosts.WPF.ViewModels
 {
@@ -25,84 +26,182 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         {
             if (IsInDesignMode)
             {
-                Title = "Title is a little different in Design mode";
+
             }
 
         }
 
 
 
-        //propvm tab tab string tab Title
-        public String Title
+
+        public ShareFileTask CurrentShareFileTask
         {
-            get { return _TitleLocator(this).Value; }
-            set { _TitleLocator(this).SetValueAndTryNotify(value); }
+            get { return _CurrentShareFileTaskLocator(this).Value; }
+            set { _CurrentShareFileTaskLocator(this).SetValueAndTryNotify(value); }
         }
-        #region Property String Title Setup
-        protected Property<String> _Title = new Property<String> { LocatorFunc = _TitleLocator };
-        static Func<BindableBase, ValueContainer<String>> _TitleLocator = RegisterContainerLocator<String>("Title", model => model.Initialize("Title", ref model._Title, ref _TitleLocator, _TitleDefaultValueFactory));
-        static Func<String> _TitleDefaultValueFactory = () => "Title is Here";
+        #region Property ShareFileTask CurrentShareFileTask Setup        
+        protected Property<ShareFileTask> _CurrentShareFileTask = new Property<ShareFileTask> { LocatorFunc = _CurrentShareFileTaskLocator };
+        static Func<BindableBase, ValueContainer<ShareFileTask>> _CurrentShareFileTaskLocator = RegisterContainerLocator<ShareFileTask>(nameof(CurrentShareFileTask), model => model.Initialize(nameof(CurrentShareFileTask), ref model._CurrentShareFileTask, ref _CurrentShareFileTaskLocator, _CurrentShareFileTaskDefaultValueFactory));
+        static Func<ShareFileTask> _CurrentShareFileTaskDefaultValueFactory = () => default(ShareFileTask);
         #endregion
 
 
 
-        #region Life Time Event Handling
 
-        ///// <summary>
-        ///// This will be invoked by view when this viewmodel instance is set to view's ViewModel property. 
-        ///// </summary>
-        ///// <param name="view">Set target</param>
-        ///// <param name="oldValue">Value before set.</param>
-        ///// <returns>Task awaiter</returns>
-        //protected override Task OnBindedToView(MVVMSidekick.Views.IView view, IViewModel oldValue)
-        //{
-        //    return base.OnBindedToView(view, oldValue);
-        //}
+        public EditOrAddState CurrentEditOrAddState
+        {
+            get { return _CurrentEditOrAddStateLocator(this).Value; }
+            set { _CurrentEditOrAddStateLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property EditOrAddState CurrentEditOrAddState Setup        
+        protected Property<EditOrAddState> _CurrentEditOrAddState = new Property<EditOrAddState> { LocatorFunc = _CurrentEditOrAddStateLocator };
+        static Func<BindableBase, ValueContainer<EditOrAddState>> _CurrentEditOrAddStateLocator = RegisterContainerLocator<EditOrAddState>(nameof(CurrentEditOrAddState), model => model.Initialize(nameof(CurrentEditOrAddState), ref model._CurrentEditOrAddState, ref _CurrentEditOrAddStateLocator, _CurrentEditOrAddStateDefaultValueFactory));
+        static Func<EditOrAddState> _CurrentEditOrAddStateDefaultValueFactory = () => default(EditOrAddState);
+        #endregion
 
-        ///// <summary>
-        ///// This will be invoked by view when this instance of viewmodel in ViewModel property is overwritten.
-        ///// </summary>
-        ///// <param name="view">Overwrite target view.</param>
-        ///// <param name="newValue">The value replacing </param>
-        ///// <returns>Task awaiter</returns>
-        //protected override Task OnUnbindedFromView(MVVMSidekick.Views.IView view, IViewModel newValue)
-        //{
-        //    return base.OnUnbindedFromView(view, newValue);
-        //}
 
-        ///// <summary>
-        ///// This will be invoked by view when the view fires Load event and this viewmodel instance is already in view's ViewModel property
-        ///// </summary>
-        ///// <param name="view">View that firing Load event</param>
-        ///// <returns>Task awaiter</returns>
-        //protected override Task OnBindedViewLoad(MVVMSidekick.Views.IView view)
-        //{
-        //    return base.OnBindedViewLoad(view);
-        //}
 
-        ///// <summary>
-        ///// This will be invoked by view when the view fires Unload event and this viewmodel instance is still in view's  ViewModel property
-        ///// </summary>
-        ///// <param name="view">View that firing Unload event</param>
-        ///// <returns>Task awaiter</returns>
-        //protected override Task OnBindedViewUnload(MVVMSidekick.Views.IView view)
-        //{
-        //    return base.OnBindedViewUnload(view);
-        //}
+        public ObservableCollection<ShareFileTask> AllTasks
+        {
+            get { return _AllTasksLocator(this).Value; }
+            set { _AllTasksLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property ObservableCollection<ShareFileTask> AllTasks Setup        
+        protected Property<ObservableCollection<ShareFileTask>> _AllTasks = new Property<ObservableCollection<ShareFileTask>> { LocatorFunc = _AllTasksLocator };
+        static Func<BindableBase, ValueContainer<ObservableCollection<ShareFileTask>>> _AllTasksLocator = RegisterContainerLocator<ObservableCollection<ShareFileTask>>(nameof(AllTasks), model => model.Initialize(nameof(AllTasks), ref model._AllTasks, ref _AllTasksLocator, _AllTasksDefaultValueFactory));
+        static Func<ObservableCollection<ShareFileTask>> _AllTasksDefaultValueFactory = () => new ObservableCollection<ShareFileTask>();
+        #endregion
 
-        ///// <summary>
-        ///// <para>If dispose actions got exceptions, will handled here. </para>
-        ///// </summary>
-        ///// <param name="exceptions">
-        ///// <para>The exception and dispose infomation</para>
-        ///// </param>
-        //protected override async void OnDisposeExceptions(IList<DisposeInfo> exceptions)
-        //{
-        //    base.OnDisposeExceptions(exceptions);
-        //    await TaskExHelper.Yield();
-        //}
+
+
+        public CommandModel<ReactiveCommand, String> CommandInitAddingNew
+        {
+            get { return _CommandInitAddingNewLocator(this).Value; }
+            set { _CommandInitAddingNewLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandInitAddingNew Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandInitAddingNew = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandInitAddingNewLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandInitAddingNewLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandInitAddingNew), model => model.Initialize(nameof(CommandInitAddingNew), ref model._CommandInitAddingNew, ref _CommandInitAddingNewLocator, _CommandInitAddingNewDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandInitAddingNewDefaultValueFactory =
+            model =>
+            {
+                var resource = nameof(CommandInitAddingNew);           // Command resource  
+                var commandId = nameof(CommandInitAddingNew);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+                            //Todo: Add InitAddingNew logic here, or
+                            await MVVMSidekick.Utilities.TaskExHelper.Yield();
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+                cmdmdl.ListenToIsUIBusy(
+                    model: vm,
+                    canExecuteWhenBusy: false);
+                return cmdmdl;
+            };
 
         #endregion
+
+
+
+
+        public CommandModel<ReactiveCommand, String> CommandMarkDeleteSelectedItem
+        {
+            get { return _CommandMarkDeleteSelectedItemLocator(this).Value; }
+            set { _CommandMarkDeleteSelectedItemLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandMarkDeleteSelectedItem Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandMarkDeleteSelectedItem = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandMarkDeleteSelectedItemLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandMarkDeleteSelectedItemLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandMarkDeleteSelectedItem), model => model.Initialize(nameof(CommandMarkDeleteSelectedItem), ref model._CommandMarkDeleteSelectedItem, ref _CommandMarkDeleteSelectedItemLocator, _CommandMarkDeleteSelectedItemDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandMarkDeleteSelectedItemDefaultValueFactory =
+            model =>
+            {
+                var resource = nameof(CommandMarkDeleteSelectedItem);           // Command resource  
+                var commandId = nameof(CommandMarkDeleteSelectedItem);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                vm,
+                async e =>
+                        {
+                        //Todo: Add MarkDeleteSelectedItem logic here, or
+                        await MVVMSidekick.Utilities.TaskExHelper.Yield();
+                        })
+            .DoNotifyDefaultEventRouter(vm, commandId)
+            .Subscribe()
+            .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+                cmdmdl.ListenToIsUIBusy(
+                    model: vm,
+                    canExecuteWhenBusy: false);
+                return cmdmdl;
+            };
+
+        #endregion
+
+
+
+        public CommandModel<ReactiveCommand, String> CommandSaveConfiguration
+        {
+            get { return _CommandSaveConfigurationLocator(this).Value; }
+            set { _CommandSaveConfigurationLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandSaveConfiguration Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandSaveConfiguration = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandSaveConfigurationLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandSaveConfigurationLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandSaveConfiguration), model => model.Initialize(nameof(CommandSaveConfiguration), ref model._CommandSaveConfiguration, ref _CommandSaveConfigurationLocator, _CommandSaveConfigurationDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandSaveConfigurationDefaultValueFactory =
+            model =>
+            {
+                var resource = nameof(CommandSaveConfiguration);           // Command resource  
+                var commandId = nameof(CommandSaveConfiguration);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+                            //Todo: Add SaveConfiguration logic here, or
+                            await MVVMSidekick.Utilities.TaskExHelper.Yield();
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+                cmdmdl.ListenToIsUIBusy(
+                    model: vm,
+                    canExecuteWhenBusy: false);
+                return cmdmdl;
+            };
+
+        #endregion
+
+
+    }
+
+
+    public enum EditOrAddState
+    {
+        Normal = 0,
+        EditingOld,
+        AddingNew
 
 
     }

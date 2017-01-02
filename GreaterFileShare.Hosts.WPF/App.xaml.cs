@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.IO;
 using System.Threading;
+using GreaterFileShare.Hosts.Core;
 
 namespace GreaterFileShare.Hosts.WPF
 {
@@ -25,6 +26,7 @@ namespace GreaterFileShare.Hosts.WPF
         public static void InitNavigationConfigurationInThisAssembly()
         {
             MVVMSidekick.Startups.StartupFunctions.RunAllConfig();
+            ServiceLocator.Instance.Register<ILauncher, Launcher>();
         }
 
         protected override async void OnStartup(StartupEventArgs e)
@@ -38,8 +40,9 @@ namespace GreaterFileShare.Hosts.WPF
             //        path,
             //        5000,
             //        default(CancellationToken));
-            var s = new GreaterFileShare.Hosts.WPF.Models.ShareFileTask() ;
+            var s = new GreaterFileShare.Hosts.WPF.Models.ShareFileTask();
             s.Start(path, 5000);
+  
 
         }
     }

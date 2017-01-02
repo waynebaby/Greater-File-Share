@@ -4,13 +4,53 @@
         Title="{Binding DataContext.Title, ElementName=grid}"
         Height="350" Width="525"
         xmlns:mvvm="clr-namespace:MVVMSidekick.Views;assembly=MVVMSidekick"        
-        xmlns:vm="clr-namespace:GreaterFileShare.Hosts.WPF.ViewModels" >
-    
+        xmlns:vm="clr-namespace:GreaterFileShare.Hosts.WPF.ViewModels" 
+ >
+
     <FrameworkElement.Resources >
         <vm:MainWindow_Model x:Key="DesignVM" />
-    </FrameworkElement.Resources>
-    <Grid x:Name="grid" DataContext="{StaticResource DesignVM}">
 
+    </FrameworkElement.Resources>
+    <mvvm:MVVMWindow.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF94D6EA" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </mvvm:MVVMWindow.Background>
+    <Grid x:Name="grid" DataContext="{StaticResource DesignVM}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="4"></ColumnDefinition>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="127*"/>
+            <RowDefinition Height="4"></RowDefinition>
+            <RowDefinition Height="192*"/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Style TargetType="Grid">
+                <Setter Property="Margin" Value="4" />
+            </Style>
+        </Grid.Resources>
+
+        <Grid Grid.Row="0" Grid.ColumnSpan="1"  Background="#33FFFFFF" >
+            <ListBox Background="#00000000" >
+
+            </ListBox>
+        </Grid>
+        <Grid Grid.Row="2" Grid.ColumnSpan="3"  Background="#33FFFFFF" >
+            <ListBox Background="#00000000" >
+
+            </ListBox>
+        </Grid>
+        <Grid Grid.Row="0" Grid.ColumnSpan="1" Grid.Column="2" Background="#33FFFFFF" >
+            <ListBox Background="#00000000" >
+
+            </ListBox>
+        </Grid>
+        <GridSplitter Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="100" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ResizeBehavior="PreviousAndNext" />
+        <GridSplitter Grid.Column="1" Grid.Row="0" Grid.RowSpan="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ResizeBehavior="PreviousAndNext" />
 
     </Grid>
 </mvvm:MVVMWindow>

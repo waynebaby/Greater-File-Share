@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using System.Threading;
 using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.StaticFiles.Infrastructure;
+using Microsoft.Extensions.FileProviders;
 
 namespace GreaterFileShare.Web
 {
@@ -16,7 +19,7 @@ namespace GreaterFileShare.Web
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseContentRoot(args.FirstOrDefault() ?? Directory.GetCurrentDirectory())
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
@@ -26,16 +29,16 @@ namespace GreaterFileShare.Web
 
         public static async Task StartAsync(string folderName, int port = 8080, CancellationToken cancellationToken = default(CancellationToken))
         {
+            var contentDir = new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.GetDirectories("contents").FirstOrDefault();
             var host = new WebHostBuilder()
-              .UseKestrel()
-              .UseContentRoot(folderName ?? Directory.GetCurrentDirectory())
-              .UseIISIntegration()
-              .UseStartup<Startup>()
-              .Build();
-            await RunAsync(host, cancellationToken, "");
+                .UseKestrel()
+                .UseContentRoot(contentDir?.FullName +"\\")
+                .UseStartup<Startup>()
+                .Build();
+            await RunAsync(host, cancellationToken, "",port);
         }
 
-        private static async Task RunAsync(IWebHost host, CancellationToken token, string shutdownMessage)
+        private static async Task RunAsync(IWebHost host, CancellationToken token, string shutdownMessage, int port = 8080)
         {
             using (host)
             {
@@ -47,7 +50,7 @@ namespace GreaterFileShare.Web
                 Console.WriteLine($"Hosting environment: {hostingEnvironment.EnvironmentName}");
                 Console.WriteLine($"Content root path: {hostingEnvironment.ContentRootPath}");
 
-                var serverAddresses = host.ServerFeatures.Get<IServerAddressesFeature>()?.Addresses;
+                var serverAddresses = new UriBuilder() { Host = "localhost", Port = port, Scheme = "http" }.ToString();  //host.ServerFeatures.Get<IServerAddressesFeature>()?.Addresses;
                 if (serverAddresses != null)
                 {
                     foreach (var address in serverAddresses)
