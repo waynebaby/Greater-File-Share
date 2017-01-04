@@ -24,70 +24,57 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
         public MainWindow_Model()
         {
-            if (IsInDesignMode)
-            {
 
-            }
+            this.CurrentTask.ListenChanged(x => x.IsHosting)
+                .ObserveOnDispatcher()
+                .Subscribe(w => IsUIBusy = CurrentTask.IsHosting)
+                .DisposeWith(this);
 
+            CurrentTask.DisposeWith(this);
         }
 
 
 
-
-        public ShareFileTask CurrentShareFileTask
+        public ShareFileTask CurrentTask
         {
-            get { return _CurrentShareFileTaskLocator(this).Value; }
-            set { _CurrentShareFileTaskLocator(this).SetValueAndTryNotify(value); }
+            get { return _CurrentTaskLocator(this).Value; }
+            private set { _CurrentTaskLocator(this).SetValueAndTryNotify(value); }
         }
-        #region Property ShareFileTask CurrentShareFileTask Setup        
-        protected Property<ShareFileTask> _CurrentShareFileTask = new Property<ShareFileTask> { LocatorFunc = _CurrentShareFileTaskLocator };
-        static Func<BindableBase, ValueContainer<ShareFileTask>> _CurrentShareFileTaskLocator = RegisterContainerLocator<ShareFileTask>(nameof(CurrentShareFileTask), model => model.Initialize(nameof(CurrentShareFileTask), ref model._CurrentShareFileTask, ref _CurrentShareFileTaskLocator, _CurrentShareFileTaskDefaultValueFactory));
-        static Func<ShareFileTask> _CurrentShareFileTaskDefaultValueFactory = () => default(ShareFileTask);
+        #region Property ShareFileTask CurrentTask Setup        
+        protected Property<ShareFileTask> _CurrentTask = new Property<ShareFileTask> { LocatorFunc = _CurrentTaskLocator };
+        static Func<BindableBase, ValueContainer<ShareFileTask>> _CurrentTaskLocator = RegisterContainerLocator<ShareFileTask>(nameof(CurrentTask), model => model.Initialize(nameof(CurrentTask), ref model._CurrentTask, ref _CurrentTaskLocator, _CurrentTaskDefaultValueFactory));
+        static Func<ShareFileTask> _CurrentTaskDefaultValueFactory = () => new ShareFileTask();
         #endregion
 
 
 
-
-        public EditOrAddState CurrentEditOrAddState
+        public ObservableCollection<ContentTypePair> AdditionalContentTypes
         {
-            get { return _CurrentEditOrAddStateLocator(this).Value; }
-            set { _CurrentEditOrAddStateLocator(this).SetValueAndTryNotify(value); }
+            get { return _AdditionalContentTypesLocator(this).Value; }
+            set { _AdditionalContentTypesLocator(this).SetValueAndTryNotify(value); }
         }
-        #region Property EditOrAddState CurrentEditOrAddState Setup        
-        protected Property<EditOrAddState> _CurrentEditOrAddState = new Property<EditOrAddState> { LocatorFunc = _CurrentEditOrAddStateLocator };
-        static Func<BindableBase, ValueContainer<EditOrAddState>> _CurrentEditOrAddStateLocator = RegisterContainerLocator<EditOrAddState>(nameof(CurrentEditOrAddState), model => model.Initialize(nameof(CurrentEditOrAddState), ref model._CurrentEditOrAddState, ref _CurrentEditOrAddStateLocator, _CurrentEditOrAddStateDefaultValueFactory));
-        static Func<EditOrAddState> _CurrentEditOrAddStateDefaultValueFactory = () => default(EditOrAddState);
+        #region Property ObservableCollection<ContentTypePair> AdditionalContentTypes Setup        
+        protected Property<ObservableCollection<ContentTypePair>> _AdditionalContentTypes = new Property<ObservableCollection<ContentTypePair>> { LocatorFunc = _AdditionalContentTypesLocator };
+        static Func<BindableBase, ValueContainer<ObservableCollection<ContentTypePair>>> _AdditionalContentTypesLocator = RegisterContainerLocator<ObservableCollection<ContentTypePair>>(nameof(AdditionalContentTypes), model => model.Initialize(nameof(AdditionalContentTypes), ref model._AdditionalContentTypes, ref _AdditionalContentTypesLocator, _AdditionalContentTypesDefaultValueFactory));
+        static Func<ObservableCollection<ContentTypePair>> _AdditionalContentTypesDefaultValueFactory = () => new ObservableCollection<ContentTypePair>();
         #endregion
 
 
 
-        public ObservableCollection<ShareFileTask> AllTasks
+        public CommandModel<ReactiveCommand, String> CommandStartHosting
         {
-            get { return _AllTasksLocator(this).Value; }
-            set { _AllTasksLocator(this).SetValueAndTryNotify(value); }
+            get { return _CommandStartHostingLocator(this).Value; }
+            set { _CommandStartHostingLocator(this).SetValueAndTryNotify(value); }
         }
-        #region Property ObservableCollection<ShareFileTask> AllTasks Setup        
-        protected Property<ObservableCollection<ShareFileTask>> _AllTasks = new Property<ObservableCollection<ShareFileTask>> { LocatorFunc = _AllTasksLocator };
-        static Func<BindableBase, ValueContainer<ObservableCollection<ShareFileTask>>> _AllTasksLocator = RegisterContainerLocator<ObservableCollection<ShareFileTask>>(nameof(AllTasks), model => model.Initialize(nameof(AllTasks), ref model._AllTasks, ref _AllTasksLocator, _AllTasksDefaultValueFactory));
-        static Func<ObservableCollection<ShareFileTask>> _AllTasksDefaultValueFactory = () => new ObservableCollection<ShareFileTask>();
-        #endregion
+        #region Property CommandModel<ReactiveCommand, String> CommandStartHosting Setup        
 
-
-
-        public CommandModel<ReactiveCommand, String> CommandInitAddingNew
-        {
-            get { return _CommandInitAddingNewLocator(this).Value; }
-            set { _CommandInitAddingNewLocator(this).SetValueAndTryNotify(value); }
-        }
-        #region Property CommandModel<ReactiveCommand, String> CommandInitAddingNew Setup        
-
-        protected Property<CommandModel<ReactiveCommand, String>> _CommandInitAddingNew = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandInitAddingNewLocator };
-        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandInitAddingNewLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandInitAddingNew), model => model.Initialize(nameof(CommandInitAddingNew), ref model._CommandInitAddingNew, ref _CommandInitAddingNewLocator, _CommandInitAddingNewDefaultValueFactory));
-        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandInitAddingNewDefaultValueFactory =
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandStartHosting = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandStartHostingLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandStartHostingLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandStartHosting), model => model.Initialize(nameof(CommandStartHosting), ref model._CommandStartHosting, ref _CommandStartHostingLocator, _CommandStartHostingDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandStartHostingDefaultValueFactory =
             model =>
             {
-                var resource = nameof(CommandInitAddingNew);           // Command resource  
-                var commandId = nameof(CommandInitAddingNew);
+                var resource = nameof(CommandStartHosting);           // Command resource  
+                var commandId = nameof(CommandStartHosting);
                 var vm = CastToCurrentType(model);
                 var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
 
@@ -95,7 +82,8 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                         vm,
                         async e =>
                         {
-                            //Todo: Add InitAddingNew logic here, or
+                            //Todo: Add StartHosting logic here, or
+                            vm.CurrentTask.Start();
                             await MVVMSidekick.Utilities.TaskExHelper.Yield();
                         })
                     .DoNotifyDefaultEventRouter(vm, commandId)
@@ -115,60 +103,60 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
 
 
-        public CommandModel<ReactiveCommand, String> CommandMarkDeleteSelectedItem
+        public CommandModel<ReactiveCommand, String> CommandStopHosting
         {
-            get { return _CommandMarkDeleteSelectedItemLocator(this).Value; }
-            set { _CommandMarkDeleteSelectedItemLocator(this).SetValueAndTryNotify(value); }
+            get { return _CommandStopHostingLocator(this).Value; }
+            set { _CommandStopHostingLocator(this).SetValueAndTryNotify(value); }
         }
-        #region Property CommandModel<ReactiveCommand, String> CommandMarkDeleteSelectedItem Setup        
+        #region Property CommandModel<ReactiveCommand, String> CommandStopHosting Setup        
 
-        protected Property<CommandModel<ReactiveCommand, String>> _CommandMarkDeleteSelectedItem = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandMarkDeleteSelectedItemLocator };
-        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandMarkDeleteSelectedItemLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandMarkDeleteSelectedItem), model => model.Initialize(nameof(CommandMarkDeleteSelectedItem), ref model._CommandMarkDeleteSelectedItem, ref _CommandMarkDeleteSelectedItemLocator, _CommandMarkDeleteSelectedItemDefaultValueFactory));
-        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandMarkDeleteSelectedItemDefaultValueFactory =
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandStopHosting = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandStopHostingLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandStopHostingLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandStopHosting), model => model.Initialize(nameof(CommandStopHosting), ref model._CommandStopHosting, ref _CommandStopHostingLocator, _CommandStopHostingDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandStopHostingDefaultValueFactory =
             model =>
             {
-                var resource = nameof(CommandMarkDeleteSelectedItem);           // Command resource  
-                var commandId = nameof(CommandMarkDeleteSelectedItem);
+                var resource = nameof(CommandStopHosting);           // Command resource  
+                var commandId = nameof(CommandStopHosting);
                 var vm = CastToCurrentType(model);
-                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
-
-                cmd.DoExecuteUIBusyTask(
-                vm,
-                async e =>
+                var cmd = new ReactiveCommand(canExecute: false) { ViewModel = model }; //New Command Core
+               cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
                         {
-                        //Todo: Add MarkDeleteSelectedItem logic here, or
-                        await MVVMSidekick.Utilities.TaskExHelper.Yield();
+                            vm.CurrentTask.Stop();
+                            //Todo: Add StopHosting logic here, or
+                            await MVVMSidekick.Utilities.TaskExHelper.Yield();
                         })
-            .DoNotifyDefaultEventRouter(vm, commandId)
-            .Subscribe()
-            .DisposeWith(vm);
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
 
                 var cmdmdl = cmd.CreateCommandModel(resource);
 
-                cmdmdl.ListenToIsUIBusy(
-                    model: vm,
-                    canExecuteWhenBusy: false);
+                var ob = vm.ListenChanged(x => x.IsUIBusy)
+                   .Select(x => vm.IsUIBusy);
+                cmd.ListenCanExecuteObservable(ob);
+
                 return cmdmdl;
             };
 
         #endregion
 
 
-
-        public CommandModel<ReactiveCommand, String> CommandSaveConfiguration
+        public CommandModel<ReactiveCommand, String> CommandSelectPath
         {
-            get { return _CommandSaveConfigurationLocator(this).Value; }
-            set { _CommandSaveConfigurationLocator(this).SetValueAndTryNotify(value); }
+            get { return _CommandSelectPathLocator(this).Value; }
+            set { _CommandSelectPathLocator(this).SetValueAndTryNotify(value); }
         }
-        #region Property CommandModel<ReactiveCommand, String> CommandSaveConfiguration Setup        
+        #region Property CommandModel<ReactiveCommand, String> CommandSelectPath Setup        
 
-        protected Property<CommandModel<ReactiveCommand, String>> _CommandSaveConfiguration = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandSaveConfigurationLocator };
-        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandSaveConfigurationLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandSaveConfiguration), model => model.Initialize(nameof(CommandSaveConfiguration), ref model._CommandSaveConfiguration, ref _CommandSaveConfigurationLocator, _CommandSaveConfigurationDefaultValueFactory));
-        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandSaveConfigurationDefaultValueFactory =
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandSelectPath = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandSelectPathLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandSelectPathLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandSelectPath), model => model.Initialize(nameof(CommandSelectPath), ref model._CommandSelectPath, ref _CommandSelectPathLocator, _CommandSelectPathDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandSelectPathDefaultValueFactory =
             model =>
             {
-                var resource = nameof(CommandSaveConfiguration);           // Command resource  
-                var commandId = nameof(CommandSaveConfiguration);
+                var resource = nameof(CommandSelectPath);           // Command resource  
+                var commandId = nameof(CommandSelectPath);
                 var vm = CastToCurrentType(model);
                 var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
 
@@ -176,7 +164,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                         vm,
                         async e =>
                         {
-                            //Todo: Add SaveConfiguration logic here, or
+                            //Todo: Add SelectPath logic here, or
                             await MVVMSidekick.Utilities.TaskExHelper.Yield();
                         })
                     .DoNotifyDefaultEventRouter(vm, commandId)
@@ -194,17 +182,44 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         #endregion
 
 
+
+        public CommandModel<ReactiveCommand, String> CommandNewHost
+        {
+            get { return _CommandNewHostLocator(this).Value; }
+            set { _CommandNewHostLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandNewHost Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandNewHost = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandNewHostLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandNewHostLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>("CommandNewHost", model => model.Initialize("CommandNewHost", ref model._CommandNewHost, ref _CommandNewHostLocator, _CommandNewHostDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandNewHostDefaultValueFactory =
+            model =>
+            {
+                var resource = "CommandNewHost";           // Command resource  
+                var commandId = "CommandNewHost";
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+                            //Todo: Add NewHost logic here, or
+                            await MVVMSidekick.Utilities.TaskExHelper.Yield();
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+           
+                return cmdmdl;
+            };
+
+        #endregion
+
+
     }
-
-
-    public enum EditOrAddState
-    {
-        Normal = 0,
-        EditingOld,
-        AddingNew
-
-
-    }
-
 }
 

@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.StaticFiles.Infrastructure;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.AspNetCore.Http;
 
 namespace GreaterFileShare.Web
 {
@@ -26,16 +28,21 @@ namespace GreaterFileShare.Web
             host.Run();
 
         }
+        public const string FileServerPathKey = nameof(FileServerPathKey);
+        public const string FileServerContentTypesKey = nameof(FileServerContentTypesKey);
 
         public static async Task StartAsync(string folderName, int port = 8080, CancellationToken cancellationToken = default(CancellationToken))
         {
             var contentDir = new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.GetDirectories("contents").FirstOrDefault();
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseContentRoot(contentDir?.FullName +"\\")
+              
+                .UseContentRoot(folderName)
+                .UseUrls("http://0.0.0.0:" + port.ToString())
+
                 .UseStartup<Startup>()
                 .Build();
-            await RunAsync(host, cancellationToken, "",port);
+            await RunAsync(host, cancellationToken, "", port);
         }
 
         private static async Task RunAsync(IWebHost host, CancellationToken token, string shutdownMessage, int port = 8080)

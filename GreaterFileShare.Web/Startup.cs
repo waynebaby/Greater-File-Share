@@ -12,11 +12,19 @@ using Microsoft.Extensions.FileProviders;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.StaticFiles;
+using System.Collections.Concurrent;
 
 namespace GreaterFileShare.Web
 {
     public class Startup
     {
+        public static ConcurrentDictionary<string, string> AdditionalContentTypes { get; private set; }
+            = new ConcurrentDictionary<string, string>(
+                new Dictionary<string, string>
+                {
+                    { ".mkv","video/mkv"}
+                });
+
         public Startup(IHostingEnvironment env)
         {
 
@@ -54,38 +62,33 @@ namespace GreaterFileShare.Web
             }
 
 
-            app.UseStaticFiles();
-
+            //app.UseStaticFiles();
+            //var path = app.Properties[ Program.FileServerPathKey] as string;
             // Set up custom content types -associating file extension to MIME type
-            var provider = new FileExtensionContentTypeProvider();
+            var contentTypeProvider = new FileExtensionContentTypeProvider();
             // Add new mappings
-            provider.Mappings[".mkv"] = "video/mkv";
-            // Remove MP4 videos.
 
-
+            if (AdditionalContentTypes!=null)
+            {
+                var kvps = AdditionalContentTypes.ToArray();
+                foreach (var kvp in kvps)
+                {
+                    contentTypeProvider.Mappings[kvp.Key] = kvp.Value;
+                }
+            }
 
             app.UseStaticFiles(new StaticFileOptions()
             {
-                ContentTypeProvider = provider,
-                FileProvider = new PhysicalFileProvider(@"d:\Users\waywa\Videos\"),
-                RequestPath = new PathString("/Files")
+                ContentTypeProvider = contentTypeProvider,
+                FileProvider = env.ContentRootFileProvider
             });
 
             app.UseDirectoryBrowser(new DirectoryBrowserOptions()
             {
-                FileProvider = new PhysicalFileProvider(@"d:\Users\waywa\Videos\"),
-                RequestPath = new PathString("/Files")
+                FileProvider = env.ContentRootFileProvider
             });
 
-            //app.UseFileServer(new FileServerOptions()
-            //{
 
-            //    EnableDirectoryBrowsing = true,
-            //    FileProvider = new PhysicalFileProvider(@"d:\Users\waywa\Videos\"),
-            //    EnableDefaultFiles = false,
-            //    RequestPath= "/Files"
-
-            //});
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
