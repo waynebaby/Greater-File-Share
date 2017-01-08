@@ -33,5 +33,13 @@ namespace GreaterFileShare.Hosts.WPF
             InitializeComponent();
         }
 
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var lb = sender as ListBox;
+            if (lb.SelectedItem!=null)
+            {
+                lb.ScrollIntoView(lb.SelectedItem);
+            }
+        }
     }
 }

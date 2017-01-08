@@ -71,14 +71,16 @@ namespace GreaterFileShare.Hosts.WPF.Models
                 var t = l.RunWebsiteAsync(path, port, cts.Token);
                 SetupStarted(t, cts);
                 IsHosting = true;
+                IsLastStartFailed = false;
             }
             catch (Exception ex)
             {
                 this.LastException = ex;
                 IsLastStartFailed = true;
-                throw;
+                GlobalEventRouter.RaiseEvent(this, ex);
+
             }
-            IsLastStartFailed = false;
+
         }
         public void Stop()
         {

@@ -50,7 +50,7 @@ namespace GreaterFileShare.Web
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug(LogLevel.Trace);
-
+            loggerFactory.AddProvider(new EventLogProvider());
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

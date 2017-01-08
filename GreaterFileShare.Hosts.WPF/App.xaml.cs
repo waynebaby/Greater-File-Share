@@ -36,15 +36,7 @@ namespace GreaterFileShare.Hosts.WPF
 
             InitNavigationConfigurationInThisAssembly();
             base.OnStartup(e);
-            var path = new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.GetDirectories("contents").FirstOrDefault()?.FullName;
-            var l = new GreaterFileShare.Hosts.Core.Launcher();
-            //var t = l.RunWebsiteAsync(
-            //        path,
-            //        5000,
-            //        default(CancellationToken));
-            //var s = new GreaterFileShare.Hosts.WPF.Models.ShareFileTask();
-            //s.Start(path, 5001);
-
+           
 
         }
     }

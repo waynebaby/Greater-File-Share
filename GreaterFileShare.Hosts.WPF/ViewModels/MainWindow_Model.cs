@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using GreaterFileShare.Hosts.WPF.Models;
+using GreaterFileShare.Hosts.Core;
 
 namespace GreaterFileShare.Hosts.WPF.ViewModels
 {
@@ -25,6 +26,38 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         IDisposable _currentTaskListening;
         public MainWindow_Model()
         {
+
+            if (IsInDesignMode)
+            {
+
+                Messages.Add(new Models.MessageEntry { Time = DateTime.Now, Message = "Message Here" });
+                return;
+            }
+
+            var source1 = GlobalEventRouter.GetEventChannel<Exception>()
+                    .Select(x => x.EventData.Message);
+
+            var source2 = GlobalEventRouter.GetEventChannel<string>()
+                    .Where(x => x.EventName == "Logging")
+                    .Select(x => x.EventData);
+            var source3 = new WebLoggingSource();
+
+            new[] { source1, source2, source3 }
+                .ToObservable()
+                .SelectMany(ms => ms)
+                .Select(x => new MessageEntry { Time = DateTime.Now, Message = x })
+                .ObserveOnDispatcher()
+                .Subscribe(x =>
+                    {
+                        Messages.Add(x);
+                        if (Messages.Count > 500)
+                        {
+                            Messages.RemoveAt(0);
+                        }
+
+                        CurrentMessageIndex = Messages.Count - 1;
+                    })
+                .DisposeWith(this);
 
             this.GetValueContainer(x => x.CurrentTask)
                 .GetEventObservable()
@@ -49,6 +82,32 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
             HostingTasks.Add(st);
             CurrentTask = st;
         }
+
+
+
+        public ObservableCollection<MessageEntry> Messages
+        {
+            get { return _MessagesLocator(this).Value; }
+            set { _MessagesLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property ObservableCollection<MessageEntry> Messages Setup        
+        protected Property<ObservableCollection<MessageEntry>> _Messages = new Property<ObservableCollection<MessageEntry>> { LocatorFunc = _MessagesLocator };
+        static Func<BindableBase, ValueContainer<ObservableCollection<MessageEntry>>> _MessagesLocator = RegisterContainerLocator<ObservableCollection<MessageEntry>>(nameof(Messages), model => model.Initialize(nameof(Messages), ref model._Messages, ref _MessagesLocator, _MessagesDefaultValueFactory));
+        static Func<ObservableCollection<MessageEntry>> _MessagesDefaultValueFactory = () => new ObservableCollection<MessageEntry>();
+        #endregion
+
+
+
+        public int CurrentMessageIndex
+        {
+            get { return _CurrentMessageIndexLocator(this).Value; }
+            set { _CurrentMessageIndexLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property int CurrentMessageIndex Setup        
+        protected Property<int> _CurrentMessageIndex = new Property<int> { LocatorFunc = _CurrentMessageIndexLocator };
+        static Func<BindableBase, ValueContainer<int>> _CurrentMessageIndexLocator = RegisterContainerLocator<int>(nameof(CurrentMessageIndex), model => model.Initialize(nameof(CurrentMessageIndex), ref model._CurrentMessageIndex, ref _CurrentMessageIndexLocator, _CurrentMessageIndexDefaultValueFactory));
+        static Func<int> _CurrentMessageIndexDefaultValueFactory = () => default(int);
+        #endregion
 
 
 
@@ -91,7 +150,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
 
 
-    
+
 
 
 
