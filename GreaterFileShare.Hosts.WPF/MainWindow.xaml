@@ -1,12 +1,66 @@
-﻿<mvvm:MVVMWindow xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" 
-                 x:Class="GreaterFileShare.Hosts.WPF.MainWindow"
+﻿<mvvm:MVVMWindow xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-       
-        MinHeight="450" Width="825"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"       
         xmlns:mvvm="clr-namespace:MVVMSidekick.Views;assembly=MVVMSidekick"        
         xmlns:vm="clr-namespace:GreaterFileShare.Hosts.WPF.ViewModels" 
- >
+        xmlns:Glue="clr-namespace:GreaterFileShare.Hosts.WPF.Glue" 
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+        x:Class="GreaterFileShare.Hosts.WPF.MainWindow"       
+        MinHeight="450" Width="825" >
+
+
+    <mvvm:MVVMWindow.Resources >
+        <Glue:TaskStateConverter x:Key="TaskStateConverter"/>
+        <Glue:IsNotNullValueConverter x:Key="IsNotNullValueConverter"/>
+        <Glue:IsNullValueConverter x:Key="IsNullValueConverter"/>
+        <Glue:NotBoolValueConverter x:Key="NotBoolValueConverter"/>
+        <vm:MainWindow_Model x:Key="DesignVM" />
+        <DataTemplate x:Key="ShareFileTaskTemplate">
+            <StackPanel x:Name="stackPanel"  Background="#30FFFFff" MinWidth="300" MinHeight="80">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="ErrorStateGroup">
+
+                        <VisualState x:Name="NoError">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="stackPanel">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#30FFFFFF"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Error">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="stackPanel">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#70FFB3B3"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Hosting">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="stackPanel">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#70B3FFB3"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <i:Interaction.Triggers>
+                    <ei:PropertyChangedTrigger Binding="{Binding Path=HasErrors}" >
+                        <ei:GoToStateAction   StateName="{Binding Converter={StaticResource TaskStateConverter}}"/>
+                    </ei:PropertyChangedTrigger>
+                    <ei:PropertyChangedTrigger Binding="{Binding Path=IsHosting}" >
+                        <ei:GoToStateAction   StateName="{Binding Converter={StaticResource TaskStateConverter}}"/>
+                    </ei:PropertyChangedTrigger>
+
+                </i:Interaction.Triggers>
+                <TextBlock><Run Text="Port"/><Run Text="&#x9;&#x9;"/><Run Text="{Binding Port}"/></TextBlock>
+                <TextBlock><Run Text="Path"/><Run Text="&#x9;&#x9;"/><Run Text="{Binding Path}" /></TextBlock>
+                <TextBlock><Run Text="Is Hosting"/><Run Text="&#x9;"/><Run Text="{Binding IsHosting,Mode=OneWay}" /></TextBlock>
+                <TextBlock><Run Text="Last Error"/><Run Text="&#x9;"/><Run Text="{Binding LastException.Message, Mode=OneWay}"/></TextBlock>
+            </StackPanel>
+
+        </DataTemplate>
+    </mvvm:MVVMWindow.Resources>
 
 
     <mvvm:MVVMWindow.Background>
@@ -15,23 +69,10 @@
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
     </mvvm:MVVMWindow.Background>
-    <FrameworkElement.Resources >
-        <vm:MainWindow_Model x:Key="DesignVM" />
-    </FrameworkElement.Resources>
-    <Grid x:Name="grid" DataContext="{StaticResource DesignVM}">
+    <Grid x:Name="grid">
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="22*"/>
-            <ColumnDefinition Width="4"></ColumnDefinition>
-            <ColumnDefinition Width="25*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="127*"/>
-            <RowDefinition Height="4"></RowDefinition>
-            <RowDefinition Height="192*"/>
-        </Grid.RowDefinitions>
         <Grid.Resources>
-            <Style TargetType="Border">
+            <Style TargetType="{x:Type Border}">
                 <Setter Property="Margin" Value="4" />
                 <Setter Property="Padding" Value="4" />
                 <Setter Property="BorderThickness" Value="1"/>
@@ -40,17 +81,34 @@
             </Style>
         </Grid.Resources>
 
-        <Border Grid.Row="0" Grid.ColumnSpan="1"  Background="#33FFFFFF" >
+        <Grid.DataContext>
+            <StaticResource ResourceKey="DesignVM"/>
+        </Grid.DataContext>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="127*"/>
+            <RowDefinition Height="4"/>
+            <RowDefinition Height="192*"/>
+        </Grid.RowDefinitions>
+
+        <Border  Grid.Row="0" Grid.ColumnSpan="1"  Background="#33FFFFFF" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
             <StackPanel>
-                <StackPanel.Resources>
-                    <Style TargetType="StackPanel">
+                <StackPanel.Resources >
+                    <Style TargetType="{x:Type StackPanel}">
                         <Setter Property="Margin" Value="4"/>
                     </Style>
 
                 </StackPanel.Resources>
+
                 <StackPanel>
-                    <Label>Port</Label>
-                    <xctk:IntegerUpDown Minimum="0" Maximum="65535" Value="{Binding CurrentTask.Port, Mode=TwoWay}" />
+
+                    <Label Content="Port"/>
+                    <xctk:IntegerUpDown Minimum="0" Maximum="65535" Value="{Binding CurrentTask.Port, Mode=TwoWay}" HorizontalContentAlignment="Right" TextAlignment="Left" />
                 </StackPanel>
                 <StackPanel>
                     <Label Content="Path"/>
@@ -59,30 +117,32 @@
                             <ColumnDefinition Width="32*"/>
                             <ColumnDefinition Width="30"/>
                         </Grid.ColumnDefinitions>
-                        <TextBox IsReadOnly="True"  Text="{Binding CurrentTask.Path, Mode=OneWay}"/>
-                        <Button Grid.Column="1" Content="..."/>
+                        <TextBox IsReadOnly="True"  Text="{Binding CurrentTask.Path, Mode=OneWay}" IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}"/>
+                        <Button Grid.Column="1" Content="..." IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}" />
                     </Grid>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                     <StackPanel.Resources>
-                        <Style TargetType="Button">
+                        <Style TargetType="{x:Type Button}">
                             <Setter Property="Margin" Value="4"  />
                             <Setter Property="Padding" Value="4" />
                         </Style>
                     </StackPanel.Resources>
-                    <Button Command="{Binding CommandStartHosting}">Start</Button>
-                    <Button Command="{Binding CommandStopHosting}">Stop</Button>
-                    <Button Command="{Binding CommandNewHost}">New Host Window</Button>
+                    <Button Command="{Binding  CurrentTask.CommandStartHosting}" Content="Start/Stop" HorizontalAlignment="Center" VerticalAlignment="Center" />
+           
                 </StackPanel>
             </StackPanel>
         </Border>
-        <Border Grid.Row="2" Grid.ColumnSpan="3"  Background="#33FFFFFF" >
-
-        </Border>
+        <Border Grid.Row="2" Grid.ColumnSpan="3"  Background="#33FFFFFF" />
         <Grid Grid.Row="0" Grid.ColumnSpan="1" Grid.Column="2" Background="#33FFFFFF" >
-            <ListBox Background="#00000000" >
-
-            </ListBox>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="174*"/>
+                <RowDefinition Height="25*"/>
+            </Grid.RowDefinitions>
+            <ListBox  Background="#50ffffff" ItemsSource="{Binding HostingTasks}" SelectedItem="{Binding CurrentTask, Mode=TwoWay}" SelectedIndex="0" ItemTemplate="{DynamicResource ShareFileTaskTemplate}"  />
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Command="{Binding CommandNewHost}" Content="New Host Entry" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
         </Grid>
         <GridSplitter Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="100" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ResizeBehavior="PreviousAndNext" />
         <GridSplitter Grid.Column="1" Grid.Row="0" Grid.RowSpan="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ResizeBehavior="PreviousAndNext" />

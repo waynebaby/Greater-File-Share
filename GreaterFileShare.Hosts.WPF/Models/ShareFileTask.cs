@@ -10,6 +10,7 @@ using System.Reactive.Threading.Tasks;
 using GreaterFileShare.Hosts.Core;
 using MVVMSidekick.Services;
 using System.IO;
+using MVVMSidekick.Reactive;
 
 namespace GreaterFileShare.Hosts.WPF.Models
 {
@@ -19,6 +20,7 @@ namespace GreaterFileShare.Hosts.WPF.Models
     {
         public ShareFileTask()
         {
+
             AddDisposeAction(() =>
             {
                 if (IsHosting)
@@ -37,9 +39,17 @@ namespace GreaterFileShare.Hosts.WPF.Models
                     e => { },
                     e =>
                     {
+                        if (!(e is TaskCanceledException))
+                        {
+                            IsLastStartFailed = true;
+                            LastException = e;
+                        }
                         IsHosting = false;
                     },
-                    CancellationToken.None
+                    () =>
+                    {
+                        IsHosting = false;
+                    }
                 );
             _cancelSource = cancelSource;
         }
@@ -50,15 +60,25 @@ namespace GreaterFileShare.Hosts.WPF.Models
         }
         public void Start(string path, int port)
         {
-            if (IsHosting)
+            try
             {
-                throw new InvalidProgramException("Still Running, need shutdown first");
+                if (IsHosting)
+                {
+                    throw new InvalidProgramException("Still Running, need shutdown first");
+                }
+                var l = ServiceLocator.Instance.Resolve<ILauncher>();
+                var cts = new CancellationTokenSource();
+                var t = l.RunWebsiteAsync(path, port, cts.Token);
+                SetupStarted(t, cts);
+                IsHosting = true;
             }
-            var l = ServiceLocator.Instance.Resolve<ILauncher>();
-            var cts = new CancellationTokenSource();
-            var t = l.RunWebsiteAsync(path, port, cts.Token);
-            SetupStarted(t, cts);
-            IsHosting = true;
+            catch (Exception ex)
+            {
+                this.LastException = ex;
+                IsLastStartFailed = true;
+                throw;
+            }
+            IsLastStartFailed = false;
         }
         public void Stop()
         {
@@ -68,12 +88,12 @@ namespace GreaterFileShare.Hosts.WPF.Models
         public string Path
         {
             get { return _PathLocator(this).Value; }
-            private set { _PathLocator(this).SetValueAndTryNotify(value); }
+            set { _PathLocator(this).SetValueAndTryNotify(value); }
         }
         #region Property string Path Setup        
         protected Property<string> _Path = new Property<string> { LocatorFunc = _PathLocator };
         static Func<BindableBase, ValueContainer<string>> _PathLocator = RegisterContainerLocator<string>(nameof(Path), model => model.Initialize(nameof(Path), ref model._Path, ref _PathLocator, _PathDefaultValueFactory));
-        static Func<string> _PathDefaultValueFactory = () =>"c:\\";// new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.GetDirectories("contents").FirstOrDefault()?.FullName;
+        static Func<string> _PathDefaultValueFactory = () => "c:\\";// new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.GetDirectories("contents").FirstOrDefault()?.FullName;
 
         #endregion
 
@@ -107,6 +127,74 @@ namespace GreaterFileShare.Hosts.WPF.Models
         static Func<bool> _IsHostingDefaultValueFactory = () => default(bool);
         #endregion
 
+
+
+        public Exception LastException
+        {
+            get { return _LastExceptionLocator(this).Value; }
+            set { _LastExceptionLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property Exception LastException Setup        
+        protected Property<Exception> _LastException = new Property<Exception> { LocatorFunc = _LastExceptionLocator };
+        static Func<BindableBase, ValueContainer<Exception>> _LastExceptionLocator = RegisterContainerLocator<Exception>(nameof(LastException), model => model.Initialize(nameof(LastException), ref model._LastException, ref _LastExceptionLocator, _LastExceptionDefaultValueFactory));
+        static Func<Exception> _LastExceptionDefaultValueFactory = () => default(Exception);
+        #endregion
+
+
+        public bool IsLastStartFailed
+        {
+            get { return _IsLastStartFailedLocator(this).Value; }
+            set { _IsLastStartFailedLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property bool IsLastStartFailed Setup        
+        protected Property<bool> _IsLastStartFailed = new Property<bool> { LocatorFunc = _IsLastStartFailedLocator };
+        static Func<BindableBase, ValueContainer<bool>> _IsLastStartFailedLocator = RegisterContainerLocator<bool>(nameof(IsLastStartFailed), model => model.Initialize(nameof(IsLastStartFailed), ref model._IsLastStartFailed, ref _IsLastStartFailedLocator, _IsLastStartFailedDefaultValueFactory));
+        static Func<bool> _IsLastStartFailedDefaultValueFactory = () => default(bool);
+        #endregion
+
+
+        public CommandModel<ReactiveCommand, String> CommandStartHosting
+        {
+            get { return _CommandStartHostingLocator(this).Value; }
+            set { _CommandStartHostingLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandStartHosting Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandStartHosting = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandStartHostingLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandStartHostingLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandStartHosting), model => model.Initialize(nameof(CommandStartHosting), ref model._CommandStartHosting, ref _CommandStartHostingLocator, _CommandStartHostingDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandStartHostingDefaultValueFactory =
+            model =>
+            {
+                var resource = nameof(CommandStartHosting);           // Command resource  
+                var commandId = nameof(CommandStartHosting);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.Do(
+                         e =>
+                        {
+                            //Todo: Add StartHosting logic here, or
+
+                            if (!vm.IsHosting)
+                            {
+                                vm.Start();
+
+                            }
+                            else
+                            {
+                                vm.Stop();
+                            }
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+                return cmdmdl;
+            };
+
+        #endregion
 
 
 

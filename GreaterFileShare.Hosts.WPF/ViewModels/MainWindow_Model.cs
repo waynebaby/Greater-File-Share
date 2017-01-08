@@ -22,15 +22,32 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         // If you have install the code sniplets, use "propvm + [tab] +[tab]" create a property propcmd for command
         // 如果您已经安装了 MVVMSidekick 代码片段，请用 propvm +tab +tab 输入属性 propcmd 输入命令
 
+        IDisposable _currentTaskListening;
         public MainWindow_Model()
         {
 
-            this.CurrentTask.ListenChanged(x => x.IsHosting)
-                .ObserveOnDispatcher()
-                .Subscribe(w => IsUIBusy = CurrentTask.IsHosting)
+            this.GetValueContainer(x => x.CurrentTask)
+                .GetEventObservable()
+                .Subscribe(
+                e =>
+                {
+                    var oldOne = e.EventArgs.OldValue;
+                    _currentTaskListening?.Dispose();
+                    var newOne = e.EventArgs.NewValue;
+                    var hostingListen = newOne
+                        .ListenChanged(x => x.IsHosting)
+                        .ObserveOnDispatcher()
+                        .Subscribe(w => IsUIBusy = CurrentTask.IsHosting);
+
+                    _currentTaskListening = hostingListen;
+                })
                 .DisposeWith(this);
 
             CurrentTask.DisposeWith(this);
+
+            var st = new ShareFileTask();
+            HostingTasks.Add(st);
+            CurrentTask = st;
         }
 
 
@@ -38,7 +55,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         public ShareFileTask CurrentTask
         {
             get { return _CurrentTaskLocator(this).Value; }
-            private set { _CurrentTaskLocator(this).SetValueAndTryNotify(value); }
+            set { _CurrentTaskLocator(this).SetValueAndTryNotify(value); }
         }
         #region Property ShareFileTask CurrentTask Setup        
         protected Property<ShareFileTask> _CurrentTask = new Property<ShareFileTask> { LocatorFunc = _CurrentTaskLocator };
@@ -61,86 +78,21 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
 
 
-        public CommandModel<ReactiveCommand, String> CommandStartHosting
+        public ObservableCollection<ShareFileTask> HostingTasks
         {
-            get { return _CommandStartHostingLocator(this).Value; }
-            set { _CommandStartHostingLocator(this).SetValueAndTryNotify(value); }
+            get { return _HostingTasksLocator(this).Value; }
+            set { _HostingTasksLocator(this).SetValueAndTryNotify(value); }
         }
-        #region Property CommandModel<ReactiveCommand, String> CommandStartHosting Setup        
-
-        protected Property<CommandModel<ReactiveCommand, String>> _CommandStartHosting = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandStartHostingLocator };
-        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandStartHostingLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandStartHosting), model => model.Initialize(nameof(CommandStartHosting), ref model._CommandStartHosting, ref _CommandStartHostingLocator, _CommandStartHostingDefaultValueFactory));
-        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandStartHostingDefaultValueFactory =
-            model =>
-            {
-                var resource = nameof(CommandStartHosting);           // Command resource  
-                var commandId = nameof(CommandStartHosting);
-                var vm = CastToCurrentType(model);
-                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
-
-                cmd.DoExecuteUIBusyTask(
-                        vm,
-                        async e =>
-                        {
-                            //Todo: Add StartHosting logic here, or
-                            vm.CurrentTask.Start();
-                            await MVVMSidekick.Utilities.TaskExHelper.Yield();
-                        })
-                    .DoNotifyDefaultEventRouter(vm, commandId)
-                    .Subscribe()
-                    .DisposeWith(vm);
-
-                var cmdmdl = cmd.CreateCommandModel(resource);
-
-                cmdmdl.ListenToIsUIBusy(
-                    model: vm,
-                    canExecuteWhenBusy: false);
-                return cmdmdl;
-            };
-
+        #region Property ObservableCollection<ShareFileTask> HostingTasks Setup        
+        protected Property<ObservableCollection<ShareFileTask>> _HostingTasks = new Property<ObservableCollection<ShareFileTask>> { LocatorFunc = _HostingTasksLocator };
+        static Func<BindableBase, ValueContainer<ObservableCollection<ShareFileTask>>> _HostingTasksLocator = RegisterContainerLocator<ObservableCollection<ShareFileTask>>(nameof(HostingTasks), model => model.Initialize(nameof(HostingTasks), ref model._HostingTasks, ref _HostingTasksLocator, _HostingTasksDefaultValueFactory));
+        static Func<ObservableCollection<ShareFileTask>> _HostingTasksDefaultValueFactory = () => new ObservableCollection<ShareFileTask>();
         #endregion
 
 
 
+    
 
-        public CommandModel<ReactiveCommand, String> CommandStopHosting
-        {
-            get { return _CommandStopHostingLocator(this).Value; }
-            set { _CommandStopHostingLocator(this).SetValueAndTryNotify(value); }
-        }
-        #region Property CommandModel<ReactiveCommand, String> CommandStopHosting Setup        
-
-        protected Property<CommandModel<ReactiveCommand, String>> _CommandStopHosting = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandStopHostingLocator };
-        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandStopHostingLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandStopHosting), model => model.Initialize(nameof(CommandStopHosting), ref model._CommandStopHosting, ref _CommandStopHostingLocator, _CommandStopHostingDefaultValueFactory));
-        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandStopHostingDefaultValueFactory =
-            model =>
-            {
-                var resource = nameof(CommandStopHosting);           // Command resource  
-                var commandId = nameof(CommandStopHosting);
-                var vm = CastToCurrentType(model);
-                var cmd = new ReactiveCommand(canExecute: false) { ViewModel = model }; //New Command Core
-               cmd.DoExecuteUIBusyTask(
-                        vm,
-                        async e =>
-                        {
-                            vm.CurrentTask.Stop();
-                            //Todo: Add StopHosting logic here, or
-                            await MVVMSidekick.Utilities.TaskExHelper.Yield();
-                        })
-                    .DoNotifyDefaultEventRouter(vm, commandId)
-                    .Subscribe()
-                    .DisposeWith(vm);
-
-                var cmdmdl = cmd.CreateCommandModel(resource);
-
-                var ob = vm.ListenChanged(x => x.IsUIBusy)
-                   .Select(x => vm.IsUIBusy);
-                cmd.ListenCanExecuteObservable(ob);
-
-                return cmdmdl;
-            };
-
-        #endregion
 
 
         public CommandModel<ReactiveCommand, String> CommandSelectPath
@@ -173,9 +125,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
                 var cmdmdl = cmd.CreateCommandModel(resource);
 
-                cmdmdl.ListenToIsUIBusy(
-                    model: vm,
-                    canExecuteWhenBusy: false);
+
                 return cmdmdl;
             };
 
@@ -204,7 +154,27 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                         vm,
                         async e =>
                         {
-                            //Todo: Add NewHost logic here, or
+                            var t = new ShareFileTask();
+                            if (vm.HostingTasks.Count > 0)
+                            {
+                                var hs = new HashSet<int>(vm.HostingTasks.Select(x => x.Port).Where(x => x.HasValue).Select(x => x.Value));
+                                t.Port = vm.HostingTasks.Max(x => x.Port ?? 0) + 1;
+                                while (hs.Contains(t.Port.Value))
+                                {
+                                    t.Port++;
+                                    if (t.Port > 65535)
+                                    {
+                                        t.Port = 0;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                t.Port = 8080;
+                            }
+                            vm.HostingTasks.Add(t);
+                            vm.CurrentTask = t;
+
                             await MVVMSidekick.Utilities.TaskExHelper.Yield();
                         })
                     .DoNotifyDefaultEventRouter(vm, commandId)
@@ -213,11 +183,13 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
                 var cmdmdl = cmd.CreateCommandModel(resource);
 
-           
+
                 return cmdmdl;
             };
 
         #endregion
+
+
 
 
     }
