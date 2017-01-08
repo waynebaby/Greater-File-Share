@@ -2,17 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GreaterFileShare.Hosts.WPF.Models
 {
 
-    //[DataContract() ] //if you want
+    [DataContract()] //if you want
     public class ContentTypePair : BindableBase<ContentTypePair>
     {
 
-
+        [DataMember]
         public string ExtensionName
         {
             get { return _ExtensionNameLocator(this).Value; }
@@ -24,7 +25,7 @@ namespace GreaterFileShare.Hosts.WPF.Models
         static Func<string> _ExtensionNameDefaultValueFactory = () => default(string);
         #endregion
 
-
+        [DataMember]
         public string ContentType
         {
             get { return _ContentTypeLocator(this).Value; }

@@ -29,6 +29,8 @@ namespace GreaterFileShare.Hosts.WPF
             MVVMSidekick.Startups.StartupFunctions.RunAllConfig();
             ServiceLocator.Instance.Register<ILauncher, Launcher>();
             ServiceLocator.Instance.Register<INewHostService, NewHostService>();
+            ServiceLocator.Instance.Register<INetworkService, NetworkService>();
+
         }
 
         protected override void OnStartup(StartupEventArgs e)

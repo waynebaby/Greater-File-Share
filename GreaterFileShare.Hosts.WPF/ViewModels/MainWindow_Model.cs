@@ -124,18 +124,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
 
 
-        public ObservableCollection<ContentTypePair> AdditionalContentTypes
-        {
-            get { return _AdditionalContentTypesLocator(this).Value; }
-            set { _AdditionalContentTypesLocator(this).SetValueAndTryNotify(value); }
-        }
-        #region Property ObservableCollection<ContentTypePair> AdditionalContentTypes Setup        
-        protected Property<ObservableCollection<ContentTypePair>> _AdditionalContentTypes = new Property<ObservableCollection<ContentTypePair>> { LocatorFunc = _AdditionalContentTypesLocator };
-        static Func<BindableBase, ValueContainer<ObservableCollection<ContentTypePair>>> _AdditionalContentTypesLocator = RegisterContainerLocator<ObservableCollection<ContentTypePair>>(nameof(AdditionalContentTypes), model => model.Initialize(nameof(AdditionalContentTypes), ref model._AdditionalContentTypes, ref _AdditionalContentTypesLocator, _AdditionalContentTypesDefaultValueFactory));
-        static Func<ObservableCollection<ContentTypePair>> _AdditionalContentTypesDefaultValueFactory = () => new ObservableCollection<ContentTypePair>();
-        #endregion
-
-
+    
 
         public ObservableCollection<ShareFileTask> HostingTasks
         {
@@ -147,9 +136,6 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         static Func<BindableBase, ValueContainer<ObservableCollection<ShareFileTask>>> _HostingTasksLocator = RegisterContainerLocator<ObservableCollection<ShareFileTask>>(nameof(HostingTasks), model => model.Initialize(nameof(HostingTasks), ref model._HostingTasks, ref _HostingTasksLocator, _HostingTasksDefaultValueFactory));
         static Func<ObservableCollection<ShareFileTask>> _HostingTasksDefaultValueFactory = () => new ObservableCollection<ShareFileTask>();
         #endregion
-
-
-
 
 
 
@@ -167,20 +153,20 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
             model =>
             {
                 var resource = nameof(CommandSelectPath);           // Command resource  
-                var commandId = nameof(CommandSelectPath);
+            var commandId = nameof(CommandSelectPath);
                 var vm = CastToCurrentType(model);
                 var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
 
-                cmd.DoExecuteUIBusyTask(
-                        vm,
-                        async e =>
-                        {
-                            //Todo: Add SelectPath logic here, or
-                            await MVVMSidekick.Utilities.TaskExHelper.Yield();
-                        })
-                    .DoNotifyDefaultEventRouter(vm, commandId)
-                    .Subscribe()
-                    .DisposeWith(vm);
+            cmd.DoExecuteUIBusyTask(
+                    vm,
+                    async e =>
+                    {
+                    //Todo: Add SelectPath logic here, or
+                    await MVVMSidekick.Utilities.TaskExHelper.Yield();
+                    })
+                .DoNotifyDefaultEventRouter(vm, commandId)
+                .Subscribe()
+                .DisposeWith(vm);
 
                 var cmdmdl = cmd.CreateCommandModel(resource);
 
@@ -205,40 +191,40 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
             model =>
             {
                 var resource = "CommandNewHost";           // Command resource  
-                var commandId = "CommandNewHost";
+            var commandId = "CommandNewHost";
                 var vm = CastToCurrentType(model);
                 var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
 
-                cmd.DoExecuteUIBusyTask(
-                        vm,
-                        async e =>
+            cmd.DoExecuteUIBusyTask(
+                    vm,
+                    async e =>
+                    {
+                        var t = new ShareFileTask();
+                        if (vm.HostingTasks.Count > 0)
                         {
-                            var t = new ShareFileTask();
-                            if (vm.HostingTasks.Count > 0)
+                            var hs = new HashSet<int>(vm.HostingTasks.Select(x => x.Port).Where(x => x.HasValue).Select(x => x.Value));
+                            t.Port = vm.HostingTasks.Max(x => x.Port ?? 0) + 1;
+                            while (hs.Contains(t.Port.Value))
                             {
-                                var hs = new HashSet<int>(vm.HostingTasks.Select(x => x.Port).Where(x => x.HasValue).Select(x => x.Value));
-                                t.Port = vm.HostingTasks.Max(x => x.Port ?? 0) + 1;
-                                while (hs.Contains(t.Port.Value))
+                                t.Port++;
+                                if (t.Port > 65535)
                                 {
-                                    t.Port++;
-                                    if (t.Port > 65535)
-                                    {
-                                        t.Port = 0;
-                                    }
+                                    t.Port = 0;
                                 }
                             }
-                            else
-                            {
-                                t.Port = 8080;
-                            }
-                            vm.HostingTasks.Add(t);
-                            vm.CurrentTask = t;
+                        }
+                        else
+                        {
+                            t.Port = 8080;
+                        }
+                        vm.HostingTasks.Add(t);
+                        vm.CurrentTask = t;
 
-                            await MVVMSidekick.Utilities.TaskExHelper.Yield();
-                        })
-                    .DoNotifyDefaultEventRouter(vm, commandId)
-                    .Subscribe()
-                    .DisposeWith(vm);
+                        await MVVMSidekick.Utilities.TaskExHelper.Yield();
+                    })
+                .DoNotifyDefaultEventRouter(vm, commandId)
+                .Subscribe()
+                .DisposeWith(vm);
 
                 var cmdmdl = cmd.CreateCommandModel(resource);
 
@@ -249,6 +235,47 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         #endregion
 
 
+
+        public CommandModel<ReactiveCommand, String> CommandShowQR
+        {
+            get { return _CommandShowQRLocator(this).Value; }
+            set { _CommandShowQRLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandShowQR Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandShowQR = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandShowQRLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandShowQRLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandShowQR), model => model.Initialize(nameof(CommandShowQR), ref model._CommandShowQR, ref _CommandShowQRLocator, _CommandShowQRDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandShowQRDefaultValueFactory =
+            model =>
+            {
+                var resource = nameof(CommandShowQR);           // Command resource  
+                var commandId = nameof(CommandShowQR);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+                            var v2 = new UriAndQRs_Model()
+                            {
+                                CurrentTask = vm.CurrentTask,
+                            };
+                            await vm.StageManager.DefaultStage.Show(v2);
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+                cmdmdl.ListenToIsUIBusy(
+                    model: vm,
+                    canExecuteWhenBusy: false);
+                return cmdmdl;
+            };
+
+        #endregion
 
 
     }

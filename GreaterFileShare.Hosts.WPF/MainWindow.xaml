@@ -11,13 +11,14 @@
 
 
     <mvvm:MVVMWindow.Resources >
+        <Glue:ShareTaskUrlConverter x:Key="ShareTaskUrlConverter"/>
         <Glue:TaskStateConverter x:Key="TaskStateConverter"/>
         <Glue:IsNotNullValueConverter x:Key="IsNotNullValueConverter"/>
         <Glue:IsNullValueConverter x:Key="IsNullValueConverter"/>
         <Glue:NotBoolValueConverter x:Key="NotBoolValueConverter"/>
         <vm:MainWindow_Model x:Key="DesignVM" />
         <DataTemplate x:Key="ShareFileTaskTemplate">
-            <StackPanel Name="stackPanel"  Width="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}}"  Background="#30FFFFff" MinWidth="300" MinHeight="80">
+            <StackPanel x:Name="stackPanel"  Width="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}}"  Background="#30FFFFff" MinWidth="300" MinHeight="80">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup x:Name="ErrorStateGroup">
 
@@ -45,23 +46,24 @@
                     </VisualStateGroup>
                 </VisualStateManager.VisualStateGroups>
                 <i:Interaction.Triggers>
-                    <ei:PropertyChangedTrigger Binding="{Binding Path=HasErrors}" >
+                    <ei:PropertyChangedTrigger Binding="{Binding HasErrors}" >
                         <ei:GoToStateAction   StateName="{Binding Converter={StaticResource TaskStateConverter}}"/>
                     </ei:PropertyChangedTrigger>
-                    <ei:PropertyChangedTrigger Binding="{Binding Path=IsHosting}" >
+                    <ei:PropertyChangedTrigger Binding="{Binding IsHosting}" >
                         <ei:GoToStateAction   StateName="{Binding Converter={StaticResource TaskStateConverter}}"/>
                     </ei:PropertyChangedTrigger>
                 </i:Interaction.Triggers>
                 <TextBlock><Run Text="Port"/><Run Text="&#x9;&#x9;"/><Run Text="{Binding Port}"/></TextBlock>
                 <TextBlock><Run Text="Path"/><Run Text="&#x9;&#x9;"/><Run Text="{Binding Path}" /></TextBlock>
-                <TextBlock><Run Text="Is Hosting"/><Run Text="&#x9;"/><Run Text="{Binding IsHosting,Mode=OneWay}" /></TextBlock>
+                <TextBlock><Run Text="Is Hosting"/><Run Text="&#x9;"/><Run Text="{Binding IsHosting, Mode=OneWay}" /></TextBlock>
                 <TextBlock><Run Text="Last Error"/><Run Text="&#x9;"/><Run Text="{Binding LastException.Message, Mode=OneWay}"/></TextBlock>
+                <TextBlock><Run Text="Test Link"/><Run Text="&#x9;"/><Hyperlink NavigateUri="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}" ><Run Text="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}"/></Hyperlink></TextBlock>
             </StackPanel>
 
         </DataTemplate>
         <DataTemplate x:Key="MessageItemTemplate">
             <Grid>
-                <TextBlock><Run Text="{Binding Path=Time}"/><Run Text="&#x9;"/><Run Text="{Binding Path=Message}"/></TextBlock>
+                <TextBlock><Run Text="{Binding Time}"/><Run Text="&#x9;"/><Run Text="{Binding Message}"/></TextBlock>
             </Grid>
         </DataTemplate>
         <Style x:Key="FocusVisual">
@@ -79,56 +81,6 @@
         <SolidColorBrush x:Key="Item.SelectedInactive.Border" Color="#FFDADADA"/>
         <SolidColorBrush x:Key="Item.SelectedActive.Background" Color="#3D26A0DA"/>
         <SolidColorBrush x:Key="Item.SelectedActive.Border" Color="#FF26A0DA"/>
-        <Style x:Key="ListBoxItemStyle1" TargetType="{x:Type ListBoxItem}">
-            <Setter Property="SnapsToDevicePixels" Value="True"/>
-            <Setter Property="Padding" Value="4,1"/>
-            <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-            <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                        <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
-                            <StackPanel>
-
-                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                            </StackPanel>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition Property="IsMouseOver" Value="True"/>
-                                </MultiTrigger.Conditions>
-                                <Setter Property="Background" TargetName="Bd" Value="{StaticResource Item.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Item.MouseOver.Border}"/>
-                            </MultiTrigger>
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition Property="Selector.IsSelectionActive" Value="False"/>
-                                    <Condition Property="IsSelected" Value="True"/>
-                                </MultiTrigger.Conditions>
-                                <Setter Property="Background" TargetName="Bd" Value="{StaticResource Item.SelectedInactive.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Item.SelectedInactive.Border}"/>
-                            </MultiTrigger>
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition Property="Selector.IsSelectionActive" Value="True"/>
-                                    <Condition Property="IsSelected" Value="True"/>
-                                </MultiTrigger.Conditions>
-                                <Setter Property="Background" TargetName="Bd" Value="{StaticResource Item.SelectedActive.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="Bd" Value="{StaticResource Item.SelectedActive.Border}"/>
-                            </MultiTrigger>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter Property="TextElement.Foreground" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
 
     </mvvm:MVVMWindow.Resources>
 
@@ -159,14 +111,32 @@
             <ColumnDefinition Width="25*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="357"/>
+            <RowDefinition Height="400" MinHeight="350"/>
             <RowDefinition Height="4"/>
             <RowDefinition Height="192*"/>
         </Grid.RowDefinitions>
 
         <Border  Grid.Row="0" Grid.ColumnSpan="1"  Background="#33FFFFFF" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
-            <Grid VerticalAlignment="Center">
-                <StackPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="28"/>
+                        <RowDefinition Height="165*"/>
+                    </Grid.RowDefinitions>
+                    <Label>Additional Content Types</Label>
+                    <DataGrid Grid.Row="1" AutoGenerateColumns="False" Background="#4CAEE1FF" ItemsSource="{Binding Path=CurrentTask.AdditionalContentTypes}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn  Width="120" Binding="{Binding ExtensionName}" Header="Extension Name"/>
+                            <DataGridTextColumn Width="120" Binding="{Binding ContentType}" Header="Content Type"/>
+                        </DataGrid.Columns>
+
+                    </DataGrid>
+                </Grid>
+                <StackPanel Grid.Row="1">
                     <StackPanel.Resources >
                         <Style TargetType="{x:Type StackPanel}">
                             <Setter Property="Margin" Value="4"/>
@@ -190,6 +160,9 @@
                             <Button Grid.Column="1" Content="..." IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}" />
                         </Grid>
                     </StackPanel>
+                    <StackPanel>
+                       
+                    </StackPanel>   
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                         <StackPanel.Resources>
                             <Style TargetType="{x:Type Button}">
@@ -217,13 +190,15 @@
                     ItemsSource="{Binding HostingTasks}" 
                     SelectedItem="{Binding CurrentTask, Mode=TwoWay}" 
                     SelectedIndex="0" 
-                    ItemTemplate="{DynamicResource ShareFileTaskTemplate}" ItemContainerStyle="{DynamicResource ListBoxItemStyle1}" 
+                    ItemTemplate="{DynamicResource ShareFileTaskTemplate}"  
                            >
 
 
                 </ListBox>
-                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="28" Margin="154,9,154,5" Width="102">
-                    <Button Command="{Binding CommandNewHost}"  Padding="4"   Content="New Host Entry" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Button Command="{Binding CommandNewHost}"  Padding="4"  Margin="4"  Content="New Host Entry" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Button  Padding="4"  Margin="4" Command="{Binding CommandShowQR}">Show QR and Links</Button>
+
                 </StackPanel>
             </Grid>
         </Border>

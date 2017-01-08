@@ -18,10 +18,10 @@ namespace GreaterFileShare.Hosts.Console
 
             var l = new Core.Launcher();
 
-            l.RunWebsiteAsync(
-                new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.GetDirectories("contents").FirstOrDefault()?.FullName,
-                5000,
-                default(CancellationToken)).Wait();
+            //l.RunWebsiteAsync(
+            //    new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.GetDirectories("contents").FirstOrDefault()?.FullName,
+            //    5000,
+            //    default(CancellationToken)).Wait();
 
             System.Console.Read();
         }

@@ -31,15 +31,17 @@ namespace GreaterFileShare.Web
         public const string FileServerPathKey = nameof(FileServerPathKey);
         public const string FileServerContentTypesKey = nameof(FileServerContentTypesKey);
 
-        public static async Task StartAsync(string folderName, int port = 8080, CancellationToken cancellationToken = default(CancellationToken))
+        public static async Task StartAsync(string folderName, int port = 8080,IDictionary<string,string> extentionContentTypeDict =null, CancellationToken cancellationToken = default(CancellationToken))
         {
+            if (extentionContentTypeDict!=null)
+            {
+                Startup.AdditionalContentTypes = new System.Collections.Concurrent.ConcurrentDictionary<string, string>(extentionContentTypeDict);
+            }
             var contentDir = new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.GetDirectories("contents").FirstOrDefault();
             var host = new WebHostBuilder()
-                .UseKestrel()
-              
+                .UseKestrel()              
                 .UseContentRoot(folderName)
                 .UseUrls("http://0.0.0.0:" + port.ToString())
-
                 .UseStartup<Startup>()
                 .Build();
             await RunAsync(host, cancellationToken, "", port);

@@ -18,12 +18,7 @@ namespace GreaterFileShare.Web
 {
     public class Startup
     {
-        public static ConcurrentDictionary<string, string> AdditionalContentTypes { get; private set; }
-            = new ConcurrentDictionary<string, string>(
-                new Dictionary<string, string>
-                {
-                    { ".mkv","video/mkv"}
-                });
+        public static ConcurrentDictionary<string, string> AdditionalContentTypes { get;  set; }
 
         public Startup(IHostingEnvironment env)
         {
@@ -80,12 +75,16 @@ namespace GreaterFileShare.Web
             app.UseStaticFiles(new StaticFileOptions()
             {
                 ContentTypeProvider = contentTypeProvider,
-                FileProvider = env.ContentRootFileProvider
+                FileProvider = env.ContentRootFileProvider,
+                 RequestPath="/Files"
+                
             });
 
             app.UseDirectoryBrowser(new DirectoryBrowserOptions()
             {
-                FileProvider = env.ContentRootFileProvider
+                FileProvider = env.ContentRootFileProvider,
+                 RequestPath="/Files"
+                 
             });
 
 

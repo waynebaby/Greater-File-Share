@@ -58,6 +58,10 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -115,6 +119,8 @@
       <HintPath>..\packages\Rx-XAML.2.2.5\lib\net45\System.Reactive.Windows.Threading.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -157,6 +163,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Startups\UriAndQRs.cs" />
+    <Compile Include="ViewModels\UriAndQRs_Model.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -165,6 +173,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Glue\ShareTaskUrlConverter.cs" />
     <Compile Include="Glue\TaskStateConverter.cs" />
     <Compile Include="Glue\IsNullValueConverter.cs" />
     <Compile Include="Glue\NotBoolValueConverter.cs" />
@@ -175,16 +184,25 @@
     <Compile Include="Models\ContentTypePair.cs" />
     <Compile Include="Models\MessageEntry.cs" />
     <Compile Include="Models\ShareFileTask.cs" />
+    <Compile Include="Services\INetworkService.cs" />
     <Compile Include="Services\INewHostService.cs" />
     <Compile Include="Services\ISettingRepoService.cs" />
+    <Compile Include="Services\NetworkService.cs" />
     <Compile Include="Services\NewHostService.cs" />
     <Compile Include="Services\SettingRepoService.cs" />
     <Compile Include="Startups\StartupFunctions.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="UriAndQRs.xaml.cs">
+      <DependentUpon>UriAndQRs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\MainWindow_Model.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UriAndQRs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

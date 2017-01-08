@@ -12,9 +12,9 @@ namespace GreaterFileShare.Hosts.Core
     public class Launcher : ILauncher
     {
 
-        public async Task RunWebsiteAsync(string contentFolderPath, int port = 8080, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task RunWebsiteAsync(string contentFolderPath, int port = 8080,IDictionary<string,string > additionalConentTypes =null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            await GreaterFileShare.Web.Program.StartAsync(contentFolderPath, port , cancellationToken);
+            await GreaterFileShare.Web.Program.StartAsync(contentFolderPath, port , additionalConentTypes, cancellationToken);
         
         }
     }

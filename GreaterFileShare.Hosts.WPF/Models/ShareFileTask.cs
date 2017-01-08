@@ -11,11 +11,13 @@ using GreaterFileShare.Hosts.Core;
 using MVVMSidekick.Services;
 using System.IO;
 using MVVMSidekick.Reactive;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
 
 namespace GreaterFileShare.Hosts.WPF.Models
 {
 
-    //[DataContract() ] //if you want
+    [DataContract()] //if you want
     public class ShareFileTask : BindableBase<ShareFileTask>
     {
         public ShareFileTask()
@@ -54,6 +56,31 @@ namespace GreaterFileShare.Hosts.WPF.Models
             _cancelSource = cancelSource;
         }
 
+        [DataMember]
+
+        public ObservableCollection<ContentTypePair> AdditionalContentTypes
+        {
+            get { return _AdditionalContentTypesLocator(this).Value; }
+            set { _AdditionalContentTypesLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property ObservableCollection<ContentTypePair> AdditionalContentTypes Setup        
+        protected Property<ObservableCollection<ContentTypePair>> _AdditionalContentTypes = new Property<ObservableCollection<ContentTypePair>> { LocatorFunc = _AdditionalContentTypesLocator };
+        static Func<BindableBase, ValueContainer<ObservableCollection<ContentTypePair>>> _AdditionalContentTypesLocator = RegisterContainerLocator<ObservableCollection<ContentTypePair>>(nameof(AdditionalContentTypes), model => model.Initialize(nameof(AdditionalContentTypes), ref model._AdditionalContentTypes, ref _AdditionalContentTypesLocator, _AdditionalContentTypesDefaultValueFactory));
+        static Func<ObservableCollection<ContentTypePair>> _AdditionalContentTypesDefaultValueFactory =
+            () => new ObservableCollection<ContentTypePair>()
+                    {
+                        new ContentTypePair
+                        {
+                            ExtensionName = ".mkv",
+                            ContentType ="video/mkv"
+                        }
+            };
+
+
+        #endregion
+
+
+
         public void Start()
         {
             Start(this.Path, this.Port.Value);
@@ -68,7 +95,10 @@ namespace GreaterFileShare.Hosts.WPF.Models
                 }
                 var l = ServiceLocator.Instance.Resolve<ILauncher>();
                 var cts = new CancellationTokenSource();
-                var t = l.RunWebsiteAsync(path, port, cts.Token);
+                var t = l.RunWebsiteAsync(
+                    path, port,
+                    this.AdditionalContentTypes?.ToDictionary(x => x.ExtensionName, x => x.ContentType),
+                    cts.Token);
                 SetupStarted(t, cts);
                 IsHosting = true;
                 IsLastStartFailed = false;
@@ -87,6 +117,8 @@ namespace GreaterFileShare.Hosts.WPF.Models
             _cancelSource?.Cancel();
         }
 
+        [DataMember]
+
         public string Path
         {
             get { return _PathLocator(this).Value; }
@@ -100,6 +132,7 @@ namespace GreaterFileShare.Hosts.WPF.Models
         #endregion
 
 
+        [DataMember]
 
         public int? Port
         {
