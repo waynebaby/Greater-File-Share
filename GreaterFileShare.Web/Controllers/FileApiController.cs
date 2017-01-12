@@ -13,10 +13,10 @@ namespace GreaterFileShare.Web.Controllers
     public class FileApiController : Controller, IFileSystemService
     {
 
-        public FileApiController()
-        {
+        //public FileApiController()
+        //{
 
-        }
+        //}
         public FileApiController(IFileSystemService rootService)
         {
             _rootService = rootService;
@@ -24,19 +24,19 @@ namespace GreaterFileShare.Web.Controllers
         IFileSystemService _rootService;
 
 
-        [HttpGet(nameof(GetFilesAsync))]
+        [HttpGet("GetFilesAsync/{folderPath}")]
 
-        public Task<IList<FileEntry>> GetFilesAsync(FolderEntry folder)
+        public Task<IList<FileEntry>> GetFilesAsync(string folderPath)
         {
-            return _rootService.GetFilesAsync(folder);
+            return _rootService.GetFilesAsync(folderPath);
         }
 
 
-        [HttpGet(nameof(GetFoldersAsync))]
+        [HttpGet("GetFoldersAsync/{folderPath}")]
 
-        public Task<IList<FolderEntry>> GetFoldersAsync(FolderEntry folder)
+        public Task<IList<FolderEntry>> GetFoldersAsync(string folderPath)
         {
-            return _rootService.GetFoldersAsync(folder);
+            return _rootService.GetFoldersAsync(folderPath);
         }
     }
 }

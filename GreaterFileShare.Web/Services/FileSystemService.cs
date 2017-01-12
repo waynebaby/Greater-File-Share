@@ -19,6 +19,7 @@ namespace GreaterFileShare.Services
             {
                 throw new ArgumentNullException(nameof(rootPath));
             }
+           
             _taskRoot = rootPath;
             _rootFolder = new Lazy<FolderEntry>(
                 () =>
@@ -42,9 +43,14 @@ namespace GreaterFileShare.Services
         private string _taskRoot;
         private Lazy<FolderEntry> _rootFolder;
 
-        public async Task<IList<FileEntry>> GetFilesAsync(FolderEntry folder)
+        public async Task<IList<FileEntry>> GetFilesAsync(string folderPath)
         {
-            var di = new DirectoryInfo(folder.FullPath);
+            if (!folderPath.StartsWith(_taskRoot))
+            {
+                throw new InvalidOperationException("Leaving Allowed Area?");
+            }
+
+            var di = new DirectoryInfo(folderPath);
             var fis = di.GetFiles();
 
             var rval = fis.Select(
@@ -65,9 +71,13 @@ namespace GreaterFileShare.Services
             return rval.ToList();
         }
 
-        public async Task<IList<FolderEntry>> GetFoldersAsync(FolderEntry folder)
+        public async Task<IList<FolderEntry>> GetFoldersAsync(string folderPath)
         {
-            var rdi = new DirectoryInfo(folder.FullPath);
+            if (!folderPath.StartsWith(_taskRoot))
+            {
+                throw new InvalidOperationException("Leaving Allowed Area?");
+            }
+            var rdi = new DirectoryInfo(folderPath);
             var dis = rdi.GetDirectories();
 
             var rval = dis.Select(

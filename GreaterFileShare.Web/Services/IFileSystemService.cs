@@ -5,7 +5,7 @@ namespace GreaterFileShare.Services
 {
     public interface IFileSystemService
     {
-        Task<IList<FileEntry>> GetFilesAsync(FolderEntry folder);
-        Task<IList<FolderEntry>> GetFoldersAsync(FolderEntry folder);
+        Task<IList<FileEntry>> GetFilesAsync(string folderPath);
+        Task<IList<FolderEntry>> GetFoldersAsync(string folderPath);
     }
 }
