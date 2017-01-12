@@ -1,26 +1,43 @@
 ﻿<mvvm:MVVMWindow x:Class="GreaterFileShare.Hosts.WPF.UriAndQRs"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="UriAndQRs" Height="350" Width="525"
+        Title="UriAndQRs" Height="768" Width="1024"
         xmlns:mvvm="clr-namespace:MVVMSidekick.Views;assembly=MVVMSidekick"
         xmlns:vm="clr-namespace:GreaterFileShare.Hosts.WPF.ViewModels" >
     <FrameworkElement.Resources>
         <vm:UriAndQRs_Model x:Key="DesignVM" />
     </FrameworkElement.Resources>
-    <Grid x:Name="grid" DataContext="{StaticResource DesignVM}">
+    <Grid x:Name="grid" Margin="8" DataContext="{StaticResource DesignVM}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="12*"/>
             <ColumnDefinition Width="35*"/>
         </Grid.ColumnDefinitions>
-        <ListBox ItemsSource="{Binding Hosts}">
-            
-        </ListBox>
-        <StackPanel Grid.Column="1"
-                    >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label>Open Folder API QR</Label>
+            <ListBox ItemsSource="{Binding Hosts}"  Grid.Row="1"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label>Open File QR</Label>
+            <TreeView ItemsSource="{Binding Hosts}" Grid.Row="1"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.RowSpan="2">
+    
+            <Image Margin="30,30,30,90"/>
+            <Button Height="30"  VerticalAlignment="Bottom" Content="Launch" Margin="8"/>
+        </Grid>
 
-            <Button >Launch</Button>
-        </StackPanel>
-        
 
     </Grid>
 </mvvm:MVVMWindow>

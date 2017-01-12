@@ -58,6 +58,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GreaterFileShare.Web">
+      <HintPath>..\$(ConfigurationName)Folder\bin\GreaterFileShare.Web.exe</HintPath>
+    </Reference>
     <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
       <Private>True</Private>
@@ -163,6 +166,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="..\GreaterFileShare.Web\Consts.cs">
+      <Link>Consts.cs</Link>
+    </Compile>
+    <Compile Include="Glue\ShareTaskApiUrlConverter.cs" />
+    <Compile Include="Models\FileFolderEntry.cs" />
+    <Compile Include="Models\IFileEntry.cs" />
     <Compile Include="Startups\UriAndQRs.cs" />
     <Compile Include="ViewModels\UriAndQRs_Model.cs" />
     <Page Include="MainWindow.xaml">

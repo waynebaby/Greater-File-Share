@@ -1,6 +1,6 @@
 {
   "dependencies": {
-   
+
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.AspNetCore.Mvc": "1.0.1",
     "Microsoft.AspNetCore.Razor.Tools": {
@@ -17,7 +17,12 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0"
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
+    "Swashbuckle.SwaggerGen":  "6.0.0-beta902",
+    "Swashbuckle.SwaggerUi":  "6.0.0-beta902"
+
+
+
   },
 
   "tools": {
@@ -45,7 +50,8 @@
   "buildOptions": {
     "emitEntryPoint": true,
     "preserveCompilationContext": true,
-    "define": [ "DEBUG", "TRACE" ]
+    "define": [ "DEBUG", "TRACE" ],
+    "xmlDoc": true
   },
 
   "runtimeOptions": {

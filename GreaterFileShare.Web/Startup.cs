@@ -13,12 +13,14 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.StaticFiles;
 using System.Collections.Concurrent;
+using Swashbuckle.Swagger.Model;
+using GreaterFileShare.Services;
 
 namespace GreaterFileShare.Web
 {
     public class Startup
     {
-        public static ConcurrentDictionary<string, string> AdditionalContentTypes { get;  set; }
+        public static ConcurrentDictionary<string, string> AdditionalContentTypes { get; set; }
 
         public Startup(IHostingEnvironment env)
         {
@@ -36,8 +38,29 @@ namespace GreaterFileShare.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             // Add framework services.
             services.AddMvc();
+            services.AddSwaggerGen();
+            services.ConfigureSwaggerGen(options =>
+            {
+                options.SingleApiVersion(new Info
+                {
+                    Version = "v1",
+                    Title = "Geo Search API",
+                    Description = "A simple api to search using geo location in Elasticsearch",
+                    TermsOfService = "None"
+                });
+                //options.IncludeXmlComments(pathToDoc);
+                options.DescribeAllEnumsAsStrings();
+            });
+            services.AddScoped<IFileSystemService, FileSystemService>(
+                sp =>
+                {
+                    var rp = sp.GetService<IHostingEnvironment>().ContentRootPath;
+                    return new FileSystemService(rp);
+                }
+                );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,7 +86,7 @@ namespace GreaterFileShare.Web
             var contentTypeProvider = new FileExtensionContentTypeProvider();
             // Add new mappings
 
-            if (AdditionalContentTypes!=null)
+            if (AdditionalContentTypes != null)
             {
                 var kvps = AdditionalContentTypes.ToArray();
                 foreach (var kvp in kvps)
@@ -76,25 +99,22 @@ namespace GreaterFileShare.Web
             {
                 ContentTypeProvider = contentTypeProvider,
                 FileProvider = env.ContentRootFileProvider,
-                 RequestPath="/Files"
-                
+                RequestPath = "/" + Consts.FilesRelativeUri
+
             });
 
             app.UseDirectoryBrowser(new DirectoryBrowserOptions()
             {
                 FileProvider = env.ContentRootFileProvider,
-                 RequestPath="/Files"
-                 
+                RequestPath = "/" + Consts.FilesRelativeUri
+
             });
 
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "API/{controller=Home}/{action=Index}/{id?}");
-            });
+            app.UseMvc();
 
+            app.UseSwagger();
+            app.UseSwaggerUi();
 
         }
     }

@@ -24,6 +24,8 @@ namespace GreaterFileShare.Hosts.WPF
     /// </summary>
     public partial class App : Application
     {
+   
+
         public static void InitNavigationConfigurationInThisAssembly()
         {
             MVVMSidekick.Startups.StartupFunctions.RunAllConfig();

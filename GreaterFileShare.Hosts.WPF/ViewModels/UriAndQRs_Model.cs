@@ -65,7 +65,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
             {
                 throw new InvalidOperationException("need a CurrentTask instance first");
             }
-            Hosts = new ObservableCollection<string>(nh.GetHosts().Select(x =>$"http://{x}:{CurrentTask.Port}/Files"));
+            Hosts = new ObservableCollection<string>(nh.GetHosts());
             await  base.OnBindedViewLoad(view);
         }
 
