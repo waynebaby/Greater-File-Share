@@ -172,6 +172,8 @@
     <Compile Include="Glue\ShareTaskApiUrlConverter.cs" />
     <Compile Include="Models\FileFolderEntry.cs" />
     <Compile Include="Models\IFileEntry.cs" />
+    <Compile Include="Services\IFileSystemHubService.cs" />
+    <Compile Include="Services\FileSystemHubService.cs" />
     <Compile Include="Startups\UriAndQRs.cs" />
     <Compile Include="ViewModels\UriAndQRs_Model.cs" />
     <Page Include="MainWindow.xaml">

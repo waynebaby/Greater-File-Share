@@ -16,7 +16,7 @@
         <Glue:IsNotNullValueConverter x:Key="IsNotNullValueConverter"/>
         <Glue:IsNullValueConverter x:Key="IsNullValueConverter"/>
         <Glue:NotBoolValueConverter x:Key="NotBoolValueConverter"/>
-        <vm:MainWindow_Model x:Key="DesignVM" />
+
         <DataTemplate x:Key="ShareFileTaskTemplate">
             <StackPanel x:Name="stackPanel"  Width="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}}"  Background="#30FFFFff" MinWidth="300" MinHeight="80">
                 <VisualStateManager.VisualStateGroups>

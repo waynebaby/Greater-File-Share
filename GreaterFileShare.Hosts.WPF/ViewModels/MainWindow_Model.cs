@@ -33,7 +33,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                 Messages.Add(new Models.MessageEntry { Time = DateTime.Now, Message = "Message Here" });
                 return;
             }
-
+            GreaterFileShare.Hosts.WPF.Services.FileSystemHubService.vmInstance = this;
             var source1 = GlobalEventRouter.GetEventChannel<Exception>()
                     .Select(x => x.EventData.Message);
 
