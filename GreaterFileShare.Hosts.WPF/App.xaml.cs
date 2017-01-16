@@ -75,7 +75,7 @@ namespace GreaterFileShare.Hosts.WPF
             switch (protocolType)
             {
                 case "NetTcpBinding":
-                    uri = new Uri("net.tcp://localhost:8800/" + type.FullName.Replace('.', '/'));
+                    uri = new Uri($"net.tcp://localhost:{Consts.WCFPort}/{Consts.WCFRelativeUri}");
                     break;
             }
             return uri;

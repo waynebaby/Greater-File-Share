@@ -9,17 +9,13 @@ using System.Windows.Data;
 
 namespace GreaterFileShare.Hosts.WPF.Glue
 {
-    public class ShareTaskApiUrlConverter : IValueConverter
+    public class HostNameWCFUrlConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            ShareFileTask ts;
-            if ((ts=value as ShareFileTask)!=null)
-            {
-                return new Uri( $"http://{parameter??"localhost"}:{ts.Port}/{Consts.SwaggerRelativeUri}");
-            }
 
-            return null;
+            return new Uri($"net.tcp://{value??"localhost"}:{Consts.WCFPort}/{Consts.WCFRelativeUri}");
+
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

@@ -23,7 +23,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         // If you have install the code sniplets, use "propvm + [tab] +[tab]" create a property propcmd for command
         // 如果您已经安装了 MVVMSidekick 代码片段，请用 propvm +tab +tab 输入属性 propcmd 输入命令
 
-        IDisposable _currentTaskListening;
+        //IDisposable _currentTaskListening;
         public MainWindow_Model()
         {
 
@@ -59,22 +59,22 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                     })
                 .DisposeWith(this);
 
-            this.GetValueContainer(x => x.CurrentTask)
-                .GetEventObservable()
-                .Subscribe(
-                e =>
-                {
-                    var oldOne = e.EventArgs.OldValue;
-                    _currentTaskListening?.Dispose();
-                    var newOne = e.EventArgs.NewValue;
-                    var hostingListen = newOne
-                        .ListenChanged(x => x.IsHosting)
-                        .ObserveOnDispatcher()
-                        .Subscribe(w => IsUIBusy = CurrentTask.IsHosting);
+            //this.GetValueContainer(x => x.CurrentTask)
+            //    .GetEventObservable()
+            //    .Subscribe(
+            //    e =>
+            //    {
+            //        var oldOne = e.EventArgs.OldValue;
+            //        _currentTaskListening?.Dispose();
+            //        var newOne = e.EventArgs.NewValue;
+            //        var hostingListen = newOne
+            //            .ListenChanged(x => x.IsHosting)
+            //            .ObserveOnDispatcher()
+            //            .Subscribe(w => IsUIBusy = CurrentTask.IsHosting);
 
-                    _currentTaskListening = hostingListen;
-                })
-                .DisposeWith(this);
+            //        _currentTaskListening = hostingListen;
+            //    })
+            //    .DisposeWith(this);
 
             CurrentTask.DisposeWith(this);
 
@@ -269,9 +269,6 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
                 var cmdmdl = cmd.CreateCommandModel(resource);
 
-                cmdmdl.ListenToIsUIBusy(
-                    model: vm,
-                    canExecuteWhenBusy: false);
                 return cmdmdl;
             };
 

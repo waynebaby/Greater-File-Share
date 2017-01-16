@@ -58,12 +58,12 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gma.QrCodeNet.0.4.1.2\lib\net40\Gma.QrCodeNet.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="GreaterFileShare.Web">
       <HintPath>..\$(ConfigurationName)Folder\bin\GreaterFileShare.Web.exe</HintPath>
-    </Reference>
-    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -169,11 +169,14 @@
     <Compile Include="..\GreaterFileShare.Web\Consts.cs">
       <Link>Consts.cs</Link>
     </Compile>
+    <Compile Include="Glue\HostNameWCFUrlConverter.cs" />
     <Compile Include="Glue\ShareTaskApiUrlConverter.cs" />
     <Compile Include="Models\FileFolderEntry.cs" />
     <Compile Include="Models\IFileEntry.cs" />
+    <Compile Include="Models\UrlGroup.cs" />
     <Compile Include="Services\IFileSystemHubService.cs" />
     <Compile Include="Services\FileSystemHubService.cs" />
+    <Compile Include="Services\QRService.cs" />
     <Compile Include="Startups\UriAndQRs.cs" />
     <Compile Include="ViewModels\UriAndQRs_Model.cs" />
     <Page Include="MainWindow.xaml">
