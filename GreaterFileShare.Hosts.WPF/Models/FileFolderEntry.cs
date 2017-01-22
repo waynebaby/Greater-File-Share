@@ -1,6 +1,7 @@
 ﻿using MVVMSidekick.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -10,7 +11,7 @@ namespace GreaterFileShare.Hosts.WPF.Models
 {
 
     [DataContract]
-    public abstract class FileFolderEntry<TSub>:BindableBase<TSub> where  TSub: FileFolderEntry<TSub>
+    public abstract class FileFolderEntry<TSub> : BindableBase<TSub> where TSub : FileFolderEntry<TSub>
     {
 
 
@@ -64,8 +65,33 @@ namespace GreaterFileShare.Hosts.WPF.Models
     }
 
     [DataContract]
+
     public class FolderEntry : FileFolderEntry<FolderEntry>
     {
+        [DataMember]
+        public ObservableCollection<FolderEntry> SubFolders
+        {
+            get { return _SubFoldersLocator(this).Value; }
+            set { _SubFoldersLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property ObservableCollection<FolderEntry> SubFolders Setup        
+        protected Property<ObservableCollection<FolderEntry>> _SubFolders = new Property<ObservableCollection<FolderEntry>> { LocatorFunc = _SubFoldersLocator };
+        static Func<BindableBase, ValueContainer<ObservableCollection<FolderEntry>>> _SubFoldersLocator = RegisterContainerLocator<ObservableCollection<FolderEntry>>(nameof(SubFolders), model => model.Initialize(nameof(SubFolders), ref model._SubFolders, ref _SubFoldersLocator, _SubFoldersDefaultValueFactory));
+        static Func<ObservableCollection<FolderEntry>> _SubFoldersDefaultValueFactory = () => new ObservableCollection<FolderEntry>();
+        #endregion
+
+
+        public ObservableCollection<FileEntry> Files
+        {
+            get { return _FilesLocator(this).Value; }
+            set { _FilesLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property ObservableCollection<FileEntry> Files Setup        
+        protected Property<ObservableCollection<FileEntry>> _Files = new Property<ObservableCollection<FileEntry>> { LocatorFunc = _FilesLocator };
+        static Func<BindableBase, ValueContainer<ObservableCollection<FileEntry>>> _FilesLocator = RegisterContainerLocator<ObservableCollection<FileEntry>>(nameof(Files), model => model.Initialize(nameof(Files), ref model._Files, ref _FilesLocator, _FilesDefaultValueFactory));
+        static Func<ObservableCollection<FileEntry>> _FilesDefaultValueFactory = () => new ObservableCollection<FileEntry>();
+        #endregion
+
 
     }
 }

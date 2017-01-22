@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using GreaterFileShare.Hosts.WPF.Services;
 using GreaterFileShare.Hosts.WPF.Models;
+using System.IO;
 
 namespace GreaterFileShare.Hosts.WPF.ViewModels
 {
@@ -23,24 +24,19 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         // If you have install the code sniplets, use "propvm + [tab] +[tab]" create a property propcmd for command
         // 如果您已经安装了 MVVMSidekick 代码片段，请用 propvm +tab +tab 输入属性 propcmd 输入命令
 
+
+        IFileSystemHubService _fileSystemHubService;
+
         public UriAndQRs_Model()
         {
-
-            this.ListenChanged(x => x.CurrentTask, x => x.SelectedHost)
-               .ObserveOnDispatcher()
-                 .Do(e =>
-               {
-                   Urls = new Models.UrlGroup(SelectedHost??"localhost", CurrentTask?.Port ?? 80);
-               })
-               .Subscribe()
-               .DisposeWith(this);
-            ;
-
 
 
         }
 
+        //public UriAndQRs_Model(IFileSystemHubService fileSystemHubService, GreaterFileShare.Services.IFileSystemService fileSystemService)
+        //{
 
+        //}
 
         public UrlGroup Urls
         {
@@ -69,54 +65,123 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         #endregion
 
 
-        public ObservableCollection<string> Hosts
+
+        public ObservableCollection<HostEntry> Hosts
         {
             get { return _HostsLocator(this).Value; }
             set { _HostsLocator(this).SetValueAndTryNotify(value); }
         }
-        #region Property ObservableCollection<string> Hosts Setup        
-        protected Property<ObservableCollection<string>> _Hosts = new Property<ObservableCollection<string>> { LocatorFunc = _HostsLocator };
-        static Func<BindableBase, ValueContainer<ObservableCollection<string>>> _HostsLocator = RegisterContainerLocator<ObservableCollection<string>>(nameof(Hosts), model => model.Initialize(nameof(Hosts), ref model._Hosts, ref _HostsLocator, _HostsDefaultValueFactory));
-        static Func<ObservableCollection<string>> _HostsDefaultValueFactory = () => default(ObservableCollection<string>);
+        #region Property ObservableCollection<HostEntry> Hosts Setup        
+        protected Property<ObservableCollection<HostEntry>> _Hosts = new Property<ObservableCollection<HostEntry>> { LocatorFunc = _HostsLocator };
+        static Func<BindableBase, ValueContainer<ObservableCollection<HostEntry>>> _HostsLocator = RegisterContainerLocator<ObservableCollection<HostEntry>>(nameof(Hosts), model => model.Initialize(nameof(Hosts), ref model._Hosts, ref _HostsLocator, _HostsDefaultValueFactory));
+        static Func<ObservableCollection<HostEntry>> _HostsDefaultValueFactory = () => default(ObservableCollection<HostEntry>);
         #endregion
 
 
-        public FolderEntry RootEntry
+        public ObservableCollection<FolderEntry> RootEntry
         {
             get { return _RootEntryLocator(this).Value; }
             set { _RootEntryLocator(this).SetValueAndTryNotify(value); }
         }
-        #region Property FolderEntry RootEntry Setup        
-        protected Property<FolderEntry> _RootEntry = new Property<FolderEntry> { LocatorFunc = _RootEntryLocator };
-        static Func<BindableBase, ValueContainer<FolderEntry>> _RootEntryLocator = RegisterContainerLocator<FolderEntry>("RootEntry", model => model.Initialize("RootEntry", ref model._RootEntry, ref _RootEntryLocator, _RootEntryDefaultValueFactory));
-        static Func<FolderEntry> _RootEntryDefaultValueFactory = () => default(FolderEntry);
+        #region Property ObservableCollection<FolderEntry> RootEntry Setup        
+        protected Property<ObservableCollection<FolderEntry>> _RootEntry = new Property<ObservableCollection<FolderEntry>> { LocatorFunc = _RootEntryLocator };
+        static Func<BindableBase, ValueContainer<ObservableCollection<FolderEntry>>> _RootEntryLocator = RegisterContainerLocator<ObservableCollection<FolderEntry>>("RootEntry", model => model.Initialize("RootEntry", ref model._RootEntry, ref _RootEntryLocator, _RootEntryDefaultValueFactory));
+        static Func<ObservableCollection<FolderEntry>> _RootEntryDefaultValueFactory = () => new ObservableCollection<FolderEntry>();
         #endregion
 
 
 
-        public string SelectedHost
+
+        public HostEntry SelectedHost
         {
             get { return _SelectedHostLocator(this).Value; }
             set { _SelectedHostLocator(this).SetValueAndTryNotify(value); }
         }
-        #region Property string SelectedHost Setup        
-        protected Property<string> _SelectedHost = new Property<string> { LocatorFunc = _SelectedHostLocator };
-        static Func<BindableBase, ValueContainer<string>> _SelectedHostLocator = RegisterContainerLocator<string>(nameof(SelectedHost), model => model.Initialize(nameof(SelectedHost), ref model._SelectedHost, ref _SelectedHostLocator, _SelectedHostDefaultValueFactory));
-        static Func<string> _SelectedHostDefaultValueFactory = () => default(string);
+        #region Property HostEntry SelectedHost Setup        
+        protected Property<HostEntry> _SelectedHost = new Property<HostEntry> { LocatorFunc = _SelectedHostLocator };
+        static Func<BindableBase, ValueContainer<HostEntry>> _SelectedHostLocator = RegisterContainerLocator<HostEntry>(nameof(SelectedHost), model => model.Initialize(nameof(SelectedHost), ref model._SelectedHost, ref _SelectedHostLocator, _SelectedHostDefaultValueFactory));
+        static Func<HostEntry> _SelectedHostDefaultValueFactory = () => default(HostEntry);
         #endregion
+
+
+
+
+
+
+
+        public FileEntry SelectedFileEntry
+        {
+            get { return _SelectedFileEntryLocator(this).Value; }
+            set { _SelectedFileEntryLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property FileEntry SelectedFileEntry Setup        
+        protected Property<FileEntry> _SelectedFileEntry = new Property<FileEntry> { LocatorFunc = _SelectedFileEntryLocator };
+        static Func<BindableBase, ValueContainer<FileEntry>> _SelectedFileEntryLocator = RegisterContainerLocator<FileEntry>(nameof(SelectedFileEntry), model => model.Initialize(nameof(SelectedFileEntry), ref model._SelectedFileEntry, ref _SelectedFileEntryLocator, _SelectedFileEntryDefaultValueFactory));
+        static Func<FileEntry> _SelectedFileEntryDefaultValueFactory = () => default(FileEntry);
+        #endregion
+
+
+        public FolderEntry SelectedFolderEntry
+        {
+            get { return _SelectedFolderEntryLocator(this).Value; }
+            set { _SelectedFolderEntryLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property FolderEntry SelectedFolderEntry Setup        
+        protected Property<FolderEntry> _SelectedFolderEntry = new Property<FolderEntry> { LocatorFunc = _SelectedFolderEntryLocator };
+        static Func<BindableBase, ValueContainer<FolderEntry>> _SelectedFolderEntryLocator = RegisterContainerLocator<FolderEntry>(nameof(SelectedFolderEntry), model => model.Initialize(nameof(SelectedFolderEntry), ref model._SelectedFolderEntry, ref _SelectedFolderEntryLocator, _SelectedFolderEntryDefaultValueFactory));
+        static Func<FolderEntry> _SelectedFolderEntryDefaultValueFactory = () => default(FolderEntry);
+        #endregion
+
+
 
         protected override async Task OnBindedViewLoad(IView view)
         {
+            this.ListenChanged(
+                x => x.CurrentTask,
+                x => x.SelectedHost,
+                x => x.SelectedFileEntry,
+                x => x.SelectedFolderEntry)
+                .ObserveOnDispatcher()
+                .Do(e =>
+                {
+                    Urls =
+                        new Models.UrlGroup(
+                            SelectedHost?.HostName ?? "localhost",
+                            CurrentTask?.Port ?? 80,
+                            SelectedFileEntry,
+                            SelectedFolderEntry,
+                            CurrentTask);
+                })
+               .Subscribe()
+               .DisposeWhenUnload(this);
+            ;
+
+
+            if (!IsInDesignMode)
+            {
+                _fileSystemHubService = ServiceLocator.Instance.Resolve<IFileSystemHubService>();
+            }
+
             var nh = ServiceLocator.Instance.Resolve<INetworkService>();
             if (CurrentTask == null)
             {
                 throw new InvalidOperationException("need a CurrentTask instance first");
             }
-            Hosts = new ObservableCollection<string>(nh.GetHosts());
+            Hosts = new ObservableCollection<HostEntry>(nh.GetHosts());
+
+            var foldere = new FolderEntry()
+            {
+                FullPath = CurrentTask.Path,
+                Name = Path.GetFileNameWithoutExtension(CurrentTask.Path)
+            };
+            SelectedFolderEntry = foldere;
+            RootEntry = new ObservableCollection<Models.FolderEntry> { foldere };
+            SelectedFolderEntry = foldere;
+            CommandFillCurrentFolder.Execute(null);
             await base.OnBindedViewLoad(view);
         }
 
-        
+
 
 
         public CommandModel<ReactiveCommand, String> CommandLaunch
@@ -140,7 +205,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                         vm,
                         async e =>
                         {
-                            if (e.EventArgs.Parameter is string )
+                            if (e.EventArgs.Parameter is string)
                             {
                                 await Windows.System.Launcher.LaunchUriAsync(new Uri(e.EventArgs.Parameter as string));
                             }
@@ -161,7 +226,101 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
         #endregion
 
-        
+
+
+
+        public CommandModel<ReactiveCommand, String> CommandFillCurrentFolder
+        {
+            get { return _CommandFillCurrentFolderLocator(this).Value; }
+            set { _CommandFillCurrentFolderLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandFillCurrentFolder Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandFillCurrentFolder = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandFillCurrentFolderLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandFillCurrentFolderLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandFillCurrentFolder), model => model.Initialize(nameof(CommandFillCurrentFolder), ref model._CommandFillCurrentFolder, ref _CommandFillCurrentFolderLocator, _CommandFillCurrentFolderDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandFillCurrentFolderDefaultValueFactory =
+            model =>
+            {
+                var resource = nameof(CommandFillCurrentFolder);           // Command resource  
+                var commandId = nameof(CommandFillCurrentFolder);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+                            var _fileSystemService = ServiceLocator.Instance.ResolveFactory<GreaterFileShare.Services.IFileSystemService>(null, vm.CurrentTask.Path);
+
+                            var targetF = vm.SelectedFolderEntry;
+                            var foldert = _fileSystemService.GetFoldersAsync(targetF.FullPath);
+                            var filet = _fileSystemService.GetFilesAsync(targetF.FullPath);
+
+                            var folders = await foldert;
+                            var files = await filet;
+
+                            targetF.SubFolders = new ObservableCollection<FolderEntry>(
+                                folders.Select(x => new FolderEntry { FullPath = x.FullPath, Name = x.Name }));
+                            targetF.Files = new ObservableCollection<FileEntry>(
+                                files.Select(x => new FileEntry { FullPath = x.FullPath, Name = x.Name }));
+
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+                cmdmdl.ListenToIsUIBusy(
+                    model: vm,
+                    canExecuteWhenBusy: false);
+                return cmdmdl;
+            };
+
+        #endregion
+
+
+
+
+        //public CommandModel<ReactiveCommand, String> CommandChangeCurrentFile
+        //{
+        //    get { return _CommandChangeCurrentFileLocator(this).Value; }
+        //    set { _CommandChangeCurrentFileLocator(this).SetValueAndTryNotify(value); }
+        //}
+        //#region Property CommandModel<ReactiveCommand, String> CommandChangeCurrentFile Setup        
+
+        //protected Property<CommandModel<ReactiveCommand, String>> _CommandChangeCurrentFile = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandChangeCurrentFileLocator };
+        //static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandChangeCurrentFileLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandChangeCurrentFile), model => model.Initialize(nameof(CommandChangeCurrentFile), ref model._CommandChangeCurrentFile, ref _CommandChangeCurrentFileLocator, _CommandChangeCurrentFileDefaultValueFactory));
+        //static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandChangeCurrentFileDefaultValueFactory =
+        //    model =>
+        //    {
+        //        var resource = nameof(CommandChangeCurrentFile);           // Command resource  
+        //        var commandId = nameof(CommandChangeCurrentFile);
+        //        var vm = CastToCurrentType(model);
+        //        var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+        //        cmd.DoExecuteUIBusyTask(
+        //                vm,
+        //                async e =>
+        //                {
+        //                    //Todo: Add ChangeCurrentFile logic here, or
+        //                    await MVVMSidekick.Utilities.TaskExHelper.Yield();
+        //                })
+        //            .DoNotifyDefaultEventRouter(vm, commandId)
+        //            .Subscribe()
+        //            .DisposeWith(vm);
+
+        //        var cmdmdl = cmd.CreateCommandModel(resource);
+
+        //        cmdmdl.ListenToIsUIBusy(
+        //            model: vm,
+        //            canExecuteWhenBusy: false);
+        //        return cmdmdl;
+        //    };
+
+        //#endregion
+
+
     }
 
 }

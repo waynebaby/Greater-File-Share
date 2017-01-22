@@ -15,11 +15,33 @@ namespace GreaterFileShare.Hosts.WPF.Models
         {
         }
 
-        public UrlGroup(string host, int port)
+        public UrlGroup(string host, int port, FileEntry file, FolderEntry folder, ShareFileTask currentTask)
         {
             WCF = $"net.tcp://{host}:{Consts.WCFPort}/{Consts.WCFRelativeUri}";
             API = $"http://{host}:{port}/{Consts.SwaggerRelativeUri}";
-            Files = $"http://{host}:{port}/{Consts.FilesRelativeUri}";
+            if (file == null && folder == null)
+            {
+                Files = $"http://{host}:{port}/{Consts.FilesRelativeUri}";
+
+            }
+            else if (file != null)
+            {
+                var rltvUrl = file
+                    .FullPath
+                    .Remove(0, currentTask.Path.Length)
+                    .Replace('\\', '/')
+                    .Trim('/');
+                Files = $"http://{host}:{port}/{Consts.FilesRelativeUri}/{rltvUrl}";
+            }
+            else if (folder != null)
+            {
+                var rltvUrl = folder
+                     .FullPath
+                     .Remove(0, currentTask.Path.Length)
+                     .Replace('\\', '/')
+                     .Trim('/');
+                Files = $"http://{host}:{port}/{Consts.FilesRelativeUri}/{rltvUrl}";
+            }
         }
 
         public string WCF

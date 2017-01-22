@@ -20,6 +20,7 @@ using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
 using System.Diagnostics;
+using GreaterFileShare.Services;
 
 namespace GreaterFileShare.Hosts.WPF
 {
@@ -33,11 +34,17 @@ namespace GreaterFileShare.Hosts.WPF
         public static void InitNavigationConfigurationInThisAssembly()
         {
             MVVMSidekick.Startups.StartupFunctions.RunAllConfig();
-            
+
             ServiceLocator.Instance.Register<ILauncher, Launcher>();
-            ServiceLocator.Instance.Register<INewHostService, NewHostService>();
+            //ServiceLocator.Instance.Register<INewHostService, NewHostService>();
             ServiceLocator.Instance.Register<INetworkService, NetworkService>();
             ServiceLocator.Instance.Register<IFileSystemHubService, FileSystemHubService>();
+            ServiceLocator.Instance.RegisterFactory<IFileSystemService>(null,
+                (o, s) =>
+                {
+                    return new FileSystemService(o.ToString());
+                }
+                );
 
         }
 
@@ -47,7 +54,7 @@ namespace GreaterFileShare.Hosts.WPF
         {
 
             InitNavigationConfigurationInThisAssembly();
-            var host = GetServiceHost();
+            host = GetServiceHost();
             Debug.WriteLine(host.BaseAddresses.FirstOrDefault()?.ToString());
             host.Open();
             //net.tcp://+:8800/GreaterFileShare/Hosts/WPF/Services/FileSystemHubService
@@ -58,8 +65,27 @@ namespace GreaterFileShare.Hosts.WPF
         }
         protected override void OnExit(ExitEventArgs e)
         {
-            base.OnExit(e);
+            var mainVM = Resources["DesignVM"] as ViewModels.MainWindow_Model;
+            var hosts = mainVM?.HostingTasks?
+                .Select(x =>
+                {
+
+                    try
+                    {
+                        x.Stop();
+                        return true;
+
+                    }
+                    catch (Exception)
+                    {
+                        return false;
+                    }
+                })?.ToList();
+
+
             host?.Close();
+            base.OnExit(e);
+
         }
 
 

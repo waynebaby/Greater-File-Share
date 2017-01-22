@@ -65,6 +65,9 @@
     <Reference Include="GreaterFileShare.Web">
       <HintPath>..\$(ConfigurationName)Folder\bin\GreaterFileShare.Web.exe</HintPath>
     </Reference>
+    <Reference Include="GreaterFileShare.Web">
+      <HintPath>..\$(ConfigurationName)Folder\bin\GreaterFileShare.Web.exe</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Prototyping.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -199,12 +202,13 @@
     <Compile Include="Glue\PickFileBehavior.cs" />
     <Compile Include="Glue\PickFolderBehavior.cs" />
     <Compile Include="Glue\ShareTaskApiUrlConverter.cs" />
+    <Compile Include="Glue\TreeViewSelectedItemBindingBehavior.cs" />
     <Compile Include="Models\FileFolderEntry.cs" />
+    <Compile Include="Models\HostEntry.cs" />
     <Compile Include="Models\IFileEntry.cs" />
     <Compile Include="Models\UrlGroup.cs" />
     <Compile Include="Services\IFileSystemHubService.cs" />
     <Compile Include="Services\FileSystemHubService.cs" />
-    <Compile Include="Services\QRService.cs" />
     <Compile Include="Startups\UriAndQRs.cs" />
     <Compile Include="ViewModels\UriAndQRs_Model.cs" />
     <Page Include="MainWindow.xaml">
@@ -227,10 +231,8 @@
     <Compile Include="Models\MessageEntry.cs" />
     <Compile Include="Models\ShareFileTask.cs" />
     <Compile Include="Services\INetworkService.cs" />
-    <Compile Include="Services\INewHostService.cs" />
     <Compile Include="Services\ISettingRepoService.cs" />
     <Compile Include="Services\NetworkService.cs" />
-    <Compile Include="Services\NewHostService.cs" />
     <Compile Include="Services\SettingRepoService.cs" />
     <Compile Include="Startups\StartupFunctions.cs">
       <SubType>Code</SubType>

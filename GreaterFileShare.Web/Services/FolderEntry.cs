@@ -7,8 +7,8 @@ namespace GreaterFileShare.Services
     {
         [DataMember]
 
-        public string FullPath { get; internal set; }
+        public string FullPath { get; set; }
         [DataMember]
-        public string Name { get; internal set; }
+        public string Name { get; set; }
     }
 }

@@ -204,10 +204,8 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                         vm,
                         async e =>
                         {
-                            var v2 = new UriAndQRs_Model()
-                            {
-                                CurrentTask = vm.CurrentTask,
-                            };
+                            var v2 = ServiceLocator.Instance.Resolve<UriAndQRs_Model>();
+                            v2.CurrentTask = vm.CurrentTask;                           
                             await vm.StageManager.DefaultStage.Show(v2);
                         })
                     .DoNotifyDefaultEventRouter(vm, commandId)
