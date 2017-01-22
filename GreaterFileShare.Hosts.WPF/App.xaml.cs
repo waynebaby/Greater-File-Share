@@ -33,9 +33,11 @@ namespace GreaterFileShare.Hosts.WPF
         public static void InitNavigationConfigurationInThisAssembly()
         {
             MVVMSidekick.Startups.StartupFunctions.RunAllConfig();
+            
             ServiceLocator.Instance.Register<ILauncher, Launcher>();
             ServiceLocator.Instance.Register<INewHostService, NewHostService>();
             ServiceLocator.Instance.Register<INetworkService, NetworkService>();
+            ServiceLocator.Instance.Register<IFileSystemHubService, FileSystemHubService>();
 
         }
 
@@ -57,7 +59,7 @@ namespace GreaterFileShare.Hosts.WPF
         protected override void OnExit(ExitEventArgs e)
         {
             base.OnExit(e);
-            host.Close();
+            host?.Close();
         }
 
 
@@ -91,7 +93,7 @@ namespace GreaterFileShare.Hosts.WPF
         {
             Uri uriAddress = null;
             ServiceHost host = null;
-            var newClass = new FileSystemHubService();
+            var newClass = ServiceLocator.Instance.Resolve<IFileSystemHubService>();
 
             uriAddress = GetUri("NetTcpBinding", newClass.GetType());
             var binding = GetNetTcpBinding();

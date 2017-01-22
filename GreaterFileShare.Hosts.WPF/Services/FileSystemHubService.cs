@@ -8,6 +8,7 @@ using System.ServiceModel;
 using GreaterFileShare.Hosts.WPF.Models;
 using System.Collections.ObjectModel;
 using GreaterFileShare.Hosts.WPF.ViewModels;
+using Windows.Storage;
 
 namespace GreaterFileShare.Hosts.WPF.Services
 {
@@ -17,6 +18,16 @@ namespace GreaterFileShare.Hosts.WPF.Services
     {
 
         internal static MainWindow_Model vmInstance;
+
+        public async Task <string> GetDefaultFolderAsync()
+        {
+            var folder = await KnownFolders.GetFolderForUserAsync(null, KnownFolderId.VideosLibrary);
+            var ancherFile = await folder.CreateFileAsync("_._", CreationCollisionOption.OpenIfExists);
+
+            var f2 =await ancherFile.GetParentAsync();
+            return f2.Path;
+        }
+
         public async Task<IList<GreaterFileShare.Services.FileEntry>> GetFilesAsync(int port, string filePath)
         {
             var tsk = await vmInstance.ExecuteTask(

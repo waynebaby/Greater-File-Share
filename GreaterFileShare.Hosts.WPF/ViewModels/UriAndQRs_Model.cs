@@ -81,6 +81,18 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         #endregion
 
 
+        public FolderEntry RootEntry
+        {
+            get { return _RootEntryLocator(this).Value; }
+            set { _RootEntryLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property FolderEntry RootEntry Setup        
+        protected Property<FolderEntry> _RootEntry = new Property<FolderEntry> { LocatorFunc = _RootEntryLocator };
+        static Func<BindableBase, ValueContainer<FolderEntry>> _RootEntryLocator = RegisterContainerLocator<FolderEntry>("RootEntry", model => model.Initialize("RootEntry", ref model._RootEntry, ref _RootEntryLocator, _RootEntryDefaultValueFactory));
+        static Func<FolderEntry> _RootEntryDefaultValueFactory = () => default(FolderEntry);
+        #endregion
+
+
 
         public string SelectedHost
         {
@@ -104,8 +116,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
             await base.OnBindedViewLoad(view);
         }
 
-
-
+        
 
 
         public CommandModel<ReactiveCommand, String> CommandLaunch
@@ -150,7 +161,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
         #endregion
 
-
+        
     }
 
 }

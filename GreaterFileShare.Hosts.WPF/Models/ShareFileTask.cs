@@ -209,11 +209,9 @@ namespace GreaterFileShare.Hosts.WPF.Models
                          e =>
                         {
                             //Todo: Add StartHosting logic here, or
-
                             if (!vm.IsHosting)
                             {
                                 vm.Start();
-
                             }
                             else
                             {

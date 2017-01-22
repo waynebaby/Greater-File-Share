@@ -11,12 +11,14 @@ namespace GreaterFileShare.Hosts.WPF.Services
     public interface IFileSystemHubService
     {
         [OperationContract]
-
         Task<IList<GreaterFileShare.Services.FileEntry>> GetFilesAsync(int port, string pathFolder);
-        [OperationContract]
 
+
+        [OperationContract]
         Task<IList<GreaterFileShare.Services.FolderEntry>> GetFoldersAsync(int port, string pathFolder);
 
-        
+
+        [OperationContract]
+        Task<string> GetDefaultFolderAsync();
     }
 }

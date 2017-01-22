@@ -176,7 +176,11 @@
                                     <ColumnDefinition Width="30"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBox IsReadOnly="True"  Text="{Binding CurrentTask.Path, Mode=OneWay}" IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}"/>
-                                <Button Grid.Column="1" Content="..." IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}" />
+                                <Button Grid.Column="1" Content="..." IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}"  >
+                                    <i:Interaction.Behaviors>
+                                        <Glue:PickFolderBehavior Folder="{Binding CurrentTask.Path, Mode=TwoWay}"/>
+                                    </i:Interaction.Behaviors>
+                                </Button>
                             </Grid>
                         </StackPanel>
                         <StackPanel/>
