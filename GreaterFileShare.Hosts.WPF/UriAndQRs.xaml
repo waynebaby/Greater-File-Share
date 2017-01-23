@@ -9,6 +9,7 @@
         <Glue:ShareTaskApiUrlConverter x:Key="ShareTaskApiUrlConverter"/>
         <Glue:HostNameWCFUrlConverter x:Key="HostNameWCFUrlConverter"/>
         <vm:UriAndQRs_Model  x:Key="DesignVM" />
+     
     </mvvm:MVVMWindow.Resources>
     <Grid x:Name="grid" Margin="8" DataContext="{StaticResource DesignVM}">
 
@@ -19,7 +20,7 @@
                 <TabControl Grid.Row="0" Grid.RowSpan="4" Grid.Column="1">
                     <TabItem >
                         <TabItem.Header>
-                            <TextBlock FontSize="14"><Run Text="Single File Address"/></TextBlock>
+                            <TextBlock FontSize="14"><Run Text="Direct File Address"/></TextBlock>
                         </TabItem.Header>
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -35,7 +36,7 @@
                                 <RowDefinition Height="1*"/>
                                 <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
-                            <Label Content="Host" />
+                            <Label Content="Host Name" />
                             <ListBox Margin="8" ItemsSource="{Binding Hosts}"  Grid.Row="1" SelectedItem="{Binding SelectedHost, Mode=OneWayToSource}" Grid.RowSpan="1"/>
                             <Label Content="Folder" Grid.Row="2"/>
                             <TreeView x:Name="treeView" Grid.Row="3" Margin="8" BorderThickness="1" BorderBrush="Gray" ItemsSource="{Binding RootEntry}">
@@ -90,7 +91,7 @@
                                 <RowDefinition Height="555*"/>
                                 <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
-                            <Label Content="Open Folder API QR" Grid.RowSpan="2"/>
+                            <Label Content="Host Name" Grid.RowSpan="2"/>
                             <ListBox Margin="8" ItemsSource="{Binding Hosts}"  Grid.Row="1" SelectedItem="{Binding SelectedHost, Mode=OneWayToSource}" Grid.RowSpan="1"/>
 
                             <qr:QrCodeGeoControl Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0" x:Name="qrCodeGeoControl1" VerticalAlignment="Stretch" Text="{Binding Urls.WCF}"  LightBrush="White" DarkBrush="Black" Grid.RowSpan="1"/>
@@ -115,7 +116,7 @@
                                 <RowDefinition Height="555*"/>
                                 <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
-                            <Label Content="Open Folder API QR" Grid.RowSpan="2"/>
+                            <Label Content="Host Name" Grid.RowSpan="2"/>
                             <ListBox Margin="8" ItemsSource="{Binding Hosts}"  Grid.Row="1" SelectedItem="{Binding SelectedHost, Mode=OneWayToSource}" Grid.RowSpan="1"/>
 
                             <qr:QrCodeGeoControl Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0" x:Name="qrCodeGeoControl2" VerticalAlignment="Stretch" LightBrush="White" DarkBrush="Black"   Text="{Binding Urls.API}" />
@@ -126,7 +127,7 @@
                         </Grid>
                     </TabItem>
 
-                    <TabItem  >
+                    <!--<TabItem  >
                         <TabItem.Header>
                             <TextBlock FontSize="14"><Run Text="File Server Address"/></TextBlock>
                         </TabItem.Header>
@@ -149,7 +150,7 @@
                             </Button>
                         </Grid>
 
-                    </TabItem>
+                    </TabItem>-->
               
                 </TabControl>
 

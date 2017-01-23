@@ -56,6 +56,17 @@ namespace GreaterFileShare.Hosts.WPF.Models
         #endregion
 
 
+        public string File
+        {
+            get { return _FileLocator(this).Value; }
+            set { _FileLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property string File Setup        
+        protected Property<string> _File = new Property<string> { LocatorFunc = _FileLocator };
+        static Func<BindableBase, ValueContainer<string>> _FileLocator = RegisterContainerLocator<string>(nameof(File), model => model.Initialize(nameof(File), ref model._File, ref _FileLocator, _FileDefaultValueFactory));
+        static Func<string> _FileDefaultValueFactory = () => default(string);
+        #endregion
+
 
 
         public string API

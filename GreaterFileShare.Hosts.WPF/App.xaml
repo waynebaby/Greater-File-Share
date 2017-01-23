@@ -5,5 +5,8 @@
              StartupUri="MainWindow.xaml" >
     <Application.Resources>
         <vm:MainWindow_Model x:Key="DesignVM" />
+        <Style TargetType="Label" >
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+        </Style>
     </Application.Resources>
 </Application>
