@@ -45,6 +45,7 @@ namespace GreaterFileShare.Hosts.WPF.Models
                         {
                             IsLastStartFailed = true;
                             LastException = e;
+                            GlobalEventRouter.RaiseEvent(this, e);
                         }
                         IsHosting = false;
                     },
@@ -99,6 +100,7 @@ namespace GreaterFileShare.Hosts.WPF.Models
                     path, port,
                     this.AdditionalContentTypes?.ToDictionary(x => x.ExtensionName, x => x.ContentType),
                     cts.Token);
+
                 SetupStarted(t, cts);
                 IsHosting = true;
                 IsLastStartFailed = false;
@@ -228,6 +230,7 @@ namespace GreaterFileShare.Hosts.WPF.Models
             };
 
         #endregion
+
 
 
 

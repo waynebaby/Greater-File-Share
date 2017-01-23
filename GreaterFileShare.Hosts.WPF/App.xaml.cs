@@ -21,6 +21,8 @@ using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
 using System.Diagnostics;
 using GreaterFileShare.Services;
+using System.Collections.ObjectModel;
+using GreaterFileShare.Hosts.WPF.Models;
 
 namespace GreaterFileShare.Hosts.WPF
 {
@@ -36,7 +38,7 @@ namespace GreaterFileShare.Hosts.WPF
             MVVMSidekick.Startups.StartupFunctions.RunAllConfig();
 
             ServiceLocator.Instance.Register<ILauncher, Launcher>();
-            //ServiceLocator.Instance.Register<INewHostService, NewHostService>();
+            ServiceLocator.Instance.Register<ISettingRepoService<ObservableCollection<ShareFileTask>>, SettingRepoService<ObservableCollection<ShareFileTask>>>();
             ServiceLocator.Instance.Register<INetworkService, NetworkService>();
             ServiceLocator.Instance.Register<IFileSystemHubService, FileSystemHubService>();
             ServiceLocator.Instance.RegisterFactory<IFileSystemService>(null,

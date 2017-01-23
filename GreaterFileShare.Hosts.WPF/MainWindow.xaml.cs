@@ -31,6 +31,13 @@ namespace GreaterFileShare.Hosts.WPF
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Unloaded += MainWindow_Unloaded;
+        }
+
+        private void MainWindow_Unloaded(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

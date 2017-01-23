@@ -215,7 +215,9 @@
                            />
                     <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
                         <Button Command="{Binding CommandNewHost}"  Padding="4"  Margin="4"  Content="New Host Entry" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Button Command="{Binding CommandDeleteHost}"  Padding="4"  Margin="4"  Content="Delete Host Entry" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <Button  Padding="4"  Margin="4" Command="{Binding CommandShowQR}" Content="Show QR and Links"/>
+                        <Button Command="{Binding CommandSaveSettings}"  Padding="4"  Margin="4"  Content="Save Settings" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
                     </StackPanel>
                 </Grid>

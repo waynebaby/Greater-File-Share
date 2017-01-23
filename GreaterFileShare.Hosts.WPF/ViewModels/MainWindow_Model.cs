@@ -37,7 +37,19 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
             }
             GreaterFileShare.Hosts.WPF.Services.FileSystemHubService.vmInstance = this;
             var source1 = GlobalEventRouter.GetEventChannel<Exception>()
-                    .Select(x => x.EventData.Message);
+                    .Select(x =>
+                       {
+                           Exception[] rval = new[] { x.EventData };
+                           if (x.EventData is AggregateException)
+                           {
+                               
+                               return rval.Union((x.EventData as AggregateException).InnerExceptions);
+
+                           }
+                           return rval;
+                       })
+                       .SelectMany(x=>x)
+                       .Select(x=>x.Message);
 
             var source2 = GlobalEventRouter.GetEventChannel<string>()
                     .Where(x => x.EventName == "Logging")
@@ -60,11 +72,10 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                         CurrentMessageIndex = Messages.Count - 1;
                     })
                 .DisposeWith(this);
-            CurrentTask.DisposeWith(this);
-            var st = new ShareFileTask();
-            HostingTasks.Add(st);
-            CurrentTask = st;
-          
+            //CurrentTask.DisposeWith(this);
+
+
+
         }
 
 
@@ -182,6 +193,54 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         #endregion
 
 
+        public CommandModel<ReactiveCommand, String> CommandDeleteHost
+        {
+            get { return _CommandDeleteHostLocator(this).Value; }
+            set { _CommandDeleteHostLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandDeleteHost Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandDeleteHost = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandDeleteHostLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandDeleteHostLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandDeleteHost), model => model.Initialize(nameof(CommandDeleteHost), ref model._CommandDeleteHost, ref _CommandDeleteHostLocator, _CommandDeleteHostDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandDeleteHostDefaultValueFactory =
+            model =>
+            {
+                var resource = nameof(CommandDeleteHost);           // Command resource  
+                var commandId = nameof(CommandDeleteHost);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+
+                            if (vm?.CurrentTask != null)
+                            {
+                                if (vm.CurrentTask.IsHosting)
+                                {
+                                    vm.CurrentTask.Stop();
+                                }
+                                vm.HostingTasks.Remove(vm.CurrentTask);
+                            }
+
+                            await MVVMSidekick.Utilities.TaskExHelper.Yield();
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+                cmd.ListenCanExecuteObservable(
+                    vm.ListenChanged(x => x.CurrentTask)
+                    .Select(x => vm.CurrentTask != null)
+                    );
+                return cmdmdl;
+            };
+
+        #endregion
+
 
         public CommandModel<ReactiveCommand, String> CommandShowQR
         {
@@ -205,7 +264,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                         async e =>
                         {
                             var v2 = ServiceLocator.Instance.Resolve<UriAndQRs_Model>();
-                            v2.CurrentTask = vm.CurrentTask;                           
+                            v2.CurrentTask = vm.CurrentTask;
                             await vm.StageManager.DefaultStage.Show(v2);
                         })
                     .DoNotifyDefaultEventRouter(vm, commandId)
@@ -214,11 +273,54 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
                 var cmdmdl = cmd.CreateCommandModel(resource);
 
+                cmd.ListenCanExecuteObservable(
+                  vm.ListenChanged(x => x.CurrentTask)
+                  .Select(x => vm.CurrentTask != null)
+                  );
                 return cmdmdl;
             };
 
         #endregion
 
+
+        public CommandModel<ReactiveCommand, String> CommandSaveSettings
+        {
+            get { return _CommandSaveSettingsLocator(this).Value; }
+            set { _CommandSaveSettingsLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandSaveSettings Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandSaveSettings = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandSaveSettingsLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandSaveSettingsLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandSaveSettings), model => model.Initialize(nameof(CommandSaveSettings), ref model._CommandSaveSettings, ref _CommandSaveSettingsLocator, _CommandSaveSettingsDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandSaveSettingsDefaultValueFactory =
+            model =>
+            {
+                var resource = nameof(CommandSaveSettings);           // Command resource  
+                var commandId = nameof(CommandSaveSettings);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+                            var store = ServiceLocator.Instance.Resolve<ISettingRepoService<ObservableCollection<ShareFileTask>>>();
+                            await store.SaveAsync(vm.HostingTasks);
+                            vm.GlobalEventRouter.RaiseEvent(vm, "Save Setting Successed.", "Logging");
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+                cmdmdl.ListenToIsUIBusy(
+                    model: vm,
+                    canExecuteWhenBusy: false);
+                return cmdmdl;
+            };
+
+        #endregion
 
 
         protected override async Task OnBindedViewLoad(IView view)
@@ -226,11 +328,44 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
             var f = ServiceLocator.Instance.Resolve<IFileSystemHubService>();
             CurrentTask.Path = await f.GetDefaultFolderAsync();
-            var cmd2 = CurrentTask.CommandStartHosting;
-            var t= cmd2.ExecuteAsync(null);
+
+
+
+            HostingTasks = await ExecuteTask(async () =>
+              {
+                  try
+                  {
+                      var store = ServiceLocator.Instance.Resolve<ISettingRepoService<ObservableCollection<ShareFileTask>>>();
+                      return await store.LoadAsync();
+                  }
+                  catch (Exception)
+                  {
+
+                  }
+                  return null;
+              });
+
+            if ((HostingTasks?.Count ?? 0) == 0)
+            {
+                var st = new ShareFileTask();
+                HostingTasks = new ObservableCollection<Models.ShareFileTask> { st };
+                CurrentTask = st;
+            }
+
+
+            var t = ExecuteTask(async () =>
+              {
+                  await Task.Delay(500);
+                  var cmd2 = CurrentTask.CommandStartHosting;
+                  cmd2.Execute(null);
+              });
+
 
             await base.OnBindedViewLoad(view);
         }
+
+
+
     }
 }
 
