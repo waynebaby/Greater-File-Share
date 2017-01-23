@@ -68,7 +68,6 @@ namespace GreaterFileShare.Hosts.WPF.Services
             catch (InvalidOperationException)
             {
                 folder = KnownFolders.DocumentsLibrary;
-
             }
 
             var surffix = string.IsNullOrEmpty(Name) ? "Default" : Name;

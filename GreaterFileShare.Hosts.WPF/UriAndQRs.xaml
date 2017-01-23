@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mvvm="clr-namespace:MVVMSidekick.Views;assembly=MVVMSidekick"
         xmlns:vm="clr-namespace:GreaterFileShare.Hosts.WPF.ViewModels" xmlns:Glue="clr-namespace:GreaterFileShare.Hosts.WPF.Glue"  xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"  x:Class="GreaterFileShare.Hosts.WPF.UriAndQRs"
-        Title="Uri And QR Code" Height="768" Width="1024"
+        Title="Uri And QR Code" Height="768" Width="1024" Icon="Assets/Icon.ico"
         >
     <mvvm:MVVMWindow.Resources>
         <Glue:ShareTaskApiUrlConverter x:Key="ShareTaskApiUrlConverter"/>

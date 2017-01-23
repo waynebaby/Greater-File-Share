@@ -6,8 +6,8 @@
         xmlns:Glue="clr-namespace:GreaterFileShare.Hosts.WPF.Glue" 
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
-        x:Class="GreaterFileShare.Hosts.WPF.MainWindow"       
-        MinHeight="640"  MinWidth="800" Height="800" Width="1024" Title="Greater File Share Host" >
+        x:Class="GreaterFileShare.Hosts.WPF.MainWindow"     
+        MinHeight="640"  MinWidth="800" Height="800" Width="1024" Title="Greater File Share Host" Icon="Assets/Icon.ico" >
 
 
     <mvvm:MVVMWindow.Resources >
