@@ -225,6 +225,7 @@
 	<table name="AppSearch">
 		<col key="yes" def="s72">Property</col>
 		<col key="yes" def="s72">Signature_</col>
+		<row><td>DOTNETVERSION45FULL</td><td>DotNet45Full</td></row>
 	</table>
 
 	<table name="BBControl">
@@ -1138,7 +1139,7 @@
 		<row><td>CustomSetup</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>OutOfNoRbDiskSpace &lt;&gt; 1</td><td>0</td></row>
 		<row><td>CustomSetup</td><td>Next</td><td>[_IsSetupTypeMin]</td><td>Custom</td><td>1</td><td>0</td></row>
 		<row><td>CustomSetupTips</td><td>OK</td><td>EndDialog</td><td>Return</td><td>1</td><td>1</td></row>
-		<row><td>CustomerInformation</td><td>Back</td><td>NewDialog</td><td>LicenseAgreement</td><td>1</td><td>1</td></row>
+		<row><td>CustomerInformation</td><td>Back</td><td>NewDialog</td><td>InstallWelcome</td><td>NOT Installed</td><td>1</td></row>
 		<row><td>CustomerInformation</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>CustomerInformation</td><td>Next</td><td>EndDialog</td><td>Exit</td><td>(SERIALNUMVALRETRYLIMIT) And (SERIALNUMVALRETRYLIMIT&lt;0) And (SERIALNUMVALRETURN&lt;&gt;SERIALNUMVALSUCCESSRETVAL)</td><td>2</td></row>
 		<row><td>CustomerInformation</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>(Not SERIALNUMVALRETURN) OR (SERIALNUMVALRETURN=SERIALNUMVALSUCCESSRETVAL)</td><td>3</td></row>
@@ -1166,7 +1167,7 @@
 		<row><td>InstallChangeFolder</td><td>Up</td><td>DirectoryListUp</td><td>0</td><td>1</td><td>0</td></row>
 		<row><td>InstallWelcome</td><td>Back</td><td>NewDialog</td><td>SplashBitmap</td><td>Display_IsBitmapDlg</td><td>0</td></row>
 		<row><td>InstallWelcome</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
-		<row><td>InstallWelcome</td><td>Next</td><td>NewDialog</td><td>LicenseAgreement</td><td>1</td><td>0</td></row>
+		<row><td>InstallWelcome</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>Back</td><td>NewDialog</td><td>InstallWelcome</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>ISPrintButton</td><td>DoAction</td><td>ISPrint</td><td>1</td><td>0</td></row>
@@ -1201,7 +1202,7 @@
 		<row><td>ReadmeInformation</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>1</td></row>
 		<row><td>ReadmeInformation</td><td>Next</td><td>NewDialog</td><td>CustomerInformation</td><td>1</td><td>1</td></row>
 		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>CustomSetup</td><td>Installed OR _IsSetupTypeMin = "Custom"</td><td>2</td></row>
-		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>CustomerInformation</td><td>NOT Installed</td><td>1</td></row>
+		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>InstallWelcome</td><td>NOT Installed</td><td>1</td></row>
 		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>MaintenanceType</td><td>Installed AND _IsMaintenance = "Reinstall"</td><td>3</td></row>
 		<row><td>ReadyToInstall</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>ReadyToInstall</td><td>InstallNow</td><td>EndDialog</td><td>Return</td><td>OutOfNoRbDiskSpace &lt;&gt; 1</td><td>0</td></row>
@@ -4138,6 +4139,7 @@
 		<row><td>COMPANY_NAME</td><td>1033</td><td>Waynebaby Presents</td><td>0</td><td/><td>-928697776</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
+		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-928674960</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
@@ -4948,7 +4950,7 @@
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>LAUNCH~1.EXE|Launch dotnet-razor-tooling.exe</td><td>0</td><td/><td>-928693648</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Hosts.WPF.exe</td><td>0</td><td/><td>-928691600</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>Greater File Share.exe</td><td>0</td><td/><td>-928693360</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Hosts.WPF.vshost.exe</td><td>0</td><td/><td>-928691600</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Web.exe</td><td>0</td><td/><td>-928691600</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>-928657008</td></row>
@@ -5239,7 +5241,7 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>https://github.com/waynebaby/Greater-File-Share</td><td>0</td><td/><td>-928677296</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>https://github.com/waynebaby/Greater-File-Share</td><td>0</td><td/><td>-928699216</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td>Waynebaby Presents</td><td>0</td><td/><td>-928697776</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-928657008</td></row>
 	</table>
@@ -5355,10 +5357,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
-		<row><td>GreaterFileShare.H_A7C5854C50F141389BE6CFCDEF8E2EE3.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>GreaterFileShare.H_B3D51252B60044068CD007F1F7B349F8.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>GreaterFileShare.W_831827E4E42D489392FC056B41DAFC3F.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>dotnet_razor_tooli_656614EEBC2449EA8BAFB36503F0B665.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>GreaterFileShare.H_D95E916A1FE448D9A26BF4C63800927E.exe</td><td/><td>&lt;VSSolutionFolder&gt;\GreaterFileShare.Hosts.WPF\Assets\Icon.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -5491,7 +5490,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{AF931C1E-44BB-4654-8C1C-61EE339E38BA}</td></row>
 		<row><td>ISUSSignature</td><td>{FA2FE9AC-56FC-420C-8366-ADD72EA54F68}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewISToday,viewLearnMore,viewShortcuts,viewEnvironmentVariables,viewVRoots,viewServices,viewFileExtensions,viewRelease</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -5549,6 +5548,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 	<table name="LaunchCondition">
 		<col key="yes" def="s255">Condition</col>
 		<col def="l255">Description</col>
+		<row><td>DOTNETVERSION45FULL&gt;="#1"</td><td>##IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL##</td></row>
 	</table>
 
 	<table name="ListBox">
@@ -5877,7 +5877,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>RestartManagerOption</td><td>CloseRestart</td><td/></row>
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION45FULL</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
 		<row><td>UpgradeCode</td><td>{72407668-4D45-4FD7-8981-176B624DA0DB}</td><td/></row>
@@ -5922,6 +5922,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s255">Key</col>
 		<col def="S255">Name</col>
 		<col def="I2">Type</col>
+		<row><td>DotNet45Full</td><td>2</td><td>SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full</td><td>Version</td><td>2</td></row>
 	</table>
 
 	<table name="Registry">
@@ -5943,9 +5944,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>FileKey1</td><td>dotnet_razor_tooling.exe</td><td/><td>wayneb_1_waynebaby_presents</td><td>2</td></row>
 		<row><td>FileKey2</td><td>dotnet_razor_tooling.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
 		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td>GreaterFileShare.Hosts.WPF.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
-		<row><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
-		<row><td>GreaterFileShare.Web.exe</td><td>GreaterFileShare.Web.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
-		<row><td>dotnet_razor_tooling.exe</td><td>dotnet_razor_tooling.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -6031,10 +6029,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>GreaterFileShare.Hosts.WPF.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_B3D51252B60044068CD007F1F7B349F8.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_A7C5854C50F141389BE6CFCDEF8E2EE3.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>GreaterFileShare.Web.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>GreaterFileShare.Web.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.W_831827E4E42D489392FC056B41DAFC3F.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>dotnet_razor_tooling.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>dotnet_razor_tooling.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>dotnet_razor_tooli_656614EEBC2449EA8BAFB36503F0B665.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>GreaterFileShare.Hosts.WPF.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_D95E916A1FE448D9A26BF4C63800927E.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

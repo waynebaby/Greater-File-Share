@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVVMSidekick.EventRouting;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -73,7 +74,7 @@ namespace GreaterFileShare.Hosts.WPF.Services
             var surffix = string.IsNullOrEmpty(Name) ? "Default" : Name;
             var fileName = $"Setting_{typeof(T).FullName}_{surffix}.setting.xml";
             var file = await folder.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
-
+            EventRouter.Instance.RaiseEvent(this, $"targeting file{file.Path}", "Logging");
             return file;
 
 
