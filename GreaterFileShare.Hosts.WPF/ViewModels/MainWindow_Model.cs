@@ -326,9 +326,6 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         protected override async Task OnBindedViewLoad(IView view)
         {
 
-            var f = ServiceLocator.Instance.Resolve<IFileSystemHubService>();
-            CurrentTask.Path = await f.GetDefaultFolderAsync();
-
 
 
             HostingTasks = await ExecuteTask(async () =>
@@ -350,7 +347,12 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                 var st = new ShareFileTask();
                 HostingTasks = new ObservableCollection<Models.ShareFileTask> { st };
                 CurrentTask = st;
+                var f = ServiceLocator.Instance.Resolve<IFileSystemHubService>();
+                CurrentTask.Path = await f.GetDefaultFolderAsync();
+
+
             }
+
 
 
             var t = ExecuteTask(async () =>

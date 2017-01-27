@@ -9,6 +9,7 @@ using GreaterFileShare.Hosts.WPF.Models;
 using System.Collections.ObjectModel;
 using GreaterFileShare.Hosts.WPF.ViewModels;
 using Windows.Storage;
+using System.IO;
 
 namespace GreaterFileShare.Hosts.WPF.Services
 {
@@ -21,11 +22,15 @@ namespace GreaterFileShare.Hosts.WPF.Services
 
         public async Task <string> GetDefaultFolderAsync()
         {
-            var folder = await KnownFolders.GetFolderForUserAsync(null, KnownFolderId.VideosLibrary);
-            var ancherFile = await folder.CreateFileAsync("_._", CreationCollisionOption.OpenIfExists);
 
-            var f2 =await ancherFile.GetParentAsync();
-            return f2.Path;
+            return Environment.GetFolderPath(Environment.SpecialFolder.CommonVideos);
+
+            ////Need vlib cap and run in UWP process
+            //var folder = await KnownFolders.GetFolderForUserAsync(null, KnownFolderId.VideosLibrary);
+            //var ancherFile = await folder.CreateFileAsync("_._", CreationCollisionOption.OpenIfExists);
+
+            //var f2 = await ancherFile.GetParentAsync();
+            //return f2.Path;
         }
 
         public async Task<IList<GreaterFileShare.Services.FileEntry>> GetFilesAsync(int port, string filePath)
