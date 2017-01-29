@@ -47,8 +47,8 @@ namespace GreaterFileShare.Web
                 options.SingleApiVersion(new Info
                 {
                     Version = "v1",
-                    Title = "Geo Search API",
-                    Description = "A simple api to search using geo location in Elasticsearch",
+                    Title = "Greater File Share API",
+                    Description = "A simple api to get file though Http",
                     TermsOfService = "None"
                 });
                 //options.IncludeXmlComments(pathToDoc);
