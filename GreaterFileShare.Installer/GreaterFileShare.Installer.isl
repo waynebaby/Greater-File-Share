@@ -4950,7 +4950,7 @@
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>LAUNCH~1.EXE|Launch dotnet-razor-tooling.exe</td><td>0</td><td/><td>-928693648</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>Greater File Share.exe</td><td>0</td><td/><td>-928693360</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>Greater File Share Host</td><td>0</td><td/><td>-123366129</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Hosts.WPF.vshost.exe</td><td>0</td><td/><td>-928691600</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Web.exe</td><td>0</td><td/><td>-928691600</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>-928657008</td></row>
@@ -5243,6 +5243,7 @@
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td>https://github.com/waynebaby/Greater-File-Share</td><td>0</td><td/><td>-928699216</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td>Waynebaby Presents</td><td>0</td><td/><td>-928697776</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>Greater File Share</td><td>0</td><td/><td>-123351889</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-928657008</td></row>
 	</table>
 
@@ -5357,6 +5358,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
+		<row><td>GreaterFileShare.H_180FBA2EE1C14A83AE0F8D4C4BD34525.exe</td><td/><td>&lt;VSSolutionFolder&gt;\GreaterFileShare.Hosts.WPF\Assets\Icon.ico</td><td>0</td></row>
 		<row><td>GreaterFileShare.H_D95E916A1FE448D9A26BF4C63800927E.exe</td><td/><td>&lt;VSSolutionFolder&gt;\GreaterFileShare.Hosts.WPF\Assets\Icon.ico</td><td>0</td></row>
 	</table>
 
@@ -6030,6 +6032,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
 		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>GreaterFileShare.Hosts.WPF.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_D95E916A1FE448D9A26BF4C63800927E.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Hosts.WPF.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>GreaterFileShare.Hosts.WPF.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_180FBA2EE1C14A83AE0F8D4C4BD34525.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
