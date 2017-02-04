@@ -9,6 +9,11 @@
             <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
                 <Setter Property="FontWeight" Value="Bold" />
             </Style>
+            <Style TargetType="ListBox"  BasedOn="{StaticResource {x:Type ListBox}}">
+                <Setter Property="BorderThickness"  Value="1" />
+                <Setter Property="BorderBrush"  Value="#ccc" />
+
+            </Style>
             <ResourceDictionary.MergedDictionaries>
                 <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />

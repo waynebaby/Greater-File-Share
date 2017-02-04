@@ -175,6 +175,9 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                             {
                                 t.Port = 8080;
                             }
+                            var f = ServiceLocator.Instance.Resolve<IFileSystemHubService>();
+                            t.Path = await f.GetDefaultFolderAsync();
+
                             vm.HostingTasks.Add(t);
                             vm.CurrentTask = t;
 

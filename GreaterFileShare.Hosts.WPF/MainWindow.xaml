@@ -10,14 +10,15 @@
         MinHeight="640"  MinWidth="800" Height="800" Width="1024" Title="Greater File Share Host" Icon="Assets/Icon.ico" >
 
     <mvvm:MVVMWindow.Resources>
-         <Glue:ShareTaskUrlConverter x:Key="ShareTaskUrlConverter"/>
+        <Glue:ShareTaskUrlConverter x:Key="ShareTaskUrlConverter"/>
         <Glue:TaskStateConverter x:Key="TaskStateConverter"/>
         <Glue:IsNotNullValueConverter x:Key="IsNotNullValueConverter"/>
         <Glue:IsNullValueConverter x:Key="IsNullValueConverter"/>
         <Glue:NotBoolValueConverter x:Key="NotBoolValueConverter"/>
 
         <DataTemplate x:Key="ShareFileTaskTemplate">
-            <StackPanel x:Name="stackPanel" 
+            <StackPanel x:Name="stackPanel"     Width="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}}" 
+                    
                         Background="Transparent">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup x:Name="ErrorStateGroup">
@@ -111,7 +112,7 @@
                             <RowDefinition Height="165*"/>
                         </Grid.RowDefinitions>
                         <Label Content="Configuration" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
-                        <DataGrid Grid.Row="1" BorderBrush="#CCC" BorderThickness="1" AutoGenerateColumns="False" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}">
+                        <DataGrid BorderBrush="#CCC" BorderThickness="1" AutoGenerateColumns="False" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}" Margin="10,25,-10,0.333" Grid.RowSpan="2">
                             <DataGrid.Columns>
                                 <DataGridTextColumn  Width="120" Binding="{Binding ExtensionName}" Header="Extension Name"/>
                                 <DataGridTextColumn Width="120" Binding="{Binding ContentType}" Header="Content Type"/>
@@ -155,13 +156,19 @@
                     <ListBox 
                         Grid.Row="1"
                         Background="Transparent"
-                        BorderBrush="#CCC"
-                        BorderThickness="1"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                         x:Name="tasksList"
                         ItemsSource="{Binding HostingTasks}" 
                         SelectedItem="{Binding CurrentTask, Mode=TwoWay}" 
                         SelectedIndex="0" 
-                        ItemTemplate="{DynamicResource ShareFileTaskTemplate}" />
+                        ItemTemplate="{DynamicResource ShareFileTaskTemplate}" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <Glue:ScrollToSelectedAction />
+
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ListBox>
                     <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
                         <Button Command="{Binding CommandNewHost}"  Content="New Host Entry" Margin="0,0,10,0" />
                         <Button Command="{Binding CommandDeleteHost}"  Content="Delete Host Entry" Margin="0,0,10,0"/>
@@ -171,14 +178,22 @@
                 </Grid>
             </Border>
             <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="#88000000">
-                <ListBox Background="#88000000" ItemsSource="{Binding Messages}"
+                <ListBox Background="#88000000" ItemsSource="{Binding Messages}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                          SelectedIndex="{Binding CurrentMessageIndex, Mode=TwoWay}" 
                          FontFamily="Consolas"
                          FontSize="12"
                          ItemTemplate="{DynamicResource MessageItemTemplate}" 
-                         SelectionChanged="ListBox_SelectionChanged"/>
+                 >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <Glue:ScrollToSelectedAction />
+
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+
+                </ListBox>
             </Border>
-            
+
             <GridSplitter Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="100" 
                           VerticalAlignment="Stretch" 
                           HorizontalAlignment="Stretch" 
