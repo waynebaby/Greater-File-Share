@@ -10,7 +10,7 @@
         MinHeight="640"  MinWidth="800" Height="800" Width="1024" Title="Greater File Share Host" Icon="Assets/Icon.ico" >
 
     <mvvm:MVVMWindow.Resources>
-        <Glue:ShareTaskUrlConverter x:Key="ShareTaskUrlConverter"/>
+         <Glue:ShareTaskUrlConverter x:Key="ShareTaskUrlConverter"/>
         <Glue:TaskStateConverter x:Key="TaskStateConverter"/>
         <Glue:IsNotNullValueConverter x:Key="IsNotNullValueConverter"/>
         <Glue:IsNullValueConverter x:Key="IsNullValueConverter"/>
@@ -50,11 +50,16 @@
                         <ei:GoToStateAction   StateName="{Binding Converter={StaticResource TaskStateConverter}}"/>
                     </ei:PropertyChangedTrigger>
                 </i:Interaction.Triggers>
+
                 <TextBlock><Run FontWeight="Bold" Text="Port"/><Run Text="&#x9;&#x9;"/><Run Text="{Binding Port}"/></TextBlock>
                 <TextBlock><Run FontWeight="Bold" Text="Path"/><Run Text="&#x9;&#x9;"/><Run Text="{Binding Path}" /></TextBlock>
                 <TextBlock><Run FontWeight="Bold" Text="Is Hosting"/><Run Text="&#x9;"/><Run Text="{Binding IsHosting, Mode=OneWay}" /></TextBlock>
                 <TextBlock><Run FontWeight="Bold" Text="Last Error"/><Run Text="&#x9;"/><Run Text="{Binding LastException.Message, Mode=OneWay}"/></TextBlock>
-                <TextBlock><Run FontWeight="Bold" Text="Test Link"/><Run Text="&#x9;"/><Hyperlink NavigateUri="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}" ><Run Text="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}"/></Hyperlink></TextBlock>
+
+
+
+                <TextBlock><Run FontWeight="Bold" Text="Root Url"/><Run Text="&#x9;"/><Run Text="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}"/></TextBlock>
+
             </StackPanel>
         </DataTemplate>
         <DataTemplate x:Key="MessageItemTemplate">

@@ -15,6 +15,7 @@ using System.Runtime.Serialization;
 using GreaterFileShare.Hosts.WPF.Services;
 using GreaterFileShare.Hosts.WPF.Models;
 using System.IO;
+using System.Windows;
 
 namespace GreaterFileShare.Hosts.WPF.ViewModels
 {
@@ -264,6 +265,54 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                             targetF.Files = new ObservableCollection<FileEntry>(
                                 files.Select(x => new FileEntry { FullPath = x.FullPath, Name = x.Name }));
 
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+                cmdmdl.ListenToIsUIBusy(
+                    model: vm,
+                    canExecuteWhenBusy: false);
+                return cmdmdl;
+            };
+
+        #endregion
+
+
+
+        public CommandModel<ReactiveCommand, String> CommandCopyLink
+        {
+            get { return _CommandCopyLinkLocator(this).Value; }
+            set { _CommandCopyLinkLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandCopyLink Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandCopyLink = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandCopyLinkLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandCopyLinkLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>("CommandCopyLink", model => model.Initialize("CommandCopyLink", ref model._CommandCopyLink, ref _CommandCopyLinkLocator, _CommandCopyLinkDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandCopyLinkDefaultValueFactory =
+            model =>
+            {
+                var resource = "CommandCopyLink";           // Command resource  
+                var commandId = "CommandCopyLink";
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+
+                            var t = e.EventArgs.Parameter?.ToString();
+                            if (!string.IsNullOrWhiteSpace(t))
+                            {
+
+                                Clipboard.SetText(t);
+                                vm.GlobalEventRouter.RaiseEvent(vm, $"Link '{t}' is Copied to Clipboard", "Logging");
+
+                            }//Todo: Add CopyLink logic here, or
+                            await MVVMSidekick.Utilities.TaskExHelper.Yield();
                         })
                     .DoNotifyDefaultEventRouter(vm, commandId)
                     .Subscribe()
