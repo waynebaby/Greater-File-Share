@@ -42,14 +42,14 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                            Exception[] rval = new[] { x.EventData };
                            if (x.EventData is AggregateException)
                            {
-                               
+
                                return rval.Union((x.EventData as AggregateException).InnerExceptions);
 
                            }
                            return rval;
                        })
-                       .SelectMany(x=>x)
-                       .Select(x=>x.Message);
+                       .SelectMany(x => x)
+                       .Select(x => x.Message);
 
             var source2 = GlobalEventRouter.GetEventChannel<string>()
                     .Where(x => x.EventName == "Logging")
@@ -304,6 +304,16 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                         vm,
                         async e =>
                         {
+
+                            //vm.HostingTasks.SelectMany(
+                            //    t => t.AdditionalContentTypes
+                            //               .ToArray().Select(x => new { task = t, contentType = x })   )
+
+                            //    .Where(x => string.IsNullOrWhiteSpace(x.contentType.ContentType) ||
+                            //    string.IsNullOrWhiteSpace(x.contentType.ExtensionName))
+                            //    .Select(x => x.task.AdditionalContentTypes.Remove(x.contentType))
+                            //    .ToArray();
+
                             var store = ServiceLocator.Instance.Resolve<ISettingRepoService<ObservableCollection<ShareFileTask>>>();
                             await store.SaveAsync(vm.HostingTasks);
                             vm.GlobalEventRouter.RaiseEvent(vm, "Save Setting Successed.", "Logging");
