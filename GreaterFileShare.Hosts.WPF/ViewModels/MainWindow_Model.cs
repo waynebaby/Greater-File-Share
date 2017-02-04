@@ -259,7 +259,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                 var vm = CastToCurrentType(model);
                 var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
 
-                cmd.DoExecuteUIBusyTask(
+                cmd.DoExecuteUITask(
                         vm,
                         async e =>
                         {
