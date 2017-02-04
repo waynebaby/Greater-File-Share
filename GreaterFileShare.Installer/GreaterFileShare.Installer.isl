@@ -340,24 +340,25 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>Gma.QrCodeNet.Encoding.dll</td><td>{8FF120C9-165F-4CC0-9109-3A597ACE63D2}</td><td>BIN</td><td>2</td><td/><td>gma.qrcodenet.encoding.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>GreaterFileShare.Hosts.Core.dll</td><td>{2A0B351C-35EC-4D24-B10B-AD74F565F1B7}</td><td>BIN</td><td>2</td><td/><td>greaterfileshare.hosts.core.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td>{82A084FA-EFDB-4EEB-ABB4-C5DCCBD1C83F}</td><td>BIN</td><td>2</td><td/><td>greaterfileshare.hosts.wpf.e</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td>{85159E7C-8170-43DB-8C2E-7D9169C36A67}</td><td>BIN</td><td>2</td><td/><td>greaterfileshare.hosts.wpf.v</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>GreaterFileShare.Web.exe</td><td>{2F1CFF94-F569-42EC-9AFA-2EA860D28A09}</td><td>BIN</td><td>2</td><td/><td>greaterfileshare.web.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td>{D2B2DC87-FEA9-42CC-8ECF-E341ECDACDD7}</td><td>BIN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{1EFF62D8-5BDC-41D1-ACF2-7D104E508FF8}</td><td>DE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT10</td><td>{8C1FDC6D-69D6-473E-BD12-39C2F2178881}</td><td>RO</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT11</td><td>{4AA70CE4-FDCA-48D9-8EAD-1D9043777E48}</td><td>RU</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT12</td><td>{77590179-4E0E-403E-9B94-42B29864A1ED}</td><td>SV</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT13</td><td>{8246750A-1EDD-4AA0-8ABE-469E972D02F4}</td><td>ZH_HANS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT14</td><td>{1E522D92-3EBD-4D3C-96E5-C76398376A73}</td><td>ZH_HANT</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Gma.QrCodeNet.Encoding.dll</td><td>{0763EAAD-9F07-473E-B64B-2C8BE08565D7}</td><td>BIN</td><td>2</td><td/><td>gma.qrcodenet.encoding.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>GreaterFileShare.Hosts.Console.exe</td><td>{74CA4F64-1A15-4F68-B42A-C12D6CD3F99B}</td><td>BIN</td><td>2</td><td/><td>greaterfileshare.hosts.conso1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>GreaterFileShare.Hosts.Core.dll</td><td>{C505E04E-E995-4692-BB04-8F1A1C782710}</td><td>BIN</td><td>2</td><td/><td>greaterfileshare.hosts.core.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td>{6DFDC04B-B1F1-44CB-9481-68135719AD5E}</td><td>BIN</td><td>2</td><td/><td>greaterfileshare.hosts.wpf.e</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td>{F76EBDB2-04E4-4680-9D64-97F032309DBE}</td><td>BIN</td><td>2</td><td/><td>greaterfileshare.hosts.wpf.v</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>GreaterFileShare.Web.exe</td><td>{9F3B5BED-B0B3-415A-A98F-EC5107DFDED5}</td><td>BIN</td><td>2</td><td/><td>greaterfileshare.web.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td>{DB2CF62A-188A-4383-997A-461EAD4F6C35}</td><td>BIN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{8F5F5B17-7967-481C-87AC-11F16DECA604}</td><td>DE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT10</td><td>{328FA60D-2B13-4B54-890A-31E5B14C1733}</td><td>RO</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT11</td><td>{335B7494-D811-470D-95F8-FD0684B9FC14}</td><td>RU</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT12</td><td>{7CB3424D-E45D-4797-8C09-740045988ED6}</td><td>SV</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT13</td><td>{CF6328DA-2004-4AC3-88DE-FFF43B5E20AA}</td><td>ZH_HANS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT14</td><td>{3492BB63-3C92-4115-8AAD-26BA99A04BDA}</td><td>ZH_HANT</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT15</td><td>{F57D3343-7781-48C2-9F77-E7098B9A4AEC}</td><td>CONTENTS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT16</td><td>{E198A850-C452-4E44-823B-6F98D3B10F80}</td><td>VIEWS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT17</td><td>{538B5F49-47F0-4032-9879-9B84EABD7E9B}</td><td>HOME</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT18</td><td>{C29C785E-91D5-45AD-BB84-7C99C05B37EC}</td><td>SHARED</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT19</td><td>{F23C2094-5534-44D7-8537-86B32D6EDF4C}</td><td>WWWROOT</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{43F4227C-75E5-4B59-9F67-7E1C808FD58A}</td><td>EN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{361B94C6-F20D-478C-B0B3-7226B93BC752}</td><td>EN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT20</td><td>{8608F4ED-77AD-412B-9995-89003BA24580}</td><td>CSS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT21</td><td>{0E1B3AAE-655C-4CAD-822A-D076121479D2}</td><td>IMAGES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT22</td><td>{0C88C7A1-B70C-49EE-85B4-CEC1148F4010}</td><td>JS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -368,209 +369,210 @@
 		<row><td>ISX_DEFAULTCOMPONENT27</td><td>{6A6E724E-6B97-4A02-85B2-CFA1440F39DB}</td><td>FONTS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT28</td><td>{747F8665-8158-4126-9C3F-460B937BCDB9}</td><td>JS1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT29</td><td>{F4A58529-0C3D-42DF-B4CC-2B3B789E7C95}</td><td>JQUERY</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{B7493BCE-95AB-48C8-BCBB-05A9154AF656}</td><td>ES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{486FA84F-1CC1-4AEA-91E9-DD4ED0D30F45}</td><td>ES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT30</td><td>{78F4FA0D-264A-4A37-8A73-0472ABA1F402}</td><td>DIST1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT31</td><td>{615F3AFE-5BF7-4165-BF3F-25858EE59E3F}</td><td>JQUERY_VALIDATION</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT32</td><td>{6C66FCD8-F7BB-4497-8E0D-DF13F0FB29F8}</td><td>DIST2</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT33</td><td>{2900CD2D-877F-414C-B1FE-D4832D168C1F}</td><td>JQUERY_VALIDATION_UNOBTRUSIVE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{63B6A61E-3CF5-4A1B-BAA0-E479ACF07448}</td><td>FR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{95E59871-9CC9-4F6C-B932-2DCC0D32B206}</td><td>HU</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{060BE9F5-14D7-4FC0-9142-29C02F89026C}</td><td>IT</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{E169DC7F-DC24-46D0-B3B4-D8853726CA48}</td><td>JA</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{9129EEB1-6E3E-40FF-960B-132CE027850A}</td><td>KO</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{6413B775-FC34-4E1B-A23A-456ADFAED8C9}</td><td>PT_BR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MVVMSidekick.dll</td><td>{554BCCF5-0F66-4EB2-BAD6-B687252114A0}</td><td>BIN</td><td>2</td><td/><td>mvvmsidekick.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Antiforgery.dll</td><td>{7FA8C74B-0310-4637-AE68-AE342984122C}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.antifor</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Authorization.dll</td><td>{1AFDF344-5EA4-4CFE-A1D2-31D1A7325959}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.authori</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Cors.dll</td><td>{05520118-940B-47F0-98FF-4BA2432F6E26}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.cors.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Cryptography.Internal.dll</td><td>{58AD0B69-027E-42A1-94C1-83DDE7591AB4}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.cryptog</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.DataProtection.Abstractions.dll</td><td>{A61FD622-0B36-4B24-905C-1959860AB450}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.datapro</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.DataProtection.dll</td><td>{38A88772-2A77-4813-A700-FF01969E8BAB}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.datapro1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Diagnostics.Abstractions.dll</td><td>{E63D1514-BB13-41A8-BA6E-E01F79C19B77}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.diagnos</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Diagnostics.dll</td><td>{D1874B86-5562-40B5-B8D8-D27DD50B35EC}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.diagnos1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Hosting.Abstractions.dll</td><td>{5BF6CA04-5582-4037-A979-5A32E65F15C8}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.hosting</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</td><td>{289A7676-7B8E-4E11-9995-01FBBDA668BC}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.hosting2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Hosting.dll</td><td>{C6920E76-D797-4D05-A985-5ADE49E4DECE}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.hosting1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Html.Abstractions.dll</td><td>{6F081904-BE8C-405C-BF40-81F5457738E6}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.html.ab</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Http.Abstractions.dll</td><td>{BCEA1D6D-C3F4-4CE8-88D6-F285406217DD}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.http.ab</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Http.Extensions.dll</td><td>{4FDB81BF-9D2A-4FA9-8479-60A4E37E99C4}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.http.ex</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Http.Features.dll</td><td>{BED13260-D9FE-4530-8C78-DBFBC5688764}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.http.fe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Http.dll</td><td>{D5EAE6F5-359B-46B0-8FAE-2C13FF845BFB}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.http.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.HttpOverrides.dll</td><td>{59473A8E-2E47-4AF2-BB59-3ABE6670B240}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.httpove</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.JsonPatch.dll</td><td>{291968EA-3551-4192-8DD1-88D3317533A8}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.jsonpat</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Localization.dll</td><td>{0F59FADA-F1E6-4FDE-89C4-912CA2AABE56}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.localiz</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Abstractions.dll</td><td>{CCBDEB6C-F66E-4915-95B2-710029D4705D}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.abs</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.ApiExplorer.dll</td><td>{8D662F74-3108-43D9-9B87-0FFA33F8E5E6}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.api</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Core.dll</td><td>{F2BA39D9-3AD3-4982-B8BE-4290C4309C34}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.cor</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Cors.dll</td><td>{2479B94F-C693-4901-A76E-7A39FD74FE20}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.cor1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.DataAnnotations.dll</td><td>{943E9323-01A2-4D5E-84AA-EE2F90D9A14F}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.dat</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Formatters.Json.dll</td><td>{ABC4F961-7F2C-42A0-959D-AA8A056FB8F3}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.for</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Localization.dll</td><td>{66F6E9F7-B793-4AD6-B82F-E80445F97DDC}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.loc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Razor.Host.dll</td><td>{F7C69C8E-121E-4678-A22C-E517C412F86F}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.raz1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Razor.dll</td><td>{3F0B1819-0E00-4D9E-9FBA-3BF51DB6913E}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.raz</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.TagHelpers.dll</td><td>{623E5B43-45F3-46A2-A350-62605C6A0668}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.tag</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.ViewFeatures.dll</td><td>{9D432A75-C09F-4BE2-95EF-A2067B94F6B9}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.vie</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Mvc.dll</td><td>{2695B8D4-2E19-44C4-BD9B-0E43B13A32F4}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Razor.Runtime.dll</td><td>{532E5622-DC9D-41FF-9D72-E28C85CD4AA6}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.razor.r</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Razor.dll</td><td>{BA671A4A-16FC-4D0D-AF17-D610D7FF266B}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.razor.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Routing.Abstractions.dll</td><td>{A81CE9FD-C009-48D2-890D-BB067DEE9CF0}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.routing</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Routing.dll</td><td>{C5B67B7A-0C62-47C1-8680-17526519F371}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.routing1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Server.IISIntegration.dll</td><td>{1A3D17E1-ABAB-4970-B60E-3E119529F12B}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.server.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.Server.Kestrel.dll</td><td>{AE2DA874-83D6-477E-BFDA-D3372423F764}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.server.1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.StaticFiles.dll</td><td>{79D945B2-A074-488F-BEC0-54265525AF1A}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.staticf</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.AspNetCore.WebUtilities.dll</td><td>{E2468D89-76B8-4397-8703-E323B9AEB363}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.webutil</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.CodeAnalysis.CSharp.dll</td><td>{9CE1A01B-25F3-43FC-BF11-F1120CF09944}</td><td>BIN</td><td>2</td><td/><td>microsoft.codeanalysis.cshar</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.CodeAnalysis.dll</td><td>{01F27EFD-89F4-441E-8D09-8C58D6C28697}</td><td>BIN</td><td>2</td><td/><td>microsoft.codeanalysis.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.DotNet.Cli.Utils.dll</td><td>{5F4267A3-6371-44E5-B3CD-70C656493C20}</td><td>BIN</td><td>2</td><td/><td>microsoft.dotnet.cli.utils.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.DotNet.InternalAbstractions.dll</td><td>{778212CD-DFE3-4426-93EB-4397CDB9FB7B}</td><td>BIN</td><td>2</td><td/><td>microsoft.dotnet.internalabs</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.DotNet.ProjectModel.dll</td><td>{342BBD80-E585-4A68-A51D-315FA013DFC4}</td><td>BIN</td><td>2</td><td/><td>microsoft.dotnet.projectmode</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Interactions.dll</td><td>{20D8DDB9-1D6F-4D1F-AACB-68AEDF55BFBD}</td><td>BIN</td><td>2</td><td/><td>microsoft.expression.interac7</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll</td><td>{9309C707-8CC6-48CB-A7F7-ED7D120B7378}</td><td>DE</td><td>2</td><td/><td>microsoft.expression.interac</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll1</td><td>{2976E1C0-908A-4491-B035-A0B1C2112867}</td><td>EN</td><td>2</td><td/><td>microsoft.expression.interac1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll2</td><td>{C655031C-E800-4F5E-BB5A-14CE6604DCD3}</td><td>ES</td><td>2</td><td/><td>microsoft.expression.interac2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll3</td><td>{5525D966-5A68-4BCA-9892-C28312783DED}</td><td>FR</td><td>2</td><td/><td>microsoft.expression.interac3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll4</td><td>{3E4C16EE-AF16-47D1-BA9E-CC07EA6D330D}</td><td>IT</td><td>2</td><td/><td>microsoft.expression.interac4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll5</td><td>{1FAA0659-B9B5-487B-A9F8-52757795C61B}</td><td>JA</td><td>2</td><td/><td>microsoft.expression.interac5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll6</td><td>{1909BFE2-C964-40C8-A176-3A0A6862AC6A}</td><td>KO</td><td>2</td><td/><td>microsoft.expression.interac6</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll7</td><td>{47AEBA59-0F1E-4919-9E3F-20634B80192B}</td><td>RU</td><td>2</td><td/><td>microsoft.expression.interac8</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll8</td><td>{D3FE4AFB-CA5D-4B80-B554-BEA67489CCE4}</td><td>ZH_HANS</td><td>2</td><td/><td>microsoft.expression.interac9</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll9</td><td>{F6CB2F2D-3835-432C-9C7F-717E613DC3F8}</td><td>ZH_HANT</td><td>2</td><td/><td>microsoft.expression.interac10</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.dll</td><td>{1FC06693-505C-4F6F-BFBB-4B6EAC0B55A0}</td><td>BIN</td><td>2</td><td/><td>microsoft.expression.prototy7</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll</td><td>{1A936D12-B30E-4D08-8D0F-EE2E9729BBD4}</td><td>DE</td><td>2</td><td/><td>microsoft.expression.prototy</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll1</td><td>{0A5F4594-736D-4CDE-AA53-7324BFBA9CCC}</td><td>EN</td><td>2</td><td/><td>microsoft.expression.prototy1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll2</td><td>{B5F8902D-D5D5-4410-9C0D-197B3424A7C1}</td><td>ES</td><td>2</td><td/><td>microsoft.expression.prototy2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll3</td><td>{26880660-4127-4DB2-81AE-59D132D8C940}</td><td>FR</td><td>2</td><td/><td>microsoft.expression.prototy3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll4</td><td>{78D083C5-E1FF-4C65-A633-3D14C3C1DC9D}</td><td>IT</td><td>2</td><td/><td>microsoft.expression.prototy4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll5</td><td>{8E38AB65-136B-4787-873B-BCA81A604140}</td><td>JA</td><td>2</td><td/><td>microsoft.expression.prototy5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll6</td><td>{8544EF58-BED6-42B7-A262-E11629028AAA}</td><td>KO</td><td>2</td><td/><td>microsoft.expression.prototy6</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll7</td><td>{E2BF9F9A-DCA2-4FD9-B1A7-3EB221281F46}</td><td>RU</td><td>2</td><td/><td>microsoft.expression.prototy8</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll8</td><td>{CD3C1D20-7757-45A2-943E-2BF5560BF4F7}</td><td>ZH_HANS</td><td>2</td><td/><td>microsoft.expression.prototy9</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll9</td><td>{7202B203-E750-42BA-BFE9-1BC66F1F1D88}</td><td>ZH_HANT</td><td>2</td><td/><td>microsoft.expression.prototy10</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Caching.Abstractions.dll</td><td>{00CABECB-77B2-46DC-B97C-D99E0E249B23}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.caching</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Caching.Memory.dll</td><td>{83CEDFF6-9B6F-45D8-93B5-44F607D189A7}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.caching1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.CommandLineUtils.dll</td><td>{FD848ACC-0474-4B4E-BCC8-F47261927DDD}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.command</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Configuration.Abstractions.dll</td><td>{E768AABE-8D71-47C6-84DF-E9E9598DE1BE}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Configuration.Binder.dll</td><td>{D566C944-C57A-467D-A5E1-7AFCF4518DA2}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Configuration.EnvironmentVariables.dll</td><td>{78644242-C92E-41DB-802B-5B07D49E7340}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Configuration.FileExtensions.dll</td><td>{704B3A30-F933-40B8-84EF-3943F3DD10E5}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Configuration.Json.dll</td><td>{1C6201C3-8CDC-45D1-9488-8F3685CE923B}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Configuration.dll</td><td>{C9C6A7FC-2175-47D1-A158-F4719EB929DA}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.DependencyInjection.Abstractions.dll</td><td>{8AC82C05-025F-4743-B587-383845B54844}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.depende</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.DependencyInjection.dll</td><td>{3B81B87C-FFC4-4449-B9BF-F1CE6A0801FC}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.depende1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.DependencyModel.dll</td><td>{3DF088DE-112F-4D21-8D0B-9901258473AB}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.depende2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.FileProviders.Abstractions.dll</td><td>{C7590420-2FC5-48AF-9B64-07281FF5D383}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.filepro</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.FileProviders.Composite.dll</td><td>{8B121A84-2BA8-4EA1-A03E-C9775CC26D3D}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.filepro1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.FileProviders.Embedded.dll</td><td>{90760971-53BD-4FDE-A11B-157D05D9F407}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.filepro2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.FileProviders.Physical.dll</td><td>{42B2A705-3D17-468A-B8BE-6ED635C8FE4D}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.filepro3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.FileSystemGlobbing.dll</td><td>{10EDEF18-9EED-4D7F-AAB7-23AF6492E63A}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.filesys</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Globalization.CultureInfoCache.dll</td><td>{94F28D36-631E-4988-8173-8648DEC60077}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.globali</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Localization.Abstractions.dll</td><td>{F09B625C-8E9C-42DC-8A75-9C93FE8A09CE}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.localiz</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Localization.dll</td><td>{8B90EA8D-EE22-449B-AEAD-0FC0D4FB8D9D}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.localiz1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Logging.Abstractions.dll</td><td>{A24DF4D3-8B1E-40BC-8489-4B0AE46E6334}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.logging</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Logging.Console.dll</td><td>{A94A4D8E-5339-43A5-82D9-E310571F94F4}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.logging1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Logging.Debug.dll</td><td>{3FDEC567-9298-4C79-B6E4-CB26E7EE22AE}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.logging2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Logging.dll</td><td>{38EF0CA4-E9CF-45BB-AC69-0B6C1E37643A}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.logging3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.ObjectPool.dll</td><td>{553C2F61-47A9-4493-9BEA-573184B88F71}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.objectp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Options.ConfigurationExtensions.dll</td><td>{D357ABD7-879A-4CB1-9C7B-34A7D67AA1DE}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.options</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Options.dll</td><td>{47D58CD3-C8AD-45A9-A175-6B2864450121}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.options1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.PlatformAbstractions.dll</td><td>{384B0B7E-5381-47A4-BB8B-FE111135D939}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.platfor</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.Primitives.dll</td><td>{8BEA14EE-3CA9-4A96-846D-62C0611A0FE3}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.primiti</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Extensions.WebEncoders.dll</td><td>{30FC98D9-D6FA-44FA-B05B-39A8FAD610AF}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.webenco</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Net.Http.Headers.dll</td><td>{A62A2E7C-CB37-425C-92FF-142BD3889046}</td><td>BIN</td><td>2</td><td/><td>microsoft.net.http.headers.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Practices.ServiceLocation.dll</td><td>{5576FAF9-C8BF-40C4-9503-7B59973AF297}</td><td>BIN</td><td>2</td><td/><td>microsoft.practices.servicel</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Practices.Unity.Configuration.dll</td><td>{73151C2B-4CAB-4380-9983-D7615DA4BD53}</td><td>BIN</td><td>2</td><td/><td>microsoft.practices.unity.co</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Practices.Unity.RegistrationByConvention.dll</td><td>{3975A516-0F07-4FF9-9BDA-AE24827F663F}</td><td>BIN</td><td>2</td><td/><td>microsoft.practices.unity.re</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Practices.Unity.dll</td><td>{DE490D3C-BBEC-4A01-BB75-4A834F74D380}</td><td>BIN</td><td>2</td><td/><td>microsoft.practices.unity.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Threading.Tasks.Extensions.Desktop.dll</td><td>{DD215459-DC71-4221-9BEB-F958BBA59867}</td><td>BIN</td><td>2</td><td/><td>microsoft.threading.tasks.ex</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Threading.Tasks.Extensions.dll</td><td>{501B5083-556F-4264-9575-4288B316D65C}</td><td>BIN</td><td>2</td><td/><td>microsoft.threading.tasks.ex2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Threading.Tasks.dll</td><td>{93DB8BDA-0823-4282-A6FC-377EDB7D4E80}</td><td>BIN</td><td>2</td><td/><td>microsoft.threading.tasks.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.VisualStudio.Web.BrowserLink.Loader.dll</td><td>{0DE20A10-B304-4BE0-840F-753D733454BE}</td><td>BIN</td><td>2</td><td/><td>microsoft.visualstudio.web.b</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.WindowsAPICodePack.Shell.dll</td><td>{A9645DCA-BC1B-47C8-915F-1CB364658450}</td><td>BIN</td><td>2</td><td/><td>microsoft.windowsapicodepack1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.WindowsAPICodePack.dll</td><td>{FDC96A0B-C13E-4F0C-B5EC-61032A44BFB2}</td><td>BIN</td><td>2</td><td/><td>microsoft.windowsapicodepack</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Newtonsoft.Json.dll</td><td>{28AD6B53-71F5-45F3-8B58-1CB4C9AC7AF2}</td><td>BIN</td><td>2</td><td/><td>newtonsoft.json.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.Common.dll</td><td>{A8339731-12EA-4279-B96C-A5D1BFBBC1BF}</td><td>BIN</td><td>2</td><td/><td>nuget.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.Configuration.dll</td><td>{A6EFF1E6-4386-4FB2-983A-4AA5ED9A1698}</td><td>BIN</td><td>2</td><td/><td>nuget.configuration.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.DependencyResolver.Core.dll</td><td>{24E5D0D9-6335-4A2B-A1A8-6C3FBE02A755}</td><td>BIN</td><td>2</td><td/><td>nuget.dependencyresolver.cor</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.Frameworks.dll</td><td>{8D6C886D-EA98-42B2-A24B-CEBD77C59D2D}</td><td>BIN</td><td>2</td><td/><td>nuget.frameworks.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.LibraryModel.dll</td><td>{5DC77B25-9C55-49EE-A9C0-E78090AD4AE5}</td><td>BIN</td><td>2</td><td/><td>nuget.librarymodel.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.Packaging.Core.Types.dll</td><td>{2D00EDBE-28B8-4E4C-8DB5-36B1F90A7DC9}</td><td>BIN</td><td>2</td><td/><td>nuget.packaging.core.types.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.Packaging.Core.dll</td><td>{B020D465-006C-4E42-8524-99B8E62E90E9}</td><td>BIN</td><td>2</td><td/><td>nuget.packaging.core.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.Packaging.dll</td><td>{84349C50-E3EE-444C-A209-CAF3C59F8512}</td><td>BIN</td><td>2</td><td/><td>nuget.packaging.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.ProjectModel.dll</td><td>{5FD95685-8B82-4402-8EC4-A9633BE9888D}</td><td>BIN</td><td>2</td><td/><td>nuget.projectmodel.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.Protocol.Core.Types.dll</td><td>{4AD43281-0064-4EE1-AC9B-8C7F3B934F99}</td><td>BIN</td><td>2</td><td/><td>nuget.protocol.core.types.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.Protocol.Core.v3.dll</td><td>{5D35C5F7-D235-403B-98A7-D364FE83F74B}</td><td>BIN</td><td>2</td><td/><td>nuget.protocol.core.v3.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.Repositories.dll</td><td>{5E311535-3140-4235-88C9-0069F970FA60}</td><td>BIN</td><td>2</td><td/><td>nuget.repositories.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.RuntimeModel.dll</td><td>{26C1CE38-03DF-4061-9F0B-EF6FFF79812E}</td><td>BIN</td><td>2</td><td/><td>nuget.runtimemodel.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NuGet.Versioning.dll</td><td>{0F846760-4736-410C-931B-CA32C95F7727}</td><td>BIN</td><td>2</td><td/><td>nuget.versioning.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>RestSharp.dll</td><td>{30259DA7-166A-4265-A515-C95C9D1E4E14}</td><td>BIN</td><td>2</td><td/><td>restsharp.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Swashbuckle.Swagger.dll</td><td>{656990B6-284B-4E52-B2F1-35F06745E522}</td><td>BIN</td><td>2</td><td/><td>swashbuckle.swagger.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Swashbuckle.SwaggerGen.dll</td><td>{4AC5EFBB-B35A-44A1-9C22-92855DB95E2D}</td><td>BIN</td><td>2</td><td/><td>swashbuckle.swaggergen.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Swashbuckle.SwaggerUi.dll</td><td>{E2D8C24C-B35C-4B8F-A574-6323B0F68952}</td><td>BIN</td><td>2</td><td/><td>swashbuckle.swaggerui.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.AppContext.dll</td><td>{16E5E1F7-EF61-49D9-A3A2-49C3D751F2B9}</td><td>BIN</td><td>2</td><td/><td>system.appcontext.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Buffers.dll</td><td>{3E88DE50-C440-41BB-86ED-403A939FC3E9}</td><td>BIN</td><td>2</td><td/><td>system.buffers.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Collections.Immutable.dll</td><td>{1DF98218-1EF2-4C83-9358-D20F86044E4A}</td><td>BIN</td><td>2</td><td/><td>system.collections.immutable</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.ComponentModel.Primitives.dll</td><td>{7657430A-4A0D-4236-80A2-EE25BCB31339}</td><td>BIN</td><td>2</td><td/><td>system.componentmodel.primit</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.ComponentModel.TypeConverter.dll</td><td>{44232B04-85E2-43CA-939E-2F696652B23E}</td><td>BIN</td><td>2</td><td/><td>system.componentmodel.typeco</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Console.dll</td><td>{3638CB0C-B6F7-49C0-AA44-C3D38B857132}</td><td>BIN</td><td>2</td><td/><td>system.console.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Diagnostics.DiagnosticSource.dll</td><td>{628EBD27-6A03-4AB8-B112-011E8146B110}</td><td>BIN</td><td>2</td><td/><td>system.diagnostics.diagnosti</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Diagnostics.FileVersionInfo.dll</td><td>{BF6A2BD1-CD98-4F15-9B14-A90BA0058E19}</td><td>BIN</td><td>2</td><td/><td>system.diagnostics.fileversi</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Diagnostics.StackTrace.dll</td><td>{6635EE3D-3EA2-4345-89A9-2D2876CB34FE}</td><td>BIN</td><td>2</td><td/><td>system.diagnostics.stacktrac</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.IO.FileSystem.Primitives.dll</td><td>{7AD65024-A31C-48D3-BA9A-577BD1B2C335}</td><td>BIN</td><td>2</td><td/><td>system.io.filesystem.primiti</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.IO.FileSystem.dll</td><td>{3AA75BFC-1CC3-4AC4-ABC0-BFC29B087953}</td><td>BIN</td><td>2</td><td/><td>system.io.filesystem.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Net.Http.Extensions.dll</td><td>{9D0E43DB-0694-490F-A034-88DA61DEDBA9}</td><td>BIN</td><td>2</td><td/><td>system.net.http.extensions.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Net.Http.Primitives.dll</td><td>{932F2DD1-EE70-4B87-A2C2-96D8F517E31A}</td><td>BIN</td><td>2</td><td/><td>system.net.http.primitives.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Numerics.Vectors.dll</td><td>{092805B6-3859-4530-9516-54F4572C1B98}</td><td>BIN</td><td>2</td><td/><td>system.numerics.vectors.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Reactive.Core.dll</td><td>{AFFAB68C-FF94-4ACD-B49D-C2BC29A684F0}</td><td>BIN</td><td>2</td><td/><td>system.reactive.core.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Reactive.Interfaces.dll</td><td>{7E07D6E4-8448-4EFF-9CBB-23B820AA4451}</td><td>BIN</td><td>2</td><td/><td>system.reactive.interfaces.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Reactive.Linq.dll</td><td>{756971D4-65DB-46E9-BCA3-D928168FAF6F}</td><td>BIN</td><td>2</td><td/><td>system.reactive.linq.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Reactive.PlatformServices.dll</td><td>{C5A286F8-8B29-4294-872C-AA6323969FE9}</td><td>BIN</td><td>2</td><td/><td>system.reactive.platformserv</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Reactive.Windows.Threading.dll</td><td>{37C59E41-9EEC-4213-930B-535079A40153}</td><td>BIN</td><td>2</td><td/><td>system.reactive.windows.thre</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Reflection.Metadata.dll</td><td>{D1564852-C847-4A2D-955A-176163A68D9C}</td><td>BIN</td><td>2</td><td/><td>system.reflection.metadata.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Runtime.InteropServices.RuntimeInformation.dll</td><td>{6C6FCD3A-DFD0-4701-B953-CCCAE692ADA3}</td><td>BIN</td><td>2</td><td/><td>system.runtime.interopservic</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Runtime.Serialization.Primitives.dll</td><td>{8E14376B-4A3E-4584-A607-29281873E078}</td><td>BIN</td><td>2</td><td/><td>system.runtime.serialization</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Runtime.WindowsRuntime.UI.Xaml.dll</td><td>{DE3D547D-2CC9-4FBF-BF45-9E2854D198FA}</td><td>BIN</td><td>2</td><td/><td>system.runtime.windowsruntim1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Runtime.WindowsRuntime.dll</td><td>{0CA9AA6D-227E-4746-A746-9BB0CA99C9D5}</td><td>BIN</td><td>2</td><td/><td>system.runtime.windowsruntim</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Security.Cryptography.Algorithms.dll</td><td>{2196862D-8086-4EC7-A264-70EC36E73766}</td><td>BIN</td><td>2</td><td/><td>system.security.cryptography</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Security.Cryptography.Encoding.dll</td><td>{141F553E-0B4C-44CA-A769-702C1F069DA0}</td><td>BIN</td><td>2</td><td/><td>system.security.cryptography1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Security.Cryptography.Primitives.dll</td><td>{B3E10FFE-0B89-422F-BBF7-9D8A69652BBD}</td><td>BIN</td><td>2</td><td/><td>system.security.cryptography2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Security.Cryptography.X509Certificates.dll</td><td>{B8EE2072-BF4A-4C15-B732-5E8DFEEA6076}</td><td>BIN</td><td>2</td><td/><td>system.security.cryptography3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Text.Encoding.CodePages.dll</td><td>{1D52C7FA-0FF0-40E2-A706-22F8E455C020}</td><td>BIN</td><td>2</td><td/><td>system.text.encoding.codepag</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Text.Encodings.Web.dll</td><td>{BA38F8BF-9004-4D23-AE2C-6AEC70AC96FD}</td><td>BIN</td><td>2</td><td/><td>system.text.encodings.web.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Threading.Tasks.Extensions.dll</td><td>{230F5050-64A7-454F-BE07-EA45710B2A45}</td><td>BIN</td><td>2</td><td/><td>system.threading.tasks.exten</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Threading.Thread.dll</td><td>{A0790311-5A8D-43A3-B123-1960E802DDC4}</td><td>BIN</td><td>2</td><td/><td>system.threading.thread.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.dll</td><td>{80D827A8-9257-4092-9ED0-9C9861A25C44}</td><td>BIN</td><td>2</td><td/><td>system.windows.interactivity8</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.resources.dll</td><td>{A99BA499-0C6B-4796-B9B7-032573A74F25}</td><td>DE</td><td>2</td><td/><td>system.windows.interactivity</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.resources.dll1</td><td>{B4D4DEA9-1A13-40CE-902D-EAD653E4F632}</td><td>EN</td><td>2</td><td/><td>system.windows.interactivity1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.resources.dll2</td><td>{01425497-CE9D-4509-A26F-7CF442E503EB}</td><td>ES</td><td>2</td><td/><td>system.windows.interactivity2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.resources.dll3</td><td>{E90E2AD8-78D1-4B32-90E0-467E946CC839}</td><td>FR</td><td>2</td><td/><td>system.windows.interactivity3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.resources.dll4</td><td>{78533A0B-B0AD-4797-9EDC-6D505D21C5D3}</td><td>IT</td><td>2</td><td/><td>system.windows.interactivity4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.resources.dll5</td><td>{2A95BAB7-61CE-457A-B25F-EE08EE73B503}</td><td>JA</td><td>2</td><td/><td>system.windows.interactivity5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.resources.dll6</td><td>{FC610657-7B02-4A1F-A5D1-2389A9C0B88C}</td><td>KO</td><td>2</td><td/><td>system.windows.interactivity6</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.resources.dll7</td><td>{3D5B6F41-BDA4-4450-ACDE-FFD16A5264B0}</td><td>RU</td><td>2</td><td/><td>system.windows.interactivity7</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.resources.dll8</td><td>{A14D11CE-22BC-4C02-93A1-48EAE203BE7A}</td><td>ZH_HANS</td><td>2</td><td/><td>system.windows.interactivity9</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Windows.Interactivity.resources.dll9</td><td>{AF455D68-4946-4DBD-974B-1F6A2B52FCEC}</td><td>ZH_HANT</td><td>2</td><td/><td>system.windows.interactivity10</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Xml.XPath.XDocument.dll</td><td>{C54012B4-A693-480F-A262-2078A1D8407D}</td><td>BIN</td><td>2</td><td/><td>system.xml.xpath.xdocument.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Xml.XPath.dll</td><td>{E5FCD4CD-1ED0-4D04-A3C0-44A7D88C8427}</td><td>BIN</td><td>2</td><td/><td>system.xml.xpath.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Xml.XmlDocument.dll</td><td>{4E1DF270-5B30-44FD-8496-FC8CF090E04C}</td><td>BIN</td><td>2</td><td/><td>system.xml.xmldocument.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.Themes.Aero.dll</td><td>{6EB58AB9-F869-4AD2-B988-49178F6B975D}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.avalondock.themes.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.Themes.Metro.dll</td><td>{E5F092E7-E6D9-4C88-AD4F-FA59E3906AB0}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.avalondock.themes.1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.Themes.VS2010.dll</td><td>{716303D6-3245-4978-A699-2F9B2D66263E}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.avalondock.themes.2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.dll</td><td>{8A6D719E-5DF4-4491-BE34-32DCEDE1662F}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.avalondock.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll</td><td>{B0D1BD93-4F87-46FC-94A1-F52C2F1A516E}</td><td>DE</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll1</td><td>{EC9603E3-CC9D-40D8-9CE0-06DF333BCACF}</td><td>ES</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll2</td><td>{55AEA5F5-866B-4FEC-A640-8354F9ADAFFD}</td><td>FR</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll3</td><td>{8356465D-7ADD-4827-8C3D-720465241CA9}</td><td>HU</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll4</td><td>{DE727C4C-D463-49B2-BBA3-13099BD4A761}</td><td>IT</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll5</td><td>{D02C976F-9C43-4B2C-B2E0-B48B64F973A9}</td><td>PT_BR</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll6</td><td>{63222F60-329A-4B07-B5C3-DA567A4C0F31}</td><td>RO</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc6</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll7</td><td>{3462180F-362F-4078-B6B9-0650B770F2E2}</td><td>RU</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc7</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll8</td><td>{51F29BB7-C69B-42D2-B2A4-323523205A9E}</td><td>SV</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc8</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll9</td><td>{D0D96293-7E8E-4C62-9B6E-9044F8A321EE}</td><td>ZH_HANS</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc9</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.DataGrid.dll</td><td>{E1E7CF31-EEBF-4692-A0FC-088E44A4D367}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.datagrid.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.Toolkit.dll</td><td>{086B94C0-E941-4AAC-BAF7-FB878D6A5ED8}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.toolkit.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Zlib.Portable.dll</td><td>{6538A5D7-24BB-4EB3-B57B-6380D225B575}</td><td>BIN</td><td>2</td><td/><td>zlib.portable.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>dotnet_razor_tooling.exe</td><td>{D081C145-D7D9-4AF1-B8AF-F2F506C21588}</td><td>BIN</td><td>2</td><td/><td>dotnet_razor_tooling.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>libuv.dll</td><td>{6FBE5067-8774-43D3-8ECC-45F8A87D7ADF}</td><td>BIN</td><td>2</td><td/><td>libuv.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{E7C2A01D-2E93-4C33-9CBB-C5B843404EFB}</td><td>FR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{8BBD2F93-2B84-4F96-BD63-39A39F93B87C}</td><td>HU</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{34E4153F-65C3-4EAE-85C1-3A332664D966}</td><td>IT</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{BE13F534-7ADE-4283-B633-3E808BEC9B46}</td><td>JA</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{091A40C6-6E00-49F0-924D-48F61EFF9F9C}</td><td>KO</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{1FC9F98C-C779-4861-915D-E510033C6855}</td><td>PT_BR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MVVMSidekick.dll</td><td>{4F3C3E19-4DC3-4774-B963-17909195AB1F}</td><td>BIN</td><td>2</td><td/><td>mvvmsidekick.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MahApps.Metro.dll</td><td>{5EE51D20-138F-47A1-8C3F-18E8D631974C}</td><td>BIN</td><td>2</td><td/><td>mahapps.metro.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Antiforgery.dll</td><td>{82B86448-02BD-470D-A163-C467B383E52E}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.antifor</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Authorization.dll</td><td>{600E54F8-2D3E-4AE1-B042-9E4D3802AE15}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.authori</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Cors.dll</td><td>{3E0668F4-4DBE-47F4-BE1E-DC9B4CB2DDCB}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.cors.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Cryptography.Internal.dll</td><td>{F76DD8B1-40BE-4A94-B5C7-3C51DA2B8AD6}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.cryptog</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.DataProtection.Abstractions.dll</td><td>{424CFFDA-6348-4C06-BCE2-DEA44C38712E}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.datapro</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.DataProtection.dll</td><td>{EF0AA2E4-A62A-45F6-9D4B-C11D12C34C0F}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.datapro1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Diagnostics.Abstractions.dll</td><td>{C48BF776-033E-4791-9305-A6955B525DC5}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.diagnos</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Diagnostics.dll</td><td>{CCE54355-C5D3-482E-A394-A0A17C2219E0}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.diagnos1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Hosting.Abstractions.dll</td><td>{427AE97B-8C20-4ABD-8625-AD45F355F436}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.hosting</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</td><td>{D2D19B5E-D6BD-4180-9F6B-9D8E5A9BF27B}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.hosting2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Hosting.dll</td><td>{A7E0198D-7AE2-454D-A7C4-D0D9AA7C2313}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.hosting1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Html.Abstractions.dll</td><td>{C91DB4DA-945F-4735-931E-9BCF126B0225}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.html.ab</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Http.Abstractions.dll</td><td>{0277F60B-9E2C-4317-A020-43D90D504C86}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.http.ab</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Http.Extensions.dll</td><td>{A1A521C0-C7BE-4C49-802B-1DA58DC2EF88}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.http.ex</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Http.Features.dll</td><td>{18CA68AC-8E83-46FC-8152-B7243908DF01}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.http.fe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Http.dll</td><td>{61B3317F-D9D2-4FED-8113-C3136763D6E9}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.http.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.HttpOverrides.dll</td><td>{E579B6DC-AD17-419D-836E-D98E436E2C3E}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.httpove</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.JsonPatch.dll</td><td>{2773F735-F1D8-460B-BD1B-2F80D449D21A}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.jsonpat</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Localization.dll</td><td>{4BCCAFCF-B68E-4CDE-B08F-59837138D687}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.localiz</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Abstractions.dll</td><td>{A4C4094E-A958-42C0-9F13-C662F82762C6}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.abs</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.ApiExplorer.dll</td><td>{E00B774E-7459-4B59-A78B-68D96D2D02BD}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.api</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Core.dll</td><td>{BF46586B-8DAE-49E5-B72F-338DED3FC650}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.cor</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Cors.dll</td><td>{7754895E-0E00-4741-9305-D96D4AA7CD62}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.cor1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.DataAnnotations.dll</td><td>{57C3CF6C-EECA-47D2-A0B3-0EBAD460D652}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.dat</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Formatters.Json.dll</td><td>{4BBCBADC-781D-4386-8474-A4247819E240}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.for</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Localization.dll</td><td>{ECBCF1BD-787F-4135-AE63-7A86849C6BE4}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.loc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Razor.Host.dll</td><td>{555610D3-07BA-414D-9F63-6E79FFAD7729}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.raz1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Razor.dll</td><td>{E0224C1C-E856-4A0B-A159-9FA3575C69CF}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.raz</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.TagHelpers.dll</td><td>{1FC097C7-2BC9-4757-AB70-F9B3DEEF011D}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.tag</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.ViewFeatures.dll</td><td>{0988948D-6954-47DB-AF60-1FB9617E4432}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.vie</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Mvc.dll</td><td>{C7C8F0E0-5093-474E-AB67-405A3E255199}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.mvc.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Razor.Runtime.dll</td><td>{0666A31F-CA29-41B5-9377-A5C3386AB9F5}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.razor.r</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Razor.dll</td><td>{7FD22A41-FFC0-4669-94B5-D7663FEA4AF7}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.razor.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Routing.Abstractions.dll</td><td>{E55753BE-E806-47EB-9A74-B9B49C889AEF}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.routing</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Routing.dll</td><td>{2813BF5E-7AB9-42CA-97F0-DB2E846B620E}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.routing1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Server.IISIntegration.dll</td><td>{88859A51-4178-49F9-9641-3DCE22BAE188}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.server.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.Server.Kestrel.dll</td><td>{2CF7E544-436B-46F8-A896-D6EFFCD28965}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.server.1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.StaticFiles.dll</td><td>{22B4F744-05E9-4670-A612-74102E2D1110}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.staticf</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.AspNetCore.WebUtilities.dll</td><td>{81D9836F-41A8-42C0-B980-3C54AAAE5B1C}</td><td>BIN</td><td>2</td><td/><td>microsoft.aspnetcore.webutil</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.CodeAnalysis.CSharp.dll</td><td>{8C4D3CD0-4627-41A4-BE10-A97FF222CC02}</td><td>BIN</td><td>2</td><td/><td>microsoft.codeanalysis.cshar</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.CodeAnalysis.dll</td><td>{5A93558D-A63C-40DD-93E4-4717BEABFEE6}</td><td>BIN</td><td>2</td><td/><td>microsoft.codeanalysis.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.DotNet.Cli.Utils.dll</td><td>{997EAF13-061F-48A7-B078-2FAE48861715}</td><td>BIN</td><td>2</td><td/><td>microsoft.dotnet.cli.utils.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.DotNet.InternalAbstractions.dll</td><td>{617E5A13-A9EB-466C-9A0D-48C465889788}</td><td>BIN</td><td>2</td><td/><td>microsoft.dotnet.internalabs</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.DotNet.ProjectModel.dll</td><td>{049680BF-8580-4BE9-A3FF-7B49C09FAC55}</td><td>BIN</td><td>2</td><td/><td>microsoft.dotnet.projectmode</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Interactions.dll</td><td>{E5DC221A-38FD-479F-9619-01E2BFB3B279}</td><td>BIN</td><td>2</td><td/><td>microsoft.expression.interac7</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll</td><td>{1832B09E-3E27-43F5-B4F2-F0541D858048}</td><td>DE</td><td>2</td><td/><td>microsoft.expression.interac</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll1</td><td>{4DE4927B-DE36-4495-B1FB-47FDF2E9A823}</td><td>EN</td><td>2</td><td/><td>microsoft.expression.interac1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll2</td><td>{0B1BD87E-ACBF-4734-9CBF-38C33D50CFF6}</td><td>ES</td><td>2</td><td/><td>microsoft.expression.interac2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll3</td><td>{0B4AD403-0EF5-48D7-83D1-A7048DD0AC90}</td><td>FR</td><td>2</td><td/><td>microsoft.expression.interac3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll4</td><td>{1C719ECD-DBE8-4439-8448-040B15A19AF0}</td><td>IT</td><td>2</td><td/><td>microsoft.expression.interac4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll5</td><td>{4CD16FEF-E127-471E-9224-69CBA60C5F85}</td><td>JA</td><td>2</td><td/><td>microsoft.expression.interac5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll6</td><td>{6E2858FD-8892-41B3-B3D6-3803210C5005}</td><td>KO</td><td>2</td><td/><td>microsoft.expression.interac6</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll7</td><td>{A52E689B-DFDA-4F4E-8D19-CB033CDA5C90}</td><td>RU</td><td>2</td><td/><td>microsoft.expression.interac8</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll8</td><td>{6FB1EFF5-5CBE-49BB-B0E2-78B238CDF5D2}</td><td>ZH_HANS</td><td>2</td><td/><td>microsoft.expression.interac9</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll9</td><td>{26E176C1-3557-41D9-961F-E6DCCB8E2DCD}</td><td>ZH_HANT</td><td>2</td><td/><td>microsoft.expression.interac10</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.dll</td><td>{43089026-8BDE-4A30-ADC2-C709081F1F6A}</td><td>BIN</td><td>2</td><td/><td>microsoft.expression.prototy7</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll</td><td>{630BCE87-5AA5-4919-AEE4-7E6805F08CFC}</td><td>DE</td><td>2</td><td/><td>microsoft.expression.prototy</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll1</td><td>{961C43C3-2EF0-4C3E-993D-E431CA480D56}</td><td>EN</td><td>2</td><td/><td>microsoft.expression.prototy1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll2</td><td>{00261372-8A13-4F74-9066-18ADFD6C05E9}</td><td>ES</td><td>2</td><td/><td>microsoft.expression.prototy2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll3</td><td>{D1B39AB0-4786-4E44-8A16-C8FC479E0BE9}</td><td>FR</td><td>2</td><td/><td>microsoft.expression.prototy3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll4</td><td>{70C3A137-5B8E-4C13-939C-FFE70AA12D16}</td><td>IT</td><td>2</td><td/><td>microsoft.expression.prototy4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll5</td><td>{23D55218-C7C2-40A1-8A4E-7A1E1BD41956}</td><td>JA</td><td>2</td><td/><td>microsoft.expression.prototy5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll6</td><td>{EFE176A1-FBA0-4E17-BDEE-C8CCF1605FFA}</td><td>KO</td><td>2</td><td/><td>microsoft.expression.prototy6</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll7</td><td>{4FDE6FAD-6E4B-4C5F-908A-30B518121E1C}</td><td>RU</td><td>2</td><td/><td>microsoft.expression.prototy8</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll8</td><td>{8BCE12DB-C422-4486-B946-3DC453CF12B5}</td><td>ZH_HANS</td><td>2</td><td/><td>microsoft.expression.prototy9</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll9</td><td>{341E046B-C17B-4126-9878-031B551553C8}</td><td>ZH_HANT</td><td>2</td><td/><td>microsoft.expression.prototy10</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Caching.Abstractions.dll</td><td>{8DFB42BB-795C-43B1-A4DF-43BDBD184BAF}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.caching</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Caching.Memory.dll</td><td>{EC854D55-3303-49C0-A9E6-398A3F02617A}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.caching1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.CommandLineUtils.dll</td><td>{B6A66378-80CB-45CD-A3CF-EB4002D36C47}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.command</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Configuration.Abstractions.dll</td><td>{8E3C416C-C6B3-41F1-AE46-C8FF8AD4D72A}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Configuration.Binder.dll</td><td>{9A50141C-0CE4-4D36-A0F5-3679FA3536C6}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Configuration.EnvironmentVariables.dll</td><td>{EC459BB3-BEEE-461F-A330-C86B49741CE0}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Configuration.FileExtensions.dll</td><td>{DE925957-7FF9-4FC5-91FE-C565135C3A86}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Configuration.Json.dll</td><td>{B8DA4DAF-4CA1-4295-B435-E714DCA77DD3}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Configuration.dll</td><td>{14D7EDD7-6A64-4DA5-96D2-AF8465E6B897}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.configu2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.DependencyInjection.Abstractions.dll</td><td>{751B1FB4-ECD7-494F-AE7B-0808D76ABC5C}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.depende</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.DependencyInjection.dll</td><td>{BFE30A64-4845-4D71-AA91-BD26811A637B}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.depende1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.DependencyModel.dll</td><td>{4B23BF4B-54F5-4663-B3FB-6A15A2CB1D89}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.depende2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.FileProviders.Abstractions.dll</td><td>{A32B92D8-A2D1-4B7F-8BFA-381FEEFA6BE1}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.filepro</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.FileProviders.Composite.dll</td><td>{90E9A4FE-FB89-4017-B2F4-4ED774CD5D87}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.filepro1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.FileProviders.Embedded.dll</td><td>{FEC0C7AB-C7F8-4653-8770-C97C57EE7D8A}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.filepro2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.FileProviders.Physical.dll</td><td>{9DAF388E-E17C-4679-AE30-FF7B7B866197}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.filepro3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.FileSystemGlobbing.dll</td><td>{12932047-E753-4344-A9B6-BD1000C8557B}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.filesys</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Globalization.CultureInfoCache.dll</td><td>{9A1ECDE2-6E96-4874-A598-E9D4553F0E0A}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.globali</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Localization.Abstractions.dll</td><td>{DD48728B-6697-4043-B631-6959E2DC75CB}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.localiz</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Localization.dll</td><td>{4A67DB88-8744-4069-81D2-99A589B1F5CD}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.localiz1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Logging.Abstractions.dll</td><td>{C357FA53-4386-4310-8648-C14856CB5D6C}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.logging</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Logging.Console.dll</td><td>{F98247F5-2BB2-47AA-9824-E5E830DE375C}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.logging1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Logging.Debug.dll</td><td>{547D6537-CB53-48AC-B449-DDB1E328A114}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.logging2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Logging.dll</td><td>{4C2C832D-7729-4704-83D3-97154AAE18E1}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.logging3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.ObjectPool.dll</td><td>{1B38E1D3-4A68-44CB-85B8-BDBE67755AB9}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.objectp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Options.ConfigurationExtensions.dll</td><td>{DCC413BA-030A-40B8-BFA6-6C7386E40790}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.options</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Options.dll</td><td>{B6A4C8BC-E680-4604-9FED-C79514E04230}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.options1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.PlatformAbstractions.dll</td><td>{C423A884-12AB-41D2-A3B7-66F075DE3192}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.platfor</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.Primitives.dll</td><td>{90EE15E9-04AA-4C5B-86E5-0E155E36659B}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.primiti</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Extensions.WebEncoders.dll</td><td>{8A50EE38-CB5A-4AF7-9FC7-3CCF56151E02}</td><td>BIN</td><td>2</td><td/><td>microsoft.extensions.webenco</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Net.Http.Headers.dll</td><td>{846244A8-9D80-4109-B1E1-2FEFD44893FA}</td><td>BIN</td><td>2</td><td/><td>microsoft.net.http.headers.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Practices.ServiceLocation.dll</td><td>{877CE3CC-F003-4251-85B0-1034E67B8C0A}</td><td>BIN</td><td>2</td><td/><td>microsoft.practices.servicel</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Practices.Unity.Configuration.dll</td><td>{0BA30EB9-296D-45B8-AE74-73D02455587E}</td><td>BIN</td><td>2</td><td/><td>microsoft.practices.unity.co</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Practices.Unity.RegistrationByConvention.dll</td><td>{78EA035E-E950-4935-95D6-23369414F494}</td><td>BIN</td><td>2</td><td/><td>microsoft.practices.unity.re</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Practices.Unity.dll</td><td>{E1E1DDBD-ED88-4EBA-ACE1-EFEC47043F3A}</td><td>BIN</td><td>2</td><td/><td>microsoft.practices.unity.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Threading.Tasks.Extensions.Desktop.dll</td><td>{53D77A03-4BF6-4740-9F30-FB2CE3A42321}</td><td>BIN</td><td>2</td><td/><td>microsoft.threading.tasks.ex</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Threading.Tasks.Extensions.dll</td><td>{4D1FEB14-4336-4D08-B953-24E4555D8AD2}</td><td>BIN</td><td>2</td><td/><td>microsoft.threading.tasks.ex2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Threading.Tasks.dll</td><td>{D1C00B87-C4FD-4300-A4C0-5C2FDCE55327}</td><td>BIN</td><td>2</td><td/><td>microsoft.threading.tasks.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.VisualStudio.Web.BrowserLink.Loader.dll</td><td>{CD0B36B1-4C26-46DB-81C2-4BC63AA1B2D4}</td><td>BIN</td><td>2</td><td/><td>microsoft.visualstudio.web.b</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.WindowsAPICodePack.Shell.dll</td><td>{45283E28-E902-4383-A3CD-B4E7CDE8F919}</td><td>BIN</td><td>2</td><td/><td>microsoft.windowsapicodepack1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.WindowsAPICodePack.dll</td><td>{1184F27D-AEFD-40A7-B774-BEF433AD465A}</td><td>BIN</td><td>2</td><td/><td>microsoft.windowsapicodepack</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Newtonsoft.Json.dll</td><td>{0A69EF76-3759-41B9-AB07-E4D6BCD8A873}</td><td>BIN</td><td>2</td><td/><td>newtonsoft.json.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.Common.dll</td><td>{37FBF7F0-F117-4AC1-96F6-79159FB689BD}</td><td>BIN</td><td>2</td><td/><td>nuget.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.Configuration.dll</td><td>{F005085D-E678-41F6-AC21-93939688978F}</td><td>BIN</td><td>2</td><td/><td>nuget.configuration.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.DependencyResolver.Core.dll</td><td>{FF8D76CF-D65C-4488-A35F-F826B462867F}</td><td>BIN</td><td>2</td><td/><td>nuget.dependencyresolver.cor</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.Frameworks.dll</td><td>{F79DE962-55A9-4285-A972-02C0460BFD21}</td><td>BIN</td><td>2</td><td/><td>nuget.frameworks.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.LibraryModel.dll</td><td>{FF77F0EA-DAB3-4C2B-AD1E-162EDEE9F5B9}</td><td>BIN</td><td>2</td><td/><td>nuget.librarymodel.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.Packaging.Core.Types.dll</td><td>{E42AF60A-59A9-43E8-8336-EA24F826C8AD}</td><td>BIN</td><td>2</td><td/><td>nuget.packaging.core.types.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.Packaging.Core.dll</td><td>{071D57CF-2285-4498-B98F-F3CEC38C1194}</td><td>BIN</td><td>2</td><td/><td>nuget.packaging.core.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.Packaging.dll</td><td>{0E6DD88E-0860-4FE8-912A-51750F55D4A3}</td><td>BIN</td><td>2</td><td/><td>nuget.packaging.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.ProjectModel.dll</td><td>{966AB4A1-FC34-47BF-A0F8-B2E7C47E2649}</td><td>BIN</td><td>2</td><td/><td>nuget.projectmodel.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.Protocol.Core.Types.dll</td><td>{14A16BCE-DDFF-4763-81CE-B409D4A2C9A3}</td><td>BIN</td><td>2</td><td/><td>nuget.protocol.core.types.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.Protocol.Core.v3.dll</td><td>{AC9536BD-7FD7-4B41-95B3-E812DBA493EF}</td><td>BIN</td><td>2</td><td/><td>nuget.protocol.core.v3.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.Repositories.dll</td><td>{31C3FC52-8436-45E4-A7FA-9DFE654644D2}</td><td>BIN</td><td>2</td><td/><td>nuget.repositories.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.RuntimeModel.dll</td><td>{157A49D9-7DBF-4BD1-9A6C-ECF876E5BF15}</td><td>BIN</td><td>2</td><td/><td>nuget.runtimemodel.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NuGet.Versioning.dll</td><td>{76017173-DA04-4734-BF00-3F9DB6DDBD87}</td><td>BIN</td><td>2</td><td/><td>nuget.versioning.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>RestSharp.dll</td><td>{98EC9F07-ED90-461E-8508-B01A111389A7}</td><td>BIN</td><td>2</td><td/><td>restsharp.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Swashbuckle.Swagger.dll</td><td>{1857C3E5-2067-4AC3-801E-80171A05B7F1}</td><td>BIN</td><td>2</td><td/><td>swashbuckle.swagger.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Swashbuckle.SwaggerGen.dll</td><td>{24750852-EA8B-4B29-B61B-05455CF17327}</td><td>BIN</td><td>2</td><td/><td>swashbuckle.swaggergen.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Swashbuckle.SwaggerUi.dll</td><td>{B53B3F5A-BAB1-4C44-B677-949A589D4273}</td><td>BIN</td><td>2</td><td/><td>swashbuckle.swaggerui.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.AppContext.dll</td><td>{A7E07635-E6B7-4EC1-B004-E325CA480250}</td><td>BIN</td><td>2</td><td/><td>system.appcontext.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Buffers.dll</td><td>{4B08B547-49A2-415B-85F4-EE4B7078D13B}</td><td>BIN</td><td>2</td><td/><td>system.buffers.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Collections.Immutable.dll</td><td>{43210189-BF67-49E0-B81D-0A0F19C62E58}</td><td>BIN</td><td>2</td><td/><td>system.collections.immutable</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.ComponentModel.Primitives.dll</td><td>{05F1FA60-2361-4965-A2C9-3F375BE5285E}</td><td>BIN</td><td>2</td><td/><td>system.componentmodel.primit</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.ComponentModel.TypeConverter.dll</td><td>{0EB574D2-E3FA-4577-89A7-AA0D3EED18DD}</td><td>BIN</td><td>2</td><td/><td>system.componentmodel.typeco</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Console.dll</td><td>{5B6372A4-670B-4B1E-A346-B7792C797120}</td><td>BIN</td><td>2</td><td/><td>system.console.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Diagnostics.DiagnosticSource.dll</td><td>{B0A22A8A-93F9-496F-A2C9-5634ABC7027E}</td><td>BIN</td><td>2</td><td/><td>system.diagnostics.diagnosti</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Diagnostics.FileVersionInfo.dll</td><td>{7187F0C0-4052-475E-B465-57801B008E76}</td><td>BIN</td><td>2</td><td/><td>system.diagnostics.fileversi</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Diagnostics.StackTrace.dll</td><td>{E9BE98E7-884D-4549-B437-028F64DBAE0F}</td><td>BIN</td><td>2</td><td/><td>system.diagnostics.stacktrac</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.IO.FileSystem.Primitives.dll</td><td>{B9B9D3EF-A42E-4F5E-81A6-6AFA318FE63A}</td><td>BIN</td><td>2</td><td/><td>system.io.filesystem.primiti</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.IO.FileSystem.dll</td><td>{C14D6EE6-C621-491B-956A-D734071E5DCA}</td><td>BIN</td><td>2</td><td/><td>system.io.filesystem.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Net.Http.Extensions.dll</td><td>{70ECBF27-D434-4DF6-A737-46FB9B971534}</td><td>BIN</td><td>2</td><td/><td>system.net.http.extensions.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Net.Http.Primitives.dll</td><td>{80B2963A-7A74-4C43-B8CD-9E14896EF6AC}</td><td>BIN</td><td>2</td><td/><td>system.net.http.primitives.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Numerics.Vectors.dll</td><td>{77019857-429E-48B3-A530-EBC7CD4B71A7}</td><td>BIN</td><td>2</td><td/><td>system.numerics.vectors.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Reactive.Core.dll</td><td>{365F1EEB-CC42-48E3-9FF8-0256A4041C79}</td><td>BIN</td><td>2</td><td/><td>system.reactive.core.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Reactive.Interfaces.dll</td><td>{BFCCBE06-E3C2-4462-AF1D-E13BEF0A2EF1}</td><td>BIN</td><td>2</td><td/><td>system.reactive.interfaces.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Reactive.Linq.dll</td><td>{7DB93316-6B0C-4A19-A4EA-9F26324177B5}</td><td>BIN</td><td>2</td><td/><td>system.reactive.linq.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Reactive.PlatformServices.dll</td><td>{7FCC90C5-7587-4434-8836-47D82179BAFA}</td><td>BIN</td><td>2</td><td/><td>system.reactive.platformserv</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Reactive.Windows.Threading.dll</td><td>{D99AD184-4962-431B-9396-3262DA233848}</td><td>BIN</td><td>2</td><td/><td>system.reactive.windows.thre</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Reflection.Metadata.dll</td><td>{4AF3E235-3D91-4FBC-96FF-A761B1B76E6E}</td><td>BIN</td><td>2</td><td/><td>system.reflection.metadata.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Runtime.InteropServices.RuntimeInformation.dll</td><td>{ABAB5F2D-588E-40EB-8916-50135F6BC66F}</td><td>BIN</td><td>2</td><td/><td>system.runtime.interopservic</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Runtime.Serialization.Primitives.dll</td><td>{76483D66-690F-4F64-B616-1E9313DEB4AE}</td><td>BIN</td><td>2</td><td/><td>system.runtime.serialization</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Runtime.WindowsRuntime.UI.Xaml.dll</td><td>{78EA11D5-AA11-4CA1-88A2-07081B3D699E}</td><td>BIN</td><td>2</td><td/><td>system.runtime.windowsruntim1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Runtime.WindowsRuntime.dll</td><td>{3F0514D8-0BF5-49EA-9DAC-00B505BE7EBE}</td><td>BIN</td><td>2</td><td/><td>system.runtime.windowsruntim</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Security.Cryptography.Algorithms.dll</td><td>{9D3D76F7-0203-4EFC-838E-364EE952C8B0}</td><td>BIN</td><td>2</td><td/><td>system.security.cryptography</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Security.Cryptography.Encoding.dll</td><td>{C9EDE28B-2065-4CD7-ACB1-BA5E857E83C3}</td><td>BIN</td><td>2</td><td/><td>system.security.cryptography1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Security.Cryptography.Primitives.dll</td><td>{FF834AC4-D8BF-4EF0-94BD-66C85B05BFCC}</td><td>BIN</td><td>2</td><td/><td>system.security.cryptography2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Security.Cryptography.X509Certificates.dll</td><td>{28D18DA4-AF74-418E-BD02-B745C38AE3BF}</td><td>BIN</td><td>2</td><td/><td>system.security.cryptography3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Text.Encoding.CodePages.dll</td><td>{A8994997-62B9-47A4-BFA5-F2DF8109BAE3}</td><td>BIN</td><td>2</td><td/><td>system.text.encoding.codepag</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Text.Encodings.Web.dll</td><td>{046B495C-E44C-44D4-92B5-B31F72E7ACAB}</td><td>BIN</td><td>2</td><td/><td>system.text.encodings.web.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Threading.Tasks.Extensions.dll</td><td>{BBBD9E83-431C-4186-B2A0-98E4279B0C98}</td><td>BIN</td><td>2</td><td/><td>system.threading.tasks.exten</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Threading.Thread.dll</td><td>{67214F0B-A44B-456C-938B-33AD8808D29D}</td><td>BIN</td><td>2</td><td/><td>system.threading.thread.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.dll</td><td>{D852CB3A-3A9F-40DC-BB1A-8CB21E615258}</td><td>BIN</td><td>2</td><td/><td>system.windows.interactivity8</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.resources.dll</td><td>{A1A206F2-8119-4CAF-A7B3-3B1D08B52416}</td><td>DE</td><td>2</td><td/><td>system.windows.interactivity</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.resources.dll1</td><td>{8877954C-0406-4972-ADBF-9551EE632A83}</td><td>EN</td><td>2</td><td/><td>system.windows.interactivity1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.resources.dll2</td><td>{2CADC1D4-027C-4F5D-80D7-E4DBC1968D7E}</td><td>ES</td><td>2</td><td/><td>system.windows.interactivity2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.resources.dll3</td><td>{B0840045-1380-478D-B2B0-B850B985C1A6}</td><td>FR</td><td>2</td><td/><td>system.windows.interactivity3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.resources.dll4</td><td>{67C34D50-0D83-4917-8820-896AEB0024CB}</td><td>IT</td><td>2</td><td/><td>system.windows.interactivity4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.resources.dll5</td><td>{25FF4D1D-67C5-4E77-945A-87CE884B38B9}</td><td>JA</td><td>2</td><td/><td>system.windows.interactivity5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.resources.dll6</td><td>{D27B5B6E-0A77-4F83-9895-EB852B816514}</td><td>KO</td><td>2</td><td/><td>system.windows.interactivity6</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.resources.dll7</td><td>{2A1B1515-EA0B-4C4F-8774-D11179142BA6}</td><td>RU</td><td>2</td><td/><td>system.windows.interactivity7</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.resources.dll8</td><td>{13407A6C-824F-48A1-B1E1-574E434841F1}</td><td>ZH_HANS</td><td>2</td><td/><td>system.windows.interactivity9</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Interactivity.resources.dll9</td><td>{40E369B7-65FB-4054-B502-DCE42FA60FE2}</td><td>ZH_HANT</td><td>2</td><td/><td>system.windows.interactivity10</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Xml.XPath.XDocument.dll</td><td>{2D26598B-B252-45F8-A4B1-C8D7914959A7}</td><td>BIN</td><td>2</td><td/><td>system.xml.xpath.xdocument.d</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Xml.XPath.dll</td><td>{C372C94A-FEBC-4B22-BA0A-CDBB9E47AAD4}</td><td>BIN</td><td>2</td><td/><td>system.xml.xpath.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Xml.XmlDocument.dll</td><td>{B82A5571-B7A9-4CB9-B512-B89DF7A88A78}</td><td>BIN</td><td>2</td><td/><td>system.xml.xmldocument.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.Themes.Aero.dll</td><td>{BDB55364-64DB-4694-A594-770EF07C538A}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.avalondock.themes.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.Themes.Metro.dll</td><td>{CCDDDB88-127F-4CAF-834B-2589A18A6A4E}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.avalondock.themes.1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.Themes.VS2010.dll</td><td>{BADDC81D-F904-42F6-BD1E-8EC98B82CA85}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.avalondock.themes.2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.dll</td><td>{B4C2DB2E-6DC8-4C23-BC86-F6771CF2FC00}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.avalondock.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll</td><td>{F9A31851-1AC3-42F9-A08B-B8F853EAEA86}</td><td>DE</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll1</td><td>{FB147B2A-D2B4-4DFF-B509-3F416CB3F578}</td><td>ES</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll2</td><td>{B2BD3FE6-0C17-45C7-A064-E6FB3CC53B20}</td><td>FR</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll3</td><td>{299997A0-A550-4C3C-866E-C8083F31858F}</td><td>HU</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc3</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll4</td><td>{43912C74-768E-4308-9CB7-87E7C60060B8}</td><td>IT</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc4</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll5</td><td>{82BE40FF-962C-4A11-96DE-4DB8B92CEC86}</td><td>PT_BR</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc5</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll6</td><td>{ED91A911-3375-4185-B5CF-348FEF9035C3}</td><td>RO</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc6</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll7</td><td>{D89D54A4-75FC-438F-A72A-CF9E05080B13}</td><td>RU</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc7</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll8</td><td>{707270FE-0162-4E8D-BCEC-F0853ABB80D2}</td><td>SV</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc8</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll9</td><td>{62A8B340-95D5-4FCC-AB03-A093AD5D6F77}</td><td>ZH_HANS</td><td>2</td><td/><td>xceed.wpf.avalondock.resourc9</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.DataGrid.dll</td><td>{CD55DAEE-40D6-435D-B0D3-3A8AFDC1AACA}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.datagrid.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.Toolkit.dll</td><td>{3048453B-4561-4B48-AF2C-D6303A2E0817}</td><td>BIN</td><td>2</td><td/><td>xceed.wpf.toolkit.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Zlib.Portable.dll</td><td>{464A4377-FAB4-4235-B3C0-53AEF1E699E6}</td><td>BIN</td><td>2</td><td/><td>zlib.portable.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>dotnet_razor_tooling.exe</td><td>{FF649558-19F7-4A3F-9829-556B0151BDCF}</td><td>BIN</td><td>2</td><td/><td>dotnet_razor_tooling.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>libuv.dll</td><td>{1C40B8A1-CB61-414A-8FFC-3819114D068C}</td><td>BIN</td><td>2</td><td/><td>libuv.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1280,12 +1282,14 @@
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>BIN</td><td>Gma.QrCodeNet.Encoding.dll</td></row>
+		<row><td>BIN</td><td>GreaterFileShare.Hosts.Console.exe</td></row>
 		<row><td>BIN</td><td>GreaterFileShare.Hosts.Core.dll</td></row>
 		<row><td>BIN</td><td>GreaterFileShare.Hosts.WPF.exe</td></row>
 		<row><td>BIN</td><td>GreaterFileShare.Hosts.WPF.vshost.exe</td></row>
 		<row><td>BIN</td><td>GreaterFileShare.Web.exe</td></row>
 		<row><td>BIN</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>BIN</td><td>MVVMSidekick.dll</td></row>
+		<row><td>BIN</td><td>MahApps.Metro.dll</td></row>
 		<row><td>BIN</td><td>Microsoft.AspNetCore.Antiforgery.dll</td></row>
 		<row><td>BIN</td><td>Microsoft.AspNetCore.Authorization.dll</td></row>
 		<row><td>BIN</td><td>Microsoft.AspNetCore.Cors.dll</td></row>
@@ -1469,6 +1473,7 @@
 		<row><td>HU</td><td>Xceed.Wpf.AvalonDock.resources.dll3</td></row>
 		<row><td>IMAGES</td><td>ISX_DEFAULTCOMPONENT21</td></row>
 		<row><td>INSTALLDIR</td><td>Gma.QrCodeNet.Encoding.dll</td></row>
+		<row><td>INSTALLDIR</td><td>GreaterFileShare.Hosts.Console.exe</td></row>
 		<row><td>INSTALLDIR</td><td>GreaterFileShare.Hosts.Core.dll</td></row>
 		<row><td>INSTALLDIR</td><td>GreaterFileShare.Hosts.WPF.exe</td></row>
 		<row><td>INSTALLDIR</td><td>GreaterFileShare.Hosts.WPF.vshost.exe</td></row>
@@ -1508,6 +1513,7 @@
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT8</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 		<row><td>INSTALLDIR</td><td>MVVMSidekick.dll</td></row>
+		<row><td>INSTALLDIR</td><td>MahApps.Metro.dll</td></row>
 		<row><td>INSTALLDIR</td><td>Microsoft.AspNetCore.Antiforgery.dll</td></row>
 		<row><td>INSTALLDIR</td><td>Microsoft.AspNetCore.Authorization.dll</td></row>
 		<row><td>INSTALLDIR</td><td>Microsoft.AspNetCore.Cors.dll</td></row>
@@ -2588,6 +2594,7 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>Gma.QrCodeNet.Encoding.dll</td></row>
+		<row><td>AlwaysInstall</td><td>GreaterFileShare.Hosts.Console.exe</td></row>
 		<row><td>AlwaysInstall</td><td>GreaterFileShare.Hosts.Core.dll</td></row>
 		<row><td>AlwaysInstall</td><td>GreaterFileShare.Hosts.WPF.exe</td></row>
 		<row><td>AlwaysInstall</td><td>GreaterFileShare.Hosts.WPF.vshost.exe</td></row>
@@ -2627,6 +2634,7 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT8</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 		<row><td>AlwaysInstall</td><td>MVVMSidekick.dll</td></row>
+		<row><td>AlwaysInstall</td><td>MahApps.Metro.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.AspNetCore.Antiforgery.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.AspNetCore.Authorization.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.AspNetCore.Cors.dll</td></row>
@@ -2871,6 +2879,11 @@
 		<row><td>glyphicons_halflings_regular3</td><td>ISX_DEFAULTCOMPONENT27</td><td>GLYPHI~1.WOF|glyphicons-halflings-regular.woff</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\contents\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff</td><td>1</td><td/></row>
 		<row><td>glyphicons_halflings_regular4</td><td>ISX_DEFAULTCOMPONENT27</td><td>GLYPHI~1.WOF|glyphicons-halflings-regular.woff2</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\contents\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2</td><td>1</td><td/></row>
 		<row><td>gma.qrcodenet.encoding.dll</td><td>Gma.QrCodeNet.Encoding.dll</td><td>GMAQRC~1.DLL|Gma.QrCodeNet.Encoding.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\Gma.QrCodeNet.Encoding.dll</td><td>1</td><td/></row>
+		<row><td>greaterfileshare.hosts.conso</td><td>ISX_DEFAULTCOMPONENT</td><td>GREATE~1.APP|GreaterFileShare.Hosts.Console.application</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\GreaterFileShare.Hosts.Console.application</td><td>1</td><td/></row>
+		<row><td>greaterfileshare.hosts.conso1</td><td>GreaterFileShare.Hosts.Console.exe</td><td>GREATE~1.EXE|GreaterFileShare.Hosts.Console.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\GreaterFileShare.Hosts.Console.exe</td><td>1</td><td/></row>
+		<row><td>greaterfileshare.hosts.conso2</td><td>ISX_DEFAULTCOMPONENT</td><td>GREATE~1.CON|GreaterFileShare.Hosts.Console.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\GreaterFileShare.Hosts.Console.exe.config</td><td>1</td><td/></row>
+		<row><td>greaterfileshare.hosts.conso3</td><td>ISX_DEFAULTCOMPONENT</td><td>GREATE~1.MAN|GreaterFileShare.Hosts.Console.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\GreaterFileShare.Hosts.Console.exe.manifest</td><td>1</td><td/></row>
+		<row><td>greaterfileshare.hosts.conso4</td><td>ISX_DEFAULTCOMPONENT</td><td>GREATE~1.PDB|GreaterFileShare.Hosts.Console.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\GreaterFileShare.Hosts.Console.pdb</td><td>1</td><td/></row>
 		<row><td>greaterfileshare.hosts.core.</td><td>GreaterFileShare.Hosts.Core.dll</td><td>GREATE~1.DLL|GreaterFileShare.Hosts.Core.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\GreaterFileShare.Hosts.Core.dll</td><td>1</td><td/></row>
 		<row><td>greaterfileshare.hosts.core.1</td><td>ISX_DEFAULTCOMPONENT</td><td>GREATE~1.PDB|GreaterFileShare.Hosts.Core.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\GreaterFileShare.Hosts.Core.pdb</td><td>1</td><td/></row>
 		<row><td>greaterfileshare.hosts.wpf.e</td><td>GreaterFileShare.Hosts.WPF.exe</td><td>GREATE~1.EXE|GreaterFileShare.Hosts.WPF.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\GreaterFileShare.Hosts.WPF.exe</td><td>1</td><td/></row>
@@ -2895,6 +2908,9 @@
 		<row><td>license</td><td>ISX_DEFAULTCOMPONENT24</td><td>LICENSE</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\contents\wwwroot\lib\bootstrap\LICENSE</td><td>1</td><td/></row>
 		<row><td>license.md</td><td>ISX_DEFAULTCOMPONENT31</td><td>LICENSE.md</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\contents\wwwroot\lib\jquery-validation\LICENSE.md</td><td>1</td><td/></row>
 		<row><td>license.txt</td><td>ISX_DEFAULTCOMPONENT29</td><td>LICENSE.txt</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\contents\wwwroot\lib\jquery\LICENSE.txt</td><td>1</td><td/></row>
+		<row><td>mahapps.metro.dll</td><td>MahApps.Metro.dll</td><td>MAHAPP~1.DLL|MahApps.Metro.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\MahApps.Metro.dll</td><td>1</td><td/></row>
+		<row><td>mahapps.metro.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>MAHAPP~1.PDB|MahApps.Metro.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\MahApps.Metro.pdb</td><td>1</td><td/></row>
+		<row><td>mahapps.metro.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>MAHAPP~1.XML|MahApps.Metro.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\MahApps.Metro.xml</td><td>1</td><td/></row>
 		<row><td>microsoft.aspnetcore.antifor</td><td>Microsoft.AspNetCore.Antiforgery.dll</td><td>MICROS~1.DLL|Microsoft.AspNetCore.Antiforgery.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\Microsoft.AspNetCore.Antiforgery.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.aspnetcore.authori</td><td>Microsoft.AspNetCore.Authorization.dll</td><td>MICROS~1.DLL|Microsoft.AspNetCore.Authorization.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\Microsoft.AspNetCore.Authorization.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.aspnetcore.cors.dl</td><td>Microsoft.AspNetCore.Cors.dll</td><td>MICROS~1.DLL|Microsoft.AspNetCore.Cors.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\Microsoft.AspNetCore.Cors.dll</td><td>1</td><td/></row>
@@ -3016,6 +3032,7 @@
 		<row><td>mvvmsidekick.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>MVVMSI~1.PDB|MVVMSidekick.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\MVVMSidekick.pdb</td><td>1</td><td/></row>
 		<row><td>mvvmsidekick.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>MVVMSI~1.XML|MVVMSidekick.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\MVVMSidekick.xml</td><td>1</td><td/></row>
 		<row><td>newtonsoft.json.dll</td><td>Newtonsoft.Json.dll</td><td>NEWTON~1.DLL|Newtonsoft.Json.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\Newtonsoft.Json.dll</td><td>1</td><td/></row>
+		<row><td>newtonsoft.json.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>NEWTON~1.XML|Newtonsoft.Json.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\Newtonsoft.Json.xml</td><td>1</td><td/></row>
 		<row><td>npm.js</td><td>ISX_DEFAULTCOMPONENT28</td><td>npm.js</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\contents\wwwroot\lib\bootstrap\dist\js\npm.js</td><td>1</td><td/></row>
 		<row><td>nuget.common.dll</td><td>NuGet.Common.dll</td><td>NUGETC~1.DLL|NuGet.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\NuGet.Common.dll</td><td>1</td><td/></row>
 		<row><td>nuget.configuration.dll</td><td>NuGet.Configuration.dll</td><td>NUGETC~1.DLL|NuGet.Configuration.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\NuGet.Configuration.dll</td><td>1</td><td/></row>
@@ -3318,24 +3335,25 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>Gma.QrCodeNet.Encoding.dll</td><td/><td/><td>_C63236A6_28B3_4A30_8B0C_EE7200499304_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>GreaterFileShare.Hosts.Core.dll</td><td/><td/><td>_1D1F5065_651F_4796_AAE5_BF76F870DD54_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td/><td/><td>_97F90AAC_DAFA_4858_B617_CB6EAB3A934C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td/><td/><td>_474DF3C4_E0AD_4C5F_8388_232703C6A7FF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>GreaterFileShare.Web.exe</td><td/><td/><td>_1DF77834_F40B_4C77_BCDD_2DF29762F5E3_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_1A4A8581_DD34_4B74_8965_6307D0A731AD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_033A8148_DAD8_4DA8_A709_DB135F3DC972_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT10</td><td/><td/><td>_167E31FB_CF31_41B3_947D_5B94761C9CC2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT11</td><td/><td/><td>_A75E1E12_D9ED_4E26_B1B9_89991C0DCB7A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT12</td><td/><td/><td>_5CB6CB4C_6858_468A_9E7E_CCB49000C6AE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT13</td><td/><td/><td>_5F677A6A_6002_4C0B_9987_822444E0C4B0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT14</td><td/><td/><td>_2AD54A01_BFF9_4FDD_B6F5_05111A9446B4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Gma.QrCodeNet.Encoding.dll</td><td/><td/><td>_B763588C_FA7A_4638_8EAE_CE7971FE22FD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Hosts.Console.exe</td><td/><td/><td>_3EA6EEAF_B618_4060_AB6F_2DC9D6B0E413_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Hosts.Core.dll</td><td/><td/><td>_528751D0_FED1_47F1_93DD_AA4E0945B4F9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td/><td/><td>_6586E057_F4E5_488B_9F64_FE057BBD2A2E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td/><td/><td>_FF831A7C_0C31_47A9_AB3E_90F29A918BE1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Web.exe</td><td/><td/><td>_3FB7A98A_ABFD_4FF1_94F1_377202D97691_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_99C82E4C_2E47_4BBA_8A78_F093F036D157_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_DE47446B_CF37_499E_B4F1_40FA4575F2E6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT10</td><td/><td/><td>_80FBE9D5_E2C8_4894_8EA8_2384C2AF3027_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT11</td><td/><td/><td>_F4C2538B_E7CE_48CD_9C56_B3232C06C9E4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT12</td><td/><td/><td>_9620D3AE_76B2_4AD6_A626_A58C13975177_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT13</td><td/><td/><td>_15D0EEC0_E57F_4BB4_8CE2_486DAB1B4211_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT14</td><td/><td/><td>_BA376592_26E2_49F2_B51F_B81EE8EA745B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT15</td><td/><td/><td>_70E8508D_B2F4_42A4_92BE_E2C939CF9FA7_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT16</td><td/><td/><td>_D1C7FE97_B14A_4C34_9510_F5BECEA2003D_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT17</td><td/><td/><td>_C4D678B9_99EF_4741_9C40_B9B9D1E1C459_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT18</td><td/><td/><td>_E77A5DCF_D1F0_40D4_8D0B_84E45AAB70CD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT19</td><td/><td/><td>_0EB02D20_B417_4F39_9418_378398F3F7D1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_857865AC_8D9A_4B6F_A024_985C302C279B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_856C5BF5_0C4E_478B_872E_4C182930B38F_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT20</td><td/><td/><td>_B0FF3CC2_05CC_45E6_9CD3_E3D031956608_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT21</td><td/><td/><td>_151627DA_161D_4B80_B232_B6293719964B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT22</td><td/><td/><td>_96A3BB63_1913_4E84_94A4_FC9AF2151952_FILTER</td><td/><td/><td/><td/></row>
@@ -3346,209 +3364,210 @@
 		<row><td>ISX_DEFAULTCOMPONENT27</td><td/><td/><td>_66CF052A_D780_48AF_874D_60F152CBA42E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT28</td><td/><td/><td>_991C2493_235B_4F43_8DC7_D2D092186C4E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT29</td><td/><td/><td>_B3F36085_19B6_4E0F_8CBE_75F7E9F483E0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_6EF9D8D6_C1D7_4DB4_9261_E35662483D9B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_16583E57_C88A_412A_A982_92CC261D8001_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT30</td><td/><td/><td>_013EFF9E_220C_470D_842D_03CD3F6B4975_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT31</td><td/><td/><td>_B94255AF_146A_4ACB_BD0E_E6F8A935F520_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT32</td><td/><td/><td>_E865BF27_2E12_46A1_94F4_DC541B594F7F_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT33</td><td/><td/><td>_5AA9AD98_25E6_45E9_A633_040091EEE7E6_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_01005E17_B3B5_41DC_B67B_BCF7381CB5DB_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_70C8EE8E_E096_4EDA_A4BF_3E852226A73F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT6</td><td/><td/><td>_A5C185EA_6FB0_4D3F_B528_8ACFA0B026BD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_B7DBFD05_9129_4284_9858_32075C6B1197_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_1C84C691_CC39_4547_BA7C_CDD89F1ED6C5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_73D89DD9_FF1E_43FB_839F_5B0C8A8CAD1A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MVVMSidekick.dll</td><td/><td/><td>_41D31FA3_FCE3_48FB_951B_DECF5FB25C1E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Antiforgery.dll</td><td/><td/><td>_CE81D881_C9EE_4C24_A685_7926E5B088C8_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Authorization.dll</td><td/><td/><td>_7E680848_24EB_4785_9727_68264F680D69_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Cors.dll</td><td/><td/><td>_2A5E7686_F546_49EC_85E3_16C95642C113_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Cryptography.Internal.dll</td><td/><td/><td>_AF3E8AD1_24A9_4BA8_8F6F_537CAF9CC9A0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.DataProtection.Abstractions.dll</td><td/><td/><td>_B4347047_31D6_4AEB_BC02_5028C9AB193E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.DataProtection.dll</td><td/><td/><td>_24F4E35E_F922_4BA6_8870_CA19350E6393_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Diagnostics.Abstractions.dll</td><td/><td/><td>_D5494592_12BA_4810_92D6_1C586A330015_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Diagnostics.dll</td><td/><td/><td>_21F1868B_F55A_4ED7_BB1C_4BC935EB46D2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Hosting.Abstractions.dll</td><td/><td/><td>_9CD8EAC9_B058_4183_8D6E_5ED68841F17B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</td><td/><td/><td>_09735AF5_4B4C_4134_8A53_5C3BBF9842FE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Hosting.dll</td><td/><td/><td>_C9C0013F_7F54_49CD_8C7F_54B38D811685_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Html.Abstractions.dll</td><td/><td/><td>_261730B1_2633_42E2_BA1B_B9A2954A3D87_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Http.Abstractions.dll</td><td/><td/><td>_5B0D4C5B_E96F_423A_B716_8A443D970E10_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Http.Extensions.dll</td><td/><td/><td>_621CFAE0_BB00_4470_A072_72AE5F649B34_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Http.Features.dll</td><td/><td/><td>_C87A20B1_AAF8_43F2_BF96_A06AA432BEC8_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Http.dll</td><td/><td/><td>_817D04BC_93B2_4AA4_8E4B_CA2E2D3B6EA1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.HttpOverrides.dll</td><td/><td/><td>_C787D360_0BEA_402F_9936_E9A949DD4273_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.JsonPatch.dll</td><td/><td/><td>_67141BE9_5740_4DC3_978D_39DAB5F31910_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Localization.dll</td><td/><td/><td>_47F02523_28FB_40B4_8C70_BBB4ABB255EF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Abstractions.dll</td><td/><td/><td>_6ACFE77C_2824_4114_AF3D_76DCD47B57E6_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.ApiExplorer.dll</td><td/><td/><td>_BAC6C253_B55D_4564_A528_5EDE61D86286_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Core.dll</td><td/><td/><td>_44C66755_3678_445D_A276_37E6602651AB_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Cors.dll</td><td/><td/><td>_01D26D3C_11EF_4E26_B5CF_4B5777561B31_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.DataAnnotations.dll</td><td/><td/><td>_8E6CF34F_1EA1_43C2_B696_F5F47F1FFD14_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Formatters.Json.dll</td><td/><td/><td>_09A8BD83_38D9_450B_AEB4_AD220FE0B21E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Localization.dll</td><td/><td/><td>_05622D19_7408_47FD_9467_9D7554B185C7_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Razor.Host.dll</td><td/><td/><td>_095B6C9A_70C0_468C_8DE3_8156F2E37D08_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.Razor.dll</td><td/><td/><td>_ABA38C62_7B30_4D4A_A9D6_530CFEC7FD5E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.TagHelpers.dll</td><td/><td/><td>_0DB5D577_97DD_4E89_804E_5286CB76F3F1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.ViewFeatures.dll</td><td/><td/><td>_8D316FDA_6998_45AC_9B48_88C200AD20E0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Mvc.dll</td><td/><td/><td>_44F9AECB_8193_4208_9B41_4C482C119552_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Razor.Runtime.dll</td><td/><td/><td>_69D42125_8CD2_4EC8_A2E4_28479D14BB70_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Razor.dll</td><td/><td/><td>_DE68214C_5546_4B5D_B2D1_C80FE2180719_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Routing.Abstractions.dll</td><td/><td/><td>_BAF0E2BF_41BC_484E_AC9B_0A6FA743C7B1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Routing.dll</td><td/><td/><td>_05E949CD_1C34_4226_8546_62881AD20F8E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Server.IISIntegration.dll</td><td/><td/><td>_54A242E5_A75C_483E_ABB8_1CB772B94D9F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.Server.Kestrel.dll</td><td/><td/><td>_5F8D6BF9_D6D4_4AFF_A939_4F74539ED532_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.StaticFiles.dll</td><td/><td/><td>_9DD153B2_E4C7_46CF_AC55_3EF025B7ED86_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.AspNetCore.WebUtilities.dll</td><td/><td/><td>_8D75FCF4_B17D_47D5_A489_2971DA863884_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.CodeAnalysis.CSharp.dll</td><td/><td/><td>_1E8C5108_6302_4C89_A242_86B997FDC2EC_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.CodeAnalysis.dll</td><td/><td/><td>_556B87E0_10CB_4537_9756_3FAEFFD163C2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.DotNet.Cli.Utils.dll</td><td/><td/><td>_AF6F1019_9DC2_4BB3_ABF4_4D047EE1848B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.DotNet.InternalAbstractions.dll</td><td/><td/><td>_57520513_3AF7_4961_A725_7F55CF4B6EF1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.DotNet.ProjectModel.dll</td><td/><td/><td>_B99551BF_FC34_4104_A9D9_C3F7ED431298_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Interactions.dll</td><td/><td/><td>_D2F56BBC_EF64_4D96_B89A_89151B95AC80_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll</td><td/><td/><td>_4269F3D5_AAEB_41E3_8099_B17C69BE8199_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll1</td><td/><td/><td>_C604A937_60C4_4F90_B8BE_33EAF08157CB_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll2</td><td/><td/><td>_A0B689C5_64A6_42BF_856F_DC09ED53714B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll3</td><td/><td/><td>_E0042429_66F8_4E75_BF56_016755E93FF5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll4</td><td/><td/><td>_997FEAD8_3632_41BC_8822_0980ED010F92_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll5</td><td/><td/><td>_3EB53B8F_D56A_44C5_A75D_B5F5D6B0CEBF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll6</td><td/><td/><td>_0FB91D4B_09E5_41BB_BE10_FF2631F2A383_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll7</td><td/><td/><td>_3D6DF20B_76B6_4D57_B29E_1288E839E8E5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll8</td><td/><td/><td>_6B30E317_3C2A_4E5D_B40F_A60376722C19_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Interactions.resources.dll9</td><td/><td/><td>_2F436F66_1543_412D_8F57_2EB3D433FC1F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.dll</td><td/><td/><td>_B6C5B2CA_7613_4BC3_B406_A867EC75882D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll</td><td/><td/><td>_5323D222_B02D_491F_B3D0_1FDDFA515D6A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll1</td><td/><td/><td>_6F564985_DAEF_4421_A2C8_EAAEABE5BF95_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll2</td><td/><td/><td>_035384E0_416C_4ED6_8CAC_C2084C02AB9D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll3</td><td/><td/><td>_FCCC1F8B_7FA4_46D4_A2E2_BDE168B31C4F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll4</td><td/><td/><td>_44BF31E6_BADF_45F8_B411_94E3E55285F3_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll5</td><td/><td/><td>_933277C1_DE3B_4A27_868C_0828ECD60B45_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll6</td><td/><td/><td>_03950112_F42A_4B82_81AA_C62A75EA3937_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll7</td><td/><td/><td>_6B6676A2_0481_4279_BC31_0331F29D3393_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll8</td><td/><td/><td>_175C2342_A25D_4017_B1FF_17CEAFE5B1F6_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll9</td><td/><td/><td>_2401892E_B15A_48C5_919B_92CB73A03D93_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Caching.Abstractions.dll</td><td/><td/><td>_C9EC5B10_0B53_468C_AB44_52AF380A0FDD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Caching.Memory.dll</td><td/><td/><td>_D535F5BE_C8E5_4309_9517_A27C78AAD77B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.CommandLineUtils.dll</td><td/><td/><td>_E8D71E19_E7B4_4A47_9B18_2EA0F18D4A89_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Configuration.Abstractions.dll</td><td/><td/><td>_A8A7B54D_1653_4858_A57B_AA90BF3A6D83_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Configuration.Binder.dll</td><td/><td/><td>_9E5426A6_BFB1_4E0D_8F06_5F458029B40E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Configuration.EnvironmentVariables.dll</td><td/><td/><td>_3E5390B4_B124_4434_B118_47A82BCEBED8_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Configuration.FileExtensions.dll</td><td/><td/><td>_97EFCAFC_F1A5_478F_80D9_51FBAEA44EF0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Configuration.Json.dll</td><td/><td/><td>_85982119_5938_4DE1_A7D0_DC90B23CAA70_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Configuration.dll</td><td/><td/><td>_63D32C09_C4FF_4F83_8C7A_25C35F7BC140_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.DependencyInjection.Abstractions.dll</td><td/><td/><td>_E9E1B3DC_7547_4BB6_8A8E_36EC6A78C9E8_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.DependencyInjection.dll</td><td/><td/><td>_F02217DF_80A0_4326_B8C8_1491C33DD2CB_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.DependencyModel.dll</td><td/><td/><td>_301C0849_8E22_4803_8D05_1A4C28D35412_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.FileProviders.Abstractions.dll</td><td/><td/><td>_C81D56F1_90DF_49F5_9F88_6FE8D7DF5092_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.FileProviders.Composite.dll</td><td/><td/><td>_E16C42F9_467F_48DE_8268_282C9B86DF35_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.FileProviders.Embedded.dll</td><td/><td/><td>_58493410_27E7_4D85_92D6_AB150E44C16F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.FileProviders.Physical.dll</td><td/><td/><td>_70B29ECC_AF1E_4B21_8283_4BA5FB789185_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.FileSystemGlobbing.dll</td><td/><td/><td>_EC616942_C88C_41AD_8D9E_BCB68D65CA0D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Globalization.CultureInfoCache.dll</td><td/><td/><td>_01D34E7C_664B_410D_8DCB_8C6F7A176A67_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Localization.Abstractions.dll</td><td/><td/><td>_660115DE_930A_41B8_9F4C_B2D67DBBD30B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Localization.dll</td><td/><td/><td>_A87BA080_6A57_4043_8290_A59391DCA638_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Logging.Abstractions.dll</td><td/><td/><td>_4ADCCA51_E5BD_40A2_A372_F0BFB2F1799E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Logging.Console.dll</td><td/><td/><td>_4C91099F_F261_48FA_9C08_85324DCD6814_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Logging.Debug.dll</td><td/><td/><td>_BF68D235_669D_46B6_B47D_A277CB290C08_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Logging.dll</td><td/><td/><td>_430A6B91_6D3D_4D2C_A5B9_8B607DA51FF2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.ObjectPool.dll</td><td/><td/><td>_2D1F6628_2D20_45E9_8456_F615DB06465D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Options.ConfigurationExtensions.dll</td><td/><td/><td>_4D9383EE_AD59_4E4D_B1D8_80A2B8A8B9E3_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Options.dll</td><td/><td/><td>_314797CF_2236_4338_8010_475FF08A1687_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.PlatformAbstractions.dll</td><td/><td/><td>_DE70513D_B0FC_4422_A6BE_7305640D360E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.Primitives.dll</td><td/><td/><td>_22EF3C53_4A76_41BA_8378_D94FA5B1EE4F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Extensions.WebEncoders.dll</td><td/><td/><td>_06D3B8B9_9A37_4A6D_AE0D_E90D7DD9F176_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Net.Http.Headers.dll</td><td/><td/><td>_F0F77B5B_B30F_4649_B783_6932727D865C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Practices.ServiceLocation.dll</td><td/><td/><td>_0DEADEA2_DE29_471B_9677_1A3CCD212736_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Practices.Unity.Configuration.dll</td><td/><td/><td>_74D70360_BD8D_4848_985D_029F8FD9D611_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Practices.Unity.RegistrationByConvention.dll</td><td/><td/><td>_CD0192A9_22F3_4D64_9389_94990A08B842_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Practices.Unity.dll</td><td/><td/><td>_42142DA1_E2EB_4E59_B016_07A737C4F69F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Threading.Tasks.Extensions.Desktop.dll</td><td/><td/><td>_4880BE6A_9CBC_48BB_9074_23838934ACFB_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Threading.Tasks.Extensions.dll</td><td/><td/><td>_91406A5C_F4D8_4783_9E34_6C7734790DFA_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Threading.Tasks.dll</td><td/><td/><td>_D12F0CB5_7B1F_424D_B881_5F6F021E1C16_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.VisualStudio.Web.BrowserLink.Loader.dll</td><td/><td/><td>_FD4F37CE_65AE_4B74_A78E_181D0B912B20_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.WindowsAPICodePack.Shell.dll</td><td/><td/><td>_FA083A29_825E_4A97_9525_8C4324EA5481_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.WindowsAPICodePack.dll</td><td/><td/><td>_65E34312_60D4_483B_A3BD_536B4E8FB0B6_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Newtonsoft.Json.dll</td><td/><td/><td>_4612D3AC_087D_456E_B8CA_125371B2F400_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.Common.dll</td><td/><td/><td>_360FDAFE_5D81_48CD_A118_95F0E16A283C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.Configuration.dll</td><td/><td/><td>_BDC1CCA9_0A1C_418A_A6EC_B07A096220B2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.DependencyResolver.Core.dll</td><td/><td/><td>_A8B62389_E0FD_4BEA_9903_B550415049B0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.Frameworks.dll</td><td/><td/><td>_28B1D9F8_5157_48F6_B25F_054720263B50_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.LibraryModel.dll</td><td/><td/><td>_F3CEDC68_C2F9_41C1_ADB7_D87E11B7C968_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.Packaging.Core.Types.dll</td><td/><td/><td>_47DA3311_7CE1_4EB6_8F30_5C9F150C9946_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.Packaging.Core.dll</td><td/><td/><td>_F7EB42D7_892C_4F92_8AEF_18E58DB58317_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.Packaging.dll</td><td/><td/><td>_68EA94F2_F2E5_413A_B774_9339A8B20600_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.ProjectModel.dll</td><td/><td/><td>_05637441_A316_40F4_B959_FDA1EBBCB467_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.Protocol.Core.Types.dll</td><td/><td/><td>_2601B2A9_3860_4737_B5A4_A6B2A4E6E8EA_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.Protocol.Core.v3.dll</td><td/><td/><td>_1EA6343A_D304_4465_93C0_27C100312E9F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.Repositories.dll</td><td/><td/><td>_1E5E782F_D124_4634_8D6A_775888ADED20_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.RuntimeModel.dll</td><td/><td/><td>_8432B406_0A02_4EA1_99F7_6EE345BE18C2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NuGet.Versioning.dll</td><td/><td/><td>_80DE923B_3F11_4CA7_89CD_FD068328E215_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>RestSharp.dll</td><td/><td/><td>_25F28D5A_076E_477C_97B1_95E66CB047EA_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Swashbuckle.Swagger.dll</td><td/><td/><td>_5B52FFD9_FF79_43E5_95EB_B1E2C9E120A8_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Swashbuckle.SwaggerGen.dll</td><td/><td/><td>_41797F9A_895F_4712_93B7_63938D0046FD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Swashbuckle.SwaggerUi.dll</td><td/><td/><td>_FF9ED246_5FAC_4305_B729_CB6B6F6A1106_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.AppContext.dll</td><td/><td/><td>_39615094_3A6B_4B05_8568_89E06BD2F816_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Buffers.dll</td><td/><td/><td>_9029CD42_A933_4C37_845B_EC4327387F3B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Collections.Immutable.dll</td><td/><td/><td>_2F892565_8645_41FA_B7A5_17C9869A3FDE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.ComponentModel.Primitives.dll</td><td/><td/><td>_787CCC24_1E75_4412_A8CB_DD8B112FC4D6_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.ComponentModel.TypeConverter.dll</td><td/><td/><td>_6400DFCE_70E8_4EC6_862D_10BD9BECD7BD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Console.dll</td><td/><td/><td>_3AD261DD_1DB6_4C3E_AEE4_3CE00AB769C2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Diagnostics.DiagnosticSource.dll</td><td/><td/><td>_AAF3E3D2_E7FE_48F3_9E2D_252A14783D07_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Diagnostics.FileVersionInfo.dll</td><td/><td/><td>_CF4DF7DD_BE40_4F57_8C8A_997E417C60C8_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Diagnostics.StackTrace.dll</td><td/><td/><td>_2C11A310_26FF_4E95_A60B_D5E9C855D063_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.IO.FileSystem.Primitives.dll</td><td/><td/><td>_C199FA7E_FE14_4FE0_8B14_652D321A936F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.IO.FileSystem.dll</td><td/><td/><td>_2341C46C_2F17_4F1C_B9A1_07173A81B0D4_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Net.Http.Extensions.dll</td><td/><td/><td>_81F741E6_6E93_4055_83A6_19C84CF18EA3_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Net.Http.Primitives.dll</td><td/><td/><td>_419AD6F7_6C5F_47F9_ABB6_6C452CDA48CA_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Numerics.Vectors.dll</td><td/><td/><td>_5B97D2CC_21C2_4513_9F82_958588164BD0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Reactive.Core.dll</td><td/><td/><td>_48F83CC9_E989_40ED_80AE_BB80B88A3A55_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Reactive.Interfaces.dll</td><td/><td/><td>_DE37DF05_30C3_4D43_88F2_BF96F9598198_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Reactive.Linq.dll</td><td/><td/><td>_3719F901_824F_4E67_9AD7_9D597835FD4A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Reactive.PlatformServices.dll</td><td/><td/><td>_811B1E95_5796_4117_ADB2_0CF77EFFCC88_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Reactive.Windows.Threading.dll</td><td/><td/><td>_53F002B1_1B67_47EC_B3AD_29BEFB994623_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Reflection.Metadata.dll</td><td/><td/><td>_CF611BF4_DF1E_49BE_9F66_87432F89B36C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Runtime.InteropServices.RuntimeInformation.dll</td><td/><td/><td>_B532695B_2666_4059_B2AA_8BB5398E29F7_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Runtime.Serialization.Primitives.dll</td><td/><td/><td>_473951E1_A20B_4897_9D92_B7DB1BD41F4E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Runtime.WindowsRuntime.UI.Xaml.dll</td><td/><td/><td>_8C382681_B44C_4C5A_940A_3415A28B2555_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Runtime.WindowsRuntime.dll</td><td/><td/><td>_40FD75EA_ABAA_4863_9D43_ACD3C3F8D7C2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Security.Cryptography.Algorithms.dll</td><td/><td/><td>_82E5CC61_6FB4_44F0_8BE1_7C34FE6E0167_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Security.Cryptography.Encoding.dll</td><td/><td/><td>_1ABAD283_3939_4418_85E4_E74A103EC30A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Security.Cryptography.Primitives.dll</td><td/><td/><td>_C1FE8F12_6504_4CAE_B0C0_65A72506EB30_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Security.Cryptography.X509Certificates.dll</td><td/><td/><td>_EA503C31_119D_4047_A5DD_8642F782635F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Text.Encoding.CodePages.dll</td><td/><td/><td>_77A78925_424F_460F_A786_E7B95BEF41A9_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Text.Encodings.Web.dll</td><td/><td/><td>_CC17DD8C_38AD_4708_8F63_AA3DD20A56B9_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Threading.Tasks.Extensions.dll</td><td/><td/><td>_5368ACE4_C574_4513_B8F6_73B6B6AB9CD0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Threading.Thread.dll</td><td/><td/><td>_7A16E01B_A8B7_41B8_BBDA_51E8355C21DF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.dll</td><td/><td/><td>_83B8F36D_8E49_40BE_A39A_B78192F5046E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.resources.dll</td><td/><td/><td>_DDCAE95B_E8FE_4879_ACD1_0839E160600E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.resources.dll1</td><td/><td/><td>_401A4102_AF7B_441A_8598_4FD838CB2E2D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.resources.dll2</td><td/><td/><td>_2EB66EDA_B12B_4FF4_8E44_0897C082905D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.resources.dll3</td><td/><td/><td>_E1F4D324_E9CD_4E01_BA60_CB72217D44E6_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.resources.dll4</td><td/><td/><td>_1E81A76B_379D_4FE7_8596_010134A98F21_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.resources.dll5</td><td/><td/><td>_75A3A1B2_E6E6_4206_B48A_3DD334DA7758_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.resources.dll6</td><td/><td/><td>_916BA6C0_35F1_4042_96E8_F389C2E09284_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.resources.dll7</td><td/><td/><td>_3CED9972_9006_4318_86F6_41F4F7E3E418_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.resources.dll8</td><td/><td/><td>_97203252_F580_4A13_8379_F8A3465AA589_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Windows.Interactivity.resources.dll9</td><td/><td/><td>_094DCDBB_1DCA_40A5_BFBE_D8A4CAA67137_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Xml.XPath.XDocument.dll</td><td/><td/><td>_3D5F8A8C_97DD_4E9F_AA32_C59795FC8CE5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Xml.XPath.dll</td><td/><td/><td>_3B2F0709_5785_4151_93B1_350EDC880B19_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Xml.XmlDocument.dll</td><td/><td/><td>_05D82376_75F0_4716_B5A3_181BBC30534F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.Themes.Aero.dll</td><td/><td/><td>_A2454CB7_95BC_4A64_A6E5_3BA23844D432_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.Themes.Metro.dll</td><td/><td/><td>_29E6FBF3_D901_4798_8448_DAC00109A0D1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.Themes.VS2010.dll</td><td/><td/><td>_8C896FD8_890C_4AA3_BDA6_CBCBF5B7E63D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.dll</td><td/><td/><td>_80996592_A5F8_431E_B72D_F50075FC1B0C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll</td><td/><td/><td>_9F7FFA68_E065_4E49_9B76_918BBF2FEF87_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll1</td><td/><td/><td>_2B54AB1C_FA2C_4797_8F88_5C38FA77FD92_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll2</td><td/><td/><td>_E2068AFC_C4F7_4C84_AF85_A93A9C096C9F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll3</td><td/><td/><td>_264367C7_F44F_4AAA_BC64_316C9B24966D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll4</td><td/><td/><td>_E13E993E_72BE_43AA_AED0_4EA0AA6B29E2_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll5</td><td/><td/><td>_8D05C1A2_C9E0_4E7C_85DD_1346CEC34DA1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll6</td><td/><td/><td>_919A4718_A52A_4915_8C43_CBBC8C4B4666_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll7</td><td/><td/><td>_1432DC5F_9F3A_43CD_95B2_7E8CC71D4557_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll8</td><td/><td/><td>_EB103489_AB98_4056_8681_80CC583D2214_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.AvalonDock.resources.dll9</td><td/><td/><td>_336CCF77_5B35_4246_ABE7_2ACD04DA449F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.DataGrid.dll</td><td/><td/><td>_2A552E18_F6C1_4095_8ADA_04D74D986948_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.Toolkit.dll</td><td/><td/><td>_420AB38B_6CB8_4837_82F9_954CAB0C56D3_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Zlib.Portable.dll</td><td/><td/><td>_92698F06_5E2A_4DC7_83C7_7717BC06C8DB_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>dotnet_razor_tooling.exe</td><td/><td/><td>_6CC2E0C6_F29B_4AC4_9B3B_DF6BE86E1584_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>libuv.dll</td><td/><td/><td>_A9E78CDA_B4A5_460B_AE87_E0651BAD9DD7_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_4F5912B0_CACA_4E3D_A308_D5F7EB592B80_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_4A9FB317_E214_47C4_A834_0B5AA4F4FA1D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td/><td/><td>_93DA4F92_30CA_4DDE_ACA3_7ED33A3CCFE6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_1AE12193_DBF0_4FF1_A74D_ECDA979D33D5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_CE931B87_C228_4DAA_9B92_D45CE3ABDFCE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_A2DDBFFA_D952_4F20_86C5_9B8D50684F0C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MVVMSidekick.dll</td><td/><td/><td>_21E61803_C4AE_44AD_A0C1_E74C13D5607C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MahApps.Metro.dll</td><td/><td/><td>_BF102E70_1F33_48C4_A0D9_8A8578C4D942_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Antiforgery.dll</td><td/><td/><td>_917528E8_D0B9_458E_B4E8_03A2F98B5356_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Authorization.dll</td><td/><td/><td>_E1933082_D429_422C_A07C_B8C93530739F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Cors.dll</td><td/><td/><td>_5093C6BB_074E_4E06_BD59_D730CBCD992A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Cryptography.Internal.dll</td><td/><td/><td>_8DE19018_FA92_4771_8D9E_53F1FDFAC363_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.DataProtection.Abstractions.dll</td><td/><td/><td>_D77B27C4_6DCE_48A2_8939_CB6CA3B6145A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.DataProtection.dll</td><td/><td/><td>_C5BF89DC_5371_407D_A4F5_628583873C19_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Diagnostics.Abstractions.dll</td><td/><td/><td>_82CFF290_050B_437C_9CA2_0302BB7CCFAF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Diagnostics.dll</td><td/><td/><td>_6F2523FE_95C9_4641_AEF3_2C2D4A7F9386_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Hosting.Abstractions.dll</td><td/><td/><td>_FE908003_8F5A_4909_9160_F43568AE5798_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</td><td/><td/><td>_6D7D5A3B_42EF_4C73_9BA5_B0F0CF16524A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Hosting.dll</td><td/><td/><td>_24F46028_9448_42D3_90EF_F93AF0FDD500_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Html.Abstractions.dll</td><td/><td/><td>_3539275D_FAAE_4BB3_B336_38605ECCA509_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Http.Abstractions.dll</td><td/><td/><td>_1A114153_8DFD_45BD_A13B_87909AB1F1C0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Http.Extensions.dll</td><td/><td/><td>_B5C90432_00DE_4BB3_8781_514A2C4D4F72_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Http.Features.dll</td><td/><td/><td>_28C4345C_166D_4FAA_9C5E_F2566DFB9711_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Http.dll</td><td/><td/><td>_EEB22880_9D20_41EC_9E15_106A90B62CC5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.HttpOverrides.dll</td><td/><td/><td>_CF211BE2_EECD_4ED0_9C21_5BDB5706C1AA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.JsonPatch.dll</td><td/><td/><td>_009ECA7A_1811_41C7_84AD_91438A556836_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Localization.dll</td><td/><td/><td>_48C792F6_9148_4940_BF7F_FEF728B20099_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Abstractions.dll</td><td/><td/><td>_F8FFD2A9_61FE_4266_8DE3_B4AC97DE5775_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.ApiExplorer.dll</td><td/><td/><td>_A004031B_3E17_4BFB_9735_5537FF0946BB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Core.dll</td><td/><td/><td>_66B317FF_786C_4371_AE6F_DF296CE4764B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Cors.dll</td><td/><td/><td>_ADC550F5_68BA_41D7_AA7D_E122198772D2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.DataAnnotations.dll</td><td/><td/><td>_2F5106FD_EFD0_442E_A4C3_1E1372622939_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Formatters.Json.dll</td><td/><td/><td>_9728B84F_FE77_4D9A_BA2C_547F2BF2F49D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Localization.dll</td><td/><td/><td>_060BC390_CDE3_4E8B_A5CC_F23C54AFB9EA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Razor.Host.dll</td><td/><td/><td>_8C4F3020_D5B8_43C5_8AB4_271E9C4B7591_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.Razor.dll</td><td/><td/><td>_97F17D01_FB4E_4B30_A907_78F1A4D37A18_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.TagHelpers.dll</td><td/><td/><td>_7009BBF3_C409_48E0_A416_79DD5B3C2A4E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.ViewFeatures.dll</td><td/><td/><td>_188564DF_C4C0_48DB_8579_213007EE74E0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Mvc.dll</td><td/><td/><td>_3AFA4FF7_8537_4F31_B5DD_2EFDDA820345_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Razor.Runtime.dll</td><td/><td/><td>_2ECF26FC_8308_408D_A2D4_C90FEF449BB4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Razor.dll</td><td/><td/><td>_5760CD2E_60AE_4140_95FD_B14C70DB1317_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Routing.Abstractions.dll</td><td/><td/><td>_9CA6D086_BBB6_4A3B_9731_33BA86B27F80_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Routing.dll</td><td/><td/><td>_D225A66F_0514_4BBB_900E_9AFA568F7707_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Server.IISIntegration.dll</td><td/><td/><td>_CA551853_8F1C_4478_A701_0D51A8643AF2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.Server.Kestrel.dll</td><td/><td/><td>_AE9377A7_0A54_4743_BA10_04616FE58518_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.StaticFiles.dll</td><td/><td/><td>_E74C7E2C_A868_46C3_813F_D0FEE578F393_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.AspNetCore.WebUtilities.dll</td><td/><td/><td>_1CFDAD24_9561_4F25_B3B4_75A74C896452_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.CodeAnalysis.CSharp.dll</td><td/><td/><td>_EA02900C_1A62_4CC8_A229_1BCDA95E6CE1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.CodeAnalysis.dll</td><td/><td/><td>_70D3FE58_5DC0_4569_984D_EE0C311531D0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.DotNet.Cli.Utils.dll</td><td/><td/><td>_9E69D24A_0AA6_49CB_952A_C760EDE6FAA9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.DotNet.InternalAbstractions.dll</td><td/><td/><td>_3391DE36_1B5D_49AB_85DB_1FE6B23CD797_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.DotNet.ProjectModel.dll</td><td/><td/><td>_83681964_7C05_482A_8372_430268F3FE5A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Interactions.dll</td><td/><td/><td>_82FC2678_EDD9_4DA4_9373_CB407E25EDBC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll</td><td/><td/><td>_A0207214_E59D_4FEA_B4D0_2ABA0FCADCC2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll1</td><td/><td/><td>_B4FDE9B7_6972_4615_A378_8948E081D442_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll2</td><td/><td/><td>_778D9B49_C3E0_4E4C_8CAF_99D986527A3A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll3</td><td/><td/><td>_B2ADB79E_0486_4E44_846C_E43A9E8DF0FC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll4</td><td/><td/><td>_05322D95_4EAF_499D_B0B0_20F25D0F2063_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll5</td><td/><td/><td>_088B9230_50DA_450A_807D_C2F996769F55_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll6</td><td/><td/><td>_33547FF3_9E12_4CC6_8575_32C05F3C1DE8_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll7</td><td/><td/><td>_C1E5F005_016C_4CEC_A1F9_69AC7F41AB8A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll8</td><td/><td/><td>_B143DA9E_608B_4069_9A06_7BCB40DBD02D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Interactions.resources.dll9</td><td/><td/><td>_EA06ABBC_9EA0_4660_AC36_43A187D91738_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.dll</td><td/><td/><td>_08EDE824_84C2_4E83_AC84_51A2B3CD127C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll</td><td/><td/><td>_693A11EA_F331_446A_8CD9_3261D53EC440_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll1</td><td/><td/><td>_823D87D1_32A4_4CC8_9679_FED56D810AA8_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll2</td><td/><td/><td>_6F9721BA_C23B_4A85_9A45_BBF543B372CA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll3</td><td/><td/><td>_5122D6C6_13FD_4F74_9ADC_0F6325EBDB86_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll4</td><td/><td/><td>_0EB15D9C_7702_45C8_BD9E_C8C8F41E34A5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll5</td><td/><td/><td>_B0A020E7_5CBE_4807_9EDB_6D5D11093E00_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll6</td><td/><td/><td>_7283EFE8_7581_4663_902B_99926FC732A7_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll7</td><td/><td/><td>_6F465742_0FA5_4818_AD95_320BCA657E0F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll8</td><td/><td/><td>_42C7EC02_5561_4076_A01C_7004450BDF44_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Expression.Prototyping.Interactivity.resources.dll9</td><td/><td/><td>_25080865_8A89_4BEE_A433_EBF4F4A826C9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Caching.Abstractions.dll</td><td/><td/><td>_7A74C5B6_3C13_4F74_989F_474099991787_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Caching.Memory.dll</td><td/><td/><td>_AD173C17_713A_482E_9F02_4DED0852CC15_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.CommandLineUtils.dll</td><td/><td/><td>_E3494A57_8DFE_42B9_B3F1_16AAC8A6CC60_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Configuration.Abstractions.dll</td><td/><td/><td>_402D845A_3B1D_4B64_9683_308972760027_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Configuration.Binder.dll</td><td/><td/><td>_8DCEA4C1_601E_4214_8796_C6A57FD1867C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Configuration.EnvironmentVariables.dll</td><td/><td/><td>_2F1875B2_84DB_44B7_97D4_D2EEA2BA46E4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Configuration.FileExtensions.dll</td><td/><td/><td>_A2734B77_A34A_4BEC_BA14_6AA4D4DC1BAF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Configuration.Json.dll</td><td/><td/><td>_4C5660DE_040F_4255_A3A9_6FF695D40590_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Configuration.dll</td><td/><td/><td>_48073DAC_486E_4E4B_9D3F_4D1BA9D67FCB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.DependencyInjection.Abstractions.dll</td><td/><td/><td>_174C0596_77FD_43EF_9A5B_1DB7616DB1B2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.DependencyInjection.dll</td><td/><td/><td>_BE8D3A5D_E1C6_4FE8_9DAA_8915FE8805FF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.DependencyModel.dll</td><td/><td/><td>_27287C93_A665_4EAD_BF23_D2830D906BC5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.FileProviders.Abstractions.dll</td><td/><td/><td>_C22013C3_1CB3_44A1_9A0C_6CDEB1E66E74_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.FileProviders.Composite.dll</td><td/><td/><td>_D6C5D5EC_3A59_49EE_8802_69AABB7F0975_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.FileProviders.Embedded.dll</td><td/><td/><td>_6E482490_0AAC_47A6_B799_FBF6BAFA93FD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.FileProviders.Physical.dll</td><td/><td/><td>_C9B89834_B291_4FDA_9796_60EAC1865124_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.FileSystemGlobbing.dll</td><td/><td/><td>_4AC6AD01_437A_49D0_AEE5_725F30814FEB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Globalization.CultureInfoCache.dll</td><td/><td/><td>_A36CF9EE_0AA5_4FCE_9694_E311A8B37808_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Localization.Abstractions.dll</td><td/><td/><td>_025C5431_FCC5_4418_8BE1_21C371C64FC4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Localization.dll</td><td/><td/><td>_53F9428C_CAFF_4437_91C9_5B6787905550_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Logging.Abstractions.dll</td><td/><td/><td>_2169D780_DF64_46E4_A505_227E715ABCD7_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Logging.Console.dll</td><td/><td/><td>_1A9D593B_1E0D_480E_89D5_C7AE8E392661_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Logging.Debug.dll</td><td/><td/><td>_A46CF037_1CE1_41A3_A54E_63E6BF7C4DD8_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Logging.dll</td><td/><td/><td>_92765A24_3ACA_474C_B610_BA56B7BE44DE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.ObjectPool.dll</td><td/><td/><td>_35574824_96E2_4EEA_B41D_EFB0F811574B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Options.ConfigurationExtensions.dll</td><td/><td/><td>_9EB1536B_B51E_47D5_BA7B_D42B4D8FB4CA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Options.dll</td><td/><td/><td>_36D3D5DC_0137_4AE7_BC8F_A1FF34C89413_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.PlatformAbstractions.dll</td><td/><td/><td>_81BFFCA9_77FF_4228_BF40_ABB35DD0AF46_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.Primitives.dll</td><td/><td/><td>_634CD27F_A326_4CAD_913B_F3B7F600FBA7_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Extensions.WebEncoders.dll</td><td/><td/><td>_F856CF14_1D7E_415F_8D00_042D8EE2BD64_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Net.Http.Headers.dll</td><td/><td/><td>_D2AABECD_0D40_42DB_91E7_A78C1EBBF69A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Practices.ServiceLocation.dll</td><td/><td/><td>_ABDA1277_9964_46EF_83C3_77CD516ADA2D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Practices.Unity.Configuration.dll</td><td/><td/><td>_25D4E6E9_21D0_4A79_B313_C6984FD2F4A0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Practices.Unity.RegistrationByConvention.dll</td><td/><td/><td>_4A8F243F_685F_4C84_ACFC_6C5DAF62917C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Practices.Unity.dll</td><td/><td/><td>_082AA9EA_A8E7_48D7_B106_97DE937C0B49_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Threading.Tasks.Extensions.Desktop.dll</td><td/><td/><td>_3F3903EE_CDDD_4FAC_AB4C_94C9964F24CC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Threading.Tasks.Extensions.dll</td><td/><td/><td>_E8C2F25A_0D1D_4B7D_B607_BD50354C89F6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Threading.Tasks.dll</td><td/><td/><td>_D90ED06C_1AEC_4A83_884A_85FD5B8A1C05_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.VisualStudio.Web.BrowserLink.Loader.dll</td><td/><td/><td>_3B96617A_ED02_48D8_A452_E846766230AA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.WindowsAPICodePack.Shell.dll</td><td/><td/><td>_AF9C4831_1EAE_47F5_A608_E6CDBC72411A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.WindowsAPICodePack.dll</td><td/><td/><td>_49372491_BC5E_4FD7_9A54_271E529D63D8_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Newtonsoft.Json.dll</td><td/><td/><td>_4B143893_6CF6_4C6D_8A67_795B068DC60D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.Common.dll</td><td/><td/><td>_6AF82002_C678_4F8D_9654_7E41C45B5E2C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.Configuration.dll</td><td/><td/><td>_7391E841_0E3A_46C8_B1CD_1678DFB5A2C9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.DependencyResolver.Core.dll</td><td/><td/><td>_551DD307_B71B_4D2C_ABAC_E7F5DC627DDF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.Frameworks.dll</td><td/><td/><td>_AA67B756_B144_4BE2_B22C_4EB7088E1CCC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.LibraryModel.dll</td><td/><td/><td>_77C13C5B_223E_4444_AF93_94B0EBC0A249_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.Packaging.Core.Types.dll</td><td/><td/><td>_F7A1F1BE_7295_483E_88D7_04D165710B1F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.Packaging.Core.dll</td><td/><td/><td>_1B1CE864_C851_4CEE_8473_A7D493F2260E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.Packaging.dll</td><td/><td/><td>_EA17177E_7E86_4940_B398_AC7E4C0C572B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.ProjectModel.dll</td><td/><td/><td>_06A9B058_9B9C_4175_B891_0EDF15BE161A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.Protocol.Core.Types.dll</td><td/><td/><td>_0347E81C_19E0_4A41_BD3B_15796B8ACB65_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.Protocol.Core.v3.dll</td><td/><td/><td>_8AB1F60B_DF58_4E98_8544_A47D51EA4877_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.Repositories.dll</td><td/><td/><td>_0EC8B218_75B6_4A93_9EA5_46C6E5934939_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.RuntimeModel.dll</td><td/><td/><td>_4B4E6452_4CBC_4E5D_A535_F8F0E6EB9DCF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NuGet.Versioning.dll</td><td/><td/><td>_F1CAC6C6_833D_4EF8_8AB6_26F6864C5482_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>RestSharp.dll</td><td/><td/><td>_8E2765CC_678A_43FC_9482_BCC66066602E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Swashbuckle.Swagger.dll</td><td/><td/><td>_A1A27937_8A71_4FEA_88FD_3B9286B065DE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Swashbuckle.SwaggerGen.dll</td><td/><td/><td>_EEB84C11_43DB_43FE_B3A3_F26C10332E4E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Swashbuckle.SwaggerUi.dll</td><td/><td/><td>_148CC945_C8AD_4E99_893D_63A47BF76866_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.AppContext.dll</td><td/><td/><td>_639FC710_5825_4B99_AA51_C5871647E105_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Buffers.dll</td><td/><td/><td>_4A05A373_31B6_49F3_A392_1BD4CC210EDF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Collections.Immutable.dll</td><td/><td/><td>_89D6E256_B2CA_4503_AE75_3ABE21CE5241_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.ComponentModel.Primitives.dll</td><td/><td/><td>_C57E8636_83CB_4226_8639_FDAC6479D007_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.ComponentModel.TypeConverter.dll</td><td/><td/><td>_103EA8C6_D872_4E73_BFB8_1FC448EC4825_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Console.dll</td><td/><td/><td>_21E8E95C_8BDA_43FF_8F73_D5282A3399DA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Diagnostics.DiagnosticSource.dll</td><td/><td/><td>_AE88897A_ECFC_4CA3_86CA_069BEFA1A60E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Diagnostics.FileVersionInfo.dll</td><td/><td/><td>_E9FF06C5_A80F_4D27_96EF_3846D3CAEAA6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Diagnostics.StackTrace.dll</td><td/><td/><td>_0B270AD9_DB73_40C9_A007_DD5E575B7314_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.IO.FileSystem.Primitives.dll</td><td/><td/><td>_0111B264_AC55_45A3_9D3E_A6A8E16FD647_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.IO.FileSystem.dll</td><td/><td/><td>_2DE04853_42E9_4898_9390_F903EA2D10C1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Net.Http.Extensions.dll</td><td/><td/><td>_F773E4F0_D85E_4BD3_817D_68CAC9AD3F3F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Net.Http.Primitives.dll</td><td/><td/><td>_50E0BB21_40E1_4D38_AC6F_874E33428F58_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Numerics.Vectors.dll</td><td/><td/><td>_E1092B8B_63B3_4608_AB16_7A6FEA32B0A1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Reactive.Core.dll</td><td/><td/><td>_7965E5CC_8E90_489F_BD62_E3574A714FBE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Reactive.Interfaces.dll</td><td/><td/><td>_42A07BD0_B716_421B_AE45_ACF4D1389235_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Reactive.Linq.dll</td><td/><td/><td>_8C35A761_AAFE_4B8A_818D_E9A202650925_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Reactive.PlatformServices.dll</td><td/><td/><td>_8887DD09_5B1D_4FEB_A48C_6389E7E64854_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Reactive.Windows.Threading.dll</td><td/><td/><td>_B4D04C6E_50D7_4CEF_A342_54A540C3EB86_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Reflection.Metadata.dll</td><td/><td/><td>_AEBBDE9A_19B9_4C95_B510_E7E4A2952482_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Runtime.InteropServices.RuntimeInformation.dll</td><td/><td/><td>_A3E7DE7E_60CE_46F6_A49F_94295062BFE1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Runtime.Serialization.Primitives.dll</td><td/><td/><td>_B7BBDE95_4171_437D_A538_0B2088BA1560_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Runtime.WindowsRuntime.UI.Xaml.dll</td><td/><td/><td>_95F7A7FD_3328_4005_8B0C_717261C73FF2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Runtime.WindowsRuntime.dll</td><td/><td/><td>_A7F33DC4_F93A_4335_96C4_7D7103E42ECF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Security.Cryptography.Algorithms.dll</td><td/><td/><td>_3105B8CE_7C43_48AB_98DA_2BEDFB4EE4D1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Security.Cryptography.Encoding.dll</td><td/><td/><td>_4F2AAFC3_6360_4069_B206_BAEFCFE86E41_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Security.Cryptography.Primitives.dll</td><td/><td/><td>_EA682650_DED2_4ED4_B038_6A6B42289963_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Security.Cryptography.X509Certificates.dll</td><td/><td/><td>_B80E899C_FC14_4E2E_8B90_59197C9EDE2F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Text.Encoding.CodePages.dll</td><td/><td/><td>_8FE07639_47A6_4664_8330_E57BE2B9EC40_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Text.Encodings.Web.dll</td><td/><td/><td>_B5DFD2DA_2B08_42E4_8372_6C51EEE24B58_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Threading.Tasks.Extensions.dll</td><td/><td/><td>_C257CD24_0F5F_437E_9A94_46E88E4578BF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Threading.Thread.dll</td><td/><td/><td>_553D4760_7E8D_4098_8D1B_CC88E9699675_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.dll</td><td/><td/><td>_FE2EE3EC_7BE9_4F06_AFCF_BD20D4EE3DBF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.resources.dll</td><td/><td/><td>_5FC2962D_8A4C_43A4_9450_E37008471535_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.resources.dll1</td><td/><td/><td>_177F29F8_DF38_4A56_9FEC_DFBA434D2DA8_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.resources.dll2</td><td/><td/><td>_63A685C6_3CEB_4962_9A7A_F939FE0D461C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.resources.dll3</td><td/><td/><td>_ED88E0DC_6513_4E40_820C_AB47DE5862F0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.resources.dll4</td><td/><td/><td>_EA4F78E1_B3E0_4746_9DF1_93BFB664BDB6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.resources.dll5</td><td/><td/><td>_9D97F7FC_A068_44EF_83EF_72BC6E50389D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.resources.dll6</td><td/><td/><td>_ACB1A286_090C_4885_9F44_AD8E54A9C2FC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.resources.dll7</td><td/><td/><td>_8275DCD6_90D1_4F32_94D1_5E89A737D2B9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.resources.dll8</td><td/><td/><td>_7336D870_D2EE_4BF7_9C5E_350AD139A920_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Interactivity.resources.dll9</td><td/><td/><td>_D3A0D0E6_95B0_41CC_8719_25190272D111_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Xml.XPath.XDocument.dll</td><td/><td/><td>_5D5E1A41_AAA4_4DC8_A20E_A34DF1390E93_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Xml.XPath.dll</td><td/><td/><td>_F2BD3021_B001_4A79_BA89_7E8940CCCFEF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Xml.XmlDocument.dll</td><td/><td/><td>_0CF5587F_7D70_45FA_AE7B_438BCFBDFD3A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.Themes.Aero.dll</td><td/><td/><td>_12939FC2_6781_4E3F_81E9_1A5E9761EF38_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.Themes.Metro.dll</td><td/><td/><td>_09F7D043_0676_4D0C_BC50_3F6F4757EF78_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.Themes.VS2010.dll</td><td/><td/><td>_1E46C988_05FD_4CD4_AE9C_08CAFDC98241_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.dll</td><td/><td/><td>_8075AD8B_A21D_46F0_933C_EBD95A74381A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll</td><td/><td/><td>_D06B228C_FFD3_44E1_A700_8DC49A2C97E1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll1</td><td/><td/><td>_195A2F92_4954_4728_B796_FBA70B762C2D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll2</td><td/><td/><td>_EC69371C_C454_4E0D_BDE0_C490795AF56B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll3</td><td/><td/><td>_59413C69_444A_4ACD_ABC2_D3C40785CB92_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll4</td><td/><td/><td>_5345EA51_CF07_4EF7_B466_F9AF5FD84677_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll5</td><td/><td/><td>_5ED8E1BA_3886_4755_9A28_45D6D294AC5E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll6</td><td/><td/><td>_9B9965CE_3C61_426B_858C_B4593160471A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll7</td><td/><td/><td>_10233267_1D2E_4E90_A12A_4D31093C80AC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll8</td><td/><td/><td>_6AA4F22D_9C98_43B4_AAC1_4FE623334497_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.AvalonDock.resources.dll9</td><td/><td/><td>_8750E427_AD50_4581_9716_9B29020EE22E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.DataGrid.dll</td><td/><td/><td>_347D6167_CDBF_458A_8BBF_C6416CE711A9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.Toolkit.dll</td><td/><td/><td>_D528D11B_F315_4DB3_BFE2_0FC136C36D2F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Zlib.Portable.dll</td><td/><td/><td>_6C00C837_52AC_4EE4_A206_34D1D71B46AB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>dotnet_razor_tooling.exe</td><td/><td/><td>_FFD8514F_7A88_40C2_976B_7E4D38D6F4EE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>libuv.dll</td><td/><td/><td>_8EE77F16_FCC4_4A5E_9760_08C7937C600A_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -4953,6 +4972,11 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>Greater File Share Host</td><td>0</td><td/><td>-123366129</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Hosts.WPF.vshost.exe</td><td>0</td><td/><td>-928691600</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Web.exe</td><td>0</td><td/><td>-928691600</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td>LAUNCH~1.EXE|Launch dotnet-razor-tooling.exe</td><td>0</td><td/><td>556130482</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Hosts.Console.exe</td><td>0</td><td/><td>556130482</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Hosts.WPF.exe</td><td>0</td><td/><td>556130482</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Hosts.WPF.vshost.exe</td><td>0</td><td/><td>556130482</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Web.exe</td><td>0</td><td/><td>556130482</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-928657008</td></row>
@@ -5359,7 +5383,12 @@
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
 		<row><td>GreaterFileShare.H_180FBA2EE1C14A83AE0F8D4C4BD34525.exe</td><td/><td>&lt;VSSolutionFolder&gt;\GreaterFileShare.Hosts.WPF\Assets\Icon.ico</td><td>0</td></row>
+		<row><td>GreaterFileShare.H_4B81C9AEAE8D4C9E976EE5F0731E5E9D.exe</td><td/><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\GreaterFileShare.Hosts.WPF.exe</td><td>0</td></row>
+		<row><td>GreaterFileShare.H_650666762EAE4C16914DEDA111DFCB34.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>GreaterFileShare.H_7116E1728DC948B1B14C5F79C7D505C5.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>GreaterFileShare.H_D95E916A1FE448D9A26BF4C63800927E.exe</td><td/><td>&lt;VSSolutionFolder&gt;\GreaterFileShare.Hosts.WPF\Assets\Icon.ico</td><td>0</td></row>
+		<row><td>GreaterFileShare.W_A159E8544B0046D2AE339632E679615C.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>dotnet_razor_tooli_63311580FF9D4AE89AE6505443E6D60A.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -5943,9 +5972,11 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>dotnet_razor_tooling.exe</td><td/><td>wayneb_1_waynebaby_presents</td><td>2</td></row>
-		<row><td>FileKey2</td><td>dotnet_razor_tooling.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
+		<row><td>GreaterFileShare.Hosts.Console.exe</td><td>GreaterFileShare.Hosts.Console.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
 		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td>GreaterFileShare.Hosts.WPF.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
+		<row><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
+		<row><td>GreaterFileShare.Web.exe</td><td>GreaterFileShare.Web.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
+		<row><td>dotnet_razor_tooling.exe</td><td>dotnet_razor_tooling.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -6031,8 +6062,11 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>GreaterFileShare.Hosts.WPF.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_D95E916A1FE448D9A26BF4C63800927E.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>GreaterFileShare.Hosts.WPF.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>GreaterFileShare.Hosts.WPF.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_180FBA2EE1C14A83AE0F8D4C4BD34525.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Hosts.Console.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME6##</td><td>GreaterFileShare.Hosts.Console.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_650666762EAE4C16914DEDA111DFCB34.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME7##</td><td>GreaterFileShare.Hosts.WPF.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_4B81C9AEAE8D4C9E976EE5F0731E5E9D.exe</td><td>1</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME8##</td><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_7116E1728DC948B1B14C5F79C7D505C5.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Web.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME9##</td><td>GreaterFileShare.Web.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.W_A159E8544B0046D2AE339632E679615C.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>dotnet_razor_tooling.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>dotnet_razor_tooling.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>dotnet_razor_tooli_63311580FF9D4AE89AE6505443E6D60A.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

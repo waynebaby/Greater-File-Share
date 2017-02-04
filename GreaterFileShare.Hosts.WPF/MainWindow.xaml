@@ -102,24 +102,16 @@
 
             <Border Grid.Row="0" Grid.Column="0" Background="Transparent" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
                 <Grid Margin="10">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="165*"/>
-                        </Grid.RowDefinitions>
+
+
+                    <StackPanel Grid.Row="1">
                         <Label Content="Configuration" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
-                        <DataGrid BorderBrush="#CCC" BorderThickness="1" AutoGenerateColumns="False" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}" Margin="10,25,-10,0.333" Grid.RowSpan="2">
+                        <DataGrid BorderBrush="#CCC" BorderThickness="1" Grid.Row="1" AutoGenerateColumns="False" Height="300" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}"  Grid.RowSpan="2">
                             <DataGrid.Columns>
                                 <DataGridTextColumn  Width="120" Binding="{Binding ExtensionName}" Header="Extension Name"/>
                                 <DataGridTextColumn Width="120" Binding="{Binding ContentType}" Header="Content Type"/>
                             </DataGrid.Columns>
                         </DataGrid>
-                    </Grid>
-                    <StackPanel Grid.Row="1">
                         <StackPanel>
                             <Label Content="PORT"/>
                             <xctk:IntegerUpDown Minimum="0" Maximum="65535" Value="{Binding CurrentTask.Port, Mode=TwoWay}" 
