@@ -37,7 +37,7 @@
                                 <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
                             <Label Content="Host Name" />
-                            <ListBox Margin="8" ItemsSource="{Binding Hosts}"  Grid.Row="1" SelectedItem="{Binding SelectedHost, Mode=OneWayToSource}" Grid.RowSpan="1"/>
+                            <ListBox Margin="8" BorderThickness="1" BorderBrush="Gray" ItemsSource="{Binding Hosts}"  Grid.Row="1" SelectedItem="{Binding SelectedHost, Mode=OneWayToSource}" Grid.RowSpan="1"/>
                             <Label Content="Folder" Grid.Row="2"/>
                             <TreeView x:Name="treeView" Grid.Row="3" Margin="8" BorderThickness="1" BorderBrush="Gray" ItemsSource="{Binding RootEntry}">
                                 <TreeView.ItemTemplate>
@@ -58,7 +58,7 @@
 
                             </TreeView>
                             <Label Content="File" Grid.Row="4"/>
-                            <ListBox Margin="8" ItemsSource="{Binding SelectedFolderEntry.Files}"  Grid.Row="5" SelectedItem="{Binding SelectedFileEntry, Mode=OneWayToSource}" Grid.RowSpan="1">
+                            <ListBox Margin="8" BorderThickness="1" BorderBrush="Gray" ItemsSource="{Binding SelectedFolderEntry.Files}"  Grid.Row="5" SelectedItem="{Binding SelectedFileEntry, Mode=OneWayToSource}" Grid.RowSpan="1">
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel>
@@ -71,9 +71,12 @@
 
 
                             <qr:QrCodeGeoControl Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0,0,0,39.616"  VerticalAlignment="Stretch" Text="{Binding Urls.Files}"  LightBrush="White" DarkBrush="Black" Grid.RowSpan="6"/>
-                            <Button Grid.Row="6" Grid.Column="1" Command="{Binding CommandLaunch, Mode=OneWay}" CommandParameter="{Binding Urls.Files}" Margin="0,0.384,0,-0.384" >
-                                <TextBlock><Run  Text="{Binding Urls.Files}"/></TextBlock>
+                            <Button  Grid.Row="6" Grid.Column="1"   Command="{Binding CommandLaunch, Mode=OneWay}" CommandParameter="{Binding Urls.Files}" Margin="0,0.384,0,-0.384" >
+                                <TextBlock>Launch: <Run  Text="{Binding Urls.Files}"/></TextBlock>
                             </Button>
+
+                            <Button Grid.Column="1" HorizontalAlignment="Right"  Height="32"  Command="{Binding CommandCopyLink}" CommandParameter="{Binding Urls.Files}">
+                                <TextBlock><Run  FontFamily="Segoe UI Symbol">&#xE16F;</Run> Copy Link</TextBlock></Button>
                         </Grid>
                     </TabItem>
                     
@@ -92,11 +95,15 @@
                                 <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
                             <Label Content="Host Name" Grid.RowSpan="2"/>
-                            <ListBox Margin="8" ItemsSource="{Binding Hosts}"  Grid.Row="1" SelectedItem="{Binding SelectedHost, Mode=OneWayToSource}" Grid.RowSpan="1"/>
+                            <ListBox BorderThickness="1" BorderBrush="Gray" Margin="8" ItemsSource="{Binding Hosts}"  Grid.Row="1" SelectedItem="{Binding SelectedHost, Mode=OneWayToSource}" Grid.RowSpan="1"/>
 
                             <qr:QrCodeGeoControl Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0" x:Name="qrCodeGeoControl1" VerticalAlignment="Stretch" Text="{Binding Urls.WCF}"  LightBrush="White" DarkBrush="Black" Grid.RowSpan="1"/>
                             <Button Grid.Row="2" Grid.Column="1" Command="{Binding CommandLaunch, Mode=OneWay}" CommandParameter="{Binding Urls.WCF}">
-                                <TextBlock><Run   Text="{Binding Urls.WCF}"  /></TextBlock>
+                                <TextBlock>Launch: <Run   Text="{Binding Urls.WCF}"  /></TextBlock>
+                            </Button>
+
+                            <Button Grid.Column="1" HorizontalAlignment="Right"  Height="32" Command="{Binding CommandCopyLink}" CommandParameter="{Binding Urls.WCF}">
+                                <TextBlock><Run  FontFamily="Segoe UI Symbol">&#xE16F;</Run> Copy Link</TextBlock>
                             </Button>
                         </Grid>
 
@@ -117,12 +124,15 @@
                                 <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
                             <Label Content="Host Name" Grid.RowSpan="2"/>
-                            <ListBox Margin="8" ItemsSource="{Binding Hosts}"  Grid.Row="1" SelectedItem="{Binding SelectedHost, Mode=OneWayToSource}" Grid.RowSpan="1"/>
+                            <ListBox BorderThickness="1" BorderBrush="Gray" Margin="8" ItemsSource="{Binding Hosts}"  Grid.Row="1" SelectedItem="{Binding SelectedHost, Mode=OneWayToSource}" Grid.RowSpan="1"/>
 
                             <qr:QrCodeGeoControl Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0" x:Name="qrCodeGeoControl2" VerticalAlignment="Stretch" LightBrush="White" DarkBrush="Black"   Text="{Binding Urls.API}" />
                             <Button Grid.Row="2" Grid.Column="1"  Command="{Binding CommandLaunch, Mode=OneWay}" CommandParameter="{Binding Urls.API}">
 
-                                <TextBlock><Run  Text="{Binding Urls.API}" /></TextBlock>
+                                <TextBlock>Launch: <Run  Text="{Binding Urls.API}" /></TextBlock>
+                            </Button>
+                            <Button Grid.Column="1" HorizontalAlignment="Right"  Height="32"  Command="{Binding CommandCopyLink}" CommandParameter="{Binding Urls.API}">
+                                <TextBlock><Run  FontFamily="Segoe UI Symbol">&#xE16F;</Run> Copy Link</TextBlock>
                             </Button>
                         </Grid>
                     </TabItem>

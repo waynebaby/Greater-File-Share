@@ -55,7 +55,7 @@
                 <TextBlock><Run Text="Path"/><Run Text="&#x9;&#x9;"/><Run Text="{Binding Path}" /></TextBlock>
                 <TextBlock><Run Text="Is Hosting"/><Run Text="&#x9;"/><Run Text="{Binding IsHosting, Mode=OneWay}" /></TextBlock>
                 <TextBlock><Run Text="Last Error"/><Run Text="&#x9;"/><Run Text="{Binding LastException.Message, Mode=OneWay}"/></TextBlock>
-                <TextBlock><Run Text="Test Link"/><Run Text="&#x9;"/><Hyperlink NavigateUri="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}" ><Run Text="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}"/></Hyperlink></TextBlock>
+                <TextBlock><Run Text="Root Url"/><Run Text="&#x9;"/><Run Text="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}"/></TextBlock>
             </StackPanel>
 
         </DataTemplate>
