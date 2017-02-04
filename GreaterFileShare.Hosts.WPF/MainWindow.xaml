@@ -152,7 +152,7 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Instance" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
+                    <Label Content="Instances" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
                     <ListBox 
                         Grid.Row="1"
                         Background="Transparent"
