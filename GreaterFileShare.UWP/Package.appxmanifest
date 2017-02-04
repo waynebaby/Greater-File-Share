@@ -17,7 +17,11 @@
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="GreaterFileShare.UWP.App">
       <!--<Application Id="GreaterFileShare" Executable="Greater File Share\bin\GreaterFileShare.Hosts.WPF.exe" EntryPoint="Windows.FullTrustApplication">-->
       <uap:VisualElements DisplayName="Greater File Share" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="GreaterFileShare.UWP" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Greater File Share" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+          </uap:ShowNameOnTiles>
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
