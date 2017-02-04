@@ -96,9 +96,25 @@ namespace GreaterFileShare.Hosts.WPF.Models
                 }
                 var l = ServiceLocator.Instance.Resolve<ILauncher>();
                 var cts = new CancellationTokenSource();
+
+                var s = new Dictionary<string, string>();
+                foreach (var item in this.AdditionalContentTypes)
+                {
+                    if (string.IsNullOrWhiteSpace(item.ExtensionName) || string.IsNullOrWhiteSpace(item.ContentType))
+                    {
+                        GlobalEventRouter.RaiseEvent(this, $"Hosting:\t\tContent Type entry Got Empty Field. Ignored. \r\n\t\t\t\t\t\t {{{nameof(item.ExtensionName)}:{item.ExtensionName ?? ""},{nameof(item.ContentType)}:{item.ContentType}}}", "Logging");
+                    }
+                    else if (s.ContainsKey(item.ExtensionName))
+                    {
+                        GlobalEventRouter.RaiseEvent(this, $"Hosting:\tContent Type entry Got Duplicate ExtensionName. Ignored.\r\n\t\t\t\t\t\t {{{nameof(item.ExtensionName)}:{item.ExtensionName ?? ""},{nameof(item.ContentType)}:{item.ContentType}}}", "Logging");
+                   }
+                    else
+                        s.Add(item.ExtensionName, item.ContentType);
+                    }
+    
                 var t = l.RunWebsiteAsync(
                     path, port,
-                    this.AdditionalContentTypes?.ToDictionary(x => x.ExtensionName, x => x.ContentType),
+                    s,
                     cts.Token);
 
                 SetupStarted(t, cts);

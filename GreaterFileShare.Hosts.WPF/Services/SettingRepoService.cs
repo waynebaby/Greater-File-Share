@@ -46,7 +46,7 @@ namespace GreaterFileShare.Hosts.WPF.Services
             var ms = new MemoryStream();
             dcs.WriteObject(ms, entry);
             ms.Position = 0;
-            var file = await GetTargetFileAsync();
+            var file = await GetTargetFileAsync(true);
             using (var stm = await file.OpenTransactedWriteAsync(StorageOpenOptions.AllowOnlyReaders))
             {
                 var s2 = stm.Stream.AsStreamForWrite();
@@ -58,7 +58,7 @@ namespace GreaterFileShare.Hosts.WPF.Services
         }
 
 
-        async Task<StorageFile> GetTargetFileAsync()
+        async Task<StorageFile> GetTargetFileAsync(bool createNew = false)
         {
             StorageFolder folder;
 
@@ -73,9 +73,21 @@ namespace GreaterFileShare.Hosts.WPF.Services
 
             var surffix = string.IsNullOrEmpty(Name) ? "Default" : Name;
             var fileName = $"Setting_{surffix}.setting.xml";
-            var file = await folder.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
-            EventRouter.Instance.RaiseEvent(this, $"targeting file\t{file.Path}", "Logging");
-            return file;
+
+            if (createNew)
+            {
+
+                var file = await folder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
+                EventRouter.Instance.RaiseEvent(this, $"targeting file\t{file.Path}", "Logging");
+                return file;
+            }
+            else
+            {
+
+                var file = await folder.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
+                EventRouter.Instance.RaiseEvent(this, $"targeting file\t{file.Path}", "Logging");
+                return file;
+            }
 
 
         }
