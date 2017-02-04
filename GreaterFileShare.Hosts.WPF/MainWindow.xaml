@@ -9,8 +9,7 @@
         x:Class="GreaterFileShare.Hosts.WPF.MainWindow"     
         MinHeight="640"  MinWidth="800" Height="800" Width="1024" Title="Greater File Share Host" Icon="Assets/Icon.ico" >
 
-
-    <mvvm:MVVMWindow.Resources >
+    <mvvm:MVVMWindow.Resources>
         <Glue:ShareTaskUrlConverter x:Key="ShareTaskUrlConverter"/>
         <Glue:TaskStateConverter x:Key="TaskStateConverter"/>
         <Glue:IsNotNullValueConverter x:Key="IsNotNullValueConverter"/>
@@ -20,24 +19,25 @@
         <DataTemplate x:Key="ShareFileTaskTemplate">
             <StackPanel x:Name="stackPanel" 
                         Width="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}}" 
-                        Background="#30FFFFff" MinHeight="80">
+                        Background="Transparent">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup x:Name="ErrorStateGroup">
-
                         <VisualState x:Name="NoError">
 
                         </VisualState>
                         <VisualState x:Name="Error">
                             <Storyboard>
-                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="stackPanel">
-                                    <EasingColorKeyFrame KeyTime="0" Value="#70FF0000"/>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" 
+                                                              Storyboard.TargetName="stackPanel">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#CCFF0000"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
                         </VisualState>
                         <VisualState x:Name="Hosting">
                             <Storyboard>
-                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="stackPanel">
-                                    <EasingColorKeyFrame KeyTime="0" Value="#70B3FFB3"/>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" 
+                                                              Storyboard.TargetName="stackPanel">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#CC00FF00"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
                         </VisualState>
@@ -51,20 +51,19 @@
                         <ei:GoToStateAction   StateName="{Binding Converter={StaticResource TaskStateConverter}}"/>
                     </ei:PropertyChangedTrigger>
                 </i:Interaction.Triggers>
-                <TextBlock><Run Text="Port"/><Run Text="&#x9;&#x9;"/><Run Text="{Binding Port}"/></TextBlock>
-                <TextBlock><Run Text="Path"/><Run Text="&#x9;&#x9;"/><Run Text="{Binding Path}" /></TextBlock>
-                <TextBlock><Run Text="Is Hosting"/><Run Text="&#x9;"/><Run Text="{Binding IsHosting, Mode=OneWay}" /></TextBlock>
-                <TextBlock><Run Text="Last Error"/><Run Text="&#x9;"/><Run Text="{Binding LastException.Message, Mode=OneWay}"/></TextBlock>
-                <TextBlock><Run Text="Test Link"/><Run Text="&#x9;"/><Hyperlink NavigateUri="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}" ><Run Text="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}"/></Hyperlink></TextBlock>
+                <TextBlock><Run FontWeight="Bold" Text="Port"/><Run Text="&#x9;&#x9;"/><Run Text="{Binding Port}"/></TextBlock>
+                <TextBlock><Run FontWeight="Bold" Text="Path"/><Run Text="&#x9;&#x9;"/><Run Text="{Binding Path}" /></TextBlock>
+                <TextBlock><Run FontWeight="Bold" Text="Is Hosting"/><Run Text="&#x9;"/><Run Text="{Binding IsHosting, Mode=OneWay}" /></TextBlock>
+                <TextBlock><Run FontWeight="Bold" Text="Last Error"/><Run Text="&#x9;"/><Run Text="{Binding LastException.Message, Mode=OneWay}"/></TextBlock>
+                <TextBlock><Run FontWeight="Bold" Text="Test Link"/><Run Text="&#x9;"/><Hyperlink NavigateUri="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}" ><Run Text="{Binding Converter={StaticResource ShareTaskUrlConverter}, Mode=OneWay}"/></Hyperlink></TextBlock>
             </StackPanel>
-
         </DataTemplate>
         <DataTemplate x:Key="MessageItemTemplate">
             <Grid>
-                <TextBlock><Run Text="{Binding Time}"/><Run Text="&#x9;"/><Run Text="{Binding Message}"/></TextBlock>
+                <TextBlock Foreground="#CCC"><Run Text="{Binding Time}"/><Run Text="&#x9;"/><Run Text="{Binding Message}"/></TextBlock>
             </Grid>
         </DataTemplate>
-        <Style x:Key="FocusVisual">
+        <!--<Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
                     <ControlTemplate>
@@ -72,60 +71,32 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-        </Style>
-        <!--<SolidColorBrush x:Key="Item.MouseOver.Background" Color="#1F26A0DA"/>
-        <SolidColorBrush x:Key="Item.MouseOver.Border" Color="#a826A0Da"/>
-        <SolidColorBrush x:Key="Item.SelectedInactive.Background" Color="#3DDADADA"/>
-        <SolidColorBrush x:Key="Item.SelectedInactive.Border" Color="#FFDADADA"/>
-        <SolidColorBrush x:Key="Item.SelectedActive.Background" Color="#3D26A0DA"/>
-        <SolidColorBrush x:Key="Item.SelectedActive.Border" Color="#FF26A0DA"/>-->
-
+        </Style>-->
     </mvvm:MVVMWindow.Resources>
-
-
     <mvvm:MVVMWindow.Background>
-        <ImageBrush ImageSource="Assets/hosting.jpg" Stretch="UniformToFill"/>
+        <ImageBrush ImageSource="Assets/hosting.jpg" Stretch="Fill" />
     </mvvm:MVVMWindow.Background>
-    <Grid >
-
+    <Grid>
         <Grid.DataContext>
             <StaticResource ResourceKey="DesignVM"/>
         </Grid.DataContext>
-        <!--<Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>-->
+
         <Grid x:Name="grid" Background="#CCFFFFFF">
-            <Grid.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="Background" Value="#CCFFFFFF" />
-                </Style>
-            </Grid.Resources>
-            <Grid.DataContext
-
->
-
-                <StaticResource
-
-        ResourceKey="DesignVM"
-/>
-
+            <Grid.DataContext>
+                <StaticResource ResourceKey="DesignVM"/>
             </Grid.DataContext>
-
-
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="300"/>
-                <ColumnDefinition Width="4"/>
-                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="450" MinHeight="350"/>
-                <RowDefinition Height="4"/>
-                <RowDefinition Height="192*"/>
+                <RowDefinition Height="*" MinHeight="350"/>
+                <RowDefinition Height="5" />
+                <RowDefinition Height="150" />
             </Grid.RowDefinitions>
 
-            <Border Grid.Row="0" Grid.ColumnSpan="1" Background="#33FFFFFF" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
+            <Border Grid.Row="0" Grid.Column="0" Background="#33FFFFFF" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
                 <Grid Margin="10">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -133,28 +104,26 @@
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="28"/>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="165*"/>
                         </Grid.RowDefinitions>
-                        <Label Content="ADDITIONAL CONTENT TYPES" />
+                        <Label Content="Configuration" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
                         <DataGrid Grid.Row="1" BorderBrush="#CCC" BorderThickness="1" AutoGenerateColumns="False" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn  Width="120" Binding="{Binding ExtensionName}" Header="Extension Name"/>
                                 <DataGridTextColumn Width="120" Binding="{Binding ContentType}" Header="Content Type"/>
                             </DataGrid.Columns>
-
                         </DataGrid>
                     </Grid>
                     <StackPanel Grid.Row="1">
                         <StackPanel>
-
-                            <Label Content="Port"/>
+                            <Label Content="PORT"/>
                             <xctk:IntegerUpDown Minimum="0" Maximum="65535" Value="{Binding CurrentTask.Port, Mode=TwoWay}" 
                                                 HorizontalContentAlignment="Right" TextAlignment="Left" Height="28" BorderBrush="#CCC" />
                         </StackPanel>
                         <StackPanel>
-                            <Label Content="Path"/>
-                            <Grid >
+                            <Label Content="FOLDER PATH"/>
+                            <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="32*"/>
                                     <ColumnDefinition Width="30"/>
@@ -168,24 +137,21 @@
                             </Grid>
                         </StackPanel>
                         <StackPanel/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
-                            <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start/Stop" />
-                        </StackPanel>
+                        <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start / Stop" HorizontalAlignment="Stretch" Margin="0,20,0,0" />
                     </StackPanel>
                 </Grid>
             </Border>
-
-            <Border Grid.Row="0" Grid.Column="2" Background="#33FFFFFF" Margin="10">
-                <Grid Background="#33FFFFFF">
+            <Border Grid.Row="0" Grid.Column="1" Background="#33FFFFFF" Margin="10">
+                <Grid Background="Transparent">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="0" Content="INSTANCE" />
+                    <Label Content="Instace" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
                     <ListBox 
                         Grid.Row="1"
-                        Background="#33FFFFFF"
+                        Background="Transparent"
                         x:Name="tasksList"
                         ItemsSource="{Binding HostingTasks}" 
                         SelectedItem="{Binding CurrentTask, Mode=TwoWay}" 
@@ -199,20 +165,19 @@
                     </StackPanel>
                 </Grid>
             </Border>
-
-            <Border Grid.Row="2" Grid.ColumnSpan="3" Background="#66FFFFFF" >
-                <ListBox  Background="#33000000" ItemsSource="{Binding Messages}"
-                          SelectedIndex="{Binding CurrentMessageIndex, Mode=TwoWay}" 
-                          FontFamily="Consolas"
-                          FontSize="12"
-                          Foreground="#CCC"
-                          ItemTemplate="{DynamicResource MessageItemTemplate}" 
-                          SelectionChanged="ListBox_SelectionChanged"/>
+            <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="#88000000">
+                <ListBox Background="#88000000" ItemsSource="{Binding Messages}"
+                         SelectedIndex="{Binding CurrentMessageIndex, Mode=TwoWay}" 
+                         FontFamily="Consolas"
+                         FontSize="12"
+                         ItemTemplate="{DynamicResource MessageItemTemplate}" 
+                         SelectionChanged="ListBox_SelectionChanged"/>
             </Border>
 
-            <GridSplitter Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="100" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ResizeBehavior="PreviousAndNext" />
-            <GridSplitter Grid.Column="1" Grid.Row="0" Grid.RowSpan="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ResizeBehavior="PreviousAndNext" />
-
+            <GridSplitter Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="100" 
+                          VerticalAlignment="Stretch" 
+                          HorizontalAlignment="Stretch" 
+                          ResizeBehavior="PreviousAndNext" />
         </Grid>
     </Grid>
 </mvvm:MVVMWindow>
