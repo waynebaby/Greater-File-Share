@@ -6,3 +6,4 @@ ren "UWPDesktopBridge\57081WaynebabyPresents.GreaterFileShare\ExtractedPackageFi
 
 BuildMe\bin\BuildMe.exe UWPDesktopBridge\57081WaynebabyPresents.GreaterFileShare\ExtractedPackageFiles\AppxManifest.xml
 
+RD UWPDesktopBridge\57081WaynebabyPresents.GreaterFileShare\ExtractedPackageFiles\VFS\SystemX64\config\systemprofile\AppData\LocalLow\Microsoft\CryptnetUrlCache /S /Q 

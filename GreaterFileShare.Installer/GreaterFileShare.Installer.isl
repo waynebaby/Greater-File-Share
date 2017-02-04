@@ -3209,6 +3209,7 @@
 	<table name="ISAssistantTag">
 		<col key="yes" def="s72">Tag</col>
 		<col def="S255">Data</col>
+		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td/></row>
 	</table>
 
 	<table name="ISBillBoard">
@@ -4155,7 +4156,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>Waynebaby Presents</td><td>0</td><td/><td>-928697776</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>Waynebaby Presents</td><td>0</td><td/><td>556104086</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-928674960</td></row>
@@ -4974,7 +4975,7 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Web.exe</td><td>0</td><td/><td>-928691600</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td>LAUNCH~1.EXE|Launch dotnet-razor-tooling.exe</td><td>0</td><td/><td>556130482</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Hosts.Console.exe</td><td>0</td><td/><td>556130482</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Hosts.WPF.exe</td><td>0</td><td/><td>556130482</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td>Greater File Share</td><td>0</td><td/><td>556081590</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Hosts.WPF.vshost.exe</td><td>0</td><td/><td>556130482</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td>LAUNCH~1.EXE|Launch GreaterFileShare.Web.exe</td><td>0</td><td/><td>556130482</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>-928657008</td></row>
@@ -5265,9 +5266,10 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-928657008</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>https://github.com/waynebaby/Greater-File-Share</td><td>0</td><td/><td>-928699216</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>Waynebaby Presents</td><td>0</td><td/><td>-928697776</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.WaynebabyPresents.com</td><td>0</td><td/><td>556104086</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>Waynebaby Presents</td><td>0</td><td/><td>556104086</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>Greater File Share</td><td>0</td><td/><td>-123351889</td></row>
+		<row><td>ID_STRING4</td><td>1033</td><td>Greater File Share</td><td>0</td><td/><td>556087734</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-928657008</td></row>
 	</table>
 
@@ -5384,11 +5386,8 @@
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
 		<row><td>GreaterFileShare.H_180FBA2EE1C14A83AE0F8D4C4BD34525.exe</td><td/><td>&lt;VSSolutionFolder&gt;\GreaterFileShare.Hosts.WPF\Assets\Icon.ico</td><td>0</td></row>
 		<row><td>GreaterFileShare.H_4B81C9AEAE8D4C9E976EE5F0731E5E9D.exe</td><td/><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\GreaterFileShare.Hosts.WPF.exe</td><td>0</td></row>
-		<row><td>GreaterFileShare.H_650666762EAE4C16914DEDA111DFCB34.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>GreaterFileShare.H_7116E1728DC948B1B14C5F79C7D505C5.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>GreaterFileShare.H_A6C1A0C6B9224833BAD47DB913CAC7D0.exe</td><td/><td>D:\GitHub\GreaterFileShare\ReleaseFolder\bin\GreaterFileShare.Hosts.WPF.exe</td><td>0</td></row>
 		<row><td>GreaterFileShare.H_D95E916A1FE448D9A26BF4C63800927E.exe</td><td/><td>&lt;VSSolutionFolder&gt;\GreaterFileShare.Hosts.WPF\Assets\Icon.ico</td><td>0</td></row>
-		<row><td>GreaterFileShare.W_A159E8544B0046D2AE339632E679615C.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>dotnet_razor_tooli_63311580FF9D4AE89AE6505443E6D60A.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -5896,7 +5895,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{D3ABDC22-9973-4901-B0E4-799EADC15166}</td><td/></row>
 		<row><td>ProductName</td><td>Greater File Share</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
+		<row><td>ProductVersion</td><td>1.02.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -5972,11 +5971,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>GreaterFileShare.Hosts.Console.exe</td><td>GreaterFileShare.Hosts.Console.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
 		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td>GreaterFileShare.Hosts.WPF.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
-		<row><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
-		<row><td>GreaterFileShare.Web.exe</td><td>GreaterFileShare.Web.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
-		<row><td>dotnet_razor_tooling.exe</td><td>dotnet_razor_tooling.exe</td><td/><td>greate_1_greater_file_share</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -6062,11 +6057,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>GreaterFileShare.Hosts.Console.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME6##</td><td>GreaterFileShare.Hosts.Console.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_650666762EAE4C16914DEDA111DFCB34.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>GreaterFileShare.Hosts.WPF.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME7##</td><td>GreaterFileShare.Hosts.WPF.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_4B81C9AEAE8D4C9E976EE5F0731E5E9D.exe</td><td>1</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME8##</td><td>GreaterFileShare.Hosts.WPF.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_7116E1728DC948B1B14C5F79C7D505C5.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>GreaterFileShare.Web.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME9##</td><td>GreaterFileShare.Web.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.W_A159E8544B0046D2AE339632E679615C.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>dotnet_razor_tooling.exe</td><td>greate_1_greater_file_share</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>dotnet_razor_tooling.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>dotnet_razor_tooli_63311580FF9D4AE89AE6505443E6D60A.exe</td><td>0</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>GreaterFileShare.Hosts.WPF.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME7##</td><td>GreaterFileShare.Hosts.WPF.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>GreaterFileShare.H_A6C1A0C6B9224833BAD47DB913CAC7D0.exe</td><td>1</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
