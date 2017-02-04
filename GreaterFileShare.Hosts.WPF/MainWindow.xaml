@@ -18,21 +18,19 @@
         <Glue:NotBoolValueConverter x:Key="NotBoolValueConverter"/>
 
         <DataTemplate x:Key="ShareFileTaskTemplate">
-            <StackPanel x:Name="stackPanel"  Width="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}}"  Background="#30FFFFff" MinWidth="300" MinHeight="80">
+            <StackPanel x:Name="stackPanel" 
+                        Width="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}}" 
+                        Background="#30FFFFff" MinHeight="80">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup x:Name="ErrorStateGroup">
 
                         <VisualState x:Name="NoError">
-                            <Storyboard>
-                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="stackPanel">
-                                    <EasingColorKeyFrame KeyTime="0" Value="#30FFFFFF"/>
-                                </ColorAnimationUsingKeyFrames>
-                            </Storyboard>
+
                         </VisualState>
                         <VisualState x:Name="Error">
                             <Storyboard>
                                 <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="stackPanel">
-                                    <EasingColorKeyFrame KeyTime="0" Value="#70FFB3B3"/>
+                                    <EasingColorKeyFrame KeyTime="0" Value="#70FF0000"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
                         </VisualState>
@@ -75,12 +73,12 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <SolidColorBrush x:Key="Item.MouseOver.Background" Color="#1F26A0DA"/>
+        <!--<SolidColorBrush x:Key="Item.MouseOver.Background" Color="#1F26A0DA"/>
         <SolidColorBrush x:Key="Item.MouseOver.Border" Color="#a826A0Da"/>
         <SolidColorBrush x:Key="Item.SelectedInactive.Background" Color="#3DDADADA"/>
         <SolidColorBrush x:Key="Item.SelectedInactive.Border" Color="#FFDADADA"/>
         <SolidColorBrush x:Key="Item.SelectedActive.Background" Color="#3D26A0DA"/>
-        <SolidColorBrush x:Key="Item.SelectedActive.Border" Color="#FF26A0DA"/>
+        <SolidColorBrush x:Key="Item.SelectedActive.Border" Color="#FF26A0DA"/>-->
 
     </mvvm:MVVMWindow.Resources>
 
@@ -98,19 +96,11 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>-->
         <Grid x:Name="grid" Background="#CCFFFFFF">
-
             <Grid.Resources>
                 <Style TargetType="{x:Type Border}">
-                    <Setter Property="Margin" Value="4" />
-                    <Setter Property="Padding" Value="4" />
-                    <Setter Property="BorderThickness" Value="1"/>
-                    <Setter Property="BorderBrush" Value="Pink"/>
-                    <Setter Property="Background" Value="#33FFFFFF" />
+                    <Setter Property="Background" Value="#CCFFFFFF" />
                 </Style>
             </Grid.Resources>
-
-
-
             <Grid.DataContext
 
 >
@@ -130,13 +120,13 @@
                 <ColumnDefinition Width="25*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="400" MinHeight="350"/>
+                <RowDefinition Height="450" MinHeight="350"/>
                 <RowDefinition Height="4"/>
                 <RowDefinition Height="192*"/>
             </Grid.RowDefinitions>
 
-            <Border  Grid.Row="0" Grid.ColumnSpan="1"  Background="#33FFFFFF" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
-                <Grid>
+            <Border Grid.Row="0" Grid.ColumnSpan="1" Background="#33FFFFFF" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
+                <Grid Margin="10">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
@@ -146,8 +136,8 @@
                             <RowDefinition Height="28"/>
                             <RowDefinition Height="165*"/>
                         </Grid.RowDefinitions>
-                        <Label Content="Additional Content Types"/>
-                        <DataGrid Grid.Row="1" AutoGenerateColumns="False" Background="#4CAEE1FF" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}">
+                        <Label Content="ADDITIONAL CONTENT TYPES" />
+                        <DataGrid Grid.Row="1" BorderBrush="#CCC" BorderThickness="1" AutoGenerateColumns="False" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}">
                             <DataGrid.Columns>
                                 <DataGridTextColumn  Width="120" Binding="{Binding ExtensionName}" Header="Extension Name"/>
                                 <DataGridTextColumn Width="120" Binding="{Binding ContentType}" Header="Content Type"/>
@@ -156,17 +146,11 @@
                         </DataGrid>
                     </Grid>
                     <StackPanel Grid.Row="1">
-                        <StackPanel.Resources >
-                            <Style TargetType="{x:Type StackPanel}">
-                                <Setter Property="Margin" Value="4"/>
-                            </Style>
-
-                        </StackPanel.Resources>
-
                         <StackPanel>
 
                             <Label Content="Port"/>
-                            <xctk:IntegerUpDown Minimum="0" Maximum="65535" Value="{Binding CurrentTask.Port, Mode=TwoWay}" HorizontalContentAlignment="Right" TextAlignment="Left" />
+                            <xctk:IntegerUpDown Minimum="0" Maximum="65535" Value="{Binding CurrentTask.Port, Mode=TwoWay}" 
+                                                HorizontalContentAlignment="Right" TextAlignment="Left" Height="28" BorderBrush="#CCC" />
                         </StackPanel>
                         <StackPanel>
                             <Label Content="Path"/>
@@ -184,47 +168,46 @@
                             </Grid>
                         </StackPanel>
                         <StackPanel/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                            <StackPanel.Resources>
-                                <Style TargetType="{x:Type Button}">
-                                    <Setter Property="Margin" Value="4"  />
-                                    <Setter Property="Padding" Value="4" />
-                                </Style>
-                            </StackPanel.Resources>
-                            <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start/Stop" HorizontalAlignment="Center" VerticalAlignment="Center" />
-
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
+                            <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start/Stop" />
                         </StackPanel>
                     </StackPanel>
                 </Grid>
             </Border>
 
-            <Border Grid.Row="0" Grid.ColumnSpan="1" Grid.Column="2" Background="#33FFFFFF" >
-                <Grid  Background="#33FFFFFF" >
+            <Border Grid.Row="0" Grid.Column="2" Background="#33FFFFFF" Margin="10">
+                <Grid Background="#33FFFFFF">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="7*"/>
-                        <RowDefinition Height="55"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Content="INSTANCE" />
                     <ListBox 
+                        Grid.Row="1"
+                        Background="#33FFFFFF"
                         x:Name="tasksList"
-                        Margin="4" 
-                        Background="#50ffffff" 
                         ItemsSource="{Binding HostingTasks}" 
                         SelectedItem="{Binding CurrentTask, Mode=TwoWay}" 
                         SelectedIndex="0" 
-                        ItemTemplate="{DynamicResource ShareFileTaskTemplate}"  
-                           />
-                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                        <Button Command="{Binding CommandNewHost}"  Padding="4"  Margin="4"  Content="New Host Entry" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <Button Command="{Binding CommandDeleteHost}"  Padding="4"  Margin="4"  Content="Delete Host Entry" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <Button  Padding="4"  Margin="4" Command="{Binding CommandShowQR}" Content="Show QR and Links"/>
-                        <Button Command="{Binding CommandSaveSettings}"  Padding="4"  Margin="4"  Content="Save Settings" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+                        ItemTemplate="{DynamicResource ShareFileTaskTemplate}" />
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
+                        <Button Command="{Binding CommandNewHost}"  Content="New Host Entry" Margin="0,0,10,0" />
+                        <Button Command="{Binding CommandDeleteHost}"  Content="Delete Host Entry" Margin="0,0,10,0"/>
+                        <Button Command="{Binding CommandShowQR}" Content="Show QR and Links" Margin="0,0,10,0"/>
+                        <Button Command="{Binding CommandSaveSettings}"  Content="Save Settings" />
                     </StackPanel>
                 </Grid>
             </Border>
 
-            <Border Grid.Row="2" Grid.ColumnSpan="3"  Background="#33FFFFFF" >
-                <ListBox  Background="#33888888" ItemsSource="{Binding Messages}" SelectedIndex="{Binding CurrentMessageIndex, Mode=TwoWay}" ItemTemplate="{DynamicResource MessageItemTemplate}" SelectionChanged="ListBox_SelectionChanged"/>
+            <Border Grid.Row="2" Grid.ColumnSpan="3" Background="#66FFFFFF" >
+                <ListBox  Background="#33000000" ItemsSource="{Binding Messages}"
+                          SelectedIndex="{Binding CurrentMessageIndex, Mode=TwoWay}" 
+                          FontFamily="Consolas"
+                          FontSize="12"
+                          Foreground="#CCC"
+                          ItemTemplate="{DynamicResource MessageItemTemplate}" 
+                          SelectionChanged="ListBox_SelectionChanged"/>
             </Border>
 
             <GridSplitter Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="100" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ResizeBehavior="PreviousAndNext" />
