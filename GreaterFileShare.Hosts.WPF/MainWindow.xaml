@@ -6,7 +6,7 @@
         xmlns:Glue="clr-namespace:GreaterFileShare.Hosts.WPF.Glue" 
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
-        x:Class="GreaterFileShare.Hosts.WPF.MainWindow"     
+        x:Class="GreaterFileShare.Hosts.WPF.MainWindow"    
         MinHeight="640"  MinWidth="800" Height="800" Width="1024" Title="Greater File Share Host" Icon="Assets/Icon.ico" >
 
     <mvvm:MVVMWindow.Resources>
@@ -18,7 +18,6 @@
 
         <DataTemplate x:Key="ShareFileTaskTemplate">
             <StackPanel x:Name="stackPanel" 
-                        Width="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}}}" 
                         Background="Transparent">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup x:Name="ErrorStateGroup">
@@ -29,7 +28,7 @@
                             <Storyboard>
                                 <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" 
                                                               Storyboard.TargetName="stackPanel">
-                                    <EasingColorKeyFrame KeyTime="0" Value="#CCFF0000"/>
+                                    <EasingColorKeyFrame KeyTime="0" Value="#60FF0000"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
                         </VisualState>
@@ -37,7 +36,7 @@
                             <Storyboard>
                                 <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" 
                                                               Storyboard.TargetName="stackPanel">
-                                    <EasingColorKeyFrame KeyTime="0" Value="#CC00FF00"/>
+                                    <EasingColorKeyFrame KeyTime="0" Value="#6000FF00"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
                         </VisualState>
@@ -74,14 +73,13 @@
         </Style>-->
     </mvvm:MVVMWindow.Resources>
     <mvvm:MVVMWindow.Background>
-        <ImageBrush ImageSource="Assets/hosting.jpg" Stretch="Fill" />
+        <ImageBrush ImageSource="Assets/map.png" Stretch="UniformToFill" />
     </mvvm:MVVMWindow.Background>
-    <Grid>
+    <Grid Background="#22FFFFFF">
         <Grid.DataContext>
             <StaticResource ResourceKey="DesignVM"/>
         </Grid.DataContext>
-
-        <Grid x:Name="grid" Background="#CCFFFFFF">
+        <Grid x:Name="grid">
             <Grid.DataContext>
                 <StaticResource ResourceKey="DesignVM"/>
             </Grid.DataContext>
@@ -96,7 +94,7 @@
                 <RowDefinition Height="150" />
             </Grid.RowDefinitions>
 
-            <Border Grid.Row="0" Grid.Column="0" Background="#33FFFFFF" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
+            <Border Grid.Row="0" Grid.Column="0" Background="Transparent" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
                 <Grid Margin="10">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -137,21 +135,23 @@
                             </Grid>
                         </StackPanel>
                         <StackPanel/>
-                        <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start / Stop" HorizontalAlignment="Stretch" Margin="0,20,0,0" />
+                        <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start / Stop" HorizontalAlignment="Stretch" Margin="0,20,0,0" Background="ForestGreen" Foreground="White" />
                     </StackPanel>
                 </Grid>
             </Border>
-            <Border Grid.Row="0" Grid.Column="1" Background="#33FFFFFF" Margin="10">
+            <Border Grid.Row="0" Grid.Column="1" Background="Transparent" Margin="10">
                 <Grid Background="Transparent">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Label Content="Instace" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
+                    <Label Content="Instance" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
                     <ListBox 
                         Grid.Row="1"
                         Background="Transparent"
+                        BorderBrush="#CCC"
+                        BorderThickness="1"
                         x:Name="tasksList"
                         ItemsSource="{Binding HostingTasks}" 
                         SelectedItem="{Binding CurrentTask, Mode=TwoWay}" 
@@ -173,7 +173,7 @@
                          ItemTemplate="{DynamicResource MessageItemTemplate}" 
                          SelectionChanged="ListBox_SelectionChanged"/>
             </Border>
-
+            
             <GridSplitter Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="100" 
                           VerticalAlignment="Stretch" 
                           HorizontalAlignment="Stretch" 
