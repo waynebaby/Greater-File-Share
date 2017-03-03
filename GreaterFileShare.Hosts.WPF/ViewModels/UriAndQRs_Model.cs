@@ -168,7 +168,9 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
             {
                 throw new InvalidOperationException("need a CurrentTask instance first");
             }
-            Hosts = new ObservableCollection<HostEntry>(nh.GetHosts());
+            Hosts = new ObservableCollection<HostEntry>(nh.GetHosts().Where(x=>!x.HostName.EndsWith(".local")) .OrderBy(x=>!x.HostName.StartsWith("192")).ThenBy(x=>x.HostName));
+
+            SelectedHost = Hosts.FirstOrDefault();
 
             var foldere = new FolderEntry()
             {
