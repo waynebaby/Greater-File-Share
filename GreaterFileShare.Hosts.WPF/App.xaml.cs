@@ -39,6 +39,7 @@ namespace GreaterFileShare.Hosts.WPF
 
             ServiceLocator.Instance.Register<ILauncher, Launcher>();
             ServiceLocator.Instance.Register<ISettingRepoService<ObservableCollection<ShareFileTask>>, SettingRepoService<ObservableCollection<ShareFileTask>>>();
+            ServiceLocator.Instance.Register<ISettingRepoService<ObservableCollection<ShareFileTask>>, Win32SettingRepoService<ObservableCollection<ShareFileTask>>>("W32");
             ServiceLocator.Instance.Register<INetworkService, NetworkService>();
             ServiceLocator.Instance.Register<IFileSystemHubService, FileSystemHubService>();
             ServiceLocator.Instance.RegisterFactory<IFileSystemService>(null,

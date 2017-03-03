@@ -319,7 +319,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
                             var store = ServiceLocator.Instance.Resolve<ISettingRepoService<ObservableCollection<ShareFileTask>>>();
                             await store.SaveAsync(vm.HostingTasks);
-                            vm.GlobalEventRouter.RaiseEvent(vm, "Save Setting Successed.", "Logging");
+                            vm.GlobalEventRouter.RaiseEvent(vm, "Save Settings Succeed.", "Logging");
                         })
                     .DoNotifyDefaultEventRouter(vm, commandId)
                     .Subscribe()
@@ -390,24 +390,140 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
         #endregion
 
+
+
+        public CommandModel<ReactiveCommand, String> CommandExportSettings
+        {
+            get { return _CommandExportSettingsLocator(this).Value; }
+            set { _CommandExportSettingsLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandExportSettings Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandExportSettings = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandExportSettingsLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandExportSettingsLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandExportSettings), model => model.Initialize(nameof(CommandExportSettings), ref model._CommandExportSettings, ref _CommandExportSettingsLocator, _CommandExportSettingsDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandExportSettingsDefaultValueFactory =
+            model =>
+            {
+                var resource = nameof(CommandExportSettings);           // Command resource  
+                var commandId = nameof(CommandExportSettings);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+                            if (e.EventArgs.Parameter as string != null)
+                            {
+
+                                var store = ServiceLocator.Instance.Resolve<Win32SettingRepoService<ObservableCollection<ShareFileTask>>>();
+                                store.SuggestedTargetFilePath = e.EventArgs.Parameter as string;
+                                await store.SaveAsync(vm.HostingTasks);
+
+                                vm.GlobalEventRouter.RaiseEvent(vm, "Export Settings Succeed.", "Logging");
+
+                            }
+                            else
+                            {
+                            }
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+                cmdmdl.ListenToIsUIBusy(
+                    model: vm,
+                    canExecuteWhenBusy: false);
+                return cmdmdl;
+            };
+
+        #endregion
+
+
+
+
+        public CommandModel<ReactiveCommand, String> CommandImportSettings
+        {
+            get { return _CommandImportSettingsLocator(this).Value; }
+            set { _CommandImportSettingsLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandImportSettings Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandImportSettings = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandImportSettingsLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandImportSettingsLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandImportSettings), model => model.Initialize(nameof(CommandImportSettings), ref model._CommandImportSettings, ref _CommandImportSettingsLocator, _CommandImportSettingsDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandImportSettingsDefaultValueFactory =
+            model =>
+            {
+                var resource = nameof(CommandImportSettings);           // Command resource  
+                var commandId = nameof(CommandImportSettings);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+                            if (e.EventArgs.Parameter as string != null)
+                            {
+
+                                var store = ServiceLocator.Instance.Resolve<Win32SettingRepoService<ObservableCollection<ShareFileTask>>>();
+                                store.SuggestedTargetFilePath = e.EventArgs.Parameter as string;
+                                var h = await store.LoadAsync();
+                                if (h != null)
+                                {
+                                    vm.CloseAllHosts();
+                                    vm.HostingTasks = h;
+                                    vm.StartAllAllowedHost();
+                                    vm.GlobalEventRouter.RaiseEvent(vm, "Import Settings Succeed.", "Logging");
+                                }
+
+                            }
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+                cmdmdl.ListenToIsUIBusy(
+                    model: vm,
+                    canExecuteWhenBusy: false);
+                return cmdmdl;
+            };
+
+        private void CloseAllHosts()
+        {
+            foreach (var item in HostingTasks)
+            {
+                if (item.IsHosting)
+                {
+                    item.Stop();
+                }
+            }
+        }
+
+        #endregion
+
         protected override async Task OnBindedViewLoad(IView view)
         {
 
 
 
             HostingTasks = await ExecuteTask(async () =>
-              {
-                  try
-                  {
-                      var store = ServiceLocator.Instance.Resolve<ISettingRepoService<ObservableCollection<ShareFileTask>>>();
-                      return await store.LoadAsync();
-                  }
-                  catch (Exception)
-                  {
+            {
+                try
+                {
+                    var store = ServiceLocator.Instance.Resolve<ISettingRepoService<ObservableCollection<ShareFileTask>>>();
+                    return await store.LoadAsync();
+                }
+                catch (Exception)
+                {
 
-                  }
-                  return null;
-              });
+                }
+                return null;
+            });
 
             if ((HostingTasks?.Count ?? 0) == 0)
             {
@@ -420,24 +536,26 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
             }
 
-
-
-            var t = ExecuteTask(async () =>
-              {
-                  await Task.Delay(500);
-
-
-                  foreach (var tsk in HostingTasks)
-                  {
-                      if (tsk.IsSetToHosting)
-                      {
-                          tsk.Start();
-                      }
-                  }
-              });
-
+            StartAllAllowedHost();
 
             await base.OnBindedViewLoad(view);
+        }
+
+        private void StartAllAllowedHost()
+        {
+            var t = ExecuteTask(async () =>
+            {
+                await Task.Delay(500);
+
+
+                foreach (var tsk in HostingTasks)
+                {
+                    if (tsk.IsSetToHosting)
+                    {
+                        tsk.Start();
+                    }
+                }
+            });
         }
 
         protected override async Task OnBindedViewUnload(IView view)

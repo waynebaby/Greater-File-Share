@@ -20,10 +20,11 @@ namespace GreaterFileShare.Hosts.WPF.Services
 
         internal static MainWindow_Model vmInstance;
 
-        public async Task <string> GetDefaultFolderAsync()
+        public async Task<string> GetDefaultFolderAsync()
         {
-
-            return Environment.GetFolderPath(Environment.SpecialFolder.CommonVideos);
+            var fds = await StorageLibrary.GetLibraryAsync(KnownLibraryId.Videos);
+            var folder = fds.SaveFolder;
+            return folder.Path;
 
             ////Need vlib cap and run in UWP process
             //var folder = await KnownFolders.GetFolderForUserAsync(null, KnownFolderId.VideosLibrary);

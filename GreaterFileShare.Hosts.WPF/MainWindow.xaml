@@ -7,7 +7,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
         x:Class="GreaterFileShare.Hosts.WPF.MainWindow"    
-        MinHeight="640"  MinWidth="800" Height="800" Width="1024" Title="Greater File Share Host" Icon="Assets/Icon.ico" >
+        MinHeight="640"  MinWidth="1024" Height="800" Width="1024" Title="Greater File Share Host" Icon="Assets/Icon.ico" >
 
     <mvvm:MVVMWindow.Resources>
         <Glue:ShareTaskUrlConverter x:Key="ShareTaskUrlConverter"/>
@@ -168,14 +168,49 @@
                                 <Setter Property="Height" Value="40" />
                             </Style>
                         </StackPanel.Resources>
-                        <Button Command="{Binding CommandNewHost}"  Content="New" Margin="0,0,10,0" />
-                        <Button Command="{Binding CommandDeleteHost}"  Content="Delete" Margin="0,0,10,0"/>
-                        <Button Command="{Binding CommandShowQR}" Content="QR" Margin="0,0,10,0"/>
-                        <Button Command="{Binding CommandSaveSettings}"  Margin="0,0,10,0" Content="Save" />
-                        <Button Command="{Binding CommandMoveItem}" CommandParameter="-1" Margin="0,0,10,0">
+                        <Button Command="{Binding CommandNewHost}"  ToolTip="New Host" Margin="0,0,10,0" >
+
+                            <TextBlock FontFamily="Segoe UI Symbol">&#xE17B;</TextBlock>
+                        </Button>
+                        <Button Command="{Binding CommandDeleteHost}"   Margin="0,0,10,0">
+
+                            <TextBlock FontFamily="Segoe UI Symbol">&#xE106;</TextBlock>
+
+                        </Button>
+                        <Button Command="{Binding CommandShowQR}" ToolTip="Show QR And Links" Margin="0,0,10,0">
+
+                            <TextBlock FontFamily="Segoe UI Symbol">&#xE1E4;</TextBlock>
+
+                        </Button>
+                        <Button Command="{Binding CommandSaveSettings}"  Margin="0,0,10,0" ToolTip="Save Settings" >
+
+                            <TextBlock FontFamily="Segoe UI Symbol">&#xE105;</TextBlock>
+
+                        </Button>
+                        <Button   Margin="0,0,10,0" ToolTip="Import Settings" >
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click" >
+                                    <Glue:PickFileTriggerAction   Title="Please Pick a file to Import" x:Name="pickFileImport" />
+                                    <i:InvokeCommandAction Command="{Binding CommandImportSettings}" CommandParameter="{Binding ElementName=pickFileImport,Path=File}"></i:InvokeCommandAction>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <TextBlock FontFamily="Segoe UI Symbol">&#xE0D6;</TextBlock>
+
+                        </Button>
+                        <Button Command="{Binding CommandExportSettings}"  Margin="0,0,10,0" ToolTip="Export Settings" >
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click" >
+                                    <Glue:PickFileTriggerAction DialogType="Save" Title="Please Pick a location to Export" x:Name="pickFileExport" />
+                                    <i:InvokeCommandAction Command="{Binding CommandExportSettings}" CommandParameter="{Binding ElementName=pickFileExport,Path=File}"></i:InvokeCommandAction>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                            <TextBlock FontFamily="Segoe UI Symbol">&#xE0B1;</TextBlock>
+
+                        </Button>
+                        <Button Command="{Binding CommandMoveItem}" ToolTip="Move Up"  CommandParameter="-1" Margin="0,0,10,0">
                             <TextBlock FontFamily="Segoe UI Symbol">&#xE0A0;</TextBlock>
                         </Button>
-                        <Button Command="{Binding CommandMoveItem}" CommandParameter="1">
+                        <Button Command="{Binding CommandMoveItem}" ToolTip="Move Down" CommandParameter="1">
                             <TextBlock FontFamily="Segoe UI Symbol">&#xE0A1;</TextBlock>
                         </Button>
 
@@ -192,7 +227,6 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="SelectionChanged">
                             <Glue:ScrollToSelectedAction />
-
                         </i:EventTrigger>
                     </i:Interaction.Triggers>
 

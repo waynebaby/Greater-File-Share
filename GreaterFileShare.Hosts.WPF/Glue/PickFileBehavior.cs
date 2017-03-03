@@ -42,22 +42,41 @@ namespace GreaterFileShare.Hosts.WPF.Glue
                 var f = dialog.ShowDialog(w);
                 if (f == CommonFileDialogResult.Ok)
                 {
-                    Folder = dialog.FileName;
+                    File = dialog.FileName;
+                }
+                else if(IsClearValueAfterFailNeeded)
+                {
+                    File = null;
                 }
             }
         }
 
 
 
-        public string Folder
+
+        public bool IsClearValueAfterFailNeeded
         {
-            get { return (string)GetValue(FolderProperty); }
-            set { SetValue(FolderProperty, value); }
+            get { return (bool)GetValue(IsClearValueAfterFailNeededProperty); }
+            set { SetValue(IsClearValueAfterFailNeededProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for Folder.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty FolderProperty =
-            DependencyProperty.Register("Folder", typeof(string), typeof(PickFolderBehavior), new PropertyMetadata(""));
+        // Using a DependencyProperty as the backing store for IsClearValueAfterFailNeeded.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty IsClearValueAfterFailNeededProperty =
+            DependencyProperty.Register("IsClearValueAfterFailNeeded", typeof(bool), typeof(PickFileBehavior), new PropertyMetadata(false));
+
+
+
+
+        public string File
+        {
+            get { return (string)GetValue(FileProperty); }
+            set { SetValue(FileProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for File.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty FileProperty =
+            DependencyProperty.Register("File", typeof(string), typeof(PickFileBehavior), new PropertyMetadata(null));
+
 
 
 

@@ -33,9 +33,9 @@ namespace GreaterFileShare.Hosts.WPF.Glue
         private void AssociatedObject_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             using (CommonOpenFileDialog dialog = new CommonOpenFileDialog()
-                {
-                    IsFolderPicker = true
-                })
+            {
+                IsFolderPicker = true
+            })
             {
 
                 var f = dialog.ShowDialog(w);
@@ -43,8 +43,24 @@ namespace GreaterFileShare.Hosts.WPF.Glue
                 {
                     Folder = dialog.FileName;
                 }
+                else if (IsClearValueAfterFailNeeded)
+                {
+                    Folder = null;
+                }
             }
         }
+
+
+
+        public bool IsClearValueAfterFailNeeded
+        {
+            get { return (bool)GetValue(IsClearValueAfterFailNeededProperty); }
+            set { SetValue(IsClearValueAfterFailNeededProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for IsClearValueAfterFailNeeded.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty IsClearValueAfterFailNeededProperty =
+            DependencyProperty.Register("IsClearValueAfterFailNeeded", typeof(bool), typeof(PickFolderBehavior), new PropertyMetadata(false));
 
 
 
