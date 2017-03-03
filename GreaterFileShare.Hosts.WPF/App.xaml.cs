@@ -52,13 +52,24 @@ namespace GreaterFileShare.Hosts.WPF
 
 
         ServiceHost host;
-        protected override void OnStartup(StartupEventArgs e)
+        protected override async void OnStartup(StartupEventArgs e)
         {
 
             InitNavigationConfigurationInThisAssembly();
             host = GetServiceHost();
             Debug.WriteLine(host.BaseAddresses.FirstOrDefault()?.ToString());
-            host.Open();
+            try
+            {
+
+                host.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error On Startup:");
+                Environment.Exit(0);
+            }
+
+
             //net.tcp://+:8800/GreaterFileShare/Hosts/WPF/Services/FileSystemHubService
 
             base.OnStartup(e);

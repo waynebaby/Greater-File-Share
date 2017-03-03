@@ -12,6 +12,7 @@ namespace GreaterFileShare
         public const string SwaggerRelativeUri = "swagger/ui"; 
         public const string WCFRelativeUri = "wcf";
         public const int WCFPort = 8800;
+        public const string SettingExtension = ".gfssetting";
         //netsh http add urlacl url=http://+:8800/ user=everyone
     }
 }

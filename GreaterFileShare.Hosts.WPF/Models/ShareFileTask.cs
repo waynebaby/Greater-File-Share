@@ -107,11 +107,11 @@ namespace GreaterFileShare.Hosts.WPF.Models
                     else if (s.ContainsKey(item.ExtensionName))
                     {
                         GlobalEventRouter.RaiseEvent(this, $"Hosting:\tContent Type entry Got Duplicate ExtensionName. Ignored.\r\n\t\t\t\t\t\t {{{nameof(item.ExtensionName)}:{item.ExtensionName ?? ""},{nameof(item.ContentType)}:{item.ContentType}}}", "Logging");
-                   }
+                    }
                     else
                         s.Add(item.ExtensionName, item.ContentType);
-                    }
-    
+                }
+
                 var t = l.RunWebsiteAsync(
                     path, port,
                     s,
@@ -169,15 +169,32 @@ namespace GreaterFileShare.Hosts.WPF.Models
 
 
 
+
         public bool IsHosting
         {
             get { return _IsHostingLocator(this).Value; }
-            private set { _IsHostingLocator(this).SetValueAndTryNotify(value); }
+            private set
+            {
+                IsSetToHosting = value;
+                _IsHostingLocator(this).SetValueAndTryNotify(value);
+            }
         }
         #region Property bool IsHosting Setup        
         protected Property<bool> _IsHosting = new Property<bool> { LocatorFunc = _IsHostingLocator };
         static Func<BindableBase, ValueContainer<bool>> _IsHostingLocator = RegisterContainerLocator<bool>(nameof(IsHosting), model => model.Initialize(nameof(IsHosting), ref model._IsHosting, ref _IsHostingLocator, _IsHostingDefaultValueFactory));
         static Func<bool> _IsHostingDefaultValueFactory = () => default(bool);
+        #endregion
+
+        [DataMember]
+        public bool IsSetToHosting
+        {
+            get { return _IsSetToHostingLocator(this).Value; }
+            set { _IsSetToHostingLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property bool IsSetToHosting Setup        
+        protected Property<bool> _IsSetToHosting = new Property<bool> { LocatorFunc = _IsSetToHostingLocator };
+        static Func<BindableBase, ValueContainer<bool>> _IsSetToHostingLocator = RegisterContainerLocator<bool>(nameof(IsSetToHosting), model => model.Initialize(nameof(IsSetToHosting), ref model._IsSetToHosting, ref _IsSetToHostingLocator, _IsSetToHostingDefaultValueFactory));
+        static Func<bool> _IsSetToHostingDefaultValueFactory = () => default(bool);
         #endregion
 
 

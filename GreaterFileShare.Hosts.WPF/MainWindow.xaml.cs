@@ -32,6 +32,8 @@ namespace GreaterFileShare.Hosts.WPF
         {
             InitializeComponent();
 
+           var title=  Environment.GetCommandLineArgs()?.FirstOrDefault() ??"no args" ;
+            Title = title;
         }
     }
 }

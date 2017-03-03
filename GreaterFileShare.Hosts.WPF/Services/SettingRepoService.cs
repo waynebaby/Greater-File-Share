@@ -18,6 +18,7 @@ namespace GreaterFileShare.Hosts.WPF.Services
             get; set;
         }
 
+        public IStorageItem SuggestedTargetStorageItem { get; set; }
 
 
         public async Task<T> LoadAsync()
@@ -60,31 +61,37 @@ namespace GreaterFileShare.Hosts.WPF.Services
 
         async Task<StorageFile> GetTargetFileAsync(bool createNew = false)
         {
-            StorageFolder folder;
+            StorageFile file= SuggestedTargetStorageItem as StorageFile;
+            if (file !=null)
+            {
+                return file;
+            }
 
+            IStorageFolder folder = SuggestedTargetStorageItem as IStorageFolder;
             try
             {
-                folder = ApplicationData.Current.RoamingFolder;
+                folder = folder ?? ApplicationData.Current.RoamingFolder;
             }
             catch (InvalidOperationException)
             {
-                folder = KnownFolders.DocumentsLibrary;
+                folder = folder ?? KnownFolders.DocumentsLibrary;
             }
 
+
             var surffix = string.IsNullOrEmpty(Name) ? "Default" : Name;
-            var fileName = $"Setting_{surffix}.setting.xml";
+            var fileName = $"Setting_{surffix}{Consts.SettingExtension}";
 
             if (createNew)
             {
 
-                var file = await folder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
+                file = await folder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
                 EventRouter.Instance.RaiseEvent(this, $"targeting file\t{file.Path}", "Logging");
                 return file;
             }
             else
             {
 
-                var file = await folder.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
+                file = await folder.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
                 EventRouter.Instance.RaiseEvent(this, $"targeting file\t{file.Path}", "Logging");
                 return file;
             }

@@ -371,8 +371,13 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
             var t = ExecuteTask(async () =>
               {
                   await Task.Delay(500);
-                  var cmd2 = CurrentTask.CommandStartHosting;
-                  cmd2.Execute(null);
+
+
+                  foreach (var tsk in HostingTasks)
+                  {
+                      var cmd2 = tsk.CommandStartHosting;
+                      cmd2.Execute(null);
+                  }
               });
 
 
