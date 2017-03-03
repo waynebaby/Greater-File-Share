@@ -336,6 +336,60 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         #endregion
 
 
+        public CommandModel<ReactiveCommand, String> CommandMoveItem
+        {
+            get { return _CommandMoveItemLocator(this).Value; }
+            set { _CommandMoveItemLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandMoveItem Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandMoveItem = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandMoveItemLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandMoveItemLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandMoveItem), model => model.Initialize(nameof(CommandMoveItem), ref model._CommandMoveItem, ref _CommandMoveItemLocator, _CommandMoveItemDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandMoveItemDefaultValueFactory =
+            model =>
+            {
+                var resource = nameof(CommandMoveItem);           // Command resource  
+                var commandId = nameof(CommandMoveItem);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+                cmd.ListenCanExecuteObservable(vm.ListenChanged(x => x.CurrentTask).Select(x => vm.CurrentTask != null && !vm.CurrentTask.IsHosting))
+                    .DisposeWith(vm);
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+                            int delta = 0;
+                            var v = e.EventArgs.Parameter;
+                            if (v is string)
+                            {
+                                int.TryParse(v as string, out delta);
+                            }
+
+                            var index = vm.HostingTasks.IndexOf(vm.CurrentTask);
+                            var newIndex = index + delta;
+                            if (index >= 0 && index < vm.HostingTasks.Count)
+                            {
+                                if (newIndex >= 0 && newIndex < vm.HostingTasks.Count)
+                                {
+                                    vm.HostingTasks.Move(index, newIndex);
+                                }
+                            }
+
+                            //Todo: Add MoveItem logic here, or
+                            await MVVMSidekick.Utilities.TaskExHelper.Yield();
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(resource);
+
+
+                return cmdmdl;
+            };
+
+        #endregion
+
         protected override async Task OnBindedViewLoad(IView view)
         {
 

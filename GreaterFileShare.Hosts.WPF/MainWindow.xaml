@@ -133,7 +133,7 @@
                             </Grid>
                         </StackPanel>
                         <StackPanel/>
-                        <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start / Stop" HorizontalAlignment="Stretch" Margin="0,20,0,0" Background="ForestGreen" Foreground="White" />
+                        <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start / Stop" HorizontalAlignment="Stretch" Margin="20" Height="40" Background="ForestGreen" Foreground="White" />
                     </StackPanel>
                 </Grid>
             </Border>
@@ -162,10 +162,23 @@
                         </i:Interaction.Triggers>
                     </ListBox>
                     <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
-                        <Button Command="{Binding CommandNewHost}"  Content="New Host Entry" Margin="0,0,10,0" />
-                        <Button Command="{Binding CommandDeleteHost}"  Content="Delete Host Entry" Margin="0,0,10,0"/>
-                        <Button Command="{Binding CommandShowQR}" Content="Show QR and Links" Margin="0,0,10,0"/>
-                        <Button Command="{Binding CommandSaveSettings}"  Content="Save Settings" />
+                        <StackPanel.Resources>
+                            <Style TargetType="Button">
+                                <Setter Property="Width" Value="50" />
+                                <Setter Property="Height" Value="40" />
+                            </Style>
+                        </StackPanel.Resources>
+                        <Button Command="{Binding CommandNewHost}"  Content="New" Margin="0,0,10,0" />
+                        <Button Command="{Binding CommandDeleteHost}"  Content="Delete" Margin="0,0,10,0"/>
+                        <Button Command="{Binding CommandShowQR}" Content="QR" Margin="0,0,10,0"/>
+                        <Button Command="{Binding CommandSaveSettings}"  Margin="0,0,10,0" Content="Save" />
+                        <Button Command="{Binding CommandMoveItem}" CommandParameter="-1" Margin="0,0,10,0">
+                            <TextBlock FontFamily="Segoe UI Symbol">&#xE0A0;</TextBlock>
+                        </Button>
+                        <Button Command="{Binding CommandMoveItem}" CommandParameter="1">
+                            <TextBlock FontFamily="Segoe UI Symbol">&#xE0A1;</TextBlock>
+                        </Button>
+
                     </StackPanel>
                 </Grid>
             </Border>
