@@ -375,8 +375,10 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
                   foreach (var tsk in HostingTasks)
                   {
-                      var cmd2 = tsk.CommandStartHosting;
-                      cmd2.Execute(null);
+                      if (tsk.IsSetToHosting)
+                      {
+                          tsk.Start();
+                      }
                   }
               });
 
@@ -384,7 +386,11 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
             await base.OnBindedViewLoad(view);
         }
 
-
+        protected override async Task OnBindedViewUnload(IView view)
+        {
+            await base.OnBindedViewUnload(view);
+            Environment.Exit(0);
+        }
 
     }
 }

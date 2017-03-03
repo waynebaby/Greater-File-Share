@@ -91,8 +91,8 @@
             </Grid.DataContext>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" MinHeight="350"/>
@@ -100,13 +100,13 @@
                 <RowDefinition Height="150" />
             </Grid.RowDefinitions>
 
-            <Border Grid.Row="0" Grid.Column="0" Background="Transparent" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
+            <Border Grid.Row="0" Grid.Column="1" Background="Transparent" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
                 <Grid Margin="10">
 
 
                     <StackPanel Grid.Row="1">
                         <Label Content="Configuration" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
-                        <DataGrid BorderBrush="#CCC" BorderThickness="1" Grid.Row="1" AutoGenerateColumns="False" Height="300" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}"  Grid.RowSpan="2">
+                        <DataGrid BorderBrush="#CCC" IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}" BorderThickness="1" Grid.Row="1" AutoGenerateColumns="False" Height="300" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}"  Grid.RowSpan="2">
                             <DataGrid.Columns>
                                 <DataGridTextColumn  Width="120" Binding="{Binding ExtensionName}" Header="Extension Name"/>
                                 <DataGridTextColumn Width="120" Binding="{Binding ContentType}" Header="Content Type"/>
@@ -115,7 +115,7 @@
                         <StackPanel>
                             <Label Content="PORT"/>
                             <xctk:IntegerUpDown Minimum="0" Maximum="65535" Value="{Binding CurrentTask.Port, Mode=TwoWay}" 
-                                                HorizontalContentAlignment="Right" TextAlignment="Left" Height="28" BorderBrush="#CCC" />
+                                  IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}"              HorizontalContentAlignment="Right" TextAlignment="Left" Height="28" BorderBrush="#CCC" />
                         </StackPanel>
                         <StackPanel>
                             <Label Content="FOLDER PATH"/>
@@ -137,7 +137,7 @@
                     </StackPanel>
                 </Grid>
             </Border>
-            <Border Grid.Row="0" Grid.Column="1" Background="Transparent" Margin="10">
+            <Border Grid.Row="0" Grid.Column="0" Background="Transparent" Margin="10">
                 <Grid Background="Transparent">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>

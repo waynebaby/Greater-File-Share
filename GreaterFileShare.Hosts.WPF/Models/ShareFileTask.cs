@@ -168,12 +168,13 @@ namespace GreaterFileShare.Hosts.WPF.Models
         CancellationTokenSource _cancelSource;
 
 
+        
 
 
         public bool IsHosting
         {
             get { return _IsHostingLocator(this).Value; }
-            private set
+          private   set
             {
                 IsSetToHosting = value;
                 _IsHostingLocator(this).SetValueAndTryNotify(value);
