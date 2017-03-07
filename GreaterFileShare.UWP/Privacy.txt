@@ -1,5 +1,5 @@
 ﻿Greater File Share is not saving or sending you personal infomation.
 
-All the files you are sharing though greater file share is sending by http requests. 
+All the files you are sharing though greater file share are sending in response to http requests. 
 
 Please manage your filewall, file and folder wisly. 
