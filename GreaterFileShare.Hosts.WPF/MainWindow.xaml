@@ -7,7 +7,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
         x:Class="GreaterFileShare.Hosts.WPF.MainWindow"    
-        MinHeight="640"  MinWidth="1024" Height="800" Width="1024" Title="Greater File Share Host" Icon="Assets/Icon.ico" >
+        MinHeight="640"  MinWidth="1024" Height="640" Top="5" Left="5" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1024" Title="Greater File Share Host" Icon="Assets/Icon.ico" >
 
     <mvvm:MVVMWindow.Resources>
         <Glue:ShareTaskUrlConverter x:Key="ShareTaskUrlConverter"/>
@@ -86,30 +86,27 @@
             <StaticResource ResourceKey="DesignVM"/>
         </Grid.DataContext>
         <Grid x:Name="grid">
-            <Grid.DataContext>
-                <StaticResource ResourceKey="DesignVM"/>
-            </Grid.DataContext>
-
+           
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" MinHeight="350"/>
+                <RowDefinition Height="*" MinHeight="450"/>
                 <RowDefinition Height="5" />
                 <RowDefinition Height="150" />
             </Grid.RowDefinitions>
 
-            <Border Grid.Row="0" Grid.Column="1" Background="Transparent" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
+            <Border Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Background="Transparent" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
                 <Grid Margin="10">
 
 
-                    <StackPanel Grid.Row="1">
+                    <StackPanel Grid.Row="1" >
                         <Label Content="Configuration" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
-                        <DataGrid BorderBrush="#CCC" IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}" BorderThickness="1" Grid.Row="1" AutoGenerateColumns="False" Height="300" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}"  Grid.RowSpan="2">
+                        <DataGrid BorderBrush="#CCC" HorizontalScrollBarVisibility="Disabled" IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}" BorderThickness="1" Grid.Row="1" AutoGenerateColumns="False" Height="300" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}"  Grid.RowSpan="2">
                             <DataGrid.Columns>
-                                <DataGridTextColumn  Width="120" Binding="{Binding ExtensionName}" Header="Extension Name"/>
-                                <DataGridTextColumn Width="120" Binding="{Binding ContentType}" Header="Content Type"/>
+                                <DataGridTextColumn  Width="140" Binding="{Binding ExtensionName}" Header="Extension Name"/>
+                                <DataGridTextColumn Width="140" Binding="{Binding ContentType}" Header="Content Type"/>
                             </DataGrid.Columns>
                         </DataGrid>
                         <StackPanel>
@@ -217,7 +214,7 @@
                     </StackPanel>
                 </Grid>
             </Border>
-            <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="#88000000">
+            <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" Background="#88000000">
                 <ListBox Background="#88000000" ItemsSource="{Binding Messages}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                          SelectedIndex="{Binding CurrentMessageIndex, Mode=TwoWay}" 
                          FontFamily="Consolas"
@@ -233,10 +230,7 @@
                 </ListBox>
             </Border>
 
-            <GridSplitter Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="100" 
-                          VerticalAlignment="Stretch" 
-                          HorizontalAlignment="Stretch" 
-                          ResizeBehavior="PreviousAndNext" />
+  
         </Grid>
     </Grid>
 </mvvm:MVVMWindow>
