@@ -9,6 +9,7 @@ namespace GreaterFileShare
     {
         public const string FilesRelativeUri = "files";
         public const string APIRelativeUri = "api";
+        public const string ShortUrlRelativeUri = "s";
         public const string SwaggerRelativeUri = "swagger/ui"; 
         public const string WCFRelativeUri = "wcf";
         public const int WCFPort = 8800;

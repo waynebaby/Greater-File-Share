@@ -38,5 +38,14 @@ namespace GreaterFileShare.Web.Controllers
         {
             return _rootService.GetFoldersAsync(folderPath);
         }
+
+
+        [HttpGet("GetShortUriCacheAsync/{shortUriKey}")]
+        public Task<Entry> GetShortUriCacheAsync(string shortUriKey)
+        {
+            shortUriKey= System.Net.WebUtility.UrlDecode(shortUriKey);
+            return _rootService.GetShortUriCacheAsync(shortUriKey);
+        }
+        
     }
 }

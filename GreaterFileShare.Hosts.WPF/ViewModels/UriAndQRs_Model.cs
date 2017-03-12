@@ -175,7 +175,8 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
             var foldere = new FolderEntry()
             {
                 FullPath = CurrentTask.Path,
-                Name = Path.GetFileNameWithoutExtension(CurrentTask.Path)
+                Name = Path.GetFileNameWithoutExtension(CurrentTask.Path),
+            
             };
             SelectedFolderEntry = foldere;
             RootEntry = new ObservableCollection<Models.FolderEntry> { foldere };
@@ -263,9 +264,9 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                             var files = await filet;
 
                             targetF.SubFolders = new ObservableCollection<FolderEntry>(
-                                folders.Select(x => new FolderEntry { FullPath = x.FullPath, Name = x.Name }));
+                                folders.Select(x => new FolderEntry { FullPath = x.FullPath, Name = x.Name , ShortUriKey = x.ShortUriKey}));
                             targetF.Files = new ObservableCollection<FileEntry>(
-                                files.Select(x => new FileEntry { FullPath = x.FullPath, Name = x.Name }));
+                                files.Select(x => new FileEntry { FullPath = x.FullPath, Name = x.Name, ShortUriKey = x.ShortUriKey }));
 
                         })
                     .DoNotifyDefaultEventRouter(vm, commandId)

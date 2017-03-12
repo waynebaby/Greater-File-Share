@@ -111,7 +111,7 @@
       <Project>{d1d642ca-e08a-4983-9333-4daf1e0ffec4}</Project>
       <Name>GreaterFileShare.Hosts.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GreaterFileShare.Web\GreaterFileShare.Web.xproj">
+    <ProjectReference Include="..\GreaterFileShare.Web\GreaterFileShare.Web.csproj">
       <Project>{2642c6e4-87d4-44f5-b66a-74a52d8d35fa}</Project>
       <Name>GreaterFileShare.Web</Name>
     </ProjectReference>

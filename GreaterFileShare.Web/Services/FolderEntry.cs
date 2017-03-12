@@ -3,12 +3,8 @@
 namespace GreaterFileShare.Services
 {
     [DataContract]
-    public class FolderEntry
+    public class FolderEntry:Entry
     {
-        [DataMember]
 
-        public string FullPath { get; set; }
-        [DataMember]
-        public string Name { get; set; }
     }
 }

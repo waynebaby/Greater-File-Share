@@ -51,9 +51,6 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GreaterFileShare.Web">
-      <HintPath>..\$(ConfigurationName)Folder\bin\GreaterFileShare.Web.exe</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -91,11 +88,17 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GreaterFileShare.Web\GreaterFileShare.Web.csproj">
+      <Project>{2642c6e4-87d4-44f5-b66a-74a52d8d35fa}</Project>
+      <Name>GreaterFileShare.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>cd $(ProjectDir)
-xcopy ..\GreaterFileShare.Web\bin\$(ConfigurationName)\net46\win7-x64\*.*  ..\$(ConfigurationName)Folder\bin   /i /s  /y
-
+xcopy ..\GreaterFileShare.Web\bin\$(ConfigurationName)\net46\*.*  ..\$(ConfigurationName)Folder\bin   /i /s  /y
+rd "..\$(ConfigurationName)Folder\bin\win7-x64"  /s /q
 xcopy ..\GreaterFileShare.Web\Views\*.*  ..\$(ConfigurationName)Folder\contents\Views   /i  /s /y
 xcopy ..\GreaterFileShare.Web\wwwroot\*.* ..\$(ConfigurationName)Folder\contents\wwwroot  /i  /s /y 
 xcopy ..\GreaterFileShare.Web\*.*  ..\$(ConfigurationName)Folder\contents  /i /y /EXCLUDE:Excludes.txt

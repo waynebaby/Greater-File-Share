@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mvvm="clr-namespace:MVVMSidekick.Views;assembly=MVVMSidekick"
         xmlns:vm="clr-namespace:GreaterFileShare.Hosts.WPF.ViewModels" xmlns:Glue="clr-namespace:GreaterFileShare.Hosts.WPF.Glue"  xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"  x:Class="GreaterFileShare.Hosts.WPF.UriAndQRs"
-        Title="Uri And QR Code" MinHeight="640"  MinWidth="1024" Height="640" Top="15" Left="15" WindowState="Normal"  Icon="Assets/Icon.ico"
+        Title="Uri And QR Code" MinHeight="640"  MinWidth="800" Height="640" Top="15" Left="15" WindowState="Normal"  Icon="Assets/Icon.ico"
         >
     <mvvm:MVVMWindow.Resources>
         <Glue:ShareTaskApiUrlConverter x:Key="ShareTaskApiUrlConverter"/>
@@ -32,6 +32,7 @@
                                 <RowDefinition Height="1*"/>
                                 <RowDefinition Height="40"/>
                                 <RowDefinition Height="1*"/>
+                                <RowDefinition Height="20"/>
                                 <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
                             <Label Content="Host Name" />
@@ -68,9 +69,12 @@
                             </ListBox>
 
 
-                            <qr:QrCodeGeoControl Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0,0,0,39.616"  VerticalAlignment="Stretch" Text="{Binding Urls.Files}"  LightBrush="White" DarkBrush="Black" Grid.RowSpan="6"/>
-                            <Button  Grid.Row="6" Grid.Column="1"   Command="{Binding CommandLaunch, Mode=OneWay}" CommandParameter="{Binding Urls.Files}" Margin="0,0.384,0,-0.384" >
-                                <TextBlock>Launch: <Run  Text="{Binding Urls.Files}"/></TextBlock>
+                            <qr:QrCodeGeoControl Panel.ZIndex="1" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0,0,0,39.616"  VerticalAlignment="Stretch" Text="{Binding Urls.ShortFiles}"  LightBrush="White" DarkBrush="Black" Grid.RowSpan="6"/>
+                            <TextBlock  Panel.ZIndex="3" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" >QR Short Url: <Run  Text="{Binding Urls.ShortFiles}"/>
+                            </TextBlock>
+                            <Button  Grid.Row="7" Grid.Column="1"   Command="{Binding CommandLaunch, Mode=OneWay}" CommandParameter="{Binding Urls.ShortFiles}" Margin="0,0.384,0,-0.384" >
+                                <TextBlock>Launch: <Run  Text="{Binding Urls.Files}"/>
+                                </TextBlock>
                             </Button>
 
                             <Button Grid.Column="1" HorizontalAlignment="Right"  Height="32"  Command="{Binding CommandCopyLink}" CommandParameter="{Binding Urls.Files}">

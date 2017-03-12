@@ -7,5 +7,7 @@ namespace GreaterFileShare.Services
     {
         Task<IList<FileEntry>> GetFilesAsync(string folderPath);
         Task<IList<FolderEntry>> GetFoldersAsync(string folderPath);
+
+        Task<Entry> GetShortUriCacheAsync(string shortUriKey);
     }
 }

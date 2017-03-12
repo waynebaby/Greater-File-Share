@@ -21,12 +21,11 @@ Latest Stable Release:
 
 ## Development Enviroment Setup
 
-- [Visual Studio 2015](https://www.visualstudio.com)
+- [Visual Studio 2017](https://www.visualstudio.com)
 
 - [.NET Core Runtime and SDK](http://dot.net)
 
 Note: You will have to install Windows 10 SDK to support the UWP project
 
 ## License
-
-// TODO
+ MS-PL

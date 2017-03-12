@@ -22,7 +22,7 @@ namespace GreaterFileShare.Hosts.WPF.Models
             if (file == null && folder == null)
             {
                 Files = $"http://{host}:{port}/{Consts.FilesRelativeUri}";
-
+                ShortFiles = Files;
             }
             else if (file != null)
             {
@@ -32,6 +32,15 @@ namespace GreaterFileShare.Hosts.WPF.Models
                     .Replace('\\', '/')
                     .Trim('/');
                 Files = $"http://{host}:{port}/{Consts.FilesRelativeUri}/{rltvUrl}";
+                if (string.IsNullOrWhiteSpace(file.ShortUriKey))
+                {
+                    ShortFiles = Files;
+                }
+                else
+                {
+                    ShortFiles = $"http://{host}:{port}/{Consts.ShortUrlRelativeUri}/{file.ShortUriKey}";
+                }
+
             }
             else if (folder != null)
             {
@@ -41,6 +50,14 @@ namespace GreaterFileShare.Hosts.WPF.Models
                      .Replace('\\', '/')
                      .Trim('/');
                 Files = $"http://{host}:{port}/{Consts.FilesRelativeUri}/{rltvUrl}";
+                if (string.IsNullOrWhiteSpace(folder.ShortUriKey))
+                {
+                    ShortFiles = Files;
+                }
+                else
+                {
+                    ShortFiles = $"http://{host}:{port}/{Consts.ShortUrlRelativeUri}/{folder.ShortUriKey}";
+                }
             }
         }
 
@@ -92,6 +109,17 @@ namespace GreaterFileShare.Hosts.WPF.Models
         protected Property<string> _Files = new Property<string> { LocatorFunc = _FilesLocator };
         static Func<BindableBase, ValueContainer<string>> _FilesLocator = RegisterContainerLocator<string>(nameof(Files), model => model.Initialize(nameof(Files), ref model._Files, ref _FilesLocator, _FilesDefaultValueFactory));
         static Func<string> _FilesDefaultValueFactory = () => nameof(Files);
+        #endregion
+
+        public string ShortFiles
+        {
+            get { return _ShortFilesLocator(this).Value; }
+            set { _ShortFilesLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property string ShortFiles Setup        
+        protected Property<string> _ShortFiles = new Property<string> { LocatorFunc = _ShortFilesLocator };
+        static Func<BindableBase, ValueContainer<string>> _ShortFilesLocator = RegisterContainerLocator<string>(nameof(ShortFiles), model => model.Initialize(nameof(ShortFiles), ref model._ShortFiles, ref _ShortFilesLocator, _ShortFilesDefaultValueFactory));
+        static Func<string> _ShortFilesDefaultValueFactory = () => nameof(ShortFiles);
         #endregion
 
 

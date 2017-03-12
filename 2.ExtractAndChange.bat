@@ -2,7 +2,7 @@
 RD UWPDesktopBridge\57081WaynebabyPresents.GreaterFileShare\ExtractedPackageFiles /S /Q 
 powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::ExtractToDirectory('UWPDesktopBridge\57081WaynebabyPresents.GreaterFileShare\57081WaynebabyPresents.GreaterFileShare.appx', 'UWPDesktopBridge\57081WaynebabyPresents.GreaterFileShare\ExtractedPackageFiles'); }"
 
-ren "UWPDesktopBridge\57081WaynebabyPresents.GreaterFileShare\ExtractedPackageFiles\Greater%%20File%%20Share" "Greater File Share"
+
 
 BuildMe\bin\BuildMe.exe UWPDesktopBridge\57081WaynebabyPresents.GreaterFileShare\ExtractedPackageFiles\AppxManifest.xml
 

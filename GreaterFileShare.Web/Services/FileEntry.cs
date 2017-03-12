@@ -4,13 +4,8 @@ namespace GreaterFileShare.Services
 {
 
     [DataContract]
-    public class FileEntry
+    public class FileEntry : Entry
     {
-        [DataMember]
-        public string FullPath { get; set; }
-        [DataMember]
-        public string Name { get; set; }
-        [DataMember]
-        public string RelativeUri { get; set; }
+
     }
 }

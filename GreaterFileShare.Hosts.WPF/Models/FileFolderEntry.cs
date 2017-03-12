@@ -41,7 +41,18 @@ namespace GreaterFileShare.Hosts.WPF.Models
         static Func<string> _FullPathDefaultValueFactory = () => default(string);
         #endregion
 
+        [DataMember]
 
+        public string ShortUriKey
+        {
+            get { return _ShortUriKeyLocator(this).Value; }
+            set { _ShortUriKeyLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property string ShortUriKey Setup        
+        protected Property<string> _ShortUriKey = new Property<string> { LocatorFunc = _ShortUriKeyLocator };
+        static Func<BindableBase, ValueContainer<string>> _ShortUriKeyLocator = RegisterContainerLocator<string>(nameof(ShortUriKey), model => model.Initialize(nameof(ShortUriKey), ref model._ShortUriKey, ref _ShortUriKeyLocator, _ShortUriKeyDefaultValueFactory));
+        static Func<string> _ShortUriKeyDefaultValueFactory = () => default(string);
+        #endregion
 
     }
 

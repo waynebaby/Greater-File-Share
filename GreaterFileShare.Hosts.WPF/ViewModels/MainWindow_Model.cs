@@ -298,7 +298,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandSaveSettingsDefaultValueFactory =
             model =>
             {
-                var resource = nameof(CommandSaveSettings);           // Command resource  
+                var resource = nameof(CommandSaveSettings);           // Cs'gommand resource  
                 var commandId = nameof(CommandSaveSettings);
                 var vm = CastToCurrentType(model);
                 var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core

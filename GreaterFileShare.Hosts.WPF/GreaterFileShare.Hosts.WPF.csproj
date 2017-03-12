@@ -68,9 +68,6 @@
     <Reference Include="GreaterFileShare.Web">
       <HintPath>..\$(ConfigurationName)Folder\bin\GreaterFileShare.Web.exe</HintPath>
     </Reference>
-    <Reference Include="GreaterFileShare.Web">
-      <HintPath>..\$(ConfigurationName)Folder\bin\GreaterFileShare.Web.exe</HintPath>
-    </Reference>
     <Reference Include="MahApps.Metro, Version=1.4.3.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.4.3\lib\net45\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -285,12 +282,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GreaterFileShare.Hosts.Core\GreaterFileShare.Hosts.Core.csproj">
-      <Project>{d1d642ca-e08a-4983-9333-4daf1e0ffec4}</Project>
-      <Name>GreaterFileShare.Hosts.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\hosting.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -307,6 +298,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GreaterFileShare.Hosts.Core\GreaterFileShare.Hosts.Core.csproj">
+      <Project>{d1d642ca-e08a-4983-9333-4daf1e0ffec4}</Project>
+      <Name>GreaterFileShare.Hosts.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreaterFileShare.Web\GreaterFileShare.Web.csproj">
+      <Project>{2642c6e4-87d4-44f5-b66a-74a52d8d35fa}</Project>
+      <Name>GreaterFileShare.Web</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
