@@ -59,6 +59,11 @@ namespace GreaterFileShare.Hosts.WPF.Models
                     ShortFiles = $"http://{host}:{port}/{Consts.ShortUrlRelativeUri}/{folder.ShortUriKey}";
                 }
             }
+
+            if (ShortFiles.Length>Files.Length)
+            {
+                ShortFiles = Files;
+            }
         }
 
         public string WCF
