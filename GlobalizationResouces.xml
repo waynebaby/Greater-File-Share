@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceMapSubtree name="Resources">
+
+  <NamedResource name="AppName" uri="ms-resource://57081WaynebabyPresents.26639897010B1/Resources/AppName">
+    <Candidate qualifiers="Language-ZH-CN" type="String">
+      <Value>最文件</Value>
+    </Candidate>
+    <Candidate qualifiers="Language-EN" isDefault="true" type="String">
+      <Value>Greater File Share</Value>
+    </Candidate>
+  </NamedResource>
+
+</ResourceMapSubtree>
