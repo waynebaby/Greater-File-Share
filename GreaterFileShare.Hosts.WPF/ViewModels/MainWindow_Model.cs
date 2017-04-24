@@ -366,9 +366,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
                 var cmdmdl = cmd.CreateCommandModel(state);
 
-                cmdmdl.ListenToIsUIBusy(
-                    model: vm,
-                    canExecuteWhenBusy: false);
+              
                 return cmdmdl;
             };
 

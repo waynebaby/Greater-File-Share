@@ -49,12 +49,12 @@ namespace BuildMe
                    XName.Get("Resource", rse.Name.NamespaceName),
                             new XAttribute(XName.Get("Language"), "zh-Hant")));
 
-            //var targetFamily = d.Descendants().First(x=>x.Name.LocalName== "TargetDeviceFamily");
-            //ChangeAttribute(targetFamily, "MaxVersionTested", "10.0.15063.0");         
-            //ChangeAttribute(targetFamily, "MinVersion", "10.0.15063.0");        //新版本才支持防火墙
+            var targetFamily = d.Descendants().First(x => x.Name.LocalName == "TargetDeviceFamily");
+            ChangeAttribute(targetFamily, "MaxVersionTested", "10.0.15063.0");
+            ChangeAttribute(targetFamily, "MinVersion", "10.0.14393.0");        //新版本才支持防火墙
 
 
-            //ConfigFirewall(d);   //设置防火墙
+            ConfigFirewall(d);   //设置防火墙
 
             d.Save(filepath);
         }
@@ -64,27 +64,35 @@ namespace BuildMe
             var firewallNamespace = "http://schemas.microsoft.com/appx/manifest/desktop/windows10/2";
             var executable = "bin\\GreaterFileShare.Hosts.WPF.exe";
             var proot = d.Root;
-            var extenston = proot.Elements().FirstOrDefault(x =>
+            var extensions = proot.Elements().FirstOrDefault(x =>
+                 x.Name.LocalName == "Extensions");
+            if (extensions == null)
+            {
+                proot.Add(
+                    extensions = new XElement(XName.Get("Extensions", proot.Name.NamespaceName)));
+
+            }
+
+
+            var extension = extensions.Elements().FirstOrDefault(x =>
                 x.Name.LocalName == "Extension"
-                &&
-                x.Name.NamespaceName == proot.Name.NamespaceName
                 && x.Attributes().FirstOrDefault(a => a.Name.LocalName == "Category")?.Value == "windows.firewallRules"
                 );
-            if (extenston == null)
+            if (extension == null)
             {
-                extenston = new XElement(XName.Get("Extension", firewallNamespace),
+                extension = new XElement(XName.Get("Extension", firewallNamespace),
                     new XAttribute("Category", "windows.firewallRules"));
-                proot.Add(extenston);
+                extensions.Add(extension);
             }
 
 
             XElement firewall = null;
-            if ((firewall = extenston.Elements().FirstOrDefault(x => x.Name.LocalName == "FirewallRules")) == null)
+            if ((firewall = extension.Elements().FirstOrDefault(x => x.Name.LocalName == "FirewallRules")) == null)
             {
                 firewall = new XElement(XName.Get("FirewallRules", firewallNamespace),
                     new XAttribute("Executable", executable));
 
-                extenston.Add(firewall);
+                extension.Add(firewall);
             }
 
             XElement rule = null;
