@@ -165,9 +165,9 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                                 while (hs.Contains(t.Port.Value))
                                 {
                                     t.Port++;
-                                    if (t.Port > 65535)
+                                    if (t.Port > 20000)
                                     {
-                                        t.Port = 0;
+                                        t.Port = 5000;
                                     }
                                 }
                             }
@@ -334,6 +334,46 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
             };
 
         #endregion
+
+
+
+        public CommandModel<ReactiveCommand, String> CommandSimpleQR
+        {
+            get { return _CommandSimpleQRLocator(this).Value; }
+            set { _CommandSimpleQRLocator(this).SetValueAndTryNotify(value); }
+        }
+        #region Property CommandModel<ReactiveCommand, String> CommandSimpleQR Setup        
+
+        protected Property<CommandModel<ReactiveCommand, String>> _CommandSimpleQR = new Property<CommandModel<ReactiveCommand, String>> { LocatorFunc = _CommandSimpleQRLocator };
+        static Func<BindableBase, ValueContainer<CommandModel<ReactiveCommand, String>>> _CommandSimpleQRLocator = RegisterContainerLocator<CommandModel<ReactiveCommand, String>>(nameof(CommandSimpleQR), model => model.Initialize(nameof(CommandSimpleQR), ref model._CommandSimpleQR, ref _CommandSimpleQRLocator, _CommandSimpleQRDefaultValueFactory));
+        static Func<BindableBase, CommandModel<ReactiveCommand, String>> _CommandSimpleQRDefaultValueFactory =
+            model =>
+            {
+                var state = nameof(CommandSimpleQR);           // Command state  
+                var commandId = nameof(CommandSimpleQR);
+                var vm = CastToCurrentType(model);
+                var cmd = new ReactiveCommand(canExecute: true) { ViewModel = model }; //New Command Core
+
+                cmd.DoExecuteUIBusyTask(
+                        vm,
+                        async e =>
+                        {
+                            await vm.StageManager.DefaultStage.Show<SimpleQR_Model>();
+                        })
+                    .DoNotifyDefaultEventRouter(vm, commandId)
+                    .Subscribe()
+                    .DisposeWith(vm);
+
+                var cmdmdl = cmd.CreateCommandModel(state);
+
+                cmdmdl.ListenToIsUIBusy(
+                    model: vm,
+                    canExecuteWhenBusy: false);
+                return cmdmdl;
+            };
+
+        #endregion
+
 
 
         public CommandModel<ReactiveCommand, String> CommandMoveItem

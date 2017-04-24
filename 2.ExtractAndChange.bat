@@ -21,9 +21,9 @@ xcopy GreaterFileShare.UWP\Strings %configPath%\ExtractedPackageFiles\Strings /s
 rem dump all  file  into xml files
 rem for /f "delims=" %%a in ('dir/b /s %rp%\*.pri') do "%ProgramFiles(x86)%\Windows Kits\10\bin\x64\makepri" dump  /if "%%a"   /of "%%a.dump" 
 
-"%ProgramFiles(x86)%\Windows Kits\10\bin\x64\makepri" createconfig  /cf "%configPath%\resources.pri.xml"  /dq en-US_zh-Hans_zh-Hant /pv 10.0  /o
+"%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.15063.0\x64\makepri" createconfig  /cf "%configPath%\resources.pri.xml"  /dq en-US_zh-Hans_zh-Hant /pv 10.0  /o
 
-"%ProgramFiles(x86)%\Windows Kits\10\bin\x64\makepri" new /pr "%rp%" /cf "%configPath%\resources.pri.xml" /of "%rp%\resources.pri" /mf AppX /o
+"%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.15063.0\x64\makepri" new /pr "%rp%" /cf "%configPath%\resources.pri.xml" /of "%rp%\resources.pri" /mf AppX /o
 
 rem dump all  file  into xml files
 rem for /f "delims=" %%a in ('dir/b /s %rp%\*.pri') do "%ProgramFiles(x86)%\Windows Kits\10\bin\x64\makepri" dump  /if "%%a"    /of "%%a2.dump" 

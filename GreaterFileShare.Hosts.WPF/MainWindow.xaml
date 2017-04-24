@@ -130,7 +130,8 @@
                             </Grid>
                         </StackPanel>
                         <StackPanel/>
-                        <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start / Stop" HorizontalAlignment="Stretch" Margin="20" Height="40" Background="ForestGreen" Foreground="White" />
+                        <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start / Stop" HorizontalAlignment="Stretch" Margin="10" Height="40" Background="ForestGreen" Foreground="White" />
+                        <Button Command="{Binding CommandSimpleQR}" Content="Custome QR URL" HorizontalAlignment="Stretch" Margin="10" Height="40" Background="ForestGreen" Foreground="White" />
                     </StackPanel>
                 </Grid>
             </Border>

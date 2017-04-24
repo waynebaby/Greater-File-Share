@@ -233,7 +233,12 @@
     <Compile Include="Models\UrlGroup.cs" />
     <Compile Include="Services\IFileSystemHubService.cs" />
     <Compile Include="Services\FileSystemHubService.cs" />
+    <Compile Include="SimpleQR.xaml.cs">
+      <DependentUpon>SimpleQR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Startups\SimpleQR.cs" />
     <Compile Include="Startups\UriAndQRs.cs" />
+    <Compile Include="ViewModels\SimpleQR_Model.cs" />
     <Compile Include="ViewModels\UriAndQRs_Model.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -267,6 +272,10 @@
     <Compile Include="ViewModels\MainWindow_Model.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SimpleQR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UriAndQRs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
