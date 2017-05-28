@@ -204,7 +204,9 @@ namespace GreaterFileShare.Services
 
         }
 
-
-
+        public async Task<string> GetRootPathAsync()
+        {
+            return _taskRoot;
+        }
     }
 }
