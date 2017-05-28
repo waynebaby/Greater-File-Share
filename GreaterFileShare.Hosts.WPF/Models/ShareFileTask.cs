@@ -85,6 +85,7 @@ namespace GreaterFileShare.Hosts.WPF.Models
         public void Start()
         {
             Start(this.Path, this.Port.Value);
+            GlobalEventRouter.RaiseEvent(this, (ViewModel: this, Hosted: true), nameof(Start));
         }
         public void Start(string path, int port)
         {
@@ -133,6 +134,8 @@ namespace GreaterFileShare.Hosts.WPF.Models
         public void Stop()
         {
             _cancelSource?.Cancel();
+            GlobalEventRouter.RaiseEvent(this, (ViewModel: this, Hosted: false), nameof(Stop));
+
         }
 
         [DataMember]
@@ -245,7 +248,9 @@ namespace GreaterFileShare.Hosts.WPF.Models
                          e =>
                         {
                             //Todo: Add StartHosting logic here, or
-                            if (!vm.IsHosting)
+
+                            var willStart = !vm.IsHosting;
+                            if (willStart)
                             {
                                 vm.Start();
                             }
@@ -253,7 +258,9 @@ namespace GreaterFileShare.Hosts.WPF.Models
                             {
                                 vm.Stop();
                             }
-                        })
+
+                            
+;                        })
                     .DoNotifyDefaultEventRouter(vm, commandId)
                     .Subscribe()
                     .DisposeWith(vm);

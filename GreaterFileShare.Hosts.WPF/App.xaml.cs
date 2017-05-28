@@ -23,6 +23,10 @@ using System.Diagnostics;
 using GreaterFileShare.Services;
 using System.Collections.ObjectModel;
 using GreaterFileShare.Hosts.WPF.Models;
+using GreaterFileShare.WCF;
+using GreaterFileShare.WCF.Models;
+using System.Collections.Concurrent;
+using MVVMSidekick.EventRouting;
 
 namespace GreaterFileShare.Hosts.WPF
 {
@@ -31,10 +35,43 @@ namespace GreaterFileShare.Hosts.WPF
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
 
+            MVVMSidekick.EventRouting.EventRouter.Instance.GetEventChannel<(ShareFileTask ViewModel, bool IsHosted)>().Subscribe(
+                    ep =>
+                    {
+                        (ShareFileTask viewModel, bool isHosted) = ep.EventData;
+                        var hosts = ServiceLocator.Instance.Resolve<ConcurrentDictionary<string, HostItem>>();
+                        if (isHosted)
+                        {
+                            EventRouter.Instance.RaiseEvent<string>(this, "Adding Host to WCF Service List", "Logging");
+                            var exists = !hosts.TryAdd(viewModel.Path, new HostItem
+                            {
+                                LocalFilePath = viewModel.Path,
+                                DirectorySeparatorChar = '/',
+                                UrlRoot = new Uri($"http://localhost:{viewModel.Port}/{Consts.FilesRelativeUri}")
+                            });
+
+                            EventRouter.Instance.RaiseEvent<string>(this, exists ? "Item Exists" : "Add Successed", "Logging");
+                        }
+                        else
+                        {
+                            EventRouter.Instance.RaiseEvent<string>(this, "Removing Host to WCF Service List", "Logging");
+
+                            var exists = hosts.TryRemove(viewModel.Path, out var x);
+                            EventRouter.Instance.RaiseEvent<string>(this, exists ? "Remove Successed" : "Not Found", "Logging");
+                        }
+
+
+                    });
+
+
+        }
 
         public static void InitNavigationConfigurationInThisAssembly()
         {
+
             MVVMSidekick.Startups.StartupFunctions.RunAllConfig();
 
             ServiceLocator.Instance.Register<ILauncher, Launcher>();
@@ -42,6 +79,11 @@ namespace GreaterFileShare.Hosts.WPF
             ServiceLocator.Instance.Register<ISettingRepoService<ObservableCollection<ShareFileTask>>, Win32SettingRepoService<ObservableCollection<ShareFileTask>>>("W32");
             ServiceLocator.Instance.Register<INetworkService, NetworkService>();
             ServiceLocator.Instance.Register<IFileSystemHubService, FileSystemHubService>();
+            var fileService = new SharingFileCatalogWebSiteService();
+            ServiceLocator.Instance.Register<ISharingFileCatalogService>(fileService);
+            ServiceLocator.Instance.Register(fileService.Hosts);
+
+
             ServiceLocator.Instance.RegisterFactory<IFileSystemService>(null,
                 (o, s) =>
                 {
@@ -51,7 +93,9 @@ namespace GreaterFileShare.Hosts.WPF
 
         }
 
-
+        /// <summary>
+        /// WCF Host
+        /// </summary>
         ServiceHost host;
         protected override async void OnStartup(StartupEventArgs e)
         {
@@ -61,17 +105,15 @@ namespace GreaterFileShare.Hosts.WPF
             Debug.WriteLine(host.BaseAddresses.FirstOrDefault()?.ToString());
             try
             {
-
                 host.Open();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Error On Startup:");
+                MessageBox.Show(ex.Message, "Error On Startup:");
                 Environment.Exit(0);
             }
 
 
-            //net.tcp://+:8800/GreaterFileShare/Hosts/WPF/Services/FileSystemHubService
 
             base.OnStartup(e);
 
@@ -105,23 +147,6 @@ namespace GreaterFileShare.Hosts.WPF
 
 
 
-        /// <summary>
-        /// 根据类型生成uri
-        /// </summary>
-        /// <param name="protocolType"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
-        private Uri GetUri(string protocolType, Type type)
-        {
-            Uri uri = null;
-            switch (protocolType)
-            {
-                case "NetTcpBinding":
-                    uri = new Uri($"net.tcp://localhost:{Consts.WCFPort}/{Consts.WCFRelativeUri}");
-                    break;
-            }
-            return uri;
-        }
 
         /// <summary>
         /// 生成Host
@@ -133,52 +158,23 @@ namespace GreaterFileShare.Hosts.WPF
         {
             Uri uriAddress = null;
             ServiceHost host = null;
-            var newClass = ServiceLocator.Instance.Resolve<IFileSystemHubService>();
+            var newClass = ServiceLocator.Instance.Resolve<ISharingFileCatalogService>();
 
-            uriAddress = GetUri("NetTcpBinding", newClass.GetType());
-            var binding = GetNetTcpBinding();
-            host = new ServiceHost(newClass, uriAddress);//实例一个服务，初始化终结点的服务对象和主机地址
-            host.AddServiceEndpoint(typeof(IFileSystemHubService), binding, nameof(FileSystemHubService));//实例化一个终结点，初始化服务接口，协议类型，地址
-            ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
 
-            smb.HttpGetEnabled = false;
-            host.Description.Behaviors.Add(smb);
-            host.AddServiceEndpoint(typeof(IMetadataExchange), GetTcpMexBinding(), "mex");
+            host = new ServiceHost(newClass);//实例一个服务，初始化终结点的服务对象和主机地址
+            //host.AddServiceEndpoint(typeof(IFileSystemHubService), binding, nameof(FileSystemHubService));//实例化一个终结点，初始化服务接口，协议类型，地址
+            //ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
+
+            //smb.HttpGetEnabled = false;
+            //host.Description.Behaviors.Add(smb);
+            //host.AddServiceEndpoint(typeof(IMetadataExchange), GetTcpMexBinding(), "mex");
 
 
 
             return host;
         }
 
-        #region 协议设置
-        private NetTcpBinding GetNetTcpBinding()
-        {
-            NetTcpBinding netTcpBinding = new NetTcpBinding();
-            netTcpBinding.MaxBufferSize = 2147483647;
-            netTcpBinding.MaxReceivedMessageSize = 2147483647;
-            netTcpBinding.Security.Mode = SecurityMode.None;
-            return netTcpBinding;
-        }
-        private Binding GetTcpMexBinding()
-        {
-            var mexBinding = MetadataExchangeBindings.CreateMexTcpBinding();
-            return mexBinding;
-        }
 
-        private WSDualHttpBinding GetWSDualHttpBinding()
-        {
-            WSDualHttpBinding wsDualHttpBinding = new WSDualHttpBinding();
-            wsDualHttpBinding.MaxReceivedMessageSize = 2147483647;
-            return wsDualHttpBinding;
-        }
 
-        private BasicHttpBinding GetBasicHttpBingding()
-        {
-            BasicHttpBinding baseBinding = new BasicHttpBinding();
-            baseBinding.MaxBufferSize = 2147483647;
-            baseBinding.MaxReceivedMessageSize = 2147483647;
-            return baseBinding;
-        }
-        #endregion
     }
 }

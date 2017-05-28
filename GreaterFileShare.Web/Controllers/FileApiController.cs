@@ -10,7 +10,7 @@ using GreaterFileShare.Services;
 namespace GreaterFileShare.Web.Controllers
 {
     [Route("api/[controller]")]
-    public class FileApiController : Controller, IFileSystemService
+    public class FileApiController : Controller
     {
 
         //public FileApiController()
@@ -24,30 +24,34 @@ namespace GreaterFileShare.Web.Controllers
         IFileSystemService _rootService;
 
 
-        [HttpGet("GetFilesAsync/{folderPath}")]
+        [HttpGet(nameof(GetFiles) + "/{folderPath}")]
 
-        public Task<IList<FileEntry>> GetFilesAsync(string folderPath)
+        public Task<IList<FileEntry>> GetFiles(string folderPath)
         {
             return _rootService.GetFilesAsync(folderPath);
         }
 
 
-        [HttpGet("GetFoldersAsync/{folderPath}")]
+        [HttpGet(nameof(GetFolders) + "/{folderPath}")]
 
-        public Task<IList<FolderEntry>> GetFoldersAsync(string folderPath)
+        public Task<IList<FolderEntry>> GetFolders(string folderPath)
         {
             return _rootService.GetFoldersAsync(folderPath);
         }
 
 
-        [HttpGet("GetShortUriCacheAsync/{shortUriKey}")]
-        public Task<Entry> GetShortUriCacheAsync(string shortUriKey)
+        [HttpGet(nameof(GetShortUriCache) + "/{shortUriKey}")]
+        public Task<Entry> GetShortUriCache(string shortUriKey)
         {
-            shortUriKey= System.Net.WebUtility.UrlDecode(shortUriKey);
+            shortUriKey = System.Net.WebUtility.UrlDecode(shortUriKey);
             return _rootService.GetShortUriCacheAsync(shortUriKey);
         }
 
-        public Task<string> GetRootPathAsync()
+
+
+        [HttpGet(nameof(GetRootPath))]
+
+        public Task<string> GetRootPath()
         {
             return _rootService.GetRootPathAsync();
         }

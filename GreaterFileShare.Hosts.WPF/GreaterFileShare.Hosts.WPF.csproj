@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GreaterFileShare.Hosts.WPF</RootNamespace>
     <AssemblyName>GreaterFileShare.Hosts.WPF</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -332,6 +332,10 @@
     <ProjectReference Include="..\GreaterFileShare.Hosts.Core\GreaterFileShare.Hosts.Core.csproj">
       <Project>{d1d642ca-e08a-4983-9333-4daf1e0ffec4}</Project>
       <Name>GreaterFileShare.Hosts.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreaterFileShare.WCF\GreaterFileShare.WCF.csproj">
+      <Project>{bcdd2fa8-5a76-4aa5-b76e-e9bd6f96fcf6}</Project>
+      <Name>GreaterFileShare.WCF</Name>
     </ProjectReference>
     <ProjectReference Include="..\GreaterFileShare.Web\GreaterFileShare.Web.csproj">
       <Project>{2642c6e4-87d4-44f5-b66a-74a52d8d35fa}</Project>

@@ -13,6 +13,8 @@ using System.Collections.ObjectModel;
 namespace GreaterFileShare.WCF
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
+
+        [ServiceBehavior (  ConcurrencyMode = ConcurrencyMode.Single, InstanceContextMode = InstanceContextMode.Single)]
     public class SharingFileCatalogWebSiteService : ISharingFileCatalogService
     {
 
@@ -58,7 +60,7 @@ namespace GreaterFileShare.WCF
 
         public static SharingFileCatalogWebSiteService Instance { get; private set; }
 
-        ConcurrentDictionary<string, HostItem> Hosts = new ConcurrentDictionary<string, HostItem>();
+        public ConcurrentDictionary<string, HostItem> Hosts = new ConcurrentDictionary<string, HostItem>();
 
 
         public Task<FolderItem> GetFolderDetail(string hostUrl, string relativeFolderPath)
