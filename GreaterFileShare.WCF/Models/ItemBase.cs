@@ -15,6 +15,6 @@ namespace GreaterFileShare.WCF.Models
         [DataMember] public string Name { get; set; }
         [DataMember] public string FullPath { get; set; }
         [DataMember] public string RelativePath { get; set; }
-
+        //[DataMember] public string Url { get; set; }
     }
 }

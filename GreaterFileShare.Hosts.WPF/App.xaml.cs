@@ -41,17 +41,20 @@ namespace GreaterFileShare.Hosts.WPF
             MVVMSidekick.EventRouting.EventRouter.Instance.GetEventChannel<(ShareFileTask ViewModel, bool IsHosted)>().Subscribe(
                     ep =>
                     {
+                    
                         (ShareFileTask viewModel, bool isHosted) = ep.EventData;
+                        var urlRoot = new Uri($"http://localhost:{viewModel.Port}/{Consts.FilesRelativeUri}");
                         var hosts = ServiceLocator.Instance.Resolve<ConcurrentDictionary<string, HostItem>>();
                         if (isHosted)
                         {
                             EventRouter.Instance.RaiseEvent<string>(this, "Adding Host to WCF Service List", "Logging");
-                            var exists = !hosts.TryAdd(viewModel.Path, new HostItem
+                            var item = new HostItem
                             {
                                 LocalFilePath = viewModel.Path,
                                 DirectorySeparatorChar = '/',
-                                UrlRoot = new Uri($"http://localhost:{viewModel.Port}/{Consts.FilesRelativeUri}")
-                            });
+                                UrlRoot = urlRoot
+                            };
+                            var exists = !hosts.TryAdd(item.UrlRoot.ToString(),item);
 
                             EventRouter.Instance.RaiseEvent<string>(this, exists ? "Item Exists" : "Add Successed", "Logging");
                         }
@@ -59,7 +62,7 @@ namespace GreaterFileShare.Hosts.WPF
                         {
                             EventRouter.Instance.RaiseEvent<string>(this, "Removing Host to WCF Service List", "Logging");
 
-                            var exists = hosts.TryRemove(viewModel.Path, out var x);
+                            var exists = hosts.TryRemove(urlRoot.ToString(), out var x);
                             EventRouter.Instance.RaiseEvent<string>(this, exists ? "Remove Successed" : "Not Found", "Logging");
                         }
 
