@@ -6,4 +6,4 @@ rem DesktopAppConverter.exe -Installer "GreaterFileShare.Installer\GreaterFileSh
 
 
 rem Following command is used for converter after 1.0.9.0 
-DesktopAppConverter.exe -Installer "D:\GitHub\GreaterFileShare\ReleaseFolder" -Destination %cd%\UWPDesktopBridge  -Publisher "CN=4D2E4444-E4BB-4498-B89B-C3BC2D2D50F2" -Version 1.0.10.0   -AppExecutable "GreaterFileShare.Hosts.WPF.exe" -PackageDisplayName "Greater File Share" -PackagePublisherDisplayName "Waynebaby Presents"  -PackageName "57081WaynebabyPresents.GreaterFileShare" -AppId "GreaterFileShareApp" -MakeAppx -PackageArch x86
+DesktopAppConverter.exe -Installer "D:\GitHub\GreaterFileShare\ReleaseFolder" -Destination %cd%\UWPDesktopBridge  -Publisher "CN=4D2E4444-E4BB-4498-B89B-C3BC2D2D50F2" -Version 1.0.11.0   -AppExecutable "GreaterFileShare.Hosts.WPF.exe" -PackageDisplayName "Greater File Share" -PackagePublisherDisplayName "Waynebaby Presents"  -PackageName "57081WaynebabyPresents.GreaterFileShare" -AppId "GreaterFileShareApp" -MakeAppx -PackageArch x86
