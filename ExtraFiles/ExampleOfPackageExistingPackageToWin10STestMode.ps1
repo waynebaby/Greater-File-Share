@@ -11,16 +11,21 @@ $packageName=[IO.Path]::GetFileNameWithoutExtension($packagePath);
 $packageExtension=[IO.Path]::GetExtension($packagePath);
 $extractedPath=[IO.Path]::Combine($folderPath,'extractedPath');
 
+$MakePriPath="${Env:ProgramFiles(x86)}\Windows Kits\10\bin\10.0.15063.0\x64\makepri.exe"
+$MakeAppxPath="${Env:ProgramFiles(x86)}\Windows Kits\10\bin\10.0.15063.0\x64\makeappx.exe"
+$SignToolPath="${Env:ProgramFiles(x86)}\Windows Kits\10\bin\10.0.15063.0\x64\signtool.exe"
+
 if([IO.Directory]::Exists($extractedPath)){
     Write-Host "Deleting old trash"
     rd $extractedPath -Recurse 
 }
 
 
-Write-Host "Extraction files from package $packageName"
-[IO.Compression.ZipFile]::ExtractToDirectory($packagePath, $extractedPath); 
-$xmlPath=[IO.Path]::Combine($extractedPath,'AppxManifest.xml');
+Write-Host "Extracting files from package $packageName"
 
+& $MakeAppxPath unpack /l /p $packagePath /d $extractedPath
+
+$xmlPath=[IO.Path]::Combine($extractedPath,'AppxManifest.xml');
 $doc=[Xml.Linq.XDocument]::Load($xmlPath);
 
 foreach($element in $doc.Descendants())
@@ -45,9 +50,6 @@ $doc.Save($xmlPath);
 
 
 
-$MakePriPath="${Env:ProgramFiles(x86)}\Windows Kits\10\bin\10.0.15063.0\x64\makepri.exe"
-$MakeAppxPath="${Env:ProgramFiles(x86)}\Windows Kits\10\bin\10.0.15063.0\x64\makeappx.exe"
-$SignToolPath="${Env:ProgramFiles(x86)}\Windows Kits\10\bin\10.0.15063.0\x64\signtool.exe"
 $targetBakFile ="$packagePath.bak"
 while([IO.File]::Exists($targetBakFile))
 {
@@ -64,3 +66,4 @@ Write-Host "Signing"
 & $SignToolPath sign -f  $pfxPath -fd SHA256 -v $packagePath
 
 Write-Host "All Done"
+

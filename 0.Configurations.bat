@@ -14,8 +14,8 @@ set PackageArch=x86
 set RootWorkingPath=UWPDesktopBridge\%PackageName%
 set PackageAppxPath=%RootWorkingPath%\%PackageName%.appx
 set PackageRoot=%RootWorkingPath%\ExtractedPackageFiles
-@rem set ForTestingSignOrEmpty=ForTestingSign
-set ForTestingSignOrEmpty=
+set ForTestingSignOrEmpty=ForTestingSign
+@rem set ForTestingSignOrEmpty=
 set StringResourceSource=GreaterFileShare.UWP\Strings
 
 @rem Tools Path
