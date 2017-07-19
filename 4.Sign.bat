@@ -1,4 +1,5 @@
+call 0.Configurations.bat
 
+if "%ForTestingSignOrEmpty%"=="ForTestingSign"  "%SignToolPath%" sign -f "%SigningForTestingPFXPath%" -fd SHA256 -v "%PackageAppxPath%" 
 
-rem  Sign
-"%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.15063.0\x64\signtool.exe" sign -f GreaterFileShare.UWP\GreaterFileShare.UWP_StoreKey.pfx -fd SHA256 -v UWPDesktopBridge\57081WaynebabyPresents.GreaterFileShare\57081WaynebabyPresents.GreaterFileShare.appx
+if NOT "%ForTestingSignOrEmpty%"=="ForTestingSign"   "%SignToolPath%" sign -f "%SigningPFXPath%" -fd SHA256 -v "%PackageAppxPath%"

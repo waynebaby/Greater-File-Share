@@ -16,7 +16,9 @@ namespace BuildMe
 
 
             Console.WriteLine("Changing AppManifest File Fields...");
-            ChangeAppManifestFileFields(args.FirstOrDefault());
+            bool forTestingSign;
+            forTestingSign = args.Any(x => x.Equals(nameof(forTestingSign), StringComparison.InvariantCultureIgnoreCase));
+            ChangeAppManifestFileFields(args.FirstOrDefault(), forTestingSign);
 
 
         }
@@ -24,17 +26,47 @@ namespace BuildMe
 
         const string AppManifestFile = "AppxManifest.xml";
 
-        static void ChangeAppManifestFileFields(string folderPath)
+        static void ChangeAppManifestFileFields(string folderPath, bool forTestingSign)
         {
-            void ChangeAttribute(XElement target, string field, string value)  //设定xml赋值函数
-            {
-                target.Attributes().Where(x => x.Name.LocalName == field).First().Value = value;
-                Console.WriteLine($"{field} Changed to \"{value}\"...");
-            }
-
             var filepath = Path.Combine(folderPath, AppManifestFile);  //打开manifest文件
 
             XDocument d = XDocument.Load(filepath);
+
+            ConfigTestSignPublisherName(forTestingSign, d); //设置测试签名的发布人
+
+            ConfigResources(d); //设置语言与资源
+
+            ConfigVersion(d); //设置版本
+
+            ConfigFirewall(d);   //设置防火墙
+
+            d.Save(filepath);
+        }
+
+        private static void ConfigTestSignPublisherName(bool forTestSign, XDocument d)
+        {
+            if (forTestSign)
+            {
+                var ele = d.Descendants().FirstOrDefault(e => e.Name.LocalName == "Identity");
+                ChangeAttribute(ele, "Publisher", "CN=Appx Test Root Agency Ex");
+            }
+        }
+
+        static void ChangeAttribute(XElement target, string field, string value)  //设定xml赋值函数
+        {
+            target.Attributes().Where(x => x.Name.LocalName == field).First().Value = value;
+            Console.WriteLine($"{field} Changed to \"{value}\"...");
+        }
+
+        private static void ConfigVersion(XDocument d)
+        {
+            var targetFamily = d.Descendants().First(x => x.Name.LocalName == "TargetDeviceFamily");
+            ChangeAttribute(targetFamily, "MaxVersionTested", "10.0.15063.0");
+            ChangeAttribute(targetFamily, "MinVersion", "10.0.14393.0");        //新版本才支持防火墙
+        }
+
+        private static void ConfigResources(XDocument d)
+        {
             var ve = d.Descendants().Where(x => x.Name.LocalName == "VisualElements").First(); //找到tile定义
 
             ChangeAttribute(ve, "DisplayName", "ms-resource:Resources/AppName");                 //将定义修改为资源访问
@@ -48,15 +80,6 @@ namespace BuildMe
             rse.Add(new XElement(
                    XName.Get("Resource", rse.Name.NamespaceName),
                             new XAttribute(XName.Get("Language"), "zh-Hant")));
-
-            var targetFamily = d.Descendants().First(x => x.Name.LocalName == "TargetDeviceFamily");
-            ChangeAttribute(targetFamily, "MaxVersionTested", "10.0.15063.0");
-            ChangeAttribute(targetFamily, "MinVersion", "10.0.14393.0");        //新版本才支持防火墙
-
-
-            ConfigFirewall(d);   //设置防火墙
-
-            d.Save(filepath);
         }
 
         private static void ConfigFirewall(XDocument d)
