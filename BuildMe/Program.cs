@@ -38,10 +38,13 @@ namespace BuildMe
 
             ConfigVersion(d); //设置版本
 
-            ConfigFirewall(d);   //设置防火墙
+            ConfigFirewall(d);   //设置防火墙和文件扩展
+
 
             d.Save(filepath);
         }
+
+
 
         private static void ConfigTestSignPublisherName(bool forTestSign, XDocument d)
         {
@@ -61,8 +64,8 @@ namespace BuildMe
         private static void ConfigVersion(XDocument d)
         {
             var targetFamily = d.Descendants().First(x => x.Name.LocalName == "TargetDeviceFamily");
-            ChangeAttribute(targetFamily, "MaxVersionTested", "10.0.15063.0");
-            ChangeAttribute(targetFamily, "MinVersion", "10.0.14393.0");        //新版本才支持防火墙
+            ChangeAttribute(targetFamily, "MaxVersionTested", "10.0.16299.0");
+            ChangeAttribute(targetFamily, "MinVersion", "10.0.15062.0");        //新版本才支持防火墙
         }
 
         private static void ConfigResources(XDocument d)
@@ -85,19 +88,20 @@ namespace BuildMe
         private static void ConfigFirewall(XDocument d)
         {
             var firewallNamespace = "http://schemas.microsoft.com/appx/manifest/desktop/windows10/2";
+            var fileTypeAssociationNamespace = "http://schemas.microsoft.com/appx/manifest/uap/windows10/3";
             var executable = "bin\\GreaterFileShare.Hosts.WPF.exe";
             var proot = d.Root;
-            var extensions = proot.Elements().FirstOrDefault(x =>
+            var outsideAppExtensions = proot.Elements().FirstOrDefault(x =>
                  x.Name.LocalName == "Extensions");
-            if (extensions == null)
+            if (outsideAppExtensions == null)
             {
                 proot.Add(
-                    extensions = new XElement(XName.Get("Extensions", proot.Name.NamespaceName)));
+                    outsideAppExtensions = new XElement(XName.Get("Extensions", proot.Name.NamespaceName)));
 
             }
 
 
-            var extension = extensions.Elements().FirstOrDefault(x =>
+            var extension = outsideAppExtensions.Elements().FirstOrDefault(x =>
                 x.Name.LocalName == "Extension"
                 && x.Attributes().FirstOrDefault(a => a.Name.LocalName == "Category")?.Value == "windows.firewallRules"
                 );
@@ -105,7 +109,7 @@ namespace BuildMe
             {
                 extension = new XElement(XName.Get("Extension", firewallNamespace),
                     new XAttribute("Category", "windows.firewallRules"));
-                extensions.Add(extension);
+                outsideAppExtensions.Add(extension);
             }
 
 
@@ -140,6 +144,65 @@ namespace BuildMe
 
                 firewall.Add(rule);
 
+            }
+
+
+            //            var xml =@"
+            //<uap:Extension Category=""windows.fileTypeAssociation"">
+            //<uap3:FileType AssociationName=""Contoso"">
+            //<uap:SupportedFileTypes>
+            //<uap:FileType>.txt</uap:FileType>
+            //<uap:FileType>.avi</uap:FileType>
+            //</uap:SupportedFileTypes>
+            //</uap3:FileTypeAssociation>
+            //</uap:Extension>";
+
+
+            var application = proot.Descendants().Single(x => x.Name.LocalName == "Application" && x?.Parent?.Parent == proot);
+            var insideExtensions = application.Elements().FirstOrDefault(x => x.Name.LocalName == "Extensions");
+            if (insideExtensions == null)
+            {
+                insideExtensions = new XElement(XName.Get("Extensions", proot.Name.Namespace.NamespaceName));
+                application.Add(insideExtensions);
+            }
+            var extensionFile = insideExtensions.Elements().FirstOrDefault(x =>
+                x.Name.LocalName == "Extension"
+                && x.Attributes().FirstOrDefault(a => a.Name.LocalName == "Category")?.Value == "windows.fileTypeAssociation"
+
+                );
+            if (extensionFile == null)
+            {
+                extensionFile = new XElement(XName.Get("Extension", "http://schemas.microsoft.com/appx/manifest/uap/windows10/3"),
+                    new XAttribute("Category", "windows.fileTypeAssociation"));
+                insideExtensions.Add(extensionFile);
+            }
+
+            //gfssetting;
+
+            XElement fileTypeAssociation = null;
+            if ((fileTypeAssociation = extensionFile.Elements().FirstOrDefault(x => x.Name.LocalName == "fileTypeAssociation")) == null)
+            {
+                // var xml = @"<SupportedFileTypes>
+                //  <FileType>.gfssetting</FileType>
+                //</SupportedFileTypes>";
+
+                fileTypeAssociation =
+                    new XElement
+                    (
+                        XName.Get("FileTypeAssociation", fileTypeAssociationNamespace),
+                        new XAttribute("Name", "settings"),
+                        new XElement
+                        (
+                            XName.Get("SupportedFileTypes", "http://schemas.microsoft.com/appx/manifest/uap/windows10"),
+                            new XElement
+                            (
+                                XName.Get("FileType", "http://schemas.microsoft.com/appx/manifest/uap/windows10"),
+                                ".gfssetting"
+                            )
+                        )
+                    );
+
+                extensionFile.Add(fileTypeAssociation);
             }
         }
     }

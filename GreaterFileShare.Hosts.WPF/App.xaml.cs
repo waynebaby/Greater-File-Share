@@ -27,6 +27,8 @@ using GreaterFileShare.WCF;
 using GreaterFileShare.WCF.Models;
 using System.Collections.Concurrent;
 using MVVMSidekick.EventRouting;
+using System.Windows.Navigation;
+using Windows.Storage;
 
 namespace GreaterFileShare.Hosts.WPF
 {
@@ -35,13 +37,15 @@ namespace GreaterFileShare.Hosts.WPF
     /// </summary>
     public partial class App : Application
     {
+
+        public static string[] CommandLineArgs = Environment.GetCommandLineArgs();
         public App()
         {
 
             MVVMSidekick.EventRouting.EventRouter.Instance.GetEventChannel<(ShareFileTask ViewModel, bool IsHosted)>().Subscribe(
                     ep =>
                     {
-                    
+
                         (ShareFileTask viewModel, bool isHosted) = ep.EventData;
                         var urlRoot = new Uri($"http://localhost:{viewModel.Port}/{Consts.FilesRelativeUri}");
                         var hosts = ServiceLocator.Instance.Resolve<ConcurrentDictionary<string, HostItem>>();
@@ -54,7 +58,7 @@ namespace GreaterFileShare.Hosts.WPF
                                 DirectorySeparatorChar = '/',
                                 UrlRoot = urlRoot
                             };
-                            var exists = !hosts.TryAdd(item.UrlRoot.ToString(),item);
+                            var exists = !hosts.TryAdd(item.UrlRoot.ToString(), item);
 
                             EventRouter.Instance.RaiseEvent<string>(this, exists ? "Item Exists" : "Add Successed", "Logging");
                         }
@@ -85,7 +89,9 @@ namespace GreaterFileShare.Hosts.WPF
             var fileService = new SharingFileCatalogWebSiteService();
             ServiceLocator.Instance.Register<ISharingFileCatalogService>(fileService);
             ServiceLocator.Instance.Register(fileService.Hosts);
-
+            ServiceLocator.Instance.Register(nameof(CommandLineArgs), CommandLineArgs);
+            ServiceLocator.Instance.Register<IStorageItem, EmptyIStorageItem>(nameof(SettingRepoService<ShareFileTask>.SuggestedTargetStorageItem));
+            ServiceLocator.Instance.Register<string>(nameof(Win32SettingRepoService<ShareFileTask>.SuggestedTargetFilePath), string.Empty);
 
             ServiceLocator.Instance.RegisterFactory<IFileSystemService>(null,
                 (o, s) =>
@@ -100,7 +106,7 @@ namespace GreaterFileShare.Hosts.WPF
         /// WCF Host
         /// </summary>
         ServiceHost host;
-        protected override async void OnStartup(StartupEventArgs e)
+        protected override void OnStartup(StartupEventArgs e)
         {
 
             InitNavigationConfigurationInThisAssembly();
@@ -122,6 +128,8 @@ namespace GreaterFileShare.Hosts.WPF
 
 
         }
+
+
         protected override void OnExit(ExitEventArgs e)
         {
             var mainVM = Resources["DesignVM"] as ViewModels.MainWindow_Model;

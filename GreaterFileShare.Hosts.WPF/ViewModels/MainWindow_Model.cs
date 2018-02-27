@@ -16,6 +16,8 @@ using GreaterFileShare.Hosts.WPF.Models;
 using GreaterFileShare.Hosts.Core;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using GreaterFileShare.Hosts.WPF.Services;
+using System.Windows;
+using Windows.Storage;
 
 namespace GreaterFileShare.Hosts.WPF.ViewModels
 {
@@ -79,6 +81,16 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
         }
 
 
+
+        public string TempConfigurePath
+        {
+            get => _TempConfigurePathLocator(this).Value;
+            set => _TempConfigurePathLocator(this).SetValueAndTryNotify(value);
+        }
+        #region Property string TempConfigurePath Setup        
+        protected Property<string> _TempConfigurePath = new Property<string>(_TempConfigurePathLocator);
+        static Func<BindableBase, ValueContainer<string>> _TempConfigurePathLocator = RegisterContainerLocator(nameof(TempConfigurePath), model => model.Initialize(nameof(TempConfigurePath), ref model._TempConfigurePath, ref _TempConfigurePathLocator, () => default(string)));
+        #endregion
 
         public ObservableCollection<MessageEntry> Messages
         {
@@ -366,7 +378,7 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
                 var cmdmdl = cmd.CreateCommandModel(state);
 
-              
+
                 return cmdmdl;
             };
 
@@ -546,7 +558,31 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
 
         protected override async Task OnBindedViewLoad(IView view)
         {
+            var cmdLineArgs = ServiceLocator.Instance.Resolve<string[]>("CommandLineArgs");
+            if ((cmdLineArgs?.Length ?? 0) >=2)
 
+            {
+                var fp = cmdLineArgs[1];
+
+                if (System.IO.File.Exists(fp))
+                {
+                    var fr = MessageBox.Show($@"Do you want to use file 
+{fp}
+as tempary configuration file? 
+
+(Old file will not be overwitten)", "Warning", MessageBoxButton.YesNo);
+                    var file = await StorageFile.GetFileFromPathAsync(fp);
+                    if (fr == MessageBoxResult.Yes)
+                    {
+                        ServiceLocator.Instance.Register<IStorageItem>(
+                            nameof(SettingRepoService<ShareFileTask>.SuggestedTargetStorageItem),
+                            file);
+                        ServiceLocator.Instance.Register<string>(
+                            nameof(SettingRepoService<ShareFileTask>.SuggestedTargetStorageItem),
+                            fp);
+                    }
+                }
+            }
 
 
             HostingTasks = await ExecuteTask(async () =>
@@ -556,9 +592,9 @@ namespace GreaterFileShare.Hosts.WPF.ViewModels
                     var store = ServiceLocator.Instance.Resolve<ISettingRepoService<ObservableCollection<ShareFileTask>>>();
                     return await store.LoadAsync();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-
+                    GlobalEventRouter.RaiseEvent(this, ex);
                 }
                 return null;
             });

@@ -19,9 +19,9 @@ set ForTestingSignOrEmpty=ForTestingSign
 set StringResourceSource=GreaterFileShare.UWP\Strings
 
 @rem Tools Path
-set MakePriPath=%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.15063.0\x64\makepri.exe
-set MakeAppxPath=%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.15063.0\x64\makeappx.exe
-set SignToolPath=%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.15063.0\x64\signtool.exe
+set MakePriPath=%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.16299.0\x64\makepri.exe
+set MakeAppxPath=%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.16299.0\x64\makeappx.exe
+set SignToolPath=%ProgramFiles(x86)%\Windows Kits\10\bin\10.0.16299.0\x64\signtool.exe
 
 
 set SigningPFXPath=GreaterFileShare.UWP\GreaterFileShare.UWP_StoreKey.pfx

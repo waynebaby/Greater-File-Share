@@ -1,7 +1,7 @@
 ﻿<mvvm:MVVMWindow xmlns:qr="clr-namespace:Gma.QrCodeNet.Encoding.Windows.WPF;assembly=Gma.QrCodeNet.Encoding"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:mvvm="clr-namespace:MVVMSidekick.Views;assembly=MVVMSidekick"
+        xmlns:mvvm="clr-namespace:MVVMSidekick.Views;assembly=MVVMSidekick_net45"
         xmlns:vm="clr-namespace:GreaterFileShare.Hosts.WPF.ViewModels" xmlns:Glue="clr-namespace:GreaterFileShare.Hosts.WPF.Glue"  xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"  x:Class="GreaterFileShare.Hosts.WPF.UriAndQRs"
         Title="Uri And QR Code" MinHeight="640"  MinWidth="800" Height="640" Top="15" Left="15" WindowState="Normal"  Icon="Assets/Icon.ico"
         >
