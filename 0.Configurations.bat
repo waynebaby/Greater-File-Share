@@ -1,5 +1,6 @@
+
 @rem Converterparameters
-set Installer=D:\GitHub\GreaterFileShare\ReleaseFolder
+set Installer=ReleaseFolder
 set PackageName=57081WaynebabyPresents.GreaterFileShare
 set Publisher=CN=4D2E4444-E4BB-4498-B89B-C3BC2D2D50F2
 set Version=1.0.11.0
@@ -8,10 +9,11 @@ set PackageDisplayName=GreaterFileShare
 set PackagePublisherDisplayName=WaynebabyPresents
 set AppId=GreaterFileShareApp
 set PackageArch=x86
+set Destination=UWPDesktopBridge
 
 
 @rem Extract and Change Parameters
-set RootWorkingPath=UWPDesktopBridge\%PackageName%
+set RootWorkingPath=%Destination%\%PackageName%
 set PackageAppxPath=%RootWorkingPath%\%PackageName%.appx
 set PackageRoot=%RootWorkingPath%\ExtractedPackageFiles
 set ForTestingSignOrEmpty=ForTestingSign
