@@ -27,12 +27,13 @@ namespace GreaterFileShare.Hosts.WPF
     /// <summary>
     /// Interaction logic for UriAndQRs.xaml
     /// </summary>
-    public partial class UriAndQRs : MVVMWindow
+    public partial class UriAndQRs : MahApps.Metro.Controls.MetroWindow
     {
         public UriAndQRs()
         {
             InitializeComponent();
         }
+        WindowViewDisguise ViewDisguise { get { return this.GetOrCreateViewDisguise(); } }
     }
 }
 

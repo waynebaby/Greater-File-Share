@@ -1,4 +1,6 @@
-﻿<mvvm:MVVMWindow xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+﻿<mah:MetroWindow
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"       
         xmlns:mvvm="clr-namespace:MVVMSidekick.Views;assembly=MVVMSidekick_net45"        
@@ -6,10 +8,12 @@
         xmlns:Glue="clr-namespace:GreaterFileShare.Hosts.WPF.Glue" 
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+    
         x:Class="GreaterFileShare.Hosts.WPF.MainWindow"    
+               
         MinHeight="640"  MinWidth="1024" Height="640" Top="5" Left="5" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1024" Title="Greater File Share Host" Icon="Assets/Icon.ico" >
 
-    <mvvm:MVVMWindow.Resources>
+    <Window.Resources>
         <Glue:ShareTaskUrlConverter x:Key="ShareTaskUrlConverter"/>
         <Glue:TaskStateConverter x:Key="TaskStateConverter"/>
         <Glue:IsNotNullValueConverter x:Key="IsNotNullValueConverter"/>
@@ -65,7 +69,7 @@
         </DataTemplate>
         <DataTemplate x:Key="MessageItemTemplate">
             <Grid>
-                <TextBlock Foreground="#CCC"><Run Text="{Binding Time}"/><Run Text="&#x9;"/><Run Text="{Binding Message}"/></TextBlock>
+                <TextBlock Foreground="#444"><Run Text="{Binding Time}"/><Run Text="&#x9;"/><Run Text="{Binding Message}"/></TextBlock>
             </Grid>
         </DataTemplate>
         <!--<Style x:Key="FocusVisual">
@@ -77,73 +81,80 @@
                 </Setter.Value>
             </Setter>
         </Style>-->
-    </mvvm:MVVMWindow.Resources>
-    <mvvm:MVVMWindow.Background>
+    </Window.Resources>
+    <Window.Background>
         <ImageBrush ImageSource="Assets/map.png" Stretch="UniformToFill" />
-    </mvvm:MVVMWindow.Background>
-    <Grid Background="#22FFFFFF">
-        <Grid.DataContext>
+    </Window.Background>
+    <Border BorderThickness="1.5" BorderBrush="#228888ff">
+        <FrameworkElement.DataContext>
             <StaticResource ResourceKey="DesignVM"/>
-        </Grid.DataContext>
-        <Grid x:Name="grid">
-           
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="300"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" MinHeight="450"/>
-                <RowDefinition Height="5" />
-                <RowDefinition Height="150" />
-            </Grid.RowDefinitions>
+        </FrameworkElement.DataContext>
+        <Grid Background="#22FFFFFF" >
 
-            <Border Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Background="Transparent" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
-                <Grid Margin="10">
+            <Grid x:Name="grid">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" MinHeight="450"/>
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="150" />
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Background="Transparent" IsEnabled="{Binding CurrentTask, Converter={StaticResource IsNotNullValueConverter}, Mode=OneWay}" >
+                    <Grid Margin="10">
 
 
-                    <StackPanel Grid.Row="1" >
-                        <Label Content="Configuration" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
-                        <DataGrid BorderBrush="#CCC" HorizontalScrollBarVisibility="Disabled" IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}" BorderThickness="1" Grid.Row="1" AutoGenerateColumns="False" Height="300" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}"  Grid.RowSpan="2">
-                            <DataGrid.Columns>
-                                <DataGridTextColumn  Width="140" Binding="{Binding ExtensionName}" Header="Extension Name"/>
-                                <DataGridTextColumn Width="140" Binding="{Binding ContentType}" Header="Content Type"/>
-                            </DataGrid.Columns>
-                        </DataGrid>
-                        <StackPanel>
-                            <Label Content="PORT"/>
-                            <xctk:IntegerUpDown Minimum="0" Maximum="65535" Value="{Binding CurrentTask.Port, Mode=TwoWay}" 
+                        <StackPanel Grid.Row="1" >
+                            <Label Content="Configuration" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
+                            <DataGrid BorderBrush="#CCC" HorizontalScrollBarVisibility="Disabled" IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}" BorderThickness="1" Grid.Row="1" AutoGenerateColumns="False" Height="300" Background="Transparent" ItemsSource="{Binding CurrentTask.AdditionalContentTypes}"  Grid.RowSpan="2">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn  Width="140" Binding="{Binding ExtensionName}" Header="Extension Name"/>
+                                    <DataGridTextColumn Width="140" Binding="{Binding ContentType}" Header="Content Type"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <StackPanel>
+                                <Label Content="PORT"/>
+                                <xctk:IntegerUpDown Minimum="0" Maximum="65535" Value="{Binding CurrentTask.Port, Mode=TwoWay}" 
                                   IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}"              HorizontalContentAlignment="Right" TextAlignment="Left" Height="28" BorderBrush="#CCC" />
+                            </StackPanel>
+                            <StackPanel>
+                         
+                                <Label Content="FOLDER PATH"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="32*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox IsReadOnly="True"  Text="{Binding CurrentTask.Path, Mode=OneWay}" IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}"/>
+                                    <Button Grid.Column="1" Content="..." IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}" CommandParameter="{Binding ElementName=grid}" 
+                                       >
+                                        <Button.Command>
+
+                                            <Glue:PickFolderCommand  />
+                                        </Button.Command>
+
+                                    </Button>
+                                </Grid>
+                            </StackPanel>
+                            <StackPanel/>
+                            <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start / Stop" HorizontalAlignment="Stretch" Margin="10" Height="40" Background="ForestGreen" Foreground="White" />
+                            <Button Command="{Binding CommandSimpleQR}" Content="Custom QR URL" HorizontalAlignment="Stretch" Margin="10" Height="40" Background="ForestGreen" Foreground="White" />
                         </StackPanel>
-                        <StackPanel>
-                            <Label Content="FOLDER PATH"/>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="32*"/>
-                                    <ColumnDefinition Width="30"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBox IsReadOnly="True"  Text="{Binding CurrentTask.Path, Mode=OneWay}" IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}"/>
-                                <Button Grid.Column="1" Content="..." IsEnabled="{Binding CurrentTask.IsHosting, Converter={StaticResource NotBoolValueConverter}, Mode=Default}"  >
-                                    <i:Interaction.Behaviors>
-                                        <Glue:PickFolderBehavior Folder="{Binding CurrentTask.Path, Mode=TwoWay}"/>
-                                    </i:Interaction.Behaviors>
-                                </Button>
-                            </Grid>
-                        </StackPanel>
-                        <StackPanel/>
-                        <Button Command="{Binding CurrentTask.CommandStartHosting}" Content="Start / Stop" HorizontalAlignment="Stretch" Margin="10" Height="40" Background="ForestGreen" Foreground="White" />
-                        <Button Command="{Binding CommandSimpleQR}" Content="Custom QR URL" HorizontalAlignment="Stretch" Margin="10" Height="40" Background="ForestGreen" Foreground="White" />
-                    </StackPanel>
-                </Grid>
-            </Border>
-            <Border Grid.Row="0" Grid.Column="0" Background="Transparent" Margin="10">
-                <Grid Background="Transparent">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Label Content="Instances" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
-                    <ListBox 
+                    </Grid>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="0" Background="Transparent" Margin="10">
+                    <Grid Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Content="Instances" FontSize="{StaticResource SubHeaderFontSize}" FontWeight="Light" />
+                        <ListBox 
+                            
                         Grid.Row="1"
                         Background="Transparent"
                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
@@ -152,86 +163,107 @@
                         SelectedItem="{Binding CurrentTask, Mode=TwoWay}" 
                         SelectedIndex="0" 
                         ItemTemplate="{DynamicResource ShareFileTaskTemplate}" >
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="SelectionChanged">
-                                <Glue:ScrollToSelectedAction />
-
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </ListBox>
-                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
-                        <StackPanel.Resources>
-                            <Style TargetType="Button">
-                                <Setter Property="Width" Value="50" />
-                                <Setter Property="Height" Value="40" />
-                            </Style>
-                        </StackPanel.Resources>
-                        <Button Command="{Binding CommandNewHost}"  ToolTip="New Host" Margin="0,0,10,0" >
-
-                            <TextBlock FontFamily="Segoe UI Symbol">&#xE17B;</TextBlock>
-                        </Button>
-                        <Button Command="{Binding CommandDeleteHost}"   Margin="0,0,10,0">
-
-                            <TextBlock FontFamily="Segoe UI Symbol">&#xE106;</TextBlock>
-
-                        </Button>
-                        <Button Command="{Binding CommandShowQR}" ToolTip="Show QR And Links" Margin="0,0,10,0">
-
-                            <TextBlock FontFamily="Segoe UI Symbol">&#xE1E4;</TextBlock>
-
-                        </Button>
-                        <Button Command="{Binding CommandSaveSettings}"  Margin="0,0,10,0" ToolTip="Save Settings" >
-
-                            <TextBlock FontFamily="Segoe UI Symbol">&#xE105;</TextBlock>
-
-                        </Button>
-                        <Button   Margin="0,0,10,0" ToolTip="Import Settings" >
                             <i:Interaction.Triggers>
-                                <i:EventTrigger EventName="Click" >
-                                    <Glue:PickFileTriggerAction   Title="Please Pick a file to Import" x:Name="pickFileImport" />
-                                    <i:InvokeCommandAction Command="{Binding CommandImportSettings}" CommandParameter="{Binding ElementName=pickFileImport,Path=File}"></i:InvokeCommandAction>
+                                <i:EventTrigger EventName="SelectionChanged">
+                                    <i:InvokeCommandAction CommandParameter="{Binding ElementName=tasksList}">
+                                        <i:InvokeCommandAction.Command>
+                                            <Glue:ScrollToSelectedCommand />
+                                        </i:InvokeCommandAction.Command>
+                                    </i:InvokeCommandAction>
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
-                            <TextBlock FontFamily="Segoe UI Symbol">&#xE0D6;</TextBlock>
+                        </ListBox>
+                        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
+                            <StackPanel.Resources>
+                                <Style TargetType="Button">
+                                    <Setter Property="Width" Value="50" />
+                                    <Setter Property="Height" Value="40" />
+                                </Style>
+                            </StackPanel.Resources>
+                            <Button Command="{Binding CommandNewHost}"  ToolTip="New Host" Margin="0,0,10,0" >
 
-                        </Button>
-                        <Button Command="{Binding CommandExportSettings}"  Margin="0,0,10,0" ToolTip="Export Settings" >
-                            <i:Interaction.Triggers>
-                                <i:EventTrigger EventName="Click" >
-                                    <Glue:PickFileTriggerAction DialogType="Save" Title="Please Pick a location to Export" x:Name="pickFileExport" />
-                                    <i:InvokeCommandAction Command="{Binding CommandExportSettings}" CommandParameter="{Binding ElementName=pickFileExport,Path=File}"></i:InvokeCommandAction>
-                                </i:EventTrigger>
-                            </i:Interaction.Triggers>
-                            <TextBlock FontFamily="Segoe UI Symbol">&#xE0B1;</TextBlock>
+                                <TextBlock FontFamily="Segoe UI Symbol">&#xE17B;</TextBlock>
+                            </Button>
+                            <Button Command="{Binding CommandDeleteHost}"   Margin="0,0,10,0">
 
-                        </Button>
-                        <Button Command="{Binding CommandMoveItem}" ToolTip="Move Up"  CommandParameter="-1" Margin="0,0,10,0">
-                            <TextBlock FontFamily="Segoe UI Symbol">&#xE0A0;</TextBlock>
-                        </Button>
-                        <Button Command="{Binding CommandMoveItem}" ToolTip="Move Down" CommandParameter="1">
-                            <TextBlock FontFamily="Segoe UI Symbol">&#xE0A1;</TextBlock>
-                        </Button>
+                                <TextBlock FontFamily="Segoe UI Symbol">&#xE106;</TextBlock>
 
-                    </StackPanel>
-                </Grid>
-            </Border>
-            <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" Background="#88000000">
-                <ListBox Background="#88000000" ItemsSource="{Binding Messages}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                            </Button>
+                            <Button Command="{Binding CommandShowQR}" ToolTip="Show QR And Links" Margin="0,0,10,0">
+
+                                <TextBlock FontFamily="Segoe UI Symbol">&#xE1E4;</TextBlock>
+
+                            </Button>
+                            <Button Command="{Binding CommandSaveSettings}"  Margin="0,0,10,0" ToolTip="Save Settings" >
+
+                                <TextBlock FontFamily="Segoe UI Symbol">&#xE105;</TextBlock>
+
+                            </Button>
+                            <Button   Margin="0,0,10,0" ToolTip="Import Settings" >
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click" >
+                                        <i:InvokeCommandAction   CommandParameter="{Binding ElementName=grid}">
+                                            <i:InvokeCommandAction.Command>
+                                                <Glue:PickFileCommand   Title="Please Pick a file to Import" x:Name="pickFileImport" />
+                                            </i:InvokeCommandAction.Command>
+                                            
+                                        </i:InvokeCommandAction>
+                                
+                                        <i:InvokeCommandAction Command="{Binding CommandImportSettings}" CommandParameter="{Binding ElementName=pickFileImport,Path=File}"></i:InvokeCommandAction>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                                <TextBlock FontFamily="Segoe UI Symbol">&#xE0D6;</TextBlock>
+
+                            </Button>
+                            <Button Command="{Binding CommandExportSettings}"  Margin="0,0,10,0" ToolTip="Export Settings" >
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click" >
+                                        <i:InvokeCommandAction  CommandParameter="{Binding ElementName=grid}">
+                                            <i:InvokeCommandAction.Command>
+                                                <Glue:PickFileCommand   Title="Please Pick a file to Import" x:Name="pickFileExport" />
+                                            </i:InvokeCommandAction.Command>
+
+                                        </i:InvokeCommandAction>
+                                        <i:InvokeCommandAction Command="{Binding CommandExportSettings}" CommandParameter="{Binding ElementName=pickFileExport,Path=File}"></i:InvokeCommandAction>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                                <TextBlock FontFamily="Segoe UI Symbol">&#xE0B1;</TextBlock>
+
+                            </Button>
+                            <Button Command="{Binding CommandMoveItem}" ToolTip="Move Up"  CommandParameter="-1" Margin="0,0,10,0">
+                                <TextBlock FontFamily="Segoe UI Symbol">&#xE0A0;</TextBlock>
+                            </Button>
+                            <Button Command="{Binding CommandMoveItem}" ToolTip="Move Down" CommandParameter="1">
+                                <TextBlock FontFamily="Segoe UI Symbol">&#xE0A1;</TextBlock>
+                            </Button>
+
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" Background="#88000000">
+                    <ListBox Background="#88ffffff"  ItemsSource="{Binding Messages}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                             x:Name="logList"
                          SelectedIndex="{Binding CurrentMessageIndex, Mode=TwoWay}" 
                          FontFamily="Consolas"
                          FontSize="12"
                          ItemTemplate="{DynamicResource MessageItemTemplate}" 
                  >
-                    <i:Interaction.Triggers>
-                        <i:EventTrigger EventName="SelectionChanged">
-                            <Glue:ScrollToSelectedAction />
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction CommandParameter="{Binding ElementName=logList }">
+                                    <i:InvokeCommandAction.Command >
+                                        <Glue:ScrollToSelectedCommand  />
+                                    </i:InvokeCommandAction.Command>
+                                </i:InvokeCommandAction>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
 
-                </ListBox>
-            </Border>
+                    </ListBox>
+                </Border>
 
-  
+
+            </Grid>
         </Grid>
-    </Grid>
-</mvvm:MVVMWindow>
+    </Border>
+
+</mah:MetroWindow>

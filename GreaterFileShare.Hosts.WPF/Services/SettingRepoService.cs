@@ -68,55 +68,41 @@ namespace GreaterFileShare.Hosts.WPF.Services
 
         async Task<StorageFile> GetTargetFileAsync(bool createNew = false)
         {
-
+            IStorageFolder folder = null;
             var suggestted = SuggestedTargetStorageItem;
             StorageFile file = suggestted as StorageFile;
-
-
-
-            if (file != null)
-            {
-                if (!createNew)
-                {
-                    return file;
-                }
-                else
-                {
-                    var p = file.Path;
-                    var fod = await file.GetParentAsync();
-                    //await file.DeleteAsync();
-                    var fn = Path.GetFileName(p);
-                    file = await fod.CreateFileAsync(fn, CreationCollisionOption.ReplaceExisting);
-                    return file;
-                }
-            
-            }
-
-
-
-            IStorageFolder folder = SuggestedTargetStorageItem as IStorageFolder;
-            try
-            {
-                var fds = await StorageLibrary.GetLibraryAsync(KnownLibraryId.Documents);
-                folder = folder ?? fds.SaveFolder;
-            }
-            catch (InvalidOperationException)
-            {
-                folder = folder ?? KnownFolders.DocumentsLibrary;
-            }
 
 
             var surffix = string.IsNullOrEmpty(Name) ? "Default" : Name;
             var fileName = $"Setting_{surffix}{Consts.SettingExtension}";
 
-            if (createNew)
+
+            if (file == null)
             {
 
-                file = await folder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
-                EventRouter.Instance.RaiseEvent(this, $"targeting file\t{file.Path}", "Logging");
-                return file;
+                try
+                {
+                    var fds = await StorageLibrary.GetLibraryAsync(KnownLibraryId.Documents);
+                    folder = SuggestedTargetStorageItem as IStorageFolder;
+                    folder = folder ?? fds.SaveFolder;
+                }
+                catch (InvalidOperationException)
+                {
+                    folder = folder ?? KnownFolders.DocumentsLibrary;
+                }
+
+
+
+                file = await folder.GetFileAsync(fileName);
             }
-            else
+
+            if (createNew && file != null)
+            {
+                await file.DeleteAsync();
+                file = null;
+            }
+
+            if (file == null || createNew)
             {
 
                 file = await folder.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
@@ -124,7 +110,12 @@ namespace GreaterFileShare.Hosts.WPF.Services
                 return file;
             }
 
-
+           
+           
+            return file;
         }
+
+
     }
 }
+

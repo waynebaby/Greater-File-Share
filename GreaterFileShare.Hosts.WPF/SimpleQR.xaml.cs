@@ -27,12 +27,13 @@ namespace GreaterFileShare.Hosts.WPF
     /// <summary>
     /// Interaction logic for SimpleQR.xaml
     /// </summary>
-    public partial class SimpleQR : MVVMWindow
+    public partial class SimpleQR : MahApps.Metro.Controls.MetroWindow
     {
         public SimpleQR()
         {
             InitializeComponent();
         }
+        WindowViewDisguise ViewDisguise { get { return this.GetOrCreateViewDisguise(); } }
     }
 }
 

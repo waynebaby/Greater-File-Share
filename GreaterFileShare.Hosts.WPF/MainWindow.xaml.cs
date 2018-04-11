@@ -20,22 +20,31 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace GreaterFileShare.Hosts.WPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : MVVMWindow
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {
+            ViewDisguise.ViewModel = null;
             InitializeComponent();
+            ViewDisguise.ViewModel = ServiceLocator.Instance.Resolve<MainWindow_Model>();
 
-            //var title = Environment.GetCommandLineArgs()?.FirstOrDefault() ?? "no args";
-            //Title = title;GlobalEventRouter
         }
 
-     
+
+        #region IView Disguise
+
+
+        WindowViewDisguise ViewDisguise { get { return this.GetOrCreateViewDisguise(); } }
+
+        #endregion
+
+
     }
 }
